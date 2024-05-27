@@ -1,0 +1,224 @@
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\ApplicationInsights.config
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\AuthModule.dll.config
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\AuthModule.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\AuthModule.pdb
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Antlr3.Runtime.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\AuthIntegration.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\EntityFramework.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\EntityFramework.SqlServer.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Kentor.OwinCookieSaver.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.AI.DependencyCollector.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.AI.Web.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.AI.WindowsServer.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.ApplicationInsights.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.IdentityModel.Logging.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.IdentityModel.Protocols.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.IdentityModel.Tokens.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Owin.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Owin.Security.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Owin.Security.Google.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Owin.Security.OpenIdConnect.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Web.Infrastructure.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Newtonsoft.Json.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Owin.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\PagedList.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\PagedList.Mvc.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\SendGrid.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\StarkbankEcdsa.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Net.Http.Formatting.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Web.Helpers.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Web.Http.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Web.Http.Owin.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Web.Http.WebHost.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Web.Mvc.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Web.Optimization.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Web.Razor.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Web.WebPages.Deployment.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Web.WebPages.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Web.WebPages.Razor.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\WebGrease.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\AuthIntegration.pdb
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Antlr3.Runtime.pdb
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\EntityFramework.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\EntityFramework.SqlServer.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Kentor.OwinCookieSaver.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.IdentityModel.JsonWebTokens.pdb
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.IdentityModel.Logging.pdb
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.IdentityModel.Logging.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.IdentityModel.Protocols.pdb
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.IdentityModel.Protocols.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.pdb
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.IdentityModel.Tokens.pdb
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.IdentityModel.Tokens.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Owin.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Owin.Security.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Owin.Security.Google.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Owin.Security.OpenIdConnect.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Newtonsoft.Json.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\PagedList.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\PagedList.Mvc.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\SendGrid.pdb
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\SendGrid.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.IdentityModel.Tokens.Jwt.pdb
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.IdentityModel.Tokens.Jwt.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Net.Http.Formatting.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Web.Helpers.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Web.Http.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Web.Http.Owin.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Web.Http.WebHost.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Web.Mvc.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Web.Optimization.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Web.Razor.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Web.WebPages.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Web.WebPages.Deployment.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Web.WebPages.Razor.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.ApplicationInsights.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.AI.DependencyCollector.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.AI.WindowsServer.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.AI.Web.xml
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\obj\Release\CoCoBeachSurf_Dev.csproj.AssemblyReference.cache
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\obj\Release\CoCoBeachSurf_Dev.csproj.CoreCompileInputs.cache
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\obj\Release\CoCoBeachSurf_Dev.csproj.CopyComplete
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\obj\Release\AuthModule.dll
+D:\Work\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\obj\Release\AuthModule.pdb
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\ApplicationInsights.config
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\AuthModule.dll.config
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\AuthModule.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\AuthModule.pdb
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Antlr3.Runtime.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\AuthIntegration.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\EntityFramework.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\EntityFramework.SqlServer.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Kentor.OwinCookieSaver.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.AI.DependencyCollector.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.AI.Web.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.AI.WindowsServer.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.ApplicationInsights.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.IdentityModel.Logging.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.IdentityModel.Protocols.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Owin.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Owin.Security.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Owin.Security.Google.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Owin.Security.OpenIdConnect.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Web.Infrastructure.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Newtonsoft.Json.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Owin.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\PagedList.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\PagedList.Mvc.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\SendGrid.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\StarkbankEcdsa.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Net.Http.Formatting.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Web.Helpers.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Web.Http.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Web.Http.Owin.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Web.Http.WebHost.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Web.Mvc.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Web.Optimization.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Web.Razor.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Web.WebPages.Deployment.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Web.WebPages.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Web.WebPages.Razor.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\WebGrease.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\AuthIntegration.pdb
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Antlr3.Runtime.pdb
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\EntityFramework.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\EntityFramework.SqlServer.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Kentor.OwinCookieSaver.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.IdentityModel.JsonWebTokens.pdb
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.IdentityModel.Logging.pdb
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.IdentityModel.Logging.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.IdentityModel.Protocols.pdb
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.IdentityModel.Protocols.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.pdb
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.IdentityModel.Tokens.pdb
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Owin.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Owin.Security.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Owin.Security.Google.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Owin.Security.OpenIdConnect.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Newtonsoft.Json.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\PagedList.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\PagedList.Mvc.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\SendGrid.pdb
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\SendGrid.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.IdentityModel.Tokens.Jwt.pdb
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Net.Http.Formatting.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Web.Helpers.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Web.Http.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Web.Http.Owin.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Web.Http.WebHost.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Web.Mvc.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Web.Optimization.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Web.Razor.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Web.WebPages.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Web.WebPages.Deployment.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\System.Web.WebPages.Razor.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.ApplicationInsights.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.AI.DependencyCollector.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.AI.WindowsServer.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\bin\Microsoft.AI.Web.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\obj\Release\CoCoBeachSurf_Dev.csproj.AssemblyReference.cache
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\obj\Release\CoCoBeachSurf_Dev.csproj.CoreCompileInputs.cache
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\obj\Release\CoCoBeachSurf_Dev.csproj.CopyComplete
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\obj\Release\AuthModule.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\obj\Release\AuthModule.pdb

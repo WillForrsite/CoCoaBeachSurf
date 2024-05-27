@@ -1,0 +1,120 @@
+D:\My\AuthModule\AuthIntegration\bin\Debug\AuthIntegration.dll
+D:\My\AuthModule\AuthIntegration\bin\Debug\AuthIntegration.pdb
+D:\My\AuthModule\AuthIntegration\obj\Debug\AuthIntegration.csproj.CoreCompileInputs.cache
+D:\My\AuthModule\AuthIntegration\obj\Debug\AuthIntegration.dll
+D:\My\AuthModule\AuthIntegration\obj\Debug\AuthIntegration.pdb
+D:\Padma\AuthModule\AuthIntegration\bin\Debug\AuthIntegration.dll
+D:\Padma\AuthModule\AuthIntegration\bin\Debug\AuthIntegration.pdb
+D:\Padma\AuthModule\AuthIntegration\obj\Debug\AuthIntegration.csproj.CoreCompileInputs.cache
+D:\Padma\AuthModule\AuthIntegration\obj\Debug\AuthIntegration.dll
+D:\Padma\AuthModule\AuthIntegration\obj\Debug\AuthIntegration.pdb
+D:\Padma\AuthModule\AuthIntegration\obj\Debug\AuthIntegration.csprojResolveAssemblyReference.cache
+D:\My\AuthModule_Project\AuthModule\AuthIntegration\bin\Debug\AuthIntegration.dll
+D:\My\AuthModule_Project\AuthModule\AuthIntegration\bin\Debug\AuthIntegration.pdb
+D:\My\AuthModule_Project\AuthModule\AuthIntegration\obj\Debug\AuthIntegration.csproj.CoreCompileInputs.cache
+D:\My\AuthModule_Project\AuthModule\AuthIntegration\obj\Debug\AuthIntegration.dll
+D:\My\AuthModule_Project\AuthModule\AuthIntegration\obj\Debug\AuthIntegration.pdb
+D:\My\AuthModule_Project\AuthModule\AuthIntegration\obj\Debug\AuthIntegration.csprojResolveAssemblyReference.cache
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthIntegration\bin\Debug\AuthIntegration.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthIntegration\bin\Debug\AuthIntegration.pdb
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthIntegration\obj\Debug\AuthIntegration.csprojResolveAssemblyReference.cache
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthIntegration\obj\Debug\AuthIntegration.csproj.CoreCompileInputs.cache
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthIntegration\obj\Debug\AuthIntegration.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthIntegration\obj\Debug\AuthIntegration.pdb
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthIntegration\bin\Debug\Newtonsoft.Json.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthIntegration\bin\Debug\SendGrid.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthIntegration\bin\Debug\StarkbankEcdsa.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthIntegration\bin\Debug\Newtonsoft.Json.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthIntegration\bin\Debug\SendGrid.pdb
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthIntegration\bin\Debug\SendGrid.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthIntegration\bin\Debug\AuthIntegration.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthIntegration\bin\Debug\AuthIntegration.pdb
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthIntegration\bin\Debug\Newtonsoft.Json.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthIntegration\bin\Debug\SendGrid.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthIntegration\bin\Debug\StarkbankEcdsa.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthIntegration\bin\Debug\Newtonsoft.Json.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthIntegration\bin\Debug\SendGrid.pdb
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthIntegration\bin\Debug\SendGrid.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthIntegration\obj\Debug\AuthIntegration.csproj.AssemblyReference.cache
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthIntegration\obj\Debug\AuthIntegration.csproj.CoreCompileInputs.cache
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthIntegration\obj\Debug\AuthIntegration.csproj.CopyComplete
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthIntegration\obj\Debug\AuthIntegration.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthIntegration\obj\Debug\AuthIntegration.pdb
+D:\Work Area\Apss-Portal\AuthIntegration\bin\Debug\AuthIntegration.dll
+D:\Work Area\Apss-Portal\AuthIntegration\bin\Debug\AuthIntegration.pdb
+D:\Work Area\Apss-Portal\AuthIntegration\bin\Debug\Newtonsoft.Json.dll
+D:\Work Area\Apss-Portal\AuthIntegration\bin\Debug\SendGrid.dll
+D:\Work Area\Apss-Portal\AuthIntegration\bin\Debug\StarkbankEcdsa.dll
+D:\Work Area\Apss-Portal\AuthIntegration\bin\Debug\Newtonsoft.Json.xml
+D:\Work Area\Apss-Portal\AuthIntegration\bin\Debug\SendGrid.pdb
+D:\Work Area\Apss-Portal\AuthIntegration\bin\Debug\SendGrid.xml
+D:\Work Area\Apss-Portal\AuthIntegration\obj\Debug\AuthIntegration.csproj.AssemblyReference.cache
+D:\Work Area\Apss-Portal\AuthIntegration\obj\Debug\AuthIntegration.csproj.CoreCompileInputs.cache
+D:\Work Area\Apss-Portal\AuthIntegration\obj\Debug\AuthIntegration.csproj.CopyComplete
+D:\Work Area\Apss-Portal\AuthIntegration\obj\Debug\AuthIntegration.dll
+D:\Work Area\Apss-Portal\AuthIntegration\obj\Debug\AuthIntegration.pdb
+D:\Work Area\Ollas\IHP Apps Portal\AuthIntegration\bin\Debug\AuthIntegration.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthIntegration\bin\Debug\AuthIntegration.pdb
+D:\Work Area\Ollas\IHP Apps Portal\AuthIntegration\bin\Debug\Newtonsoft.Json.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthIntegration\bin\Debug\SendGrid.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthIntegration\bin\Debug\StarkbankEcdsa.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthIntegration\bin\Debug\Newtonsoft.Json.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthIntegration\bin\Debug\SendGrid.pdb
+D:\Work Area\Ollas\IHP Apps Portal\AuthIntegration\bin\Debug\SendGrid.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthIntegration\obj\Debug\AuthIntegration.csproj.AssemblyReference.cache
+D:\Work Area\Ollas\IHP Apps Portal\AuthIntegration\obj\Debug\AuthIntegration.csproj.CoreCompileInputs.cache
+D:\Work Area\Ollas\IHP Apps Portal\AuthIntegration\obj\Debug\AuthIntegration.csproj.CopyComplete
+D:\Work Area\Ollas\IHP Apps Portal\AuthIntegration\obj\Debug\AuthIntegration.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthIntegration\obj\Debug\AuthIntegration.pdb
+D:\Work Area\IHP\AuthIntegration\bin\Debug\AuthIntegration.dll
+D:\Work Area\IHP\AuthIntegration\bin\Debug\AuthIntegration.pdb
+D:\Work Area\IHP\AuthIntegration\bin\Debug\Newtonsoft.Json.dll
+D:\Work Area\IHP\AuthIntegration\bin\Debug\SendGrid.dll
+D:\Work Area\IHP\AuthIntegration\bin\Debug\StarkbankEcdsa.dll
+D:\Work Area\IHP\AuthIntegration\bin\Debug\Newtonsoft.Json.xml
+D:\Work Area\IHP\AuthIntegration\bin\Debug\SendGrid.pdb
+D:\Work Area\IHP\AuthIntegration\bin\Debug\SendGrid.xml
+D:\Work Area\IHP\AuthIntegration\obj\Debug\AuthIntegration.csproj.AssemblyReference.cache
+D:\Work Area\IHP\AuthIntegration\obj\Debug\AuthIntegration.csproj.CoreCompileInputs.cache
+D:\Work Area\IHP\AuthIntegration\obj\Debug\AuthIntegration.csproj.CopyComplete
+D:\Work Area\IHP\AuthIntegration\obj\Debug\AuthIntegration.dll
+D:\Work Area\IHP\AuthIntegration\obj\Debug\AuthIntegration.pdb
+D:\Work\CoCoBeachSurf_Dev\AuthIntegration\bin\Debug\AuthIntegration.dll
+D:\Work\CoCoBeachSurf_Dev\AuthIntegration\bin\Debug\AuthIntegration.pdb
+D:\Work\CoCoBeachSurf_Dev\AuthIntegration\bin\Debug\Newtonsoft.Json.dll
+D:\Work\CoCoBeachSurf_Dev\AuthIntegration\bin\Debug\SendGrid.dll
+D:\Work\CoCoBeachSurf_Dev\AuthIntegration\bin\Debug\StarkbankEcdsa.dll
+D:\Work\CoCoBeachSurf_Dev\AuthIntegration\bin\Debug\Newtonsoft.Json.xml
+D:\Work\CoCoBeachSurf_Dev\AuthIntegration\bin\Debug\SendGrid.pdb
+D:\Work\CoCoBeachSurf_Dev\AuthIntegration\bin\Debug\SendGrid.xml
+D:\Work\CoCoBeachSurf_Dev\AuthIntegration\obj\Debug\AuthIntegration.csproj.AssemblyReference.cache
+D:\Work\CoCoBeachSurf_Dev\AuthIntegration\obj\Debug\AuthIntegration.csproj.CoreCompileInputs.cache
+D:\Work\CoCoBeachSurf_Dev\AuthIntegration\obj\Debug\AuthIntegration.csproj.CopyComplete
+D:\Work\CoCoBeachSurf_Dev\AuthIntegration\obj\Debug\AuthIntegration.dll
+D:\Work\CoCoBeachSurf_Dev\AuthIntegration\obj\Debug\AuthIntegration.pdb
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\AuthIntegration\bin\Debug\AuthIntegration.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\AuthIntegration\bin\Debug\AuthIntegration.pdb
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\AuthIntegration\bin\Debug\Newtonsoft.Json.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\AuthIntegration\bin\Debug\SendGrid.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\AuthIntegration\bin\Debug\StarkbankEcdsa.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\AuthIntegration\bin\Debug\Newtonsoft.Json.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\AuthIntegration\bin\Debug\SendGrid.pdb
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\AuthIntegration\bin\Debug\SendGrid.xml
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\AuthIntegration\obj\Debug\AuthIntegration.csproj.AssemblyReference.cache
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\AuthIntegration\obj\Debug\AuthIntegration.csproj.CoreCompileInputs.cache
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\AuthIntegration\obj\Debug\AuthIntegration.csproj.CopyComplete
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\AuthIntegration\obj\Debug\AuthIntegration.dll
+C:\Bluechip Development\CoCoBeachSurf_Dev\CoCoBeachSurf_Dev\AuthIntegration\obj\Debug\AuthIntegration.pdb
+C:\Bluechip Development\CoCoaBeachSurf\AuthIntegration\bin\Debug\AuthIntegration.dll
+C:\Bluechip Development\CoCoaBeachSurf\AuthIntegration\bin\Debug\AuthIntegration.pdb
+C:\Bluechip Development\CoCoaBeachSurf\AuthIntegration\bin\Debug\Newtonsoft.Json.dll
+C:\Bluechip Development\CoCoaBeachSurf\AuthIntegration\bin\Debug\SendGrid.dll
+C:\Bluechip Development\CoCoaBeachSurf\AuthIntegration\bin\Debug\StarkbankEcdsa.dll
+C:\Bluechip Development\CoCoaBeachSurf\AuthIntegration\bin\Debug\Newtonsoft.Json.xml
+C:\Bluechip Development\CoCoaBeachSurf\AuthIntegration\bin\Debug\SendGrid.pdb
+C:\Bluechip Development\CoCoaBeachSurf\AuthIntegration\bin\Debug\SendGrid.xml
+C:\Bluechip Development\CoCoaBeachSurf\AuthIntegration\obj\Debug\AuthIntegration.csproj.AssemblyReference.cache
+C:\Bluechip Development\CoCoaBeachSurf\AuthIntegration\obj\Debug\AuthIntegration.csproj.CoreCompileInputs.cache
+C:\Bluechip Development\CoCoaBeachSurf\AuthIntegration\obj\Debug\AuthIntegration.csproj.CopyComplete
+C:\Bluechip Development\CoCoaBeachSurf\AuthIntegration\obj\Debug\AuthIntegration.dll
+C:\Bluechip Development\CoCoaBeachSurf\AuthIntegration\obj\Debug\AuthIntegration.pdb

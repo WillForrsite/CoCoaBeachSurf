@@ -1,0 +1,253 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title CoCoBeachSurf</title>
+    <link href="~/Images/coco.png" rel="shortcut icon" type="image/x-icon" />
+    @*<link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />*@
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.bundle.min.js" integrity="sha512-w3u9q/DeneCSwUDjhiMNibTRh/1i/gScBVp2imNVAMCt6cUHIw6xzhzcPFIaL3Q1EbI2l+nu17q2aLJJLo4ZYg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <style>
+        /*.navbar {
+            min-height: 60px !important;
+            background-color:#000;
+        }*/
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+
+        /*.navbar {
+            overflow: hidden;
+            background-color: #333;
+        }*/
+
+        .navbar a {
+            float: right;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .navbar-fixed-bottom, .navbar-fixed-top {
+            position: sticky!important
+        }
+
+        .subnav {
+            float: right;
+            overflow: hidden;
+        }
+
+            .subnav .subnavAdminbtn {
+                font-size: 16px;
+                border: none;
+                outline: none;
+                color: white;
+                padding: 14px 16px;
+                background-color: inherit;
+                font-family: inherit;
+                margin: 0;
+            }
+
+            .navbar a:hover, .subnav:hover .subnavAdminbtn {
+                background-color: black;
+            }
+            .subnav .subnavbtn {
+                font-size: 16px;
+                border: none;
+                outline: none;
+                color: white;
+                padding: 14px 16px;
+                background-color: inherit;
+                font-family: inherit;
+                margin: 0;
+            }
+
+            .navbar a:hover, .subnav:hover .subnavbtn {
+                background-color: black;
+            }
+
+        .subnav-content {
+            display: none;
+            position: absolute;
+            left: 0;
+            background-color: black;
+            width: 100%;
+            z-index: 1;
+        }
+
+            .subnav-content a {
+                float: right;
+                color: white;
+                text-decoration: none;
+            }
+
+                .subnav-content a:hover {
+                    background-color: #eee;
+                    color: black;
+                }
+
+        .subnav:hover .subnav-content {
+            display: block;
+        }
+        .subnav-Admincontent {
+            display: block;
+            position: absolute;
+            left: 0;
+            background-color: black;
+            width: 100%;
+            z-index: 1;
+        }
+
+            .subnav-Admincontent a {
+                float: right;
+                color: white;
+                text-decoration: none;
+            }
+
+               
+
+        #registerLink {
+            color: #999;
+        }
+
+        #loginLink {
+            color: #999;
+        }
+
+       
+        .navbar-fixed-left {
+            width: 221px;
+            position: fixed;
+            border-radius: 0;
+            height: 100%;
+        }
+
+        .navbar-fixed-left .navbar-nav > li {
+            float: none; /* Cancel default li float: left */
+            width: 139px;
+        }
+
+        .navbar-fixed-left + .container {
+            padding-left: 160px;
+        }
+
+        /* On using dropdown menu (To right shift popuped) */
+        .navbar-fixed-left .navbar-nav > li > .dropdown-menu {
+            margin-top: -50px;
+            margin-left: 140px;
+        }
+            .navbar-fixed-left a {
+                float: left;
+                font-size: 25px;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+        .list-group-item-light.list-group-item-action:hover, .list-group-item-light.list-group-item-action:focus {
+            color: #636464;
+            background-color: #edb81c;
+        }
+        .navbar-fixed-left .navbar-nav > a:hover {
+            color: #636464;
+            background-color: #edb81c;
+        }
+        
+        
+    </style>
+</head>
+<body id="body" style="padding-top:0px">
+    <div class="navbar navbar-inverse navbar-fixed-top" style="background-color: white;margin-bottom:0px">
+        <div class="" style="background-color: white; height: 125px;">
+            <div class="navbar-header" style="background-color:white" id="index">
+
+
+                @*@Html.ActionLink(" ", "Index", "Home", new { area = "" }, new { @class = "navbar-brand", @style = "background-image:url('/Images/IHPLogo.png');width:300px;height:60px;background-repeat: no-repeat;" })*@
+
+                <a class="navbar-brand" style="background-color: white !important; height:125px">
+                    <img src="../Images/coco.png" style="width: 100px; height: 115px;" alt="CocoaBeachSurf" />
+                </a>
+
+            </div>
+            <div class="navbar" style=" margin-bottom: 0px">
+                @*<div class="navbar-collapse collapse">*@
+                @*<div id="navbar" class="navbar-collapse collapse">*@
+                @*<ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
+                        <li>@Html.ActionLink("API", "Index", "Help", new { area = "HelpPage" }, null)</li>
+                    </ul>*@
+                @Html.Partial("_LoginPartial")
+
+            </div>
+
+
+        </div>
+    </div>
+    @using Microsoft.AspNet.Identity
+    @if (Request.IsAuthenticated)
+    {
+        <div class="navbar navbar-inverse navbar-fixed-left" style="margin-bottom:0px">
+            @*<a class="navbar-brand" href="#">Brand</a>*@
+            <ul class="nav navbar-nav" style="float:none;font-size:22px;text-align:left">
+
+                <li>@Html.ActionLink("Dashboard", "Index", "Home", new { area = "" }, null) </li>
+                <li>@Html.ActionLink("Reservations", "Reservations", "Home", new { area = "" }, null)</li>
+                <li><a href="#">Payments</a></li>               
+                <li>@Html.ActionLink("Customers", "Customers", "Home", new { area = "" }, null)</li>
+                <li><a href="#">Reports</a></li>
+                <li><a href="#">Inventory</a></li>
+                <li>
+                    <a href="#" style="display:flex" class="subnavAdminbtn">Administrators  <i class="fa fa-caret-down"></i></a>
+
+                    @*<button style="border:unset">
+                Administrators
+                <i class="fa fa-caret-down" style="color:darkblue"></i>
+            </button>*@
+                </li>
+            </ul>
+            <div class="subnav-Admincontent">
+
+                <ul class="nav navbar-nav" style="float:none;font-size:22px;text-align:left">
+                    <li>
+                    <li style="width:100%;font-size:20px">
+                        @Html.ActionLink("Location Types", "LocationTypes", "Home", new { area = "" }, null)
+                    </li>
+                    <li style="width:100%;font-size:20px">@Html.ActionLink("Locations", "Locations", "Home", new { area = "" }, null)</li>                   
+                   
+                </ul>
+
+            </div>
+
+        </div>
+        
+    }
+
+
+    <div class="container body-content" style="margin-top:5px">
+        @RenderBody()
+        @RenderSection("SPAViews", required: false)
+        <hr />
+        @*<footer>
+                <p style="text-align:center;">&copy; @DateTime.Now.Year - Winter Park Construction</p>
+            </footer>*@
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("Scripts", required: false)
+
+
+</body>
+</html>
+

@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="app_authentication_devModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AppRegistration">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AppName" Type="varchar" MaxLength="500" />
+    <Property Name="Url" Type="nvarchar" MaxLength="500" />
+    <Property Name="ImagePath" Type="nvarchar" MaxLength="500" />
+    <Property Name="DefaultAuthorized" Type="smallint" />
+    <Property Name="IsActive" Type="tinyint" />
+    <Property Name="AppType" Type="int" />
+  </EntityType>
+  <EntityType Name="AppType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AppType" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="AppUserValidation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" />
+    <Property Name="AppId" Type="int" />
+    <Property Name="IsAppAdmin" Type="tinyint" />
+    <Property Name="IsGlobalAdmin" Type="tinyint" />
+    <Property Name="IsAllowAccess" Type="tinyint" />
+    <Property Name="IsDeleted" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="AspNetRoles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaims">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ClaimType" Type="nvarchar(max)" />
+    <Property Name="ClaimValue" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogins">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUsers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Hometown" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+    <Property Name="PasswordHash" Type="nvarchar(max)" />
+    <Property Name="SecurityStamp" Type="nvarchar(max)" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" />
+    <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="datetime" />
+    <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Authentication">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Userid" Type="nvarchar" MaxLength="128" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" />
+    <Property Name="Token" Type="nvarchar" MaxLength="1000" />
+    <Property Name="DeviceID" Type="nvarchar" MaxLength="128" />
+    <Property Name="AppId" Type="int" />
+    <Property Name="SignIn" Type="tinyint" />
+    <Property Name="SignOut" Type="tinyint" />
+    <Property Name="LastUsed" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="EConfirmation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GuidKey" Type="nvarchar" MaxLength="128" />
+    <Property Name="CallbackUrl" Type="nvarchar" MaxLength="1000" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="SendDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblCategory">
+    <Key>
+      <PropertyRef Name="CatId" />
+      <PropertyRef Name="Category" />
+    </Key>
+    <Property Name="CatId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Category" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CatDesc" Type="nvarchar" MaxLength="256" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="tblProducts">
+    <Key>
+      <PropertyRef Name="PrdId" />
+    </Key>
+    <Property Name="PrdId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CatId" Type="int" Nullable="false" />
+    <Property Name="PrdCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PrdDesc" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="PrdPrice" Type="money" Nullable="false" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="UserDeviceRegistration">
+    <Key>
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="DeviceID" />
+      <PropertyRef Name="AppID" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="DeviceID" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="AppID" Type="int" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="DeviceName" Type="nvarchar" MaxLength="500" />
+    <Property Name="DeviceOs" Type="nvarchar" MaxLength="100" />
+    <Property Name="DeviceOsVersion" Type="nvarchar" MaxLength="100" />
+    <Property Name="DeviceConfirmed" Type="bit" Nullable="false" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IsDeleted" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IHP_authenticaton_prod.dbo.vw_tblCategory' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vw_tblCategory">
+    <Key>
+      <PropertyRef Name="CatId" />
+      <PropertyRef Name="Category" />
+    </Key>
+    <Property Name="CatId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Category" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CatDesc" Type="nvarchar" MaxLength="256" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IHP_authenticaton_prod.dbo.vw_tblProducts' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vw_tblProducts">
+    <Key>
+      <PropertyRef Name="PrdId" />
+      <PropertyRef Name="CatId" />
+      <PropertyRef Name="PrdCode" />
+      <PropertyRef Name="PrdDesc" />
+      <PropertyRef Name="PrdPrice" />
+      <PropertyRef Name="Active" />
+      <PropertyRef Name="CreatedDate" />
+      <PropertyRef Name="Category" />
+    </Key>
+    <Property Name="PrdId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CatId" Type="int" Nullable="false" />
+    <Property Name="PrdCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PrdDesc" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="PrdPrice" Type="money" Nullable="false" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="Category" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_AppRegistration_AppType">
+    <End Role="AppType" Type="Self.AppType" Multiplicity="0..1" />
+    <End Role="AppRegistration" Type="Self.AppRegistration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AppType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AppRegistration">
+        <PropertyRef Name="AppType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaims">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogins">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+    <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetRoles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="getRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="Token" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_I_tblProducts" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PrdId" Type="int" Mode="In" />
+    <Parameter Name="PrdCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="PrdDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="PrdPrice" Type="money" Mode="In" />
+    <Parameter Name="Active" Type="int" Mode="In" />
+    <Parameter Name="CMBy" Type="nvarchar" Mode="In" />
+    <Parameter Name="CMDate" Type="datetime" Mode="In" />
+    <Parameter Name="Delete" Type="int" Mode="In" />
+    <Parameter Name="CatId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spGetProductList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PrdId" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="app_authentication_devModelStoreContainer">
+    <EntitySet Name="AppRegistration" EntityType="Self.AppRegistration" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AppType" EntityType="Self.AppType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AppUserValidation" EntityType="Self.AppUserValidation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Authentication" EntityType="Self.Authentication" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EConfirmation" EntityType="Self.EConfirmation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCategory" EntityType="Self.tblCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblProducts" EntityType="Self.tblProducts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserDeviceRegistration" EntityType="Self.UserDeviceRegistration" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="vw_tblCategory" EntityType="Self.vw_tblCategory" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_tblCategory].[CatId] AS [CatId], 
+    [vw_tblCategory].[Category] AS [Category], 
+    [vw_tblCategory].[CatDesc] AS [CatDesc], 
+    [vw_tblCategory].[CreatedDate] AS [CreatedDate], 
+    [vw_tblCategory].[ModifiedDate] AS [ModifiedDate], 
+    [vw_tblCategory].[CreatedBy] AS [CreatedBy], 
+    [vw_tblCategory].[ModifiedBy] AS [ModifiedBy]
+    FROM [dbo].[vw_tblCategory] AS [vw_tblCategory]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_tblProducts" EntityType="Self.vw_tblProducts" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_tblProducts].[PrdId] AS [PrdId], 
+    [vw_tblProducts].[CatId] AS [CatId], 
+    [vw_tblProducts].[PrdCode] AS [PrdCode], 
+    [vw_tblProducts].[PrdDesc] AS [PrdDesc], 
+    [vw_tblProducts].[PrdPrice] AS [PrdPrice], 
+    [vw_tblProducts].[Active] AS [Active], 
+    [vw_tblProducts].[CreatedDate] AS [CreatedDate], 
+    [vw_tblProducts].[CreatedBy] AS [CreatedBy], 
+    [vw_tblProducts].[ModifiedDate] AS [ModifiedDate], 
+    [vw_tblProducts].[ModifiedBy] AS [ModifiedBy], 
+    [vw_tblProducts].[Category] AS [Category]
+    FROM [dbo].[vw_tblProducts] AS [vw_tblProducts]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_AppRegistration_AppType" Association="Self.FK_AppRegistration_AppType">
+      <End Role="AppType" EntitySet="AppType" />
+      <End Role="AppRegistration" EntitySet="AppRegistration" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

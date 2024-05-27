@@ -1,0 +1,1583 @@
+﻿@model AuthModule.Models.SalesOrderViewModel
+@{
+    ViewBag.Title = "SaleOrder";
+}
+<style>
+    .page {
+        display: none;
+    }
+
+    .form-control {
+        width: 150%;
+    }
+
+    .chkbox {
+        width: 20px;
+        height: 20px;
+    }
+
+    .lbl {
+        padding: 7px;
+    }
+
+    .txtbox {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+
+    .dd {
+        width: 100px;
+        /* display: block; */
+        /* width: 100%; */
+        height: 26px;
+        /* padding: 6px 12px; */
+        /* font-size: 14px; */
+        /* line-height: 1.42857143; */
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    #sig-canvas {
+        border: 2px dotted #CCCCCC;
+        border-radius: 15px;
+        cursor: crosshair;
+    }
+
+    #sig-canvas1 {
+        border: 2px dotted #CCCCCC;
+        border-radius: 15px;
+        cursor: crosshair;
+    }
+
+    .paymentRow {
+        width: auto
+    }
+</style>
+
+<h2 style="margin-top: 45px;"></h2>
+
+@*@using (Html.BeginForm("SalesOrder", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {*@
+@Html.AntiForgeryToken()
+
+@*@Html.ValidationSummary("", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+        </div>
+        @Html.LabelFor(m => m.Date, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Date, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Date, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Date, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.FirstName, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.LastName, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="button" class="btn btn-default" value="Submit" />
+        </div>
+    </div>*@
+
+
+<div style="display: flex;">
+    <div class="col-md-2" style="margin-top: 20px">
+        @*<button class="btn " style="font-size: 20px;" title="ESP">
+                ESP
+            </button>
+            <button class="btn btn-success" style="font-size: 20px;" title="ENG">
+                ENG
+            </button>*@
+        <a target="" class="btn btn-success " style="font-size: 20px;" title="ESP" href="@Url.Action("SalesOrderSpanish", "Home")" id="Spanish">
+
+            ESP
+        </a>
+        <a target="" class="btn  " style="font-size: 20px;" title="ESP" href="@Url.Action("SalesOrder", "Home")" id="English">
+
+            ENG
+        </a>
+
+
+    </div>
+    <div class="col-md-9">
+        <h1 style="font-size: 27px">ACUERDO COMPRAVENTA EN EFECTIVO/Y GARANTIA</h1>
+    </div>
+    <div style="padding: 5px; margin-top: 20px">
+        <input type="text" hidden id="Od" value="@ViewBag.Od" />
+        <select id="myDropDownLisTId" class="form-control fa fa-user" style="height: 38px; width: 200px;">
+            @*<option>
+                Seleccionar
+            </option>*@
+        </select>
+    </div>
+
+    <hr />
+</div>
+
+<div id="page1" class="page">
+    <div>
+        <h2>
+            I.COMPRADOR/CLIENTE:
+        </h2>
+
+    </div>
+    <div style=" display: flex; flex-wrap: wrap; align-content: flex-start; flex-direction: row-reverse; justify-content: space-between;">
+        @*<div class="form">
+                <label>
+                    Nombre:
+                </label>
+                <div class="input-parent">
+                    <input type="text" class="form-control">
+                </div>
+            </div>*@
+        <div class="form" style="display:none">
+            <label>
+                Cust Id:
+            </label>
+            <div class="input-parent">
+                <input type="text" id="CustId" class="form-control">
+            </div>
+
+        </div>
+        <div class="form">
+            <label>
+                Apellido :
+            </label>
+            <div class="input-parent">
+                <input type="text" id="CustLN" class="form-control">
+            </div>
+
+        </div>
+        <div class="form">
+            <label>
+                Nombre de pila:
+            </label>
+            <div class="input-parent">
+                <input type="text" id="CustFN" class="form-control">
+            </div>
+
+        </div>
+        <div class="form">
+            <label>
+                E-Mail:
+            </label>
+            <div class="input-parent">
+                <input type="text" id="CustEmail" class="form-control">
+            </div>
+
+        </div>
+    </div>
+    <div style="display: flex; flex-direction: row; justify-content: space-between;">
+
+
+        <div class="form">
+            <label>
+                FECHA:
+            </label>
+            <div class="input-parent">
+                <input type="date" id="CustCreatedDate" style=" width: 280px" class="form-control">
+            </div>
+
+        </div>
+        <div class="form" style="margin-left: -80px;">
+            <label>
+                Teléfono:
+            </label>
+            <div class="input-parent">
+                <input type="text" id="CustPhn" class="form-control">
+            </div>
+
+        </div>
+        <div class="form">
+            <label>
+                Ht Movil:
+            </label>
+            <div class="input-parent">
+                <input type="text" id="CustMbl" class="form-control">
+            </div>
+
+        </div>
+    </div>
+    <div>
+        @*II.DIRECCION*@
+        <h2>
+            II.DIRECCION
+        </h2>
+        <div style=" display: flex; flex-wrap: wrap; align-content: flex-start; flex-direction: row; justify-content: space-between;">
+            @*<div class="form">
+                    <label>
+                        #Street:
+                    </label>
+                    <div class="input-parent">
+                        <input type="text" class="form-control">
+                    </div>
+
+
+                </div>
+                <div class="form">
+                    <label>
+                        Subdivision/Country:
+                    </label>
+                    <div class="input-parent">
+                        <input type="text" class="form-control">
+                    </div>
+
+                </div>*@
+
+        </div>
+        <div style=" display: flex; justify-content: space-between;">
+            <div class="form">
+                @*Urb. / Neighborhood*@
+                <label>
+                    Urb. / Barrio:
+                </label>
+                <div class="input-parent">
+                    <input type="text" id="CustStreet" class="form-control">
+                </div>
+
+
+            </div>
+            <div class="form">
+                <label>
+                    @*#Nam Street/Avenue*@
+                    #Calle / Avenida Nam:
+                </label>
+                <div class="input-parent">
+                    <input type="text" id="CustCountry" class="form-control">
+                </div>
+
+            </div>
+            <div class="form">
+                <label>
+                    @*City*@
+                    Cuidad:
+                </label>
+                <div class="input-parent">
+                    <input type="text" id="CustCity" class="form-control">
+                </div>
+
+            </div>
+
+        </div>
+        <div style=" display: flex; flex-wrap: wrap; align-content: flex-start; flex-direction: row-reverse; justify-content: space-between;">
+
+            <div class="form">
+                <label>
+                    @*State*@
+                    Estado:
+                </label>
+                <div class="input-parent">
+                    <input type="text" id="CustState" class="form-control">
+                </div>
+            </div>
+            <div class="form">
+                <label>
+                    ZipCode:
+                </label>
+                <div class="input-parent">
+                    <input type="text" id="CustZipCode" class="form-control">
+                </div>
+            </div>
+            <div class="form">
+                <label>
+                    @*Mailling Address*@
+                    Dirección Postal:
+                </label>
+                <div class="input-parent">
+                    <input type="text" id="CustPOAddress" class="form-control">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h2>
+            III.MERCANCIA
+        </h2>
+        <div class="form" style="display:flex">
+            <div class="input-parent">
+                <a class="btn btn-success" id="ProductSelection" onclick="SaveCustomer()" href="" style="margin-top: 7px;" title="Product Selection">
+                    Selección de producto
+                </a>
+            </div>
+        </div>
+        
+    </div>
+   
+
+    <div>
+        <h2>
+            IV.PRECIO TOTAL DE LA VENTA
+        </h2>
+        <div>
+            <div class="form" style="display: flex; padding: 10px;">
+                <label style="width: 120px">
+                    Mercancia:
+                </label>
+                <div class="input-parent">
+                    <span style="position: absolute; margin-left: 3px; margin-top: 7px;">$</span>
+                    <input type="text" id="TotalMarchandiseAmt" class="form-control" readonly>
+                </div>
+
+            </div>
+            <div class="form" style="display: none; padding: 10px;">
+                <label style="width: 120px">
+                    Menos Trade-In:
+                </label>
+                <div class="input-parent">
+                    <span style="position: absolute; margin-left: 3px; margin-top: 7px;">$</span>
+                    <input type="text" id="MinusTradeIn" class="form-control">
+                </div>
+
+            </div>
+            <div class="form" style="display: none; padding: 10px;">
+                <label style="width: 120px">
+                    Descuento/precio especial:
+                </label>
+                <div class="input-parent">
+                    <span style="position: absolute; margin-left: 3px; margin-top: 7px;">$</span>
+                    <input type="text" id="DiscountPrice" class="form-control">
+                </div>
+
+            </div>
+            
+            <div class="form" style="display: flex; padding: 10px;">
+                <label style="width: 120px">
+                    Subtotal:
+                </label>
+                <div class="input-parent">
+                    <span style="position: absolute; margin-left: 3px; margin-top: 7px;">$</span>
+                    <input type="text" id="SubTotal" readonly class="form-control">
+                </div>
+
+            </div>
+            <div class="form" style="display: flex; padding: 10px;">
+                <label style="width: 120px">
+                    mds Impuestos:
+                </label>
+                <div class="input-parent">
+                    <span style="position: absolute; margin-left: 3px; margin-top: 7px;">$</span>
+                    <input type="text" readonly id="PlusTaxes" class="form-control">
+                </div>
+
+            </div>
+            <div class="form" style="display: flex; padding: 10px;">
+                <label style="width: 120px">
+                    Precio Total:
+                </label>
+                <div class="input-parent">
+                    <span style="position: absolute; margin-left: 3px; margin-top: 7px;">$</span>
+                    <input type="text" readonly id="TotalSalesPrice" class="form-control">
+                </div>
+
+            </div>
+            <div class="form" style="display: flex; padding: 10px;">
+                <label style="width: 120px">
+                    Ubicación:
+                </label>
+                <div class="input-parent">
+                    <select id="Location">
+                        <option value="0.065">Florida(6.5%)</option>
+                        <option value="0.115">Puerto Rico(11.5%)</option>
+                    </select>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div>
+        <h2>
+            V.PAGO /METODO DE PAGO
+        </h2>
+        <div>
+            @*----Old Payment method ---*@
+            <div style="display:none">
+                <div class="form" style="display: flex; padding: 10px;">
+                    <label style="width: 120px">
+                        $
+                    </label>
+                    <div class="input-parent">
+                        <input type="text" class="form-control">
+                    </div>
+
+                </div>
+                <div class="form" style="display: flex; padding: 10px;">
+                    <label style="width: 120px">
+                        Depésito $
+                    </label>
+                    <div class="input-parent">
+                        <input type="text" class="form-control">
+                    </div>
+
+                </div>
+                <div class="form" style="display: flex; padding: 10px;">
+                    <label style="width: 120px">
+                        C.O.D $
+                    </label>
+                    <div class="input-parent">
+                        <input type="text" class="form-control">
+                    </div>
+
+                </div>
+                <div class="form" style="display: flex; padding: 10px;">
+                    <label style="width: 120px">
+                        Payment Types
+                    </label>
+                    <div class="input-parent">
+                        <select id="PaymentDD1" class="form-control  fa-user" style="height: 38px;">
+                        </select>
+                        @*<input type="text" class="txtbox" style="width:110%;margin-top:15px">*@
+
+                        <div class="form-body" id="CreditCard" style="display: none; margin-top: 5px">
+                            <!-- Card Number -->
+                            <div style="display:flex">
+                                <input type="text" style=" width: 61px;" disabled class=" form-control card-number" maxlength="4" id="pin" pattern="\d{4}" placeholder="XXXX">
+                                <input type="text" style=" width: 61px;" disabled class=" form-control card-number" maxlength="4" id="pin" pattern="\d{4}" placeholder="XXXX">
+                                <input type="text" style=" width: 61px;" disabled class=" form-control card-number" maxlength="4" id="pin" pattern="\d{4}" placeholder="XXXX">
+                                <input type="text" style=" width: 99px;" class=" form-control card-number" maxlength="4" id="pin" pattern="\d{4}" placeholder="Last 4 digits">
+
+                            </div>
+
+
+                            <!-- Date Field -->
+                            <div class="date-field" style="margin-top:5px">
+                                <div class="month">
+                                    <select name="Month" class="form-control  fa-user">
+
+                                        <option value="january">January</option>
+                                        <option value="february">February</option>
+                                        <option value="march">March</option>
+                                        <option value="april">April</option>
+                                        <option value="may">May</option>
+                                        <option value="june">June</option>
+                                        <option value="july">July</option>
+                                        <option value="august">August</option>
+                                        <option value="september">September</option>
+                                        <option value="october">October</option>
+                                        <option value="november">November</option>
+                                        <option value="december">December</option>
+                                    </select>
+                                </div>
+                                <div class="year" style="margin-top:5px">
+                                    <select name="Year" class="form-control  fa-user">
+
+                                        <option value="2024">2024</option>
+                                        <option value="2024">2025</option>
+                                        <option value="2024">2026</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div class="card-verification" style="margin-top:5px">
+                                <div class="cvv-input">
+                                    <input type="text" placeholder="CVV" class="form-control">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div id="NonCreditCard" style="display: none; margin-top: 5px">
+                            <div class="form" style="display: flex;">
+
+                                <div class="input-parent">
+                                    <input type="text" class="form-control">
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="form" style="display: flex; padding: 10px;">
+                    <label style="width: 120px">
+                        Promotion Code
+                    </label>
+                    <div class="input-parent">
+                        <input type="text" class="form-control">
+                    </div>
+
+                </div>
+                <div class="col-md-12" style="display:none">
+                    <div class="col-md-7">
+                        <div class="form" style="display:flex">
+
+                            <div class="input-parent">
+                                <input type="checkbox" class="chkbox">
+                            </div>
+                            <label class="lbl">
+                                Cash
+                            </label>
+
+                        </div>
+                        <div class="form" style="display:flex">
+
+                            <div class="input-parent">
+                                <input type="checkbox" class="chkbox">
+                            </div>
+                            <label class="lbl">
+                                Cheque#
+                            </label>
+                            <input type="text" class="txtbox">
+                        </div>
+                        <div class="form" style="display:flex">
+
+                            <div class="input-parent">
+                                <input type="checkbox" class="chkbox">
+                            </div>
+                            <label class="lbl">
+                                Credit Card V/MC/Amx/D
+                            </label>
+
+                        </div>
+                        <div class="form" id="CreditAppDdwnVisible" style="display:flex">
+
+                            <div class="input-parent">
+                                <input type="checkbox" class="chkbox">
+                            </div>
+                            <select id="CreditAppDdwn1" class="form-control  fa-user" style="height: 38px; margin-left: 5px;">
+                            </select>
+
+                        </div>
+
+                        <div id="CreditAppDdwnHide" class="form" style="display:none">
+
+                            <div class="input-parent">
+                                <input id="CreditAppDdwnchk" type="checkbox" checked class="chkbox">
+                            </div>
+                            <label id="CreditAppDdwntext" class="lbl">
+
+                            </label>
+                            <input type="text" class="txtbox">
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-8">
+
+                    </div>
+                </div>
+
+            </div>
+            @*----Old Payment method end---*@
+            <div>
+                <table style="display:none">
+                    <thead>
+
+                        <tr>
+                            <th></th>
+                            <th style="text-align:center">Amount</th>
+                            <th style="text-align:center">Number</th>
+                            <th style="text-align:center">Confirmation|Note</th>
+                            <th style="text-align:center">Date</th>
+                            <th style="text-align:center"><button class="form-control">+</button></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <select id="PaymentDD" class="form-control  fa-user" style="width: auto">
+                                </select>
+                            </td>
+                            <td>
+                                <span style="position: absolute; margin-left: 3px; margin-top: 7px;">$</span>
+                                <input type="text" class="form-control" style="width:auto">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" style="width:auto">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" style="width:auto">
+                            </td>
+                            <td>
+                                <input type="date" class="form-control" style="width:auto">
+                            </td>
+                            <td>
+                                <button class="form-control">X</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table id="paymentTable">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th style="text-align:center">Amount</th>
+                            <th style="text-align:center">Number</th>
+                            <th style="text-align:center">Cofirmation | Note</th>
+                            <th style="text-align:center">Date</th>
+                            <th> <button class="form-control" onclick="addRow()">+</button></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <select id="CreditAppDdwn" class="form-control" style="width:auto">
+                                </select>
+                            </td>
+                            <td><input class="form-control mytextbox" type="text" style="width:auto" name="price[]"></td>
+                            <td><input class="form-control" type="text" style="width:auto" name="number[]"></td>
+                            <td><input class="form-control" type="text" style="width:auto" name="note[]"></td>
+                            <td><input class="form-control" type="date" style="width:auto" name="date[]"></td>
+                            <td> <button class="form-control">X</button> </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <table>
+
+                        <tbody>
+                            <tr>
+                                <th><label class="form-control" style="padding-right: 111px;">Remaining Balance</label></th>
+                                <td><input class="form-control" id="Balance" autocomplete="off" type="text" style="width:auto" placeholder="$0">
+                                <td><label id="errmsg" style="color:red;padding-top:13px"></label></td>
+                            </tr>
+                            @*<tr>
+                                    <th><label class="form-control" style="padding-right: 170px;" >Balance</label></th>
+                                    <td><input class="form-control" id="total1" type="text" style="width:auto" placeholder="0"></td>
+                                </tr>*@
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    <div>
+        <h2>VI. GARANTIA DE FABRICAn     </h2>
+        <div>
+            <p style="font-weight: bold">
+                La garantia de su mercancia es provisto por el fabricante. Para informacién sobre los términos de garantia consulte el
+                Manual y/o la Hoja de Garantfa del fabricante que se incluye con su mercancia. El comprador/ cliente es responsable de
+                registrarse con el manufacturero usando la tarjeta que se incluye en el Manual del Equipo para poder reclamar la garantfa.
+
+
+
+            </p>
+        </div>
+    </div>
+    <div>
+        <h2>VII. POLITICA DE DEVOLUCION DE MERCANCIA</h2>
+        <div>
+            <p style="font-weight: bold">
+                El comprador/ cliente tendré (3) dias laborales, contados a partir de la entrega de la mercancia, para devolver y cancelar el
+                contrato; sujeto a que la mercancia esté en su estado de entrega y no haya sufrido dafios o desperfectos. En el evento de
+                una devolucién, el cliente vendré obligado a pagar $45 por concepto de gastos de entrega, ademds de gastos incurridos por
+                concepto de instalacién y desconeccion, si aplica.
+            </p>
+            <p style="font-weight: bold">
+                <b style="font-weight: 900">MIENTRAS</b> Por todo lo cual las partes firman en aceptacién de la compraventa de la mercancia y de todos los términos descritos eneste acuerdo.
+
+            </p>
+            <p style="font-weight: bold">HOY fecha<input type="text" /> en <input type="text" />,PR.</p>
+
+            <div style="display: flex; justify-content: space-between;">
+                <div>
+                    <h3>
+                        COMPRADOR/ CLIENTE
+                    </h3>
+                    <div>
+                        @*<input type="text" class="form-control" style="height:80px" />*@
+                        <canvas id="sig-canvas" width="300" height="100">
+                            Get a better browser, bro.
+                        </canvas>
+                        <p>
+                            Firma del Comprador / Cliente
+                        </p>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button class="btn btn-primary" id="sig-submitBtn">Submit Signature</button>
+                            <button class="btn btn-default" id="sig-clearBtn">Clear Signature</button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3>
+                        COMPANIA / VENDEDOR:
+                    </h3>
+                    <div>
+                        @*<input type="text" class="form-control" style="height:80px" />*@
+                        <canvas id="sig-canvas1" width="300" height="100">
+                            Get a better browser, bro.
+                        </canvas>
+                        <p>Firma del Rapresentants de Ventas.</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button class="btn btn-primary" id="sig-submitBtn1">Submit Signature</button>
+                            <button class="btn btn-default" id="sig-clearBtn1">Clear Signature</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="col-md-12" style="text-align:center">
+        @*<button class="btn btn-success" style="font-size: 20px;" OnClick="Save()" href="#" id="MncAgr" title="Ahorrar">
+                Ahorrar
+            </button>*@
+        <a class="btn btn-success" OnClick="Save()" href="#" id="MncAgr" style=" font-size: 20px;">
+            Ahorrar
+        </a>
+    </div>
+    <div>
+        <h1>&nbsp;</h1>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+@*}*@
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>
+    localStorage.setItem("lang", "Span");
+    var currentPage = 1;
+    var totalPage = 4;
+    let customer = [
+        {
+            CustEmail : "",
+            CustFN : "",
+            CustLN: "",
+            CustPhn:  "",
+            CustMbl: "",
+            CustStreet: "",
+            CustPOAddress: "",
+            CustCity: "",
+            CustCountry: "",
+            CustState: "",
+            CustZipCode: ""
+        }
+    ];
+    var PayTypes = [];
+    window.document.onload = function (e) {
+        console.log("document.onload", e, Date.now(), window.tdiff,
+            (window.tdiff[0] = Date.now()) && window.tdiff.reduce(fred));
+        showPage(currentPage);
+        localStorage.setItem("CustEmail", "");
+        getCustomerByEmail();
+
+    }
+    $(document).ready(function () {
+        showPage(currentPage);
+        getCustomerByEmail();
+        creditAppDdwnData();
+        //alert($("#Od").val())
+
+    })
+    function showPage(pageNumber) {
+        var pages = document.getElementsByClassName("page");
+        //var pages = Array.from(document.getElementsByClassName('page') as HTMLCollectionOf<HTMLElement>)
+        for (var i = 0; i < pages.length; i++) {
+            pages[i].style.display = "none";
+        }
+        document.getElementById("page" + pageNumber).style.display = "block";
+
+    }
+    function nextPage() {
+        //alert("Hi")
+        if (currentPage < totalPage) {
+            currentPage++;
+            showPage(currentPage);
+        }
+    }
+    function Save() {
+        //alert("Saved")
+        if ($("#Location").val() == "0.115") {
+            document.getElementById("MncAgr").href = "MaintenanceAgreement"
+
+        }
+        localStorage.setItem("CustEmail", $('#CustEmail').val().trim());
+    }
+    function previousPage() {
+        if (currentPage > 1) {
+            currentPage--;
+            showPage(currentPage);
+        }
+    }
+    function SaveCustomer() {
+
+        $('#CustEmail').val();
+        localStorage.setItem("CustEmail", $('#CustEmail').val().trim());
+        if ($('#CustId').val() === "") {
+            customer = {
+                CustEmail: $('#CustEmail').val(),
+                CustFN: $('#CustFN').val(),
+                CustLN: $('#CustLN').val(),
+                CustPhn: $('#CustPhn').val(),
+                CustMbl: $('#CustMbl').val(),
+                CustStreet: $('#CustStreet').val(),
+                CustPOAddress: $('#CustPOAddress').val(),
+                CustCity: $('#CustCity').val(),
+                CustCountry: $('#CustCountry').val(),
+                CustState: $('#CustState').val(),
+                CustZipCode: $('#CustZipCode').val()
+            }
+            //alert(customer.CustEmail)
+
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("SaveCustomer")',
+                data: JSON.stringify(customer),
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function () {
+                    // alert("Data has been added successfully.");
+                    $.get("/Home/ProductSelection",
+                        {
+
+                        },
+                        function (data, status) {
+                            var d = data
+                        });
+                },
+                error: function () {
+                    alert("Error while inserting data");
+                }
+            });
+        }
+        else
+        {
+            var e = document.getElementById("myDropDownLisTId");
+            var value = e.options[e.selectedIndex].value;
+            var text = e.options[e.selectedIndex].text;
+            //alert(text)
+            //var result = document.getElementById("ProductSelection").value;
+            localStorage.setItem("OrderID", value.trim());
+            document.getElementById("ProductSelection").href = "ProductSelection?OrderId=" + value;
+            //$.get("/Home/ProductSelection",
+            //    {
+            //        OrderId: $('#myDropDownLisTId').val()
+            //    },
+            //    function (data, status) {
+            //        var d = data
+            //    });
+        }
+
+    }
+    $("#CustEmail").blur(function () {
+        //alert('working');
+        var SearchTerm = document.getElementById("CustEmail").value
+        if (SearchTerm != "") {
+            $.get("/Home/GetCustomerByEmail",
+                {
+                    Email: SearchTerm
+                },
+                function (data, status) {
+                    if (data != null && data != "") {
+                        console.log(data);
+                        $('#CustId').val(data[0].CustId);
+                        $('#CustEmail').val(data[0].CustEmail);
+                        $('#CustFN').val(data[0].CustFN);
+                        $('#CustLN').val(data[0].CustLN);
+                        $('#CustMbl').val(data[0].CustMbl);
+                        $('#CustPOAddress').val(data[0].CustPOAddress);
+                        $('#CustPhn').val(data[0].CustPhn);
+                        $('#CustState').val(data[0].CustState);
+                        $('#CustStreet').val(data[0].CustStreet);
+                        $('#CustZipCode').val(data[0].CustZipCode);
+                        $('#CustCountry').val(data[0].CustCountry);
+                        $('#CustCity').val(data[0].CustCity);
+                        var now = new Date(data[0].CreatedDate.match(/\d+/)[0] * 1);
+                        now.toLocaleDateString()
+                        var day = ("0" + now.getDate()).slice(-2);
+                        var month = ("0" + (now.getMonth() + 1)).slice(-2);
+                        var today = now.getFullYear() + "-" + (month) + "-" + (day);
+                        $('#CustCreatedDate').val(today);
+                        getOrderDetailsByCustId(data[0].CustId)
+                    }
+                    else {
+                        ClearAllFields();
+                        $("#myDropDownLisTId").append($("<option>", {
+                            value: "0",
+                            text: "New"
+                        }));
+
+                    }
+
+
+                    //alert("Data: " + data + "\nStatus: " + status);
+                    //alert("Changed!");
+                });
+        }
+        localStorage.setItem("OrderID", "");
+    })
+
+
+    function getCustomerByEmail() {
+
+        $.get("/Home/GetCustomerByEmail",
+            {
+                Email: localStorage.getItem("CustEmail").trim()
+            },
+            function (data, status) {
+
+                if (data != null && data != "") {
+                    console.log(data);
+                    $('#CustId').val(data[0].CustId);
+                    $('#CustEmail').val(data[0].CustEmail);
+                    $('#CustFN').val(data[0].CustFN);
+                    $('#CustLN').val(data[0].CustLN);
+                    $('#CustMbl').val(data[0].CustMbl);
+                    $('#CustPOAddress').val(data[0].CustPOAddress);
+                    $('#CustPhn').val(data[0].CustPhn);
+                    $('#CustState').val(data[0].CustState);
+                    $('#CustStreet').val(data[0].CustStreet);
+                    $('#CustZipCode').val(data[0].CustZipCode);
+                    $('#CustCountry').val(data[0].CustCountry);
+                    $('#CustCity').val(data[0].CustCity);
+                    var now = new Date(data[0].CreatedDate.match(/\d+/)[0] * 1);
+                    now.toLocaleDateString()
+                    var day = ("0" + now.getDate()).slice(-2);
+                    var month = ("0" + (now.getMonth() + 1)).slice(-2);
+                    var today = now.getFullYear() + "-" + (month) + "-" + (day);
+                    $('#CustCreatedDate').val(today);
+                    getOrderDetailsByCustId(data[0].CustId)
+
+                } else {
+                    ClearAllFields();
+                    $('#CustEmail').val(localStorage.getItem("CustEmail").trim())
+                }
+
+
+
+
+                //alert("Data: " + data + "\nStatus: " + status);
+                //alert("Changed!");
+            });
+    }
+    function ClearAllFields() {
+        $('#CustId').val('');
+        $('#CustFN').val('');
+        $('#CustLN').val('');
+        $('#CustMbl').val('');
+        $('#CustPOAddress').val('');
+        $('#CustPhn').val('');
+        $('#CustState').val('');
+        $('#CustStreet').val('');
+        $('#CustZipCode').val('');
+        $('#CustCountry').val('');
+        $('#CustCity').val('');
+        var now = new Date();
+        var day = ("0" + now.getDate()).slice(-2);
+        var month = ("0" + (now.getMonth() + 1)).slice(-2);
+        var today = now.getFullYear() + "-" + (month) + "-" + (day);
+        $('#CustCreatedDate').val(today);
+    }
+
+    function getOrderDetailsByCustId1(CustId) {
+
+        $.get("/Home/GetOrderDetailsByCustId",
+            {
+                CustId: CustId
+            },
+            function (data, status) {
+                 let d = data;
+            });
+    }
+    function getOrderDetailsByCustId(CustId) {
+
+
+        $.get("/Home/GetOrderDetailsByCustId",
+            {
+                CustId: CustId
+            },
+            function (data, status) {
+                let d = data;
+                $.each(data, function () {
+                    //$(".myDropDownLisTId").append($("<option     />").val(this.OrderId).text(this.OrderId));
+                    //var OptionValue = $(this).find('OrderId').text();
+                    //var OptionText = $(this).find('OrderId').text();
+                    //var option = $("<option>" + OptionText + "</option>");
+                    //option.attr("value", OptionValue);
+
+                    //myDropDownList.append(option);
+
+                    $("#myDropDownLisTId").empty();
+                    $("#myDropDownLisTId").append($("<option>", {
+                        value: "0",
+                        text: "New"
+                    }));
+                    $.each(data, function (i, item) {
+
+                        $("#myDropDownLisTId").append($("<option>", {
+                            value: item.OrderId,
+                            text: item.OrderId
+                        }));
+                    });
+                });
+
+                if (data.length == 0) {
+                    $("#myDropDownLisTId").append($("<option>", {
+                        value: "0",
+                        text: "New"
+                    }));
+                }
+                if ($("#Od").val() != '' && $("#Od").val() != null)
+                    $("#myDropDownLisTId").val($("#Od").val())
+                if (localStorage.getItem("OrderID").trim() != '' && localStorage.getItem("OrderID").trim() != "New" &&  localStorage.getItem("OrderID").trim() != "0")
+                    $("#myDropDownLisTId").val(localStorage.getItem("OrderID").trim())
+
+                if ($("#Od").val() != '' && $("#Od").val() != null)
+                {
+                    //getProdcutTotalByOrderId(localStorage.getItem("OrderID").trim())
+                    getProdcutTotalByOrderId($("#myDropDownLisTId").val())
+                }
+
+            });
+    }
+    function getProdcutTotalByOrderId(OrderId) {
+
+        $.get("/Home/GetProdcutTotalByOrderId",
+            {
+                OrderId: OrderId
+            },
+            function (data, status) {
+                //alert(data)
+                let d = data;
+                $("#TotalMarchandiseAmt").val(data);
+                $("#MinusTradeIn").val(0);
+                $("#DiscountPrice").val(0);
+                CalCulatePrice();
+
+            });
+    }
+    $(function () {
+        $("#myDropDownLisTId").change(function () {
+            //alert($('option:selected', this).text());
+            getProdcutTotalByOrderId($("#myDropDownLisTId").val());
+        });
+    });
+    function CalCulatePrice()
+    {
+        if ($("#TotalMarchandiseAmt").val() != null && $("#TotalMarchandiseAmt").val() != '') {
+            $("#SubTotal").val((parseFloat($("#TotalMarchandiseAmt").val()) - parseFloat($("#MinusTradeIn").val()) - parseFloat($("#DiscountPrice").val())).toFixed(2));
+            $("#Location").val();
+            $("#PlusTaxes").val((parseFloat($("#SubTotal").val()) * parseFloat($("#Location").val())).toFixed(2));          
+            $("#TotalSalesPrice").val((parseFloat($("#SubTotal").val()) + parseFloat($("#PlusTaxes").val())).toFixed(2));
+            $("#SubTotal").val();
+          
+        }
+    }
+
+    $("#MinusTradeIn").on("input", function () {
+        // Print entered value in a div box
+        //$(this).val()
+        if ($(this).val() == "") {
+            $("#MinusTradeIn").val(0);
+        }
+        else {
+            $("#MinusTradeIn").val($(this).val());
+        }
+
+        CalCulatePrice();
+    });
+    $("#DiscountPrice").on("input", function () {
+        // Print entered value in a div box
+        //$(this).val()
+        if ($(this).val() == "") {
+            $("#DiscountPrice").val(0);
+        }
+        else {
+            $("#DiscountPrice").val($(this).val());
+        }
+
+        CalCulatePrice();
+    });
+    $("#Location").change(function () {
+       // alert($('option:selected', this).text());
+        CalCulatePrice();
+    });
+    function creditAppDdwnData() {
+
+
+        $.get("/Home/GetCreditAppDdwnData",
+            {
+
+            },
+            function (data, status) {
+                let d = data;
+                PayTypes = data;
+                $.each(data, function () {
+
+
+                    $("#CreditAppDdwn").empty();
+                    $("#CreditAppDdwn").append($("<option>", {
+                        value: "0",
+                        text: "Select"
+                    }));
+                    $.each(data, function (i, item) {
+
+                        $("#CreditAppDdwn").append($("<option>", {
+                            value: item.Id,
+                            text: item.CreditAppDesc
+                        }));
+                    });
+                });
+
+
+
+
+            });
+    }
+    $(function () {
+        $("#CreditAppDdwn").change(function () {
+            //alert($('option:selected', this).text());            
+            var CreditAppDdwntext = $('option:selected', this).text()
+
+            document.getElementById("CreditAppDdwnVisible").style.display = "none";
+            document.getElementById("CreditAppDdwnHide").style.display = "flex";
+            document.getElementById('CreditAppDdwntext').innerHTML = CreditAppDdwntext;
+
+        });
+    });
+    $(function () {
+        $("#CreditAppDdwnchk").change(function () {
+            //alert($('option:selected', this).text());        
+            document.getElementById("CreditAppDdwnVisible").style.display = "flex";
+            document.getElementById("CreditAppDdwnHide").style.display = "none";
+            $("#CreditAppDdwn").val('0')
+        });
+    }); 
+    $(function () {
+        $("#PaymentDD").change(function () {
+            //alert($('option:selected', this).text());            
+            var PaymentDDtext = $('option:selected', this).text()
+            if (PaymentDDtext == "Credit Card V/MC/Amx/D") {
+                document.getElementById("CreditCard").style.display = "block";
+                document.getElementById("NonCreditCard").style.display = "none";
+            }
+            else {
+                document.getElementById("CreditCard").style.display = "none";
+
+                document.getElementById("NonCreditCard").style.display = "block";
+            }
+
+
+
+
+        });
+    });
+
+    (function () {
+        window.requestAnimFrame = (function (callback) {
+            return window.requestAnimationFrame ||
+                window.webkitRequestAnimationFrame ||
+                window.mozRequestAnimationFrame ||
+                window.oRequestAnimationFrame ||
+                window.msRequestAnimaitonFrame ||
+                function (callback) {
+                    window.setTimeout(callback, 1000 / 60);
+                };
+        })();
+
+        var canvas = document.getElementById("sig-canvas");
+        var canvas1 = document.getElementById("sig-canvas1");
+        var ctx = canvas.getContext("2d");
+        ctx.strokeStyle = "#222222";
+        ctx.lineWidth = 3;
+
+        var drawing = false;
+        var mousePos = {
+            x: 0,
+            y: 0
+        };
+        var lastPos = mousePos;
+
+        canvas.addEventListener("mousedown", function (e) {
+            drawing = true;
+            lastPos = getMousePos(canvas, e);
+        }, false);
+
+        canvas.addEventListener("mouseup", function (e) {
+            drawing = false;
+        }, false);
+
+        canvas.addEventListener("mousemove", function (e) {
+            mousePos = getMousePos(canvas, e);
+        }, false);
+
+        // Add touch event support for mobile
+        canvas.addEventListener("touchstart", function (e) {
+
+        }, false);
+
+        canvas.addEventListener("touchmove", function (e) {
+            var touch = e.touches[0];
+            var me = new MouseEvent("mousemove", {
+                clientX: touch.clientX,
+                clientY: touch.clientY
+            });
+            canvas.dispatchEvent(me);
+        }, false);
+
+        canvas.addEventListener("touchstart", function (e) {
+            mousePos = getTouchPos(canvas, e);
+            var touch = e.touches[0];
+            var me = new MouseEvent("mousedown", {
+                clientX: touch.clientX,
+                clientY: touch.clientY
+            });
+            canvas.dispatchEvent(me);
+        }, false);
+
+        canvas.addEventListener("touchend", function (e) {
+            var me = new MouseEvent("mouseup", {});
+            canvas.dispatchEvent(me);
+        }, false);
+
+        function getMousePos(canvasDom, mouseEvent) {
+            var rect = canvasDom.getBoundingClientRect();
+            return {
+                x: mouseEvent.clientX - rect.left,
+                y: mouseEvent.clientY - rect.top
+            }
+        }
+
+        function getTouchPos(canvasDom, touchEvent) {
+            var rect = canvasDom.getBoundingClientRect();
+            return {
+                x: touchEvent.touches[0].clientX - rect.left,
+                y: touchEvent.touches[0].clientY - rect.top
+            }
+        }
+
+        function renderCanvas() {
+            if (drawing) {
+                ctx.moveTo(lastPos.x, lastPos.y);
+                ctx.lineTo(mousePos.x, mousePos.y);
+                ctx.stroke();
+                lastPos = mousePos;
+            }
+        }
+
+        // Prevent scrolling when touching the canvas
+        document.body.addEventListener("touchstart", function (e) {
+            if (e.target == canvas) {
+                e.preventDefault();
+            }
+        }, false);
+        document.body.addEventListener("touchend", function (e) {
+            if (e.target == canvas) {
+                e.preventDefault();
+            }
+        }, false);
+        document.body.addEventListener("touchmove", function (e) {
+            if (e.target == canvas) {
+                e.preventDefault();
+            }
+        }, false);
+
+        (function drawLoop() {
+            requestAnimFrame(drawLoop);
+            renderCanvas();
+        })();
+
+        function clearCanvas() {
+            canvas.width = canvas.width;
+        }
+
+        // Set up the UI
+        var sigText = document.getElementById("sig-dataUrl");
+        var sigImage = document.getElementById("sig-image");
+        var clearBtn = document.getElementById("sig-clearBtn");
+        var submitBtn = document.getElementById("sig-submitBtn");
+        clearBtn.addEventListener("click", function (e) {
+            clearCanvas();
+            sigText.innerHTML = "Data URL for your signature will go here!";
+            sigImage.setAttribute("src", "");
+        }, false);
+        submitBtn.addEventListener("click", function (e) {
+            var dataUrl = canvas.toDataURL();
+            sigText.innerHTML = dataUrl;
+            sigImage.setAttribute("src", dataUrl);
+        }, false);
+
+    })();
+
+    //// Second Signature
+    (function () {
+        window.requestAnimFrame = (function (callback) {
+            return window.requestAnimationFrame ||
+                window.webkitRequestAnimationFrame ||
+                window.mozRequestAnimationFrame ||
+                window.oRequestAnimationFrame ||
+                window.msRequestAnimaitonFrame ||
+                function (callback) {
+                    window.setTimeout(callback, 1000 / 60);
+                };
+        })();
+
+        var canvas1 = document.getElementById("sig-canvas1");
+
+        var ctx1 = canvas1.getContext("2d");
+        ctx1.strokeStyle = "#222222";
+        ctx1.lineWidth = 3;
+
+        var drawing1 = false;
+        var mousePos1 = {
+            x: 0,
+            y: 0
+        };
+        var lastPos1 = mousePos1;
+
+        canvas1.addEventListener("mousedown", function (e) {
+            drawing1 = true;
+            lastPos1 = getMousePos(canvas1, e);
+        }, false);
+
+        canvas1.addEventListener("mouseup", function (e) {
+            drawing1 = false;
+        }, false);
+
+        canvas1.addEventListener("mousemove", function (e) {
+            mousePos1 = getMousePos(canvas1, e);
+        }, false);
+
+        // Add touch event support for mobile
+        canvas1.addEventListener("touchstart", function (e) {
+
+        }, false);
+
+        canvas1.addEventListener("touchmove", function (e) {
+            var touch = e.touches[0];
+            var me1 = new MouseEvent("mousemove", {
+                clientX: touch.clientX,
+                clientY: touch.clientY
+            });
+            canvas.dispatchEvent(me);
+        }, false);
+
+        canvas1.addEventListener("touchstart", function (e) {
+            mousePos = getTouchPos(canvas1, e);
+            var touch = e.touches[0];
+            var me = new MouseEvent("mousedown", {
+                clientX: touch.clientX,
+                clientY: touch.clientY
+            });
+            canvas.dispatchEvent(me);
+        }, false);
+
+        canvas1.addEventListener("touchend", function (e) {
+            var me = new MouseEvent("mouseup", {});
+            canvas.dispatchEvent(me);
+        }, false);
+
+        function getMousePos(canvasDom, mouseEvent) {
+            var rect = canvasDom.getBoundingClientRect();
+            return {
+                x: mouseEvent.clientX - rect.left,
+                y: mouseEvent.clientY - rect.top
+            }
+        }
+
+        function getTouchPos(canvasDom, touchEvent) {
+            var rect = canvasDom.getBoundingClientRect();
+            return {
+                x: touchEvent.touches[0].clientX - rect.left,
+                y: touchEvent.touches[0].clientY - rect.top
+            }
+        }
+
+        function renderCanvas() {
+            if (drawing1) {
+                ctx1.moveTo(lastPos1.x, lastPos1.y);
+                ctx1.lineTo(mousePos1.x, mousePos1.y);
+                ctx1.stroke();
+                lastPos1 = mousePos1;
+            }
+        }
+
+        // Prevent scrolling when touching the canvas
+        document.body.addEventListener("touchstart", function (e) {
+            if (e.target == canvas1) {
+                e.preventDefault();
+            }
+        }, false);
+        document.body.addEventListener("touchend", function (e) {
+            if (e.target == canvas) {
+                e.preventDefault();
+            }
+        }, false);
+        document.body.addEventListener("touchmove", function (e) {
+            if (e.target == canvas) {
+                e.preventDefault();
+            }
+        }, false);
+
+        (function drawLoop() {
+            requestAnimFrame(drawLoop);
+            renderCanvas();
+        })();
+
+        function clearCanvas1() {
+            canvas1.width = canvas1.width;
+        }
+
+        // Set up the UI
+        var sigText1 = document.getElementById("sig-dataUrl1");
+        var sigImage1 = document.getElementById("sig-image1");
+        var clearBtn1 = document.getElementById("sig-clearBtn1");
+        var submitBtn1 = document.getElementById("sig-submitBtn1");
+        clearBtn1.addEventListener("click", function (e) {
+            clearCanvas1();
+            sigText1.innerHTML = "Data URL for your signature will go here!";
+            sigImage1.setAttribute("src", "");
+        }, false);
+        submitBtn1.addEventListener("click", function (e) {
+            var dataUrl1 = canvas1.toDataURL();
+            sigText1.innerHTML = dataUrl1;
+            sigImage1.setAttribute("src", dataUrl1);
+        }, false);
+
+    })();
+
+    function addRow() {
+        var table = document.getElementById("paymentTable").getElementsByTagName('tbody')[0];
+        var newRow = table.insertRow(table.rows.length);
+        newRow.id = "Id" + table.rows.length;
+        var cell1 = newRow.insertCell(0);
+        var cell2 = newRow.insertCell(1);
+        var cell3 = newRow.insertCell(2);
+        var cell4 = newRow.insertCell(3);
+        var cell5 = newRow.insertCell(4);
+        var cell6 = newRow.insertCell(5);
+
+        var paymentMethodDropdown = document.createElement("select");
+        paymentMethodDropdown.name = "paymentMethod[]";
+        var paymentOptions = ["cash", "creditCard", "cheque"];
+        //for (var i = 0; i < paymentOptions.length; i++) {
+        //    var option = document.createElement("option");
+        //    option.value = paymentOptions[i];
+        //    option.text = paymentOptions[i];
+        //    paymentMethodDropdown.appendChild(option);
+        //}
+        var option1 = document.createElement("option");
+        option1.value = "0";
+        option1.text = "Select";
+        paymentMethodDropdown.appendChild(option1);
+        for (var i = 0; i < PayTypes.length; i++) {
+            var option = document.createElement("option");
+            option.value = PayTypes[i].Id;
+            option.text = PayTypes[i].CreditAppDesc;
+            paymentMethodDropdown.appendChild(option);
+        }
+        paymentMethodDropdown.className = "form-control paymentRow "
+
+
+        var priceInput = document.createElement("input");
+        priceInput.type = "text";
+        priceInput.name = "price[]";
+        priceInput.className = "form-control paymentRow mytextbox"
+        var numberInput = document.createElement("input");
+        numberInput.type = "text";
+        numberInput.name = "price[]";
+        numberInput.className = "form-control paymentRow"
+
+        var noteInput = document.createElement("input");
+        noteInput.type = "text";
+        noteInput.name = "note[]";
+        noteInput.className = "form-control paymentRow"
+
+        var dateInput = document.createElement("input");
+        dateInput.type = "date";
+        dateInput.name = "date[]";
+        dateInput.className = "form-control paymentRow"
+
+        //var btn = document.createElement("button");  
+        //btn.className = "form-control " + "Id" + table.rows.length;    
+        //btn.text = "X"
+        //btn.innerText = "X"             
+        //btn.onclick = function () {
+        //    btnclick("Id" + table.rows.length)           
+        //};
+        var deleteButton = document.createElement("button");
+        deleteButton.className = "form-control "
+        deleteButton.innerHTML = "X";
+        deleteButton.onclick = function () {
+            var row = this.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+            calculateTotal()
+        };
+        cell5.appendChild(deleteButton);
+
+        cell1.appendChild(paymentMethodDropdown);
+        cell2.appendChild(priceInput);
+        cell3.appendChild(numberInput);
+        cell4.appendChild(noteInput);
+        cell5.appendChild(dateInput);
+        cell6.appendChild(deleteButton);
+
+    }
+    $('#paymentTable tr').click(function () {
+        $(this).html();
+    });
+    function btnclick(Id) {
+        //alert('hi' + Id)
+        var d = "table#paymentTable tr#" + Id
+        $(d).remove();
+    }
+    function addRow1() { }
+    function calculateTotal() {
+        var table = document.getElementById("paymentTable");
+        var totalPrice = 0;
+        for (var i = 1; i < table.rows.length; i++) {
+            var price = parseFloat(table.rows[i].cells[1].children[0].value);
+            if (!isNaN(price)) {
+                totalPrice += price;
+            }
+        }
+        //document.getElementById("total").innerHTML = totalPrice.toFixed(2);
+        $("#total1").val(totalPrice.toFixed(2));
+        var bal = parseFloat($("#TotalSalesPrice").val()) - totalPrice.toFixed(2)
+        if (bal < 0) {
+            $("#Balance").val(bal.toFixed(2));
+            document.getElementById("errmsg").innerHTML = "Balance Can't Negitive";
+        }
+        else {
+            $("#Balance").val(bal.toFixed(2));
+            document.getElementById("errmsg").innerHTML = "";
+        }
+
+    }
+    $(".mytextbox1").keyup(function () {
+        calculateTotal();
+    });
+
+    $(document).on('keyup', '.mytextbox', function () {
+        calculateTotal();
+    });
+</script>

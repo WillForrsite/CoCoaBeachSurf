@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="app_authentication_devModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AppRegistration">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AppName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Url" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ImagePath" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DefaultAuthorized" Type="Int16" />
+    <Property Name="IsActive" Type="Byte" />
+    <Property Name="AppType" Type="Int32" />
+    <NavigationProperty Name="AppType1" Relationship="app_authentication_devModel.FK_AppRegistration_AppType" FromRole="AppRegistration" ToRole="AppType" />
+  </EntityType>
+  <EntityType Name="Authentication">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Userid" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Token" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="SignIn" Type="Byte" />
+    <Property Name="SignOut" Type="Byte" />
+    <Property Name="LastUsed" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AppId" Type="Int32" />
+    <Property Name="DeviceID" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="AppUserValidation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="AppId" Type="Int32" />
+    <Property Name="IsAppAdmin" Type="Byte" />
+    <Property Name="IsGlobalAdmin" Type="Byte" />
+    <Property Name="IsAllowAccess" Type="Byte" />
+    <Property Name="IsDeleted" Type="Byte" />
+  </EntityType>
+  <EntityContainer Name="app_authentication_devEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AppRegistrations" EntityType="Self.AppRegistration" />
+    <EntitySet Name="Authentications" EntityType="Self.Authentication" />
+    <EntitySet Name="AppUserValidations" EntityType="Self.AppUserValidation" />
+    <EntitySet Name="AspNetRoles" EntityType="app_authentication_devModel.AspNetRole" />
+    <EntitySet Name="AspNetUserClaims" EntityType="app_authentication_devModel.AspNetUserClaim" />
+    <EntitySet Name="AspNetUserLogins" EntityType="app_authentication_devModel.AspNetUserLogin" />
+    <EntitySet Name="AspNetUsers" EntityType="app_authentication_devModel.AspNetUser" />
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="app_authentication_devModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaim" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="app_authentication_devModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogin" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="AspNetUserRoles" Association="app_authentication_devModel.AspNetUserRoles">
+      <End Role="AspNetRole" EntitySet="AspNetRoles" />
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+    </AssociationSet>
+    <EntitySet Name="AppTypes" EntityType="app_authentication_devModel.AppType" />
+    <AssociationSet Name="FK_AppRegistration_AppType" Association="app_authentication_devModel.FK_AppRegistration_AppType">
+      <End Role="AppType" EntitySet="AppTypes" />
+      <End Role="AppRegistration" EntitySet="AppRegistrations" />
+    </AssociationSet>
+    <EntitySet Name="UserDeviceRegistrations" EntityType="app_authentication_devModel.UserDeviceRegistration" />
+    <EntitySet Name="EConfirmations" EntityType="app_authentication_devModel.EConfirmation" />
+    <EntitySet Name="vw_tblProducts" EntityType="app_authentication_devModel.vw_tblProducts" />
+    <FunctionImport Name="sp_I_tblProducts">
+      <Parameter Name="PrdId" Mode="In" Type="Int32" />
+      <Parameter Name="PrdCode" Mode="In" Type="String" />
+      <Parameter Name="PrdDesc" Mode="In" Type="String" />
+      <Parameter Name="PrdPrice" Mode="In" Type="Decimal" />
+      <Parameter Name="Active" Mode="In" Type="Int32" />
+      <Parameter Name="CMBy" Mode="In" Type="String" />
+      <Parameter Name="CMDate" Mode="In" Type="DateTime" />
+      <Parameter Name="Delete" Mode="In" Type="Int32" />
+      <Parameter Name="CatId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="tblProducts" EntityType="app_authentication_devModel.tblProduct" />
+    <FunctionImport Name="spGetProductList" ReturnType="Collection(app_authentication_devModel.spGetProductList_Result)">
+      <Parameter Name="PrdId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="tblCategories" EntityType="app_authentication_devModel.tblCategory" />
+    <EntitySet Name="vw_tblCategory" EntityType="app_authentication_devModel.vw_tblCategory" />
+  </EntityContainer>
+  <EntityType Name="AspNetRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUsers" Relationship="app_authentication_devModel.AspNetUserRoles" FromRole="AspNetRole" ToRole="AspNetUser" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaim">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="app_authentication_devModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUserClaim" ToRole="AspNetUser" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogin">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="ProviderKey" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="app_authentication_devModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUserLogin" ToRole="AspNetUser" />
+  </EntityType>
+  <EntityType Name="AspNetUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Hometown" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+    <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUserClaims" Relationship="app_authentication_devModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUser" ToRole="AspNetUserClaim" />
+    <NavigationProperty Name="AspNetUserLogins" Relationship="app_authentication_devModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUser" ToRole="AspNetUserLogin" />
+    <NavigationProperty Name="AspNetRoles" Relationship="app_authentication_devModel.AspNetUserRoles" FromRole="AspNetUser" ToRole="AspNetRole" />
+  </EntityType>
+  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+    <End Type="app_authentication_devModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="app_authentication_devModel.AspNetUserClaim" Role="AspNetUserClaim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaim">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+    <End Type="app_authentication_devModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="app_authentication_devModel.AspNetUserLogin" Role="AspNetUserLogin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogin">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AspNetUserRoles">
+    <End Type="app_authentication_devModel.AspNetRole" Role="AspNetRole" Multiplicity="*" />
+    <End Type="app_authentication_devModel.AspNetUser" Role="AspNetUser" Multiplicity="*" />
+  </Association>
+  <EntityType Name="AppType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AppType1" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="AppRegistrations" Relationship="app_authentication_devModel.FK_AppRegistration_AppType" FromRole="AppType" ToRole="AppRegistration" />
+  </EntityType>
+  <Association Name="FK_AppRegistration_AppType">
+    <End Type="app_authentication_devModel.AppType" Role="AppType" Multiplicity="0..1" />
+    <End Type="app_authentication_devModel.AppRegistration" Role="AppRegistration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AppType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AppRegistration">
+        <PropertyRef Name="AppType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="UserDeviceRegistration">
+    <Key>
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="DeviceID" />
+      <PropertyRef Name="AppID" />
+    </Key>
+    <Property Name="UserID" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="DeviceID" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="AppID" Type="Int32" Nullable="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DeviceName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DeviceConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="DeviceOs" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DeviceOsVersion" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IsDeleted" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="EConfirmation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GuidKey" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="CallbackUrl" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="SendDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="vw_tblProducts">
+    <Key>
+      <PropertyRef Name="PrdId" />
+      <PropertyRef Name="PrdCode" />
+      <PropertyRef Name="PrdDesc" />
+      <PropertyRef Name="PrdPrice" />
+      <PropertyRef Name="Active" />
+      <PropertyRef Name="CreatedDate" />
+      <PropertyRef Name="CatId" />
+      <PropertyRef Name="Category" />
+    </Key>
+    <Property Name="PrdId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PrdCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PrdDesc" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="PrdPrice" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="CatId" Type="Int32" Nullable="false" />
+    <Property Name="Category" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblProduct">
+    <Key>
+      <PropertyRef Name="PrdId" />
+    </Key>
+    <Property Name="PrdId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PrdCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PrdDesc" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="PrdPrice" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="CatId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <ComplexType Name="spGetProductList_Result">
+    <Property Type="Int32" Name="PrdId" Nullable="false" />
+    <Property Type="String" Name="PrdCode" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="PrdDesc" Nullable="false" MaxLength="128" />
+    <Property Type="Decimal" Name="PrdPrice" Nullable="false" Precision="19" />
+    <Property Type="Boolean" Name="Active" Nullable="false" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="128" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="128" />
+  </ComplexType>
+  <EntityType Name="tblCategory">
+    <Key>
+      <PropertyRef Name="CatId" />
+      <PropertyRef Name="Category" />
+    </Key>
+    <Property Name="CatId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Category" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CatDesc" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="vw_tblCategory">
+    <Key>
+      <PropertyRef Name="CatId" />
+      <PropertyRef Name="Category" />
+    </Key>
+    <Property Name="CatId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Category" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CatDesc" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

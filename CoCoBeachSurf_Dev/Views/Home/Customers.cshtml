@@ -1,0 +1,80 @@
+﻿@model IEnumerable<AuthModule.Models.tblCustomers>
+
+@{
+    ViewBag.Title = "Customers";
+}
+
+<h2>Customers</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CstmrID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CstmrFN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CstmrLN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CstmrEml)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CstmrPhn1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CstmrPhn2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CstmrCrtdDt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CstmrCrtdBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CstmrActv)
+        </th>
+        <th style="width:100px">@Html.ActionLink("New", "CreateCustomers", null, new { @class = "btn btn-success" })</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CstmrID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CstmrFN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CstmrLN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CstmrEml)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CstmrPhn1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CstmrPhn2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CstmrCrtdDt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CstmrCrtdBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CstmrActv)
+        </td>
+        <td>
+           
+            @Html.ActionLink(" ", "EditCustomer", "Home", new { @CustomerId = @item.CstmrID }, new { @class = "btn btn-warning fa fa-pencil" })
+            @Html.ActionLink(" ", "DeleteCustomer", "Home", new { @CustomerId = @item.CstmrID }, new { @class = "btn btn-danger fa fa-trash" })
+
+        </td>
+    </tr>
+}
+
+</table>

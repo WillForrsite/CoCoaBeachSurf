@@ -1,0 +1,572 @@
+﻿
+@{
+    ViewBag.Title = "MaintainAgreement";
+}
+
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    td,
+    th {
+        border: 1px solid black;
+        padding: 10px 20px;
+    }
+
+    .txtbox {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+
+    .chkbox {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+    }
+    #sig-canvas {
+        border: 2px dotted #CCCCCC;
+        border-radius: 15px;
+        cursor: crosshair;
+    }
+
+    #sig-canvas1 {
+        border: 2px dotted #CCCCCC;
+        border-radius: 15px;
+        cursor: crosshair;
+    }
+</style>
+<div style="margin-top: 80px">
+
+
+    <h2 style="margin-top: 45px;"> </h2>
+    <h1 style="text-align: center;"> CONTRATO DE SERVICIOS DE MANTENIMIENTO</h1>
+    <div style="padding: 10px;">
+        <table style="width:96%">
+            <tr>
+                <td> NOMBRE DEL CLIENTE:  <input type="text" id="CustEmail" style="width:270px" class="txtbox"></td>
+                <td>
+                    NUM. TELEFONO:  <input type="text" id="CustPhn"  class="txtbox">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    DIRECCION: <input type="text" class="txtbox" id="CustAddress" style="width:270px">
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    Descripcion de la(s) Unidades)/Equipo(s) :  <input type="text"  class="txtbox">
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <div style="padding: 10px;">
+        <p style="font-weight:600;">
+            El cliente antes descrito y IMPERIAL HOME PRODUCTS INC aceptan y acuerdan los siguientes terminos y condiciones para la prestación de servicios de mantenimiento a los equipos del cliente detallados anteriormente:
+
+        </p>
+    </div>
+    <div>
+        <p>
+            <span style="font-weight: 600;">I. Inspección y Cualificación del Equipo.</span> La compañía retiere su derecho a otorgar o no el Contrato de Mantenimiento. La compañia habrá de determinar of estado de condición del equipo del cliente antes de decidir otorgar o no el Contrato de Mantenimiento, La compañia enviará un técnico autor zado por ésta a hacer una inspección visual del equipo con el propósito de determinar si el equipo esta en una condición aceptable. Entendiéndose que si el equipo tiene una condición aceptable, al equipo podrá acogerse a los servicios provistos bajo el Contrato de Mantenimiento de la compañia La compañía podrá otorgare un Contrato de Mantenimiento a un equipo que por su condición de deterioro no cualifique pant el Contrato de Mantenimiento sujelo a que el equipo reciba un servicio de re-acondicionamiento provisto por la compañia que ponga e equipo en condición aceptable. En el evento de que se determine que por su estado de deterioro el equipo no cualifica para el Contrato de Mantenimiento, la compartia notificará por escrito su determinación al cliente. La compañía, sin embargo, en su notificación podrá ofrecere al cliente re-acondicionar el equipo y extenderie e contrato de mantenimiento. El servicio de re-acondicionamiento de e equipo será facturado por separado. El diente lendra 10 dias a partir de la fecha de notificación para
+            rechazar el servicio de re-acondicionamiento del equipo. La compañia interpretará la ausencia de una respuesta del cliente como su aceptación al servicio de re-acondicionamiento del equipo para que se le otorgue el Contrato de Mantenimiento solicitado. Una vez el equipo see provista del servicio de re-acondicionamiento, la
+            compañia pondrá en vigor dicho Contrato.
+        </p>
+        <p>
+            <span style="font-weight: 600;">II. Excepciones:</span>Eslán exentos del requisito de inspección y nualificación los siguientes equipos: (1) Los equipos que están en alquiler con la compañia, (2) Los equipos de la compañia con garantías de menos de un año de expirado; (3) Los equipos con cuentas activas con la compañía; y (4)
+            Los equipos que tienen contratos de mantenimiento pre-existentes con la compañia.
+        </p>
+        <p>
+            <span style="font-weight: 600;">
+                III. Termino del Contrato:
+            </span> Este contrato será efectivo por un período de UN (1) año, a partir de le fecha de la firma del contrato y una vez se haya cualificado favorabki-
+            mente el equipa
+        </p>
+        <p>
+            <span style="font-weight: 600;">
+                IV. Servicios de Mantenimiento Incluidos.
+            </span>La Compañía se compromete por virtud de esto Contrato a tener disponible servicios de mantenimiento para e equipo descrita en este contrato a razón de seis servicios de mantenimiento al año que podrá ser provistos cada dos meses ylo hasta que se consuma los seis servicios de mantenimiento
+            en el año contrato. Entendiéndose, que los servicios programados para prestarse cada dos meses podrán, por petición. del cliente, ser adelantados o atrasados, sujeto a que los mismos sean provisios durante el año contrato El servicio de mantenimiento incluye mantenimiento preventivo basado en las necesidades específicas de clilos equipos (s) individual(es), como determine is compañía de tiempo en tiempo y, además, incluye llamadas de remedio no programadas. El mantenimiento incuirá limpieza de depósitos residuales, lubricación, ajustes y reemplazo de piezas que sean necesarias para mantener e los equipo(s) en buenas condiciones de funcionamiento. La
+            determinación de si un pedido de mantenimiento involucra servicios extraordinarios, no cubiertos bajo este comrato, será tomada exclusivamente por el técnico de le Compañia. Este Contrato no cubre re-instalación de equipos. Las piezas serán suministradas y remplazadas por la Compañia sin costo adicional para el cliente, sujein a que la garantia de dichas piezas este vigente, ya sea bajo la garantia de compra original, o por el Contrato opcional de garantia extendida. En caso de que al periodo de garantia para el reemplazo de piezas haya expirado, las piezas serán suministrades, reemplazadas e instaladas por la Compañía si asi lo requiere y acepta el Cliente al precio y tarifa vicente a momento en que se hace necesario al reemplazo.
+            El Cliente se compromete proveerie a la compañia total y libre acceso al equipo descrito en este Contrato para poder llevar acabolcs servicios de mantenimiento.
+        </p>
+        <table>
+            <tr>
+                <td>
+                    <p>
+                        <span style="font-weight: 600;">
+                            V. Cargo por Servicios bajo el Contrato de Mantenimiento.
+                        </span>El cargo por servicios bajo el Contrato de Mantenimiento esta sujeto a la a cantidad Ide equipos cubierios bajo el contrato de mantenimiento y la forma de pago. Esto es paga del monto total por adelantado, plan de tres (3) pagos, e doce pagos mensuales. El diente acuerda pagar el cargo por servicios bajo el Contrato de Mantenimiento de la siguiente manera.
+                        <div class="form" style="display:flex;padding:2px;">
+                            <div class="input-parent">
+                                <input type="checkbox" class="chkbox" style="margin-right: 5px; margin-top: 0px; ">
+                            </div>
+                            <span class="lbl">
+                                Número de equipos bajo contrato &nbsp;
+                            </span>
+                            <div class="input-parent">
+                                <input type="number" style="width:55px">
+                            </div>
+                        </div>
+                        <div class="form" style="display: flex; padding: 2px;">
+                            <div class="input-parent">
+                                <input type="checkbox" class="chkbox" style="margin-right: 5px; margin-top: 0px; ">
+                            </div>
+                            <span class="lbl">
+                                Pago total por adelantado............................$  <input type="text" class="txtbox">
+                            </span>
+                        </div>
+                        <div class="form" style="display: flex; padding: 2px;">
+                            <div class="input-parent">
+                                <input type="checkbox" class="chkbox" style="margin-right: 5px; margin-top: 0px; ">
+                            </div>
+                            <span class="lbl">
+                                Plan de pago a tres plazos de .....................$  <input type="text" class="txtbox"> vencederos cade 4 meses el primer die laborable de mes
+                            </span>
+                        </div>
+                        <div class="form" style="display: flex; padding: 2px;">
+                            <div class="input-parent">
+                                <input type="checkbox" class="chkbox" style="margin-right: 5px; margin-top: 0px; ">
+                            </div>
+                            <span class="lbl">
+                                Doce (12) pagos mensuales de....................$  <input type="text" class="txtbox"> vencedero(s) el primer dia laborabie de mes
+                            </span>
+                        </div>
+                        <div class="form" style="display: flex; padding: 2px;">
+                            <div class="input-parent">
+                                <input type="checkbox" class="chkbox" style="margin-right: 5px; margin-top: 0px; ">
+                            </div>
+                            <span class="lbl">
+                                Olra
+                            </span>
+                        </div>
+
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <p>
+            <span style="font-weight: 600;">VI. Incumplimiento de Pago: </span>El Contrato de Mantenimiento podrá ser terminado por razones de incumplimiento de pago. Se entendera que el incumplimiento de pago ocurre una vez vencido los quince (15) dias de gracia subsiguientes a la fecha de vencimento de cualesquiera de los plazos acordados sin que se reciba en la compañia of pago de dinero correspondiente. Los cargos por contrato de mantenimiento pueden variar de año en año conforme al modelo del equipo y según los aumentos en costos.
+
+        </p>
+        <p>
+            <span style="font-weight: 600;">
+                VII. Tiempo de Respuesta:
+            </span> No hay garantia en el tiempo de respuesta a una llamada de servicio. Sin embargo, la Compatila pondrá todo su esfuerze para responder a
+            una llamada de servicio dentro de las siguientes veinticuatro (24) horas a partir de la llamada de servicio
+        </p>
+        <p>
+            <span style="font-weight: 600;">
+                VIII. Limitación de Responsabilidad.
+            </span> La Compañía no serà responsable si por fuerzae mayores y/o impedimentos fuera de su control no pueda rendir un servicio. Ε
+            Cliente se compromete y obliga a relevar a la Compañia de toda responsabilidad por daños, directos o indirectos, como consecuencia de: (a) Trabajo de electricidad a mantenimiento de accesorios, alteraciones u otros dispositivos no suministrados, ejecutados o instalados por la Compañía con relación a la(s) máquina(s) (b) Reparación de averia o aumento en el tiempo de servicio causado por accidente, transportación, negligencia o mai uso: alteraciones que incluyan, pero no Inviado a
+            cualquier dsawación de circuito o diseño del equipa como is provee la Compañia, instalación o remoción de aigtin distintivo de la Compañia, o cualquier otra modificación, cuando no see levada a cabo por la Compañia (c) Reparación de averia o aumento en tiempo de servicio que resulte por la incapacidad de proveer un medio ambiелто para una buona instalación con todas la facilidades especificadas en al Manual de instalaciones de la Compañía, incluyendo, pero no ümitado a, fala an o faila de proviser
+            fuerza eléctrica adecuada o del uso de suministros o materiales que no cumpian con las especificaciones de la Compalila para dicha instalación. (
+            d) Reparación de averis o eumento en tiempo de servicio stribuable al uso de las máquinas para otros propósitos que no seen los designados (e) Añadir o remover acopsorias, dispositivos u otros aparafos, o hacer cambios en las especificaciones u otras alteraciones en la(a) máquinas), incluyendo la conexión por medios mecánicos o
+            eléctricos a cra máquina o accesorio, cuando no sea realizado por la Compañia.
+        </p>
+        <p>
+            <span style="font-weight: 600;">
+                IX. Asignación.
+            </span>El Cliente no podrá conceler, asigner, transferir o empeñar este Contrato sin el consentimiento escrito de la Compartia. Este Contrato redunda en beneficio de, y obliga legalmente a los sucsacres yio represantantes de as partes contratantes. La Compañia puede asignar y/o transferir este Contrato a un tercero an
+            forma completa o en parte sin el consentimiento del cliente y sin la necesidad de previo aviso.
+        </p>
+        <p>
+            <span style="font-weight: 600;">
+                X. Ley Aplicable.
+            </span> La interpretación, ejecución y cumplimiento de los términos y condiciones provistos en este Contrata se efectuará de conformidad con las leyes del
+            Estado Ibra Asociado de Puerto Rico.
+        </p>
+        <p>
+            <span style="font-weight: 600;">
+                XI. Contrato Exclusivo.
+            </span> Este Contrata constituye el Contrato completo y exclusivo e invalida toda comunicación oral o escrita anterior o Contrato previos entre las partes relacionadas con este asunto. Los términos de este Contrato prevalecerán sin tomar an consideración cualquier variación en los términos de cualquier orden dell Cliente
+            hechos de Contrato con lo estipulado. En caso de que cualquier término o provisión de este Contrato, o la aplicación del mismo a una persona o circunstancia pueda ser
+            o que no puedan ejecutarse, no se afectará, y cada término o provisión de este Contrato será válido y exigible con toda la fuerza permitida por ley.
+            El cliente certifica haber leido este contrato, que lo entiende y esta de acuerdo con todos los terminos y condiciones aqui descritos.
+
+        </p>
+        <p>
+            EN <input type="text" class="txtbox">, P.R ESTE  <input type="text" class="txtbox"> DIA DE  <input type="text" class="txtbox"> DE 20  <input type="text" class="txtbox">
+        </p>
+        <div style="display: flex; justify-content: space-between;">
+            <div>
+                <h4>
+                    FIRMA DEL CLIENTE
+                </h4>
+                @*<div>
+                    <input type="text" class="form-control" style=" width: 120%;">
+
+                </div>*@
+                <div>
+                   
+                    <canvas id="sig-canvas" width="300" height="100">
+                        Get a better browser, bro.
+                    </canvas>
+                    <p>Signature Buyer/ Client</p>
+                    
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <button class="btn btn-primary" id="sig-submitBtn">Submit Signature</button>
+                        <button class="btn btn-default" id="sig-clearBtn">Clear Signature</button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4>
+                    REPRESENTANTE DE LA COMPANIA
+                </h4>
+                @*<div>
+                    <input type="text" class="form-control" style=" width: 120%;">
+
+                </div>*@
+                <div>
+                    
+                    <canvas id="sig-canvas1" width="300" height="100">
+                        Get a better browser, bro.
+                    </canvas>
+                    <p>Signature Company/ Sales Rep.</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <button class="btn btn-primary" id="sig-submitBtn1">Submit Signature</button>
+                        <button class="btn btn-default" id="sig-clearBtn1">Clear Signature</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>
+    var email = "";
+    window.document.onload = function (e) {
+        email = localStorage.getItem("CustEmail").trim()
+        
+   
+    }
+
+    $(document).ready(function () {
+        email = localStorage.getItem("CustEmail").trim()
+      //  alert(email)
+        $('#CustEmail').val(email)
+        var SearchTerm = email
+        if (SearchTerm != "") {
+            $.get("/Home/GetCustomerByEmail",
+                {
+                    Email: email
+                },
+                function (data, status) {
+                    if (data != null && data != "") {
+                        console.log(data);
+                        
+                        $('#CustEmail').val(data[0].CustEmail);
+                        $('#CustPhn').val(data[0].CustPhn);
+                        //$('#CustId').val(data[0].CustId);
+                        //$('#CustFN').val(data[0].CustFN);
+                        //$('#CustLN').val(data[0].CustLN);
+                        //$('#CustMbl').val(data[0].CustMbl);
+                        //$('#CustPOAddress').val(data[0].CustPOAddress);
+                       
+                        //$('#CustState').val(data[0].CustState);
+                        //$('#CustStreet').val(data[0].CustStreet);
+                        //$('#CustZipCode').val(data[0].CustZipCode);
+                        //$('#CustCountry').val(data[0].CustCountry);
+                        //$('#CustCity').val(data[0].CustCity);
+                        let address = data[0].CustStreet + ' ' + data[0].CustPOAddress + ' ' + data[0].CustCity + ' ' + data[0].CustState + ' ' + data[0].CustCountry + ' ' + data[0].CustZipCode 
+                        $('#CustAddress').val(address)
+                        //alert(address)
+                    }
+                    else {
+                        
+                        
+
+                    }
+
+
+                    //alert("Data: " + data + "\nStatus: " + status);
+                    //alert("Changed!");
+                });
+        }
+        })
+    
+    
+</script>
+<script>
+
+        (function () {
+            window.requestAnimFrame = (function (callback) {
+                return window.requestAnimationFrame ||
+                    window.webkitRequestAnimationFrame ||
+                    window.mozRequestAnimationFrame ||
+                    window.oRequestAnimationFrame ||
+                    window.msRequestAnimaitonFrame ||
+                    function (callback) {
+                        window.setTimeout(callback, 1000 / 60);
+                    };
+            })();
+
+            var canvas1 = document.getElementById("sig-canvas1");
+
+            var ctx1 = canvas1.getContext("2d");
+            ctx1.strokeStyle = "#222222";
+            ctx1.lineWidth = 3;
+
+            var drawing1 = false;
+            var mousePos1 = {
+                x: 0,
+                y: 0
+            };
+            var lastPos1 = mousePos1;
+
+            canvas1.addEventListener("mousedown", function (e) {
+                drawing1 = true;
+                lastPos1 = getMousePos(canvas1, e);
+            }, false);
+
+            canvas1.addEventListener("mouseup", function (e) {
+                drawing1 = false;
+            }, false);
+
+            canvas1.addEventListener("mousemove", function (e) {
+                mousePos1 = getMousePos(canvas1, e);
+            }, false);
+
+            // Add touch event support for mobile
+            canvas1.addEventListener("touchstart", function (e) {
+
+            }, false);
+
+            canvas1.addEventListener("touchmove", function (e) {
+                var touch = e.touches[0];
+                var me1 = new MouseEvent("mousemove", {
+                    clientX: touch.clientX,
+                    clientY: touch.clientY
+                });
+                canvas.dispatchEvent(me);
+            }, false);
+
+            canvas1.addEventListener("touchstart", function (e) {
+                mousePos = getTouchPos(canvas1, e);
+                var touch = e.touches[0];
+                var me = new MouseEvent("mousedown", {
+                    clientX: touch.clientX,
+                    clientY: touch.clientY
+                });
+                canvas.dispatchEvent(me);
+            }, false);
+
+            canvas1.addEventListener("touchend", function (e) {
+                var me = new MouseEvent("mouseup", {});
+                canvas.dispatchEvent(me);
+            }, false);
+
+            function getMousePos(canvasDom, mouseEvent) {
+                var rect = canvasDom.getBoundingClientRect();
+                return {
+                    x: mouseEvent.clientX - rect.left,
+                    y: mouseEvent.clientY - rect.top
+                }
+            }
+
+            function getTouchPos(canvasDom, touchEvent) {
+                var rect = canvasDom.getBoundingClientRect();
+                return {
+                    x: touchEvent.touches[0].clientX - rect.left,
+                    y: touchEvent.touches[0].clientY - rect.top
+                }
+            }
+
+            function renderCanvas() {
+                if (drawing1) {
+                    ctx1.moveTo(lastPos1.x, lastPos1.y);
+                    ctx1.lineTo(mousePos1.x, mousePos1.y);
+                    ctx1.stroke();
+                    lastPos1 = mousePos1;
+                }
+            }
+
+            // Prevent scrolling when touching the canvas
+            document.body.addEventListener("touchstart", function (e) {
+                if (e.target == canvas1) {
+                    e.preventDefault();
+                }
+            }, false);
+            document.body.addEventListener("touchend", function (e) {
+                if (e.target == canvas) {
+                    e.preventDefault();
+                }
+            }, false);
+            document.body.addEventListener("touchmove", function (e) {
+                if (e.target == canvas) {
+                    e.preventDefault();
+                }
+            }, false);
+
+            (function drawLoop() {
+                requestAnimFrame(drawLoop);
+                renderCanvas();
+            })();
+
+            function clearCanvas1() {
+                canvas1.width = canvas1.width;
+            }
+
+            // Set up the UI
+            var sigText1 = document.getElementById("sig-dataUrl1");
+            var sigImage1 = document.getElementById("sig-image1");
+            var clearBtn1 = document.getElementById("sig-clearBtn1");
+            var submitBtn1 = document.getElementById("sig-submitBtn1");
+            clearBtn1.addEventListener("click", function (e) {
+                clearCanvas1();
+                sigText1.innerHTML = "Data URL for your signature will go here!";
+                sigImage1.setAttribute("src", "");
+            }, false);
+            submitBtn1.addEventListener("click", function (e) {
+                var dataUrl1 = canvas1.toDataURL();
+                sigText1.innerHTML = dataUrl1;
+                sigImage1.setAttribute("src", dataUrl1);
+            }, false);
+
+        })();
+    (function () {
+        window.requestAnimFrame = (function (callback) {
+            return window.requestAnimationFrame ||
+                window.webkitRequestAnimationFrame ||
+                window.mozRequestAnimationFrame ||
+                window.oRequestAnimationFrame ||
+                window.msRequestAnimaitonFrame ||
+                function (callback) {
+                    window.setTimeout(callback, 1000 / 60);
+                };
+        })();
+
+        var canvas = document.getElementById("sig-canvas");
+        var canvas1 = document.getElementById("sig-canvas1");
+        var ctx = canvas.getContext("2d");
+        ctx.strokeStyle = "#222222";
+        ctx.lineWidth = 3;
+
+        var drawing = false;
+        var mousePos = {
+            x: 0,
+            y: 0
+        };
+        var lastPos = mousePos;
+
+        canvas.addEventListener("mousedown", function (e) {
+            drawing = true;
+            lastPos = getMousePos(canvas, e);
+        }, false);
+
+        canvas.addEventListener("mouseup", function (e) {
+            drawing = false;
+        }, false);
+
+        canvas.addEventListener("mousemove", function (e) {
+            mousePos = getMousePos(canvas, e);
+        }, false);
+
+        // Add touch event support for mobile
+        canvas.addEventListener("touchstart", function (e) {
+
+        }, false);
+
+        canvas.addEventListener("touchmove", function (e) {
+            var touch = e.touches[0];
+            var me = new MouseEvent("mousemove", {
+                clientX: touch.clientX,
+                clientY: touch.clientY
+            });
+            canvas.dispatchEvent(me);
+        }, false);
+
+        canvas.addEventListener("touchstart", function (e) {
+            mousePos = getTouchPos(canvas, e);
+            var touch = e.touches[0];
+            var me = new MouseEvent("mousedown", {
+                clientX: touch.clientX,
+                clientY: touch.clientY
+            });
+            canvas.dispatchEvent(me);
+        }, false);
+
+        canvas.addEventListener("touchend", function (e) {
+            var me = new MouseEvent("mouseup", {});
+            canvas.dispatchEvent(me);
+        }, false);
+
+        function getMousePos(canvasDom, mouseEvent) {
+            var rect = canvasDom.getBoundingClientRect();
+            return {
+                x: mouseEvent.clientX - rect.left,
+                y: mouseEvent.clientY - rect.top
+            }
+        }
+
+        function getTouchPos(canvasDom, touchEvent) {
+            var rect = canvasDom.getBoundingClientRect();
+            return {
+                x: touchEvent.touches[0].clientX - rect.left,
+                y: touchEvent.touches[0].clientY - rect.top
+            }
+        }
+
+        function renderCanvas() {
+            if (drawing) {
+                ctx.moveTo(lastPos.x, lastPos.y);
+                ctx.lineTo(mousePos.x, mousePos.y);
+                ctx.stroke();
+                lastPos = mousePos;
+            }
+        }
+
+        // Prevent scrolling when touching the canvas
+        document.body.addEventListener("touchstart", function (e) {
+            if (e.target == canvas) {
+                e.preventDefault();
+            }
+        }, false);
+        document.body.addEventListener("touchend", function (e) {
+            if (e.target == canvas) {
+                e.preventDefault();
+            }
+        }, false);
+        document.body.addEventListener("touchmove", function (e) {
+            if (e.target == canvas) {
+                e.preventDefault();
+            }
+        }, false);
+
+        (function drawLoop() {
+            requestAnimFrame(drawLoop);
+            renderCanvas();
+        })();
+
+        function clearCanvas() {
+            canvas.width = canvas.width;
+        }
+
+        // Set up the UI
+        var sigText = document.getElementById("sig-dataUrl");
+        var sigImage = document.getElementById("sig-image");
+        var clearBtn = document.getElementById("sig-clearBtn");
+        var submitBtn = document.getElementById("sig-submitBtn");
+        clearBtn.addEventListener("click", function (e) {
+            clearCanvas();
+            sigText.innerHTML = "Data URL for your signature will go here!";
+            sigImage.setAttribute("src", "");
+        }, false);
+        submitBtn.addEventListener("click", function (e) {
+            var dataUrl = canvas.toDataURL();
+            sigText.innerHTML = dataUrl;
+            sigImage.setAttribute("src", dataUrl);
+        }, false);
+
+    })();
+</script>

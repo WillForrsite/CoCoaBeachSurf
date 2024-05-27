@@ -1,0 +1,49 @@
+D:\My\AuthModule\AuthIntegration\bin\Release\AuthIntegration.dll
+D:\My\AuthModule\AuthIntegration\bin\Release\AuthIntegration.pdb
+D:\My\AuthModule\AuthIntegration\obj\Release\AuthIntegration.csprojResolveAssemblyReference.cache
+D:\My\AuthModule\AuthIntegration\obj\Release\AuthIntegration.csproj.CoreCompileInputs.cache
+D:\My\AuthModule\AuthIntegration\obj\Release\AuthIntegration.dll
+D:\My\AuthModule\AuthIntegration\obj\Release\AuthIntegration.pdb
+D:\My\AuthModule_Project\AuthModule\AuthIntegration\bin\Release\AuthIntegration.dll
+D:\My\AuthModule_Project\AuthModule\AuthIntegration\bin\Release\AuthIntegration.pdb
+D:\My\AuthModule_Project\AuthModule\AuthIntegration\obj\Release\AuthIntegration.csproj.CoreCompileInputs.cache
+D:\My\AuthModule_Project\AuthModule\AuthIntegration\obj\Release\AuthIntegration.dll
+D:\My\AuthModule_Project\AuthModule\AuthIntegration\obj\Release\AuthIntegration.pdb
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthIntegration\bin\Release\AuthIntegration.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthIntegration\bin\Release\AuthIntegration.pdb
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthIntegration\obj\Release\AuthIntegration.csprojResolveAssemblyReference.cache
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthIntegration\obj\Release\AuthIntegration.csproj.CoreCompileInputs.cache
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthIntegration\obj\Release\AuthIntegration.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthIntegration\obj\Release\AuthIntegration.pdb
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthIntegration\bin\Release\Newtonsoft.Json.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthIntegration\bin\Release\SendGrid.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthIntegration\bin\Release\StarkbankEcdsa.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthIntegration\bin\Release\Newtonsoft.Json.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthIntegration\bin\Release\SendGrid.pdb
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthIntegration\bin\Release\SendGrid.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthIntegration\bin\Release\AuthIntegration.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthIntegration\bin\Release\AuthIntegration.pdb
+D:\Work Area\Ollas\IHP Apps Portal\AuthIntegration\bin\Release\Newtonsoft.Json.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthIntegration\bin\Release\SendGrid.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthIntegration\bin\Release\StarkbankEcdsa.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthIntegration\bin\Release\Newtonsoft.Json.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthIntegration\bin\Release\SendGrid.pdb
+D:\Work Area\Ollas\IHP Apps Portal\AuthIntegration\bin\Release\SendGrid.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthIntegration\obj\Release\AuthIntegration.csproj.AssemblyReference.cache
+D:\Work Area\Ollas\IHP Apps Portal\AuthIntegration\obj\Release\AuthIntegration.csproj.CoreCompileInputs.cache
+D:\Work Area\Ollas\IHP Apps Portal\AuthIntegration\obj\Release\AuthIntegration.csproj.CopyComplete
+D:\Work Area\Ollas\IHP Apps Portal\AuthIntegration\obj\Release\AuthIntegration.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthIntegration\obj\Release\AuthIntegration.pdb
+D:\Work Area\IHP\AuthIntegration\bin\Release\AuthIntegration.dll
+D:\Work Area\IHP\AuthIntegration\bin\Release\AuthIntegration.pdb
+D:\Work Area\IHP\AuthIntegration\bin\Release\Newtonsoft.Json.dll
+D:\Work Area\IHP\AuthIntegration\bin\Release\SendGrid.dll
+D:\Work Area\IHP\AuthIntegration\bin\Release\StarkbankEcdsa.dll
+D:\Work Area\IHP\AuthIntegration\bin\Release\Newtonsoft.Json.xml
+D:\Work Area\IHP\AuthIntegration\bin\Release\SendGrid.pdb
+D:\Work Area\IHP\AuthIntegration\bin\Release\SendGrid.xml
+D:\Work Area\IHP\AuthIntegration\obj\Release\AuthIntegration.csproj.AssemblyReference.cache
+D:\Work Area\IHP\AuthIntegration\obj\Release\AuthIntegration.csproj.CoreCompileInputs.cache
+D:\Work Area\IHP\AuthIntegration\obj\Release\AuthIntegration.csproj.CopyComplete
+D:\Work Area\IHP\AuthIntegration\obj\Release\AuthIntegration.dll
+D:\Work Area\IHP\AuthIntegration\obj\Release\AuthIntegration.pdb

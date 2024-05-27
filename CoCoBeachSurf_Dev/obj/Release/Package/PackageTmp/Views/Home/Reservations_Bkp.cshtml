@@ -1,0 +1,717 @@
+﻿
+
+<br />
+<br />
+<style>
+    .hd {
+        color: white;
+        font-size: x-large;
+        font-weight: 700;
+        background-color: #878e9d;
+    }
+
+    .fplabel12 {
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: none;
+    }
+
+    .fplabel14 {
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: none;
+    }
+    body {
+        /*background-image: url("../../../Images/OllasBG.jpg");*/
+        background-size: cover;
+        background-repeat: round;
+        /*  background-color: #1563ac;*/
+    }
+
+    .form1 {
+        background-color: #fff;
+        width: 1000px;
+        margin: auto;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+        margin-top: 5%;
+        border-radius: 70px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    input[type=text], input[type=password], input[type=email] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: none;
+        box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+        font-size: 16px;
+    }
+
+    button[type=submit] {
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+</style>
+
+@{
+    ViewData["Title"] = "Reservations";
+}
+<style>
+    .hd {
+        color: white;
+        font-size: x-large;
+        font-weight: 700;
+        background-color: #878e9d;
+    }
+
+    .fplabel12 {
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: none;
+    }
+
+    .fplabel14 {
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: none;
+    }
+</style>
+
+<div style="overflow-x:auto">
+    <table style="margin: 0 auto; width: 100%;">
+
+        <tbody>
+            <tr>
+                <td colspan="2">
+                    <div id="DivDateInfo">
+                    </div><table align="center" width="800">
+                        <tbody>
+                            <tr align="center">
+                                <td align="center">
+                                </td>
+                            </tr>
+                            <tr align="center" class="tdColor">
+                                <td align="center" class="hd">
+                                    <span id="Label2" class="biglabel18 hd">Cruise Information</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table><div id="DivArrival">
+                    </div><div id="DivDepart">
+                    </div><table width="800" align="center">
+                        <tbody>
+                            <tr>
+                                <td align="left">
+                                    <span id="lblArrivalDate" class="fplabel14">Arrival Date:</span>
+                                    <br>
+                                    @*<span id="lblArrivalSelected" class="fplabel14">February 24, 2024 - Saturday</span>*@
+                                </td>
+                                <td align="left" width="200">
+                                    <input type="date" id="ArrivalSelected" onchange="Arrivalchange(event)" />
+                                    @*<input name="txtCalArrive" type="text" value="2/24/2024" onchange="javascript:setTimeout('__doPostBack(\'txtCalArrive\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="txtCalArrive" class="fptextbox12" style="width:200px;" fdprocessedid="emxa5">
+
+                                        <input type="hidden" name="WatermarkExtender1_ClientState" id="WatermarkExtender1_ClientState">*@
+                                    <br>
+
+                                </td>
+                                <td align="left" width="20">
+                                    @* <input type="date" name="ImgCal1" id="ImgCal1" alt="Click here to display calendar" style="width:20px;" fdprocessedid="5xlmo7">*@
+
+                                </td>
+                                <td align="right">
+                                    <span id="lblArrivalTime" class="fplabel12">Assigned Check-in Time</span>
+                                </td>
+                                <td align="left">
+                                    <select name="ddlArriveHr" id="ddlArriveHr" tabindex="1" class="fptextbox12" fdprocessedid="ghmowj">
+                                        <option selected="selected" value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="01">01</option>
+                                        <option value="02">02</option>
+
+                                    </select>
+                                    <select name="ddlArriveMinutes" id="ddlArriveMinutes" tabindex="2" class="fptextbox12" fdprocessedid="0y7ynh">
+                                        <option value="00">00</option>
+                                        <option value="15">15</option>
+                                        <option value="30">30</option>
+                                        <option selected="selected" value="45">45</option>
+
+                                    </select>
+                                    <select name="ddlArriveAM" id="ddlArriveAM" tabindex="3" class="fptextbox12" fdprocessedid="9yipls">
+                                        <option selected="selected" value="AM">AM</option>
+                                        <option value="PM">PM</option>
+
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td align="left">
+                                    <span id="lblDepartDate" class="fplabel14">Return Date:</span>
+                                    <br>
+                                    @*<span id="lblDepartSelected" class="fplabel14">February 26, 2024 - Monday</span>*@
+                                </td>
+                                <td align="left" width="200">
+                                    <input type="date" id="ReturnSelected" onchange="Returnchange(event)" />
+                                    @* <input name="txtCalDeparture" type="text" value="2/26/2024" onchange="javascript:setTimeout('__doPostBack(\'txtCalDeparture\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="txtCalDeparture" tabindex="4" class="fptextbox12" style="width:200px;" fdprocessedid="n9i2h"><br>
+
+                                        <input type="hidden" name="WatermarkExtender2_ClientState" id="WatermarkExtender2_ClientState">*@
+                                </td>
+                                <td align="left">
+                                    @*<input type="date" name="ImgCal2" id="ImgCal2" alt="Click here to display calendar" style="width:20px;" fdprocessedid="k0hawq">*@
+                                </td>
+                                <td align="center" colspan="2">
+                                    <span id="lblDepartTime" class="fplabel12" style="display:inline-block;font-weight:bold;width:280px;">Shuttles depart every 30 minutes. You will be boarded based on your Assigned Check-in Time. Return shuttles begin at 8:00am and continue every 30 minutes until ship is clear.</span>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    <div id="DivReason">
+                        <table width="800" align="center">
+                            <tbody>
+                                <tr>
+                                    <td align="right" width="115">
+                                        <span id="lblFirstReq4" style="color:Red;">*</span>
+                                        <span id="lblReason" class="fplabel12">Cruise Line</span>
+                                    </td>
+                                    <td align="left">
+                                        <select name="ddlReason" id="ddlReason" tabindex="8" class="fptextbox12" fdprocessedid="910on">
+                                            <option value="0&quot;">Selection</option>
+                                            <option value="Carnival - Elation">Carnival - Elation</option>
+                                            <option value="Carnival - Freedom">Carnival - Freedom</option>
+                                            <option value="Carnival - Glory">Carnival - Glory</option>
+                                            <option value="Carnival - Mardi Gras">Carnival - Mardi Gras</option>
+                                            <option value="Carnival - Venezia">Carnival - Venezia</option>
+                                            <option value="Carnival - Vista">Carnival - Vista</option>
+                                            <option value="Carnival - Vista">Carnival - Vista</option>
+                                            <option value="Carnival – Liberty">Carnival – Liberty</option>
+                                            <option value="Carnival – Magic">Carnival – Magic</option>
+                                            <option value="Celebrity - Equinox">Celebrity - Equinox</option>
+                                            <option value="Disney - Dream">Disney - Dream</option>
+                                            <option value="Disney - Fantasy">Disney - Fantasy</option>
+                                            <option value="Disney - Wish">Disney - Wish</option>
+                                            <option value="Marella - Discovery">Marella - Discovery</option>
+                                            <option value="Marella - Discovery">Marella - Discovery</option>
+                                            <option value="Marella - Discovery">Marella - Discovery</option>
+                                            <option value="MSC - Divina">MSC - Divina</option>
+                                            <option value="MSC - Meraviglia">MSC - Meraviglia</option>
+                                            <option value="MSC- Seashore">MSC- Seashore</option>
+                                            <option value="MSC- Seaside">MSC- Seaside</option>
+                                            <option value="Norwegian - Epic">Norwegian - Epic</option>
+                                            <option value="Norwegian - Getaway">Norwegian - Getaway</option>
+                                            <option value="Norwegian - Jade">Norwegian - Jade</option>
+                                            <option value="Norwegian -Escape">Norwegian -Escape</option>
+                                            <option value="Norwegian-Prima">Norwegian-Prima</option>
+                                            <option value="Royal Caribbean - Allure of the Seas">Royal Caribbean - Allure of the Seas</option>
+                                            <option value="Royal Caribbean - Icon of the Seas">Royal Caribbean - Icon of the Seas</option>
+                                            <option value="Royal Caribbean - Jewel of the Seas">Royal Caribbean - Jewel of the Seas</option>
+                                            <option value="Royal Caribbean - Wonder of the Seas">Royal Caribbean - Wonder of the Seas</option>
+                                            <option value="Royal Caribbean – Harmony of the Seas">Royal Caribbean – Harmony of the Seas</option>
+                                            <option value="Royal Caribbean – Harmonyof the Seas">Royal Caribbean – Harmonyof the Seas</option>
+                                            <option value="Royal Caribbean – Mariner of the Seas">Royal Caribbean – Mariner of the Seas</option>
+                                            <option value="Royal Carribbean - Adventure of the Seas">Royal Carribbean - Adventure of the Seas</option>
+                                            <option value="Royal Carribbean -Independence of the Seas">Royal Carribbean -Independence of the Seas</option>
+
+                                        </select>
+                                    </td>
+                                    <td align="right">
+                                        <span id="lblQuantity" class="fplabel12">Number of Passengers</span>
+                                    </td>
+                                    <td align="left">
+                                        <select name="ddlQuantity" id="ddlQuantity" tabindex="8" class="fptextbox12" fdprocessedid="0n0jun">
+                                            <option value="1">1</option>
+                                            <option selected="selected" value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right" width="115">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left">
+                                        <table id="rbFeeType" class="fplabel12">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <input id="rbFeeType_0" type="radio" name="rbFeeType" value="12.85" onclick="rbfee(rbFeeType_0)">
+                                                        <label id="lrbFeeType_0" for="rbFeeType_0">Car - Advance Reservation- $12.85</label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input id="rbFeeType_1" type="radio" name="rbFeeType" value="15.95" onclick="rbfee(rbFeeType_1)">
+                                                        <label id="lrbFeeType_1" for="rbFeeType_1">Car - Drive Up No Reservation- $15.95</label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input id="rbFeeType_2" type="radio" name="rbFeeType" value="20.95" onclick="rbfee(rbFeeType_2)">
+                                                        <label id="lrbFeeType_2" for="rbFeeType_2">Oversized (+17ft) - Advance Res- $20.95</label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input id="rbFeeType_3" type="radio" name="rbFeeType" value="24.95" onclick="rbfee(rbFeeType_3)">
+                                                        <label id="lrbFeeType_3" for="rbFeeType_3">Oversized (+17ft) - Drive Up- $24.95</label>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+
+                                    <td align="right" valign="top">
+                                    </td>
+                                    <td align="left" valign="top">
+
+                                        <br>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right" valign="top">
+                                    </td>
+                                    <td align="left" valign="top">
+
+                                        <br>
+
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td align="right" valign="top">
+                                        <span id="lblPromoCode" class="fplabel12">Promotional Code</span>
+                                    </td>
+                                    <td align="left" valign="top">
+                                        <input name="txtPromoCode" type="text" onchange="javascript:setTimeout('__doPostBack(\'txtPromoCode\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="txtPromoCode" class="fptextbox12" fdprocessedid="tx1ydl">
+                                        <br>
+
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="DivAddl">
+                        <table width="800" align="center">
+                            <tbody>
+                                <tr align="center" class="tdColor">
+                                    <td align="center" class="hd">
+                                        <span id="Label4" class="biglabel18 hd">Additional Information</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table style="margin: 0 auto; text-align: center;">
+                            <tbody>
+                                <tr>
+                                    <td align="left" style="width: 250px;">
+                                    </td>
+                                    <td align="left" style="width: 250px;">
+                                    </td>
+                                    <td align="left">
+                                    </td>
+                                </tr>
+
+
+
+
+
+
+                            </tbody>
+                        </table>
+                        <table width="800" align="center">
+                            <tbody>
+                                <tr align="center">
+                                    <td align="right" width="120">
+                                        <span id="lblComment" class="fplabel12">Additional Information</span>
+                                    </td>
+                                    <td align="left">
+                                        <textarea name="txtComment" rows="2" cols="20" id="txtComment" class="fptextbox12" style="height:50px;width:400px;"></textarea>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="DivFee">
+                        <table width="800" align="center">
+                            <tbody>
+                                <tr align="center" class="tdColor">
+                                    <td align="center" class="hd">
+                                        <span id="Label1" class="biglabel18 hd">Fee Summary</span>
+                                    </td>
+                                </tr>
+                                <tr align="center">
+                                    <td align="center">
+                                        <span id="lblFee" class="fplabel12">
+                                            <table align="center" width="400 border=0">
+                                                <tbody>
+                                                    <tr>
+                                                        <td colspan="2" align="left">Arriving on: <label id="Arrivingdatetime"></label> </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2" align="left">Returning on: <label id="Returningdatetime"></label></td>
+                                                    </tr>
+                                                    <tr style="font-weight:bold;">
+                                                        <td>Description</td>
+                                                        <td>Price</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="right">
+                                                            <lable id="selectedOption"></lable>
+                                                            <label id="lbldesc"></label>
+                                                        </td>
+                                                        <td><lable id="lblPrice"></lable> </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="right">Port Canaveral Entry Fee</td>
+                                                        <td>$7.50</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td> </td>
+                                                        <td>-----------</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="right">Subtotal </td>
+                                                        <td><label id="lblSubTotal"></label></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="right">Taxes </td>
+                                                        <td>$3.23</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td> </td>
+                                                        <td>-----------</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="right">Total</td>
+                                                        <td><label id="lblTotal"></label></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td> </td>
+                                                        <td>=======</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="DivPhone">
+                    </div><div id="DivEmail2">
+                    </div><table width="800" align="center">
+                        <tbody>
+                            <tr align="center" class="tdColor">
+                                <td align="center" colspan="4" class="hd">
+                                    <span id="Label7" class="biglabel18 hd">Customer Information</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">
+                                    <span id="lblFirstReq" style="color:Red;">*</span>
+                                    <span id="Label25" class="fplabel12">First Name</span>
+                                </td>
+                                <td align="left">
+                                    <input name="txtFirstName" type="text" maxlength="15" id="txtFirstName" tabindex="32" class="fptextbox12" fdprocessedid="bgnep">
+                                </td>
+                                <td align="right">
+                                    <span id="lblLaststReq" style="color:Red;">*</span>
+                                    <span id="Label26" class="fplabel12">Last Name</span>
+                                </td>
+                                <td align="left" width="270">
+                                    <input name="txtLastName" type="text" maxlength="20" id="txtLastName" tabindex="33" class="fptextbox12" fdprocessedid="zahavo">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td align="right">
+                                    <span id="Label14" class="fplabel12">Telephone #</span>
+                                </td>
+                                <td align="left">
+                                    <input name="txtPhone" type="text" maxlength="15" id="txtPhone" tabindex="39" class="fptextbox12" fdprocessedid="sbnran">
+                                </td>
+                                <td align="right">
+                                    <span id="Label33" class="fplabel12">Telephone Type</span>
+                                </td>
+                                <td align="left">
+                                    <select name="ddlPhoneType" id="ddlPhoneType" tabindex="40" class="fptextbox12" fdprocessedid="c98t5g">
+                                        <option value="Mobile">Home</option>
+                                        <option value="Home">Mobile</option>
+                                        <option value="Work">Work</option>
+
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td align="right">
+                                    <span id="lblFirstReq0" style="color:Red;">*</span>
+                                    <span id="lblEmail2" class="fplabel12">Email Address</span>
+                                </td>
+                                <td align="left">
+                                    <input name="txtEmail2" type="text" maxlength="60" id="txtEmail2" tabindex="40" class="fptextbox12" style="width:215px;" fdprocessedid="rw8th">
+                                </td>
+                                <td align="right">
+                                    <span id="lblFirstReq1" style="color:Red;">*</span>
+                                    <span id="lblEmail3" class="fplabel12">Confirm Email</span>
+                                </td>
+                                <td align="left">
+                                    <input name="txtEmailConfirm" type="text" maxlength="60" id="txtEmailConfirm" tabindex="41" class="fptextbox12" style="width:215px;" fdprocessedid="enecng">
+                                </td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div id="DivAgreement"></div>
+    <table align="center" width="800">
+        <tbody>
+            <tr align="center">
+                <td>
+                    <span class="fpbiglabel18"><input id="cbTerms" type="checkbox" name="cbTerms" onclick="javascript:setTimeout('__doPostBack(\'cbTerms\',\'\')', 0)" tabindex="50"><label for="cbTerms">I have read and agree to the Terms and Conditions</label></span>
+                </td>
+            </tr>
+            <tr align="center">
+                <td align="center">
+                </td>
+                @*  <td>
+                    <span id="Label19">All terms and conditions are located at </span>
+                    <a id="hpAgreementLink" href="https://www.parkportcanaveral.com/policies" target="_blank" style="color:#BEC5F3;font-weight:bold;">Park Port Canaveral</a>
+                    </td>*@
+            </tr>
+
+            <tr>
+                <td align="center">
+                </td>
+            </tr>
+            <tr align="center">
+                <td>
+                </td>
+            </tr>
+            <tr align="center">
+                <td>
+                </td>
+            </tr>
+            <tr align="center">
+                <td>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>
+    var Arrivetime = "";
+    var diffDays = "";
+    $(document).ready(function () {
+        var now = new Date();
+        var mm = "";
+        if ((now.getMonth() + 1) < 10) {
+            mm = '0' + (now.getMonth() + 1);
+
+        }
+        else {
+            mm = (now.getMonth() + 1);
+        }
+        var dd = "";
+        if ((now.getDate()) < 10) {
+            dd = '0' + (now.getDate());
+
+        }
+        else {
+            dd = (now.getDate());
+        }
+
+        var today = now.getFullYear() + '-' + mm + '-' + dd;
+        var tomorrow = now.getFullYear() + '-' + mm + '-' + (now.getDate() + 1);
+        tomorrow = new Date(`${(new Date()).getFullYear()}-${(new Date()).getMonth() + 1}-${(new Date()).getDate() + 1}`);
+        var mm1 = "";
+        if ((tomorrow.getMonth() + 1) < 10) {
+            mm1 = '0' + (tomorrow.getMonth() + 1);
+
+        }
+        else {
+            mm1 = (tomorrow.getMonth() + 1);
+        }
+        var dd1 = "";
+        if ((tomorrow.getDate()) < 10) {
+            dd1 = '0' + (tomorrow.getDate());
+
+        }
+        else {
+            dd1 = (tomorrow.getDate());
+        }
+        tomorrow = tomorrow.getFullYear() + '-' + mm1 + '-' + dd1;
+        $('#datePicker').val(today);
+        $('#ArrivalSelected').val(today);
+        $('#ReturnSelected').val(tomorrow);
+
+        document.getElementById("Arrivingdatetime").innerHTML = new Date().toDateString() + " at " + $('#ddlArriveHr').val() + " " + $('#ddlArriveMinutes').val() + " " + $('#ddlArriveAM').val();
+        document.getElementById("Returningdatetime").innerHTML = (new Date(tomorrow)).toDateString();
+
+        var nmbrofDays = "";
+        const date1 = new Date(today);
+        const date2 = new Date(tomorrow);
+        const diffTime = Math.abs(date2 - date1);
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        // alert(diffDays);
+        DiffDays(today, tomorrow)
+        //alert($('#ddlArriveHr').val());
+    })
+    function DiffDays(date1, date2) {
+        const d1 = new Date(date1);
+        const d2 = new Date(date2);
+        const diffTime = Math.abs(d2 - d1);
+        diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        return diffDays;
+        //alert(diffDays);
+    }
+    function fnArrivetime() {
+        Arrivetime = $('#ddlArriveHr').val() + " " + $('#ddlArriveMinutes').val() + " " + $('#ddlArriveAM').val();
+        return Arrivetime;
+    }
+    $("#Arrivalchange").change(function (event) {
+        alert($(this).val());
+        Arrivetime = $('#ddlArriveHr').val() + " " + $('#ddlArriveMinutes').val() + " " + $('#ddlArriveAM').val();
+
+    });
+    $("#ddlArriveHr").change(function () {
+        alert($('#ddlArriveHr').val());
+        Arrivetime = $('#ddlArriveHr').val() + " " + $('#ddlArriveMinutes').val() + " " + $('#ddlArriveAM').val();
+    });
+    $("#ddlArriveMinutes").change(function () {
+        alert($('#ddlArriveMinutes').val());
+        Arrivetime = $('#ddlArriveHr').val() + " " + $('#ddlArriveMinutes').val() + " " + $('#ddlArriveAM').val();
+    });
+    $("#ddlArriveAM").change(function () {
+        alert($('#ddlArriveAM').val());
+    });
+    function Arrivalchange(e) {
+        //alert(e.target.value);
+        var d = new Date(e.target.value);
+        //d.toLocaleString('en-us', { weekday: 'long' })
+        //d.toDateString()
+        document.getElementById("Arrivingdatetime").innerHTML = d.toDateString() + " at " + $('#ddlArriveHr').val() + " " + $('#ddlArriveMinutes').val() + " " + $('#ddlArriveAM').val();;
+        var d2 = $('#ReturnSelected').val();
+        DiffDays(d, d2)
+    }
+    function Returnchange(e) {
+        //alert(e.target.value);
+        var d2 = new Date(e.target.value);
+        document.getElementById("Returningdatetime").innerHTML = d2.toDateString();
+        var d1 = $('#ArrivalSelected').val();
+        DiffDays(d1, d2)
+    }
+    var rates = document.getElementsByName('rbFeeType');
+    var rate_value;
+    for (var i = 0; i < rates.length; i++) {
+        if (rates[i].checked) {
+            rate_value = rates[i].value;
+        }
+    }
+    function rbfee(data) {
+        // document.getElementById(data.id).innerHTML;
+        // alert(document.getElementById('l'+data.id));
+        var d = document.getElementById('l' + data.id).innerHTML;
+        document.getElementById('selectedOption').innerHTML = d;
+        var d1 = $('#ArrivalSelected').val();
+        var d2 = $('#ReturnSelected').val();
+        diffDays = DiffDays(d1, d2)
+        let price = parseFloat(data.value) * parseInt(diffDays)
+        d = d + " * " + diffDays + " days "
+        document.getElementById('selectedOption').innerHTML = d;
+        document.getElementById('lblPrice').innerHTML = "$" + price.toFixed(2);
+        let PortCanaveralEntryFee = "7.50"
+        let lblSubTotal = price + parseFloat(PortCanaveralEntryFee)
+        document.getElementById('lblSubTotal').innerHTML = "$" + lblSubTotal.toFixed(2);
+        let tax = "3.23"
+        let Total = parseFloat(lblSubTotal) + parseFloat(tax)
+        document.getElementById('lblTotal').innerHTML = "$" + Total.toFixed(2);
+
+        var rates = document.getElementsByName('rbFeeType');
+        var rate_value;
+        for (var i = 0; i < rates.length; i++) {
+            if (rates[i].checked) {
+                rate_value = rates[i].value;
+            }
+        }
+    }
+</script>
+
+@*<script>
+    function getToken() {
+        debugger;
+
+        var token = $("#token").val();
+
+    }
+    localStorage.setItem("CustEmail", "");
+</script>*@
+
+
+
+
+
+
+
+

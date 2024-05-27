@@ -1,0 +1,90 @@
+﻿@model AuthModule.tblProduct
+
+@{
+    
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>tblProduct</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.PrdCode)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PrdCode)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.PrdDesc)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PrdDesc)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.PrdPrice)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PrdPrice)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Active)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Active)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.CreatedDate)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.CreatedDate)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.CreatedBy)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.CreatedBy)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ModifiedDate)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ModifiedDate)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ModifiedBy)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ModifiedBy)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.PrdId }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

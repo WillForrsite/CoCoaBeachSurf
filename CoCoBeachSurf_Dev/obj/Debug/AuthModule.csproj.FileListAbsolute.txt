@@ -1,0 +1,984 @@
+D:\My\AuthModule\AuthModule\bin\ApplicationInsights.config
+D:\My\AuthModule\AuthModule\bin\AuthModule.dll.config
+D:\My\AuthModule\AuthModule\bin\AuthModule.dll
+D:\My\AuthModule\AuthModule\bin\AuthModule.pdb
+D:\My\AuthModule\AuthModule\bin\Antlr3.Runtime.dll
+D:\My\AuthModule\AuthModule\bin\EntityFramework.dll
+D:\My\AuthModule\AuthModule\bin\EntityFramework.SqlServer.dll
+D:\My\AuthModule\AuthModule\bin\Microsoft.AI.Agent.Intercept.dll
+D:\My\AuthModule\AuthModule\bin\Microsoft.AI.DependencyCollector.dll
+D:\My\AuthModule\AuthModule\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\My\AuthModule\AuthModule\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\My\AuthModule\AuthModule\bin\Microsoft.AI.Web.dll
+D:\My\AuthModule\AuthModule\bin\Microsoft.AI.WindowsServer.dll
+D:\My\AuthModule\AuthModule\bin\Microsoft.ApplicationInsights.dll
+D:\My\AuthModule\AuthModule\bin\Microsoft.AspNet.Identity.Core.dll
+D:\My\AuthModule\AuthModule\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\My\AuthModule\AuthModule\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\My\AuthModule\AuthModule\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\My\AuthModule\AuthModule\bin\Microsoft.Owin.dll
+D:\My\AuthModule\AuthModule\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\My\AuthModule\AuthModule\bin\Microsoft.Owin.Security.Cookies.dll
+D:\My\AuthModule\AuthModule\bin\Microsoft.Owin.Security.dll
+D:\My\AuthModule\AuthModule\bin\Microsoft.Owin.Security.Facebook.dll
+D:\My\AuthModule\AuthModule\bin\Microsoft.Owin.Security.Google.dll
+D:\My\AuthModule\AuthModule\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\My\AuthModule\AuthModule\bin\Microsoft.Owin.Security.OAuth.dll
+D:\My\AuthModule\AuthModule\bin\Microsoft.Owin.Security.Twitter.dll
+D:\My\AuthModule\AuthModule\bin\Microsoft.Web.Infrastructure.dll
+D:\My\AuthModule\AuthModule\bin\Newtonsoft.Json.dll
+D:\My\AuthModule\AuthModule\bin\Owin.dll
+D:\My\AuthModule\AuthModule\bin\System.Net.Http.Formatting.dll
+D:\My\AuthModule\AuthModule\bin\System.Web.Helpers.dll
+D:\My\AuthModule\AuthModule\bin\System.Web.Http.dll
+D:\My\AuthModule\AuthModule\bin\System.Web.Http.Owin.dll
+D:\My\AuthModule\AuthModule\bin\System.Web.Http.WebHost.dll
+D:\My\AuthModule\AuthModule\bin\System.Web.Mvc.dll
+D:\My\AuthModule\AuthModule\bin\System.Web.Optimization.dll
+D:\My\AuthModule\AuthModule\bin\System.Web.Razor.dll
+D:\My\AuthModule\AuthModule\bin\System.Web.WebPages.Deployment.dll
+D:\My\AuthModule\AuthModule\bin\System.Web.WebPages.dll
+D:\My\AuthModule\AuthModule\bin\System.Web.WebPages.Razor.dll
+D:\My\AuthModule\AuthModule\bin\WebGrease.dll
+D:\My\AuthModule\AuthModule\bin\Antlr3.Runtime.pdb
+D:\My\AuthModule\AuthModule\bin\EntityFramework.xml
+D:\My\AuthModule\AuthModule\bin\EntityFramework.SqlServer.xml
+D:\My\AuthModule\AuthModule\bin\Microsoft.AspNet.Identity.Core.xml
+D:\My\AuthModule\AuthModule\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\My\AuthModule\AuthModule\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\My\AuthModule\AuthModule\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\My\AuthModule\AuthModule\bin\Microsoft.Owin.xml
+D:\My\AuthModule\AuthModule\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\My\AuthModule\AuthModule\bin\Microsoft.Owin.Security.xml
+D:\My\AuthModule\AuthModule\bin\Microsoft.Owin.Security.Cookies.xml
+D:\My\AuthModule\AuthModule\bin\Microsoft.Owin.Security.Facebook.xml
+D:\My\AuthModule\AuthModule\bin\Microsoft.Owin.Security.Google.xml
+D:\My\AuthModule\AuthModule\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\My\AuthModule\AuthModule\bin\Microsoft.Owin.Security.OAuth.xml
+D:\My\AuthModule\AuthModule\bin\Microsoft.Owin.Security.Twitter.xml
+D:\My\AuthModule\AuthModule\bin\Newtonsoft.Json.xml
+D:\My\AuthModule\AuthModule\bin\System.Net.Http.Formatting.xml
+D:\My\AuthModule\AuthModule\bin\System.Web.Helpers.xml
+D:\My\AuthModule\AuthModule\bin\System.Web.Http.xml
+D:\My\AuthModule\AuthModule\bin\System.Web.Http.Owin.xml
+D:\My\AuthModule\AuthModule\bin\System.Web.Http.WebHost.xml
+D:\My\AuthModule\AuthModule\bin\System.Web.Mvc.xml
+D:\My\AuthModule\AuthModule\bin\System.Web.Optimization.xml
+D:\My\AuthModule\AuthModule\bin\System.Web.Razor.xml
+D:\My\AuthModule\AuthModule\bin\System.Web.WebPages.xml
+D:\My\AuthModule\AuthModule\bin\System.Web.WebPages.Deployment.xml
+D:\My\AuthModule\AuthModule\bin\System.Web.WebPages.Razor.xml
+D:\My\AuthModule\AuthModule\bin\Microsoft.ApplicationInsights.xml
+D:\My\AuthModule\AuthModule\bin\Microsoft.AI.DependencyCollector.xml
+D:\My\AuthModule\AuthModule\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\My\AuthModule\AuthModule\bin\Microsoft.AI.WindowsServer.xml
+D:\My\AuthModule\AuthModule\bin\Microsoft.AI.Web.xml
+D:\My\AuthModule\AuthModule\obj\Debug\AuthModule.csproj.CoreCompileInputs.cache
+D:\My\AuthModule\AuthModule\obj\Debug\AuthModule.dll
+D:\My\AuthModule\AuthModule\obj\Debug\AuthModule.pdb
+D:\My\AuthModule\AuthModule\obj\Debug\AuthModule.csprojResolveAssemblyReference.cache
+D:\My\AuthModule\AuthModule\bin\AuthIntegration.dll
+D:\My\AuthModule\AuthModule\bin\AuthIntegration.pdb
+D:\My\AuthModule\AuthModule\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\My\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Logging.dll
+D:\My\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Protocols.dll
+D:\My\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\My\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Tokens.dll
+D:\My\AuthModule\AuthModule\bin\Microsoft.Owin.Security.OpenIdConnect.dll
+D:\My\AuthModule\AuthModule\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\My\AuthModule\AuthModule\bin\Microsoft.IdentityModel.JsonWebTokens.pdb
+D:\My\AuthModule\AuthModule\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+D:\My\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Logging.pdb
+D:\My\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Logging.xml
+D:\My\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Protocols.pdb
+D:\My\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Protocols.xml
+D:\My\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.pdb
+D:\My\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+D:\My\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Tokens.pdb
+D:\My\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Tokens.xml
+D:\My\AuthModule\AuthModule\bin\Microsoft.Owin.Security.OpenIdConnect.xml
+D:\My\AuthModule\AuthModule\bin\System.IdentityModel.Tokens.Jwt.pdb
+D:\My\AuthModule\AuthModule\bin\System.IdentityModel.Tokens.Jwt.xml
+D:\My\AuthModule\AuthModule\bin\Kentor.OwinCookieSaver.dll
+D:\My\AuthModule\AuthModule\bin\Kentor.OwinCookieSaver.xml
+D:\Padma\AuthModule\AuthModule\bin\ApplicationInsights.config
+D:\Padma\AuthModule\AuthModule\bin\AuthModule.dll.config
+D:\Padma\AuthModule\AuthModule\bin\AuthModule.dll
+D:\Padma\AuthModule\AuthModule\bin\AuthModule.pdb
+D:\Padma\AuthModule\AuthModule\bin\Antlr3.Runtime.dll
+D:\Padma\AuthModule\AuthModule\bin\AuthIntegration.dll
+D:\Padma\AuthModule\AuthModule\bin\EntityFramework.dll
+D:\Padma\AuthModule\AuthModule\bin\EntityFramework.SqlServer.dll
+D:\Padma\AuthModule\AuthModule\bin\Kentor.OwinCookieSaver.dll
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.AI.DependencyCollector.dll
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.AI.Web.dll
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.AI.WindowsServer.dll
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.ApplicationInsights.dll
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Logging.dll
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Protocols.dll
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Tokens.dll
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.Owin.dll
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.Owin.Security.dll
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.Owin.Security.Google.dll
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.Owin.Security.OpenIdConnect.dll
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.Web.Infrastructure.dll
+D:\Padma\AuthModule\AuthModule\bin\Newtonsoft.Json.dll
+D:\Padma\AuthModule\AuthModule\bin\Owin.dll
+D:\Padma\AuthModule\AuthModule\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\Padma\AuthModule\AuthModule\bin\System.Net.Http.Formatting.dll
+D:\Padma\AuthModule\AuthModule\bin\System.Web.Helpers.dll
+D:\Padma\AuthModule\AuthModule\bin\System.Web.Http.dll
+D:\Padma\AuthModule\AuthModule\bin\System.Web.Http.Owin.dll
+D:\Padma\AuthModule\AuthModule\bin\System.Web.Http.WebHost.dll
+D:\Padma\AuthModule\AuthModule\bin\System.Web.Mvc.dll
+D:\Padma\AuthModule\AuthModule\bin\System.Web.Optimization.dll
+D:\Padma\AuthModule\AuthModule\bin\System.Web.Razor.dll
+D:\Padma\AuthModule\AuthModule\bin\System.Web.WebPages.Deployment.dll
+D:\Padma\AuthModule\AuthModule\bin\System.Web.WebPages.dll
+D:\Padma\AuthModule\AuthModule\bin\System.Web.WebPages.Razor.dll
+D:\Padma\AuthModule\AuthModule\bin\WebGrease.dll
+D:\Padma\AuthModule\AuthModule\bin\AuthIntegration.pdb
+D:\Padma\AuthModule\AuthModule\bin\Antlr3.Runtime.pdb
+D:\Padma\AuthModule\AuthModule\bin\EntityFramework.xml
+D:\Padma\AuthModule\AuthModule\bin\EntityFramework.SqlServer.xml
+D:\Padma\AuthModule\AuthModule\bin\Kentor.OwinCookieSaver.xml
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.IdentityModel.JsonWebTokens.pdb
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Logging.pdb
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Logging.xml
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Protocols.pdb
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Protocols.xml
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.pdb
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Tokens.pdb
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Tokens.xml
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.Owin.xml
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.Owin.Security.xml
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.Owin.Security.Google.xml
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.Owin.Security.OpenIdConnect.xml
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Padma\AuthModule\AuthModule\bin\Newtonsoft.Json.xml
+D:\Padma\AuthModule\AuthModule\bin\System.IdentityModel.Tokens.Jwt.pdb
+D:\Padma\AuthModule\AuthModule\bin\System.IdentityModel.Tokens.Jwt.xml
+D:\Padma\AuthModule\AuthModule\bin\System.Net.Http.Formatting.xml
+D:\Padma\AuthModule\AuthModule\bin\System.Web.Helpers.xml
+D:\Padma\AuthModule\AuthModule\bin\System.Web.Http.xml
+D:\Padma\AuthModule\AuthModule\bin\System.Web.Http.Owin.xml
+D:\Padma\AuthModule\AuthModule\bin\System.Web.Http.WebHost.xml
+D:\Padma\AuthModule\AuthModule\bin\System.Web.Mvc.xml
+D:\Padma\AuthModule\AuthModule\bin\System.Web.Optimization.xml
+D:\Padma\AuthModule\AuthModule\bin\System.Web.Razor.xml
+D:\Padma\AuthModule\AuthModule\bin\System.Web.WebPages.xml
+D:\Padma\AuthModule\AuthModule\bin\System.Web.WebPages.Deployment.xml
+D:\Padma\AuthModule\AuthModule\bin\System.Web.WebPages.Razor.xml
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.ApplicationInsights.xml
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.AI.DependencyCollector.xml
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.AI.WindowsServer.xml
+D:\Padma\AuthModule\AuthModule\bin\Microsoft.AI.Web.xml
+D:\Padma\AuthModule\AuthModule\obj\Debug\AuthModule.csprojResolveAssemblyReference.cache
+D:\Padma\AuthModule\AuthModule\obj\Debug\AuthModule.csproj.CoreCompileInputs.cache
+D:\Padma\AuthModule\AuthModule\obj\Debug\AuthModule.dll
+D:\Padma\AuthModule\AuthModule\obj\Debug\AuthModule.pdb
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\ApplicationInsights.config
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\AuthModule.dll.config
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\AuthModule.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\AuthModule.pdb
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Antlr3.Runtime.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\AuthIntegration.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\EntityFramework.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\EntityFramework.SqlServer.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Kentor.OwinCookieSaver.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AI.Agent.Intercept.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AI.DependencyCollector.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AI.Web.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AI.WindowsServer.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.ApplicationInsights.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AspNet.Identity.Core.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Logging.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Protocols.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Tokens.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.Cookies.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.Facebook.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.Google.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.OAuth.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.OpenIdConnect.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.Twitter.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Web.Infrastructure.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Newtonsoft.Json.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Owin.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\PagedList.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\PagedList.Mvc.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\System.Net.Http.Formatting.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Helpers.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Http.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Http.Owin.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Http.WebHost.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Mvc.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Optimization.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Razor.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.WebPages.Deployment.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.WebPages.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.WebPages.Razor.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\WebGrease.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\AuthIntegration.pdb
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Antlr3.Runtime.pdb
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\EntityFramework.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\EntityFramework.SqlServer.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Kentor.OwinCookieSaver.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AspNet.Identity.Core.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.JsonWebTokens.pdb
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Logging.pdb
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Logging.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Protocols.pdb
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Protocols.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.pdb
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Tokens.pdb
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Tokens.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.Cookies.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.Facebook.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.Google.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.OAuth.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.OpenIdConnect.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.Twitter.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Newtonsoft.Json.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\PagedList.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\PagedList.Mvc.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\System.IdentityModel.Tokens.Jwt.pdb
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\System.IdentityModel.Tokens.Jwt.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\System.Net.Http.Formatting.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Helpers.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Http.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Http.Owin.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Http.WebHost.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Mvc.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Optimization.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Razor.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.WebPages.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.WebPages.Deployment.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.WebPages.Razor.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.ApplicationInsights.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AI.DependencyCollector.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AI.WindowsServer.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AI.Web.xml
+D:\My\AuthModule_Project\AuthModule\AuthModule\obj\Debug\AuthModule.csprojResolveAssemblyReference.cache
+D:\My\AuthModule_Project\AuthModule\AuthModule\obj\Debug\AuthModule.csproj.CoreCompileInputs.cache
+D:\My\AuthModule_Project\AuthModule\AuthModule\obj\Debug\AuthModule.dll
+D:\My\AuthModule_Project\AuthModule\AuthModule\obj\Debug\AuthModule.pdb
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\ApplicationInsights.config
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\AuthModule.dll.config
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\AuthModule.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\AuthModule.pdb
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Antlr3.Runtime.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\AuthIntegration.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\EntityFramework.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\EntityFramework.SqlServer.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Kentor.OwinCookieSaver.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AI.Agent.Intercept.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AI.DependencyCollector.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AI.Web.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AI.WindowsServer.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.ApplicationInsights.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AspNet.Identity.Core.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Logging.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Protocols.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Tokens.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.Cookies.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.Facebook.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.Google.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.OAuth.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.OpenIdConnect.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.Twitter.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Web.Infrastructure.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Newtonsoft.Json.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Owin.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\PagedList.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\PagedList.Mvc.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\System.Net.Http.Formatting.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Helpers.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Http.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Http.Owin.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Http.WebHost.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Mvc.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Optimization.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Razor.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.WebPages.Deployment.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.WebPages.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.WebPages.Razor.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\WebGrease.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\AuthIntegration.pdb
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Antlr3.Runtime.pdb
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\EntityFramework.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\EntityFramework.SqlServer.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Kentor.OwinCookieSaver.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AspNet.Identity.Core.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.JsonWebTokens.pdb
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Logging.pdb
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Logging.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Protocols.pdb
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Protocols.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.pdb
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Tokens.pdb
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Tokens.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.Cookies.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.Facebook.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.Google.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.OAuth.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.OpenIdConnect.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.Twitter.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Newtonsoft.Json.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\PagedList.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\PagedList.Mvc.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\System.IdentityModel.Tokens.Jwt.pdb
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\System.Net.Http.Formatting.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Helpers.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Http.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Http.Owin.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Http.WebHost.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Mvc.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Optimization.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Razor.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.WebPages.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.WebPages.Deployment.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.WebPages.Razor.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.ApplicationInsights.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AI.DependencyCollector.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AI.WindowsServer.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AI.Web.xml
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\obj\Debug\AuthModule.csprojResolveAssemblyReference.cache
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\obj\Debug\AuthModule.csproj.CoreCompileInputs.cache
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\obj\Debug\AuthModule.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\obj\Debug\AuthModule.pdb
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\SendGrid.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\StarkbankEcdsa.dll
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\SendGrid.pdb
+C:\DATA\Ravi\Production\AuthModule_Project\AuthModule\AuthModule\bin\SendGrid.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\ApplicationInsights.config
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\AuthModule.dll.config
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\AuthModule.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\AuthModule.pdb
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Antlr3.Runtime.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\AuthIntegration.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\EntityFramework.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\EntityFramework.SqlServer.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Kentor.OwinCookieSaver.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AI.Agent.Intercept.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AI.DependencyCollector.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AI.PerfCounterCollector.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AI.ServerTelemetryChannel.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AI.Web.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AI.WindowsServer.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.ApplicationInsights.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AspNet.Identity.Core.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AspNet.Identity.Owin.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Logging.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Protocols.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Tokens.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Host.SystemWeb.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.Cookies.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.Facebook.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.Google.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.OAuth.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.OpenIdConnect.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.Twitter.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Web.Infrastructure.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Newtonsoft.Json.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Owin.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\PagedList.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\PagedList.Mvc.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\SendGrid.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\StarkbankEcdsa.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\System.IdentityModel.Tokens.Jwt.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\System.Net.Http.Formatting.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Helpers.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Http.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Http.Owin.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Http.WebHost.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Mvc.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Optimization.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Razor.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.WebPages.Deployment.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.WebPages.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.WebPages.Razor.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\WebGrease.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\AuthIntegration.pdb
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Antlr3.Runtime.pdb
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\EntityFramework.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\EntityFramework.SqlServer.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Kentor.OwinCookieSaver.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AspNet.Identity.Core.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AspNet.Identity.Owin.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.JsonWebTokens.pdb
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Logging.pdb
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Logging.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Protocols.pdb
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Protocols.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.pdb
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Tokens.pdb
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.IdentityModel.Tokens.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Host.SystemWeb.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.Cookies.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.Facebook.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.Google.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.OAuth.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.OpenIdConnect.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.Owin.Security.Twitter.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Newtonsoft.Json.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\PagedList.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\PagedList.Mvc.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\SendGrid.pdb
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\SendGrid.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\System.IdentityModel.Tokens.Jwt.pdb
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\System.IdentityModel.Tokens.Jwt.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\System.Net.Http.Formatting.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Helpers.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Http.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Http.Owin.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Http.WebHost.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Mvc.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Optimization.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.Razor.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.WebPages.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.WebPages.Deployment.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\System.Web.WebPages.Razor.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.ApplicationInsights.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AI.DependencyCollector.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AI.ServerTelemetryChannel.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AI.WindowsServer.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\bin\Microsoft.AI.Web.xml
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\obj\Debug\AuthModule.csproj.AssemblyReference.cache
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\obj\Debug\AuthModule.csproj.CoreCompileInputs.cache
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\obj\Debug\AuthModule.csproj.CopyComplete
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\obj\Debug\AuthModule.dll
+B:\WPC Development Codes\Apps Prod&Dev\AuthModule_Project\AuthModule\AuthModule\obj\Debug\AuthModule.pdb
+D:\Work Area\Apss-Portal\AuthModule\bin\ApplicationInsights.config
+D:\Work Area\Apss-Portal\AuthModule\bin\AuthModule.dll.config
+D:\Work Area\Apss-Portal\AuthModule\bin\AuthModule.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\AuthModule.pdb
+D:\Work Area\Apss-Portal\AuthModule\bin\Antlr3.Runtime.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\AuthIntegration.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\EntityFramework.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\EntityFramework.SqlServer.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\Kentor.OwinCookieSaver.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.AI.DependencyCollector.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.AI.Web.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.AI.WindowsServer.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.ApplicationInsights.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.IdentityModel.Logging.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.IdentityModel.Protocols.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.IdentityModel.Tokens.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.Owin.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.Owin.Security.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.Owin.Security.Google.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.Owin.Security.OpenIdConnect.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.Web.Infrastructure.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\Newtonsoft.Json.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\Owin.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\PagedList.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\PagedList.Mvc.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\SendGrid.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\StarkbankEcdsa.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\System.Net.Http.Formatting.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\System.Web.Helpers.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\System.Web.Http.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\System.Web.Http.Owin.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\System.Web.Http.WebHost.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\System.Web.Mvc.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\System.Web.Optimization.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\System.Web.Razor.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\System.Web.WebPages.Deployment.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\System.Web.WebPages.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\System.Web.WebPages.Razor.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\WebGrease.dll
+D:\Work Area\Apss-Portal\AuthModule\bin\AuthIntegration.pdb
+D:\Work Area\Apss-Portal\AuthModule\bin\Antlr3.Runtime.pdb
+D:\Work Area\Apss-Portal\AuthModule\bin\EntityFramework.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\EntityFramework.SqlServer.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\Kentor.OwinCookieSaver.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.IdentityModel.JsonWebTokens.pdb
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.IdentityModel.Logging.pdb
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.IdentityModel.Logging.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.IdentityModel.Protocols.pdb
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.IdentityModel.Protocols.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.pdb
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.IdentityModel.Tokens.pdb
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.IdentityModel.Tokens.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.Owin.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.Owin.Security.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.Owin.Security.Google.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.Owin.Security.OpenIdConnect.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\Newtonsoft.Json.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\PagedList.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\PagedList.Mvc.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\SendGrid.pdb
+D:\Work Area\Apss-Portal\AuthModule\bin\SendGrid.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\System.IdentityModel.Tokens.Jwt.pdb
+D:\Work Area\Apss-Portal\AuthModule\bin\System.IdentityModel.Tokens.Jwt.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\System.Net.Http.Formatting.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\System.Web.Helpers.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\System.Web.Http.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\System.Web.Http.Owin.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\System.Web.Http.WebHost.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\System.Web.Mvc.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\System.Web.Optimization.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\System.Web.Razor.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\System.Web.WebPages.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\System.Web.WebPages.Deployment.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\System.Web.WebPages.Razor.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.ApplicationInsights.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.AI.DependencyCollector.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.AI.WindowsServer.xml
+D:\Work Area\Apss-Portal\AuthModule\bin\Microsoft.AI.Web.xml
+D:\Work Area\Apss-Portal\AuthModule\obj\Debug\AuthModule.csproj.AssemblyReference.cache
+D:\Work Area\Apss-Portal\AuthModule\obj\Debug\AuthModule.csproj.CoreCompileInputs.cache
+D:\Work Area\Apss-Portal\AuthModule\obj\Debug\AuthModule.csproj.CopyComplete
+D:\Work Area\Apss-Portal\AuthModule\obj\Debug\AuthModule.dll
+D:\Work Area\Apss-Portal\AuthModule\obj\Debug\AuthModule.pdb
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\obj\Debug\AuthModule.csproj.AssemblyReference.cache
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\obj\Debug\AuthModule.csproj.CoreCompileInputs.cache
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\ApplicationInsights.config
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\AuthModule.dll.config
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\AuthModule.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\AuthModule.pdb
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Antlr3.Runtime.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\AuthIntegration.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\EntityFramework.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\EntityFramework.SqlServer.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Kentor.OwinCookieSaver.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.AI.DependencyCollector.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.AI.Web.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.AI.WindowsServer.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.ApplicationInsights.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.IdentityModel.Logging.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.IdentityModel.Protocols.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.IdentityModel.Tokens.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.Owin.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.Owin.Security.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.Owin.Security.Google.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.Owin.Security.OpenIdConnect.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.Web.Infrastructure.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Newtonsoft.Json.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Owin.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\PagedList.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\PagedList.Mvc.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\SendGrid.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\StarkbankEcdsa.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\System.Net.Http.Formatting.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\System.Web.Helpers.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\System.Web.Http.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\System.Web.Http.Owin.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\System.Web.Http.WebHost.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\System.Web.Mvc.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\System.Web.Optimization.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\System.Web.Razor.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\System.Web.WebPages.Deployment.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\System.Web.WebPages.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\System.Web.WebPages.Razor.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\WebGrease.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\AuthIntegration.pdb
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Antlr3.Runtime.pdb
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\EntityFramework.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\EntityFramework.SqlServer.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Kentor.OwinCookieSaver.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.IdentityModel.JsonWebTokens.pdb
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.IdentityModel.Logging.pdb
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.IdentityModel.Logging.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.IdentityModel.Protocols.pdb
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.IdentityModel.Protocols.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.pdb
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.IdentityModel.Tokens.pdb
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.IdentityModel.Tokens.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.Owin.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.Owin.Security.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.Owin.Security.Google.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.Owin.Security.OpenIdConnect.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Newtonsoft.Json.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\PagedList.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\PagedList.Mvc.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\SendGrid.pdb
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\SendGrid.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\System.IdentityModel.Tokens.Jwt.pdb
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\System.IdentityModel.Tokens.Jwt.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\System.Net.Http.Formatting.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\System.Web.Helpers.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\System.Web.Http.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\System.Web.Http.Owin.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\System.Web.Http.WebHost.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\System.Web.Mvc.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\System.Web.Optimization.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\System.Web.Razor.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\System.Web.WebPages.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\System.Web.WebPages.Deployment.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\System.Web.WebPages.Razor.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.ApplicationInsights.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.AI.DependencyCollector.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.AI.WindowsServer.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\bin\Microsoft.AI.Web.xml
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\obj\Debug\AuthModule.csproj.CopyComplete
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\obj\Debug\AuthModule.dll
+D:\Work Area\Ollas\IHP Apps Portal\AuthModule\obj\Debug\AuthModule.pdb
+C:\Bluechip Development\IHP\AuthModule\bin\ApplicationInsights.config
+C:\Bluechip Development\IHP\AuthModule\bin\AuthModule.dll.config
+C:\Bluechip Development\IHP\AuthModule\bin\AuthModule.dll
+C:\Bluechip Development\IHP\AuthModule\bin\AuthModule.pdb
+C:\Bluechip Development\IHP\AuthModule\bin\Antlr3.Runtime.dll
+C:\Bluechip Development\IHP\AuthModule\bin\AuthIntegration.dll
+C:\Bluechip Development\IHP\AuthModule\bin\EntityFramework.dll
+C:\Bluechip Development\IHP\AuthModule\bin\EntityFramework.SqlServer.dll
+C:\Bluechip Development\IHP\AuthModule\bin\Kentor.OwinCookieSaver.dll
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.AI.DependencyCollector.dll
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.AI.Web.dll
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.AI.WindowsServer.dll
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.ApplicationInsights.dll
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.IdentityModel.Logging.dll
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.IdentityModel.Protocols.dll
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.Owin.dll
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.Owin.Security.dll
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.Owin.Security.Google.dll
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.Owin.Security.OpenIdConnect.dll
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.Web.Infrastructure.dll
+C:\Bluechip Development\IHP\AuthModule\bin\Newtonsoft.Json.dll
+C:\Bluechip Development\IHP\AuthModule\bin\Owin.dll
+C:\Bluechip Development\IHP\AuthModule\bin\PagedList.dll
+C:\Bluechip Development\IHP\AuthModule\bin\PagedList.Mvc.dll
+C:\Bluechip Development\IHP\AuthModule\bin\SendGrid.dll
+C:\Bluechip Development\IHP\AuthModule\bin\StarkbankEcdsa.dll
+C:\Bluechip Development\IHP\AuthModule\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Bluechip Development\IHP\AuthModule\bin\System.Net.Http.Formatting.dll
+C:\Bluechip Development\IHP\AuthModule\bin\System.Web.Helpers.dll
+C:\Bluechip Development\IHP\AuthModule\bin\System.Web.Http.dll
+C:\Bluechip Development\IHP\AuthModule\bin\System.Web.Http.Owin.dll
+C:\Bluechip Development\IHP\AuthModule\bin\System.Web.Http.WebHost.dll
+C:\Bluechip Development\IHP\AuthModule\bin\System.Web.Mvc.dll
+C:\Bluechip Development\IHP\AuthModule\bin\System.Web.Optimization.dll
+C:\Bluechip Development\IHP\AuthModule\bin\System.Web.Razor.dll
+C:\Bluechip Development\IHP\AuthModule\bin\System.Web.WebPages.Deployment.dll
+C:\Bluechip Development\IHP\AuthModule\bin\System.Web.WebPages.dll
+C:\Bluechip Development\IHP\AuthModule\bin\System.Web.WebPages.Razor.dll
+C:\Bluechip Development\IHP\AuthModule\bin\WebGrease.dll
+C:\Bluechip Development\IHP\AuthModule\bin\AuthIntegration.pdb
+C:\Bluechip Development\IHP\AuthModule\bin\Antlr3.Runtime.pdb
+C:\Bluechip Development\IHP\AuthModule\bin\EntityFramework.xml
+C:\Bluechip Development\IHP\AuthModule\bin\EntityFramework.SqlServer.xml
+C:\Bluechip Development\IHP\AuthModule\bin\Kentor.OwinCookieSaver.xml
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.IdentityModel.JsonWebTokens.pdb
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.IdentityModel.Logging.pdb
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.IdentityModel.Logging.xml
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.IdentityModel.Protocols.pdb
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.IdentityModel.Protocols.xml
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.pdb
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.IdentityModel.Tokens.pdb
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.Owin.xml
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.Owin.Security.xml
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.Owin.Security.Google.xml
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.Owin.Security.OpenIdConnect.xml
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Bluechip Development\IHP\AuthModule\bin\Newtonsoft.Json.xml
+C:\Bluechip Development\IHP\AuthModule\bin\PagedList.xml
+C:\Bluechip Development\IHP\AuthModule\bin\PagedList.Mvc.xml
+C:\Bluechip Development\IHP\AuthModule\bin\SendGrid.pdb
+C:\Bluechip Development\IHP\AuthModule\bin\SendGrid.xml
+C:\Bluechip Development\IHP\AuthModule\bin\System.IdentityModel.Tokens.Jwt.pdb
+C:\Bluechip Development\IHP\AuthModule\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Bluechip Development\IHP\AuthModule\bin\System.Net.Http.Formatting.xml
+C:\Bluechip Development\IHP\AuthModule\bin\System.Web.Helpers.xml
+C:\Bluechip Development\IHP\AuthModule\bin\System.Web.Http.xml
+C:\Bluechip Development\IHP\AuthModule\bin\System.Web.Http.Owin.xml
+C:\Bluechip Development\IHP\AuthModule\bin\System.Web.Http.WebHost.xml
+C:\Bluechip Development\IHP\AuthModule\bin\System.Web.Mvc.xml
+C:\Bluechip Development\IHP\AuthModule\bin\System.Web.Optimization.xml
+C:\Bluechip Development\IHP\AuthModule\bin\System.Web.Razor.xml
+C:\Bluechip Development\IHP\AuthModule\bin\System.Web.WebPages.xml
+C:\Bluechip Development\IHP\AuthModule\bin\System.Web.WebPages.Deployment.xml
+C:\Bluechip Development\IHP\AuthModule\bin\System.Web.WebPages.Razor.xml
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.ApplicationInsights.xml
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.AI.DependencyCollector.xml
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.AI.WindowsServer.xml
+C:\Bluechip Development\IHP\AuthModule\bin\Microsoft.AI.Web.xml
+C:\Bluechip Development\IHP\AuthModule\obj\Debug\AuthModule.csproj.AssemblyReference.cache
+C:\Bluechip Development\IHP\AuthModule\obj\Debug\AuthModule.csproj.CoreCompileInputs.cache
+C:\Bluechip Development\IHP\AuthModule\obj\Debug\AuthModule.csproj.CopyComplete
+C:\Bluechip Development\IHP\AuthModule\obj\Debug\AuthModule.dll
+C:\Bluechip Development\IHP\AuthModule\obj\Debug\AuthModule.pdb
+D:\Work Area\IHP\AuthModule\bin\ApplicationInsights.config
+D:\Work Area\IHP\AuthModule\bin\AuthModule.dll.config
+D:\Work Area\IHP\AuthModule\bin\AuthModule.dll
+D:\Work Area\IHP\AuthModule\bin\AuthModule.pdb
+D:\Work Area\IHP\AuthModule\bin\Antlr3.Runtime.dll
+D:\Work Area\IHP\AuthModule\bin\AuthIntegration.dll
+D:\Work Area\IHP\AuthModule\bin\EntityFramework.dll
+D:\Work Area\IHP\AuthModule\bin\EntityFramework.SqlServer.dll
+D:\Work Area\IHP\AuthModule\bin\Kentor.OwinCookieSaver.dll
+D:\Work Area\IHP\AuthModule\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Work Area\IHP\AuthModule\bin\Microsoft.AI.DependencyCollector.dll
+D:\Work Area\IHP\AuthModule\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Work Area\IHP\AuthModule\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Work Area\IHP\AuthModule\bin\Microsoft.AI.Web.dll
+D:\Work Area\IHP\AuthModule\bin\Microsoft.AI.WindowsServer.dll
+D:\Work Area\IHP\AuthModule\bin\Microsoft.ApplicationInsights.dll
+D:\Work Area\IHP\AuthModule\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Work Area\IHP\AuthModule\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Work Area\IHP\AuthModule\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Work Area\IHP\AuthModule\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Work Area\IHP\AuthModule\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Work Area\IHP\AuthModule\bin\Microsoft.IdentityModel.Logging.dll
+D:\Work Area\IHP\AuthModule\bin\Microsoft.IdentityModel.Protocols.dll
+D:\Work Area\IHP\AuthModule\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Work Area\IHP\AuthModule\bin\Microsoft.IdentityModel.Tokens.dll
+D:\Work Area\IHP\AuthModule\bin\Microsoft.Owin.dll
+D:\Work Area\IHP\AuthModule\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Work Area\IHP\AuthModule\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Work Area\IHP\AuthModule\bin\Microsoft.Owin.Security.dll
+D:\Work Area\IHP\AuthModule\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Work Area\IHP\AuthModule\bin\Microsoft.Owin.Security.Google.dll
+D:\Work Area\IHP\AuthModule\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Work Area\IHP\AuthModule\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Work Area\IHP\AuthModule\bin\Microsoft.Owin.Security.OpenIdConnect.dll
+D:\Work Area\IHP\AuthModule\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Work Area\IHP\AuthModule\bin\Microsoft.Web.Infrastructure.dll
+D:\Work Area\IHP\AuthModule\bin\Newtonsoft.Json.dll
+D:\Work Area\IHP\AuthModule\bin\Owin.dll
+D:\Work Area\IHP\AuthModule\bin\PagedList.dll
+D:\Work Area\IHP\AuthModule\bin\PagedList.Mvc.dll
+D:\Work Area\IHP\AuthModule\bin\SendGrid.dll
+D:\Work Area\IHP\AuthModule\bin\StarkbankEcdsa.dll
+D:\Work Area\IHP\AuthModule\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\Work Area\IHP\AuthModule\bin\System.Net.Http.Formatting.dll
+D:\Work Area\IHP\AuthModule\bin\System.Web.Helpers.dll
+D:\Work Area\IHP\AuthModule\bin\System.Web.Http.dll
+D:\Work Area\IHP\AuthModule\bin\System.Web.Http.Owin.dll
+D:\Work Area\IHP\AuthModule\bin\System.Web.Http.WebHost.dll
+D:\Work Area\IHP\AuthModule\bin\System.Web.Mvc.dll
+D:\Work Area\IHP\AuthModule\bin\System.Web.Optimization.dll
+D:\Work Area\IHP\AuthModule\bin\System.Web.Razor.dll
+D:\Work Area\IHP\AuthModule\bin\System.Web.WebPages.Deployment.dll
+D:\Work Area\IHP\AuthModule\bin\System.Web.WebPages.dll
+D:\Work Area\IHP\AuthModule\bin\System.Web.WebPages.Razor.dll
+D:\Work Area\IHP\AuthModule\bin\WebGrease.dll
+D:\Work Area\IHP\AuthModule\bin\AuthIntegration.pdb
+D:\Work Area\IHP\AuthModule\bin\Antlr3.Runtime.pdb
+D:\Work Area\IHP\AuthModule\bin\EntityFramework.xml
+D:\Work Area\IHP\AuthModule\bin\EntityFramework.SqlServer.xml
+D:\Work Area\IHP\AuthModule\bin\Kentor.OwinCookieSaver.xml
+D:\Work Area\IHP\AuthModule\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Work Area\IHP\AuthModule\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Work Area\IHP\AuthModule\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Work Area\IHP\AuthModule\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Work Area\IHP\AuthModule\bin\Microsoft.IdentityModel.JsonWebTokens.pdb
+D:\Work Area\IHP\AuthModule\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+D:\Work Area\IHP\AuthModule\bin\Microsoft.IdentityModel.Logging.pdb
+D:\Work Area\IHP\AuthModule\bin\Microsoft.IdentityModel.Logging.xml
+D:\Work Area\IHP\AuthModule\bin\Microsoft.IdentityModel.Protocols.pdb
+D:\Work Area\IHP\AuthModule\bin\Microsoft.IdentityModel.Protocols.xml
+D:\Work Area\IHP\AuthModule\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.pdb
+D:\Work Area\IHP\AuthModule\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+D:\Work Area\IHP\AuthModule\bin\Microsoft.IdentityModel.Tokens.pdb
+D:\Work Area\IHP\AuthModule\bin\Microsoft.IdentityModel.Tokens.xml
+D:\Work Area\IHP\AuthModule\bin\Microsoft.Owin.xml
+D:\Work Area\IHP\AuthModule\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Work Area\IHP\AuthModule\bin\Microsoft.Owin.Security.xml
+D:\Work Area\IHP\AuthModule\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Work Area\IHP\AuthModule\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Work Area\IHP\AuthModule\bin\Microsoft.Owin.Security.Google.xml
+D:\Work Area\IHP\AuthModule\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Work Area\IHP\AuthModule\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Work Area\IHP\AuthModule\bin\Microsoft.Owin.Security.OpenIdConnect.xml
+D:\Work Area\IHP\AuthModule\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Work Area\IHP\AuthModule\bin\Newtonsoft.Json.xml
+D:\Work Area\IHP\AuthModule\bin\PagedList.xml
+D:\Work Area\IHP\AuthModule\bin\PagedList.Mvc.xml
+D:\Work Area\IHP\AuthModule\bin\SendGrid.pdb
+D:\Work Area\IHP\AuthModule\bin\SendGrid.xml
+D:\Work Area\IHP\AuthModule\bin\System.IdentityModel.Tokens.Jwt.pdb
+D:\Work Area\IHP\AuthModule\bin\System.IdentityModel.Tokens.Jwt.xml
+D:\Work Area\IHP\AuthModule\bin\System.Net.Http.Formatting.xml
+D:\Work Area\IHP\AuthModule\bin\System.Web.Helpers.xml
+D:\Work Area\IHP\AuthModule\bin\System.Web.Http.xml
+D:\Work Area\IHP\AuthModule\bin\System.Web.Http.Owin.xml
+D:\Work Area\IHP\AuthModule\bin\System.Web.Http.WebHost.xml
+D:\Work Area\IHP\AuthModule\bin\System.Web.Mvc.xml
+D:\Work Area\IHP\AuthModule\bin\System.Web.Optimization.xml
+D:\Work Area\IHP\AuthModule\bin\System.Web.Razor.xml
+D:\Work Area\IHP\AuthModule\bin\System.Web.WebPages.xml
+D:\Work Area\IHP\AuthModule\bin\System.Web.WebPages.Deployment.xml
+D:\Work Area\IHP\AuthModule\bin\System.Web.WebPages.Razor.xml
+D:\Work Area\IHP\AuthModule\bin\Microsoft.ApplicationInsights.xml
+D:\Work Area\IHP\AuthModule\bin\Microsoft.AI.DependencyCollector.xml
+D:\Work Area\IHP\AuthModule\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Work Area\IHP\AuthModule\bin\Microsoft.AI.WindowsServer.xml
+D:\Work Area\IHP\AuthModule\bin\Microsoft.AI.Web.xml
+D:\Work Area\IHP\AuthModule\obj\Debug\AuthModule.csproj.AssemblyReference.cache
+D:\Work Area\IHP\AuthModule\obj\Debug\AuthModule.csproj.CoreCompileInputs.cache
+D:\Work Area\IHP\AuthModule\obj\Debug\AuthModule.csproj.CopyComplete
+D:\Work Area\IHP\AuthModule\obj\Debug\AuthModule.dll
+D:\Work Area\IHP\AuthModule\obj\Debug\AuthModule.pdb
