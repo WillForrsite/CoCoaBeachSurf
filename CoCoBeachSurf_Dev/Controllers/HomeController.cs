@@ -1277,14 +1277,16 @@ namespace AuthModule.Controllers
         public ActionResult Reservations()
         {
             IEnumerable<tblLocationType> locationTypesList = db.Database.SqlQuery
-                                                                             <tblLocationType>("select * from udfGetLocationTypes()").ToList();
+                                                                             <tblLocationType>("select * from udfGetRsvtnlctntyp()").ToList();
 
 
 
             ViewBag.TypeList = locationTypesList;
             IEnumerable<tblLocations> locationList = db.Database.SqlQuery
                                                                            <tblLocations>("select * from udfGetLocations()").ToList();
-            ViewBag.locationList = locationList;
+            ViewBag.locationList = locationList;            
+            string rsrvtnId = Guid.NewGuid().ToString();
+            ViewBag.ReservationId = rsrvtnId;
             return View();
         }
         public JsonResult GetHotelsList() 
@@ -1306,17 +1308,17 @@ namespace AuthModule.Controllers
             
             try
             {
-               // int count = db.Database.ExecuteSqlCommand("exec sp_I_VwRsrvtnFrm @htl_id = {0},@htl_nme = {1} , @htl_clrk = {2}, @htl_rsrvtn_nmbr = {3}, @shp_id = {4}, @shp_nme = {5}, @shp_dt = {6} , @shp_fc = {7}, @shp_pd = {8}, @shp_cst = {9}, @rsrvtn_ctgry = {10}, @rsrvtn_type = {11}, @gst_nme = {12}, @gst_eml = {13}, @gst_cphn1={14} , @gst_cphn2 ={15}, @arrvl_dt ={16}, @arrvl_tm ={17}, @arrvl_arprt ={18}, @arrvl_arln ={19}, @arrvl_flght_nmbr ={20}, @arrvl_nmbr_pssngrs ={21}, @arrvl_pckup_tm ={22},@arrvl_drpoff_loc ={23}, @dep_dt ={24}, @dep_tm ={25}, @dep_arprt ={26}, @dep_arln ={27}, @dep_flght_nmbr ={28}, @dep_nmbr_pssngrs ={29}, @dep_pckup_tm ={30}, @dep_drpoff_loc ={31}, @whlchr ={32}, @whlchr_cnfld ={33}, @addtnl_inf ={34}",
-               //Convert.ToInt32(obj.htl_id), obj.htl_nme, obj.htl_clrk, obj.htl_rsrvtn_nmbr, Convert.ToInt32(obj.shp_id), obj.shp_nme, obj.shp_dt, obj.shp_fc, Convert.ToInt32(obj.shp_pd), Convert.ToDecimal(obj.shp_cst)
-               // , Convert.ToInt32(obj.rsrvtn_ctgry), Convert.ToInt32(obj.rsrvtn_type), obj.gst_nme, obj.gst_eml, obj.gst_cphn1, obj.gst_cphn2, obj.arrvl_dt, obj.arrvl_tm, obj.arrvl_arprt, obj.arrvl_arln
-               // , obj.arrvl_flght_nmbr, Convert.ToInt32(obj.arrvl_nmbr_pssngrs), obj.arrvl_pckup_tm, obj.arrvl_drpoff_loc, obj.dep_dt, obj.dep_tm, obj.dep_arprt, obj.dep_arln
-               // , obj.dep_flght_nmbr, Convert.ToInt32(obj.dep_nmbr_pssngrs), obj.dep_pckup_tm, obj.dep_drpoff_loc, obj.whlchr, obj.whlchr_cnfld, obj.addtnl_inf);
-
-                int count = db.Database.ExecuteSqlCommand("exec sp_I_VwRsrvtnFrm @htl_id = {0},@htl_nme = {1} , @htl_clrk = {2}, @htl_rsrvtn_nmbr = {3}, @shp_id = {4}, @shp_nme = {5}, @shp_dt = {6} , @shp_fc = {7}, @shp_pd = {8}, @shp_cst = {9}, @rsrvtn_type = {11}, @gst_fnme = {35},@gst_lnme = {36}, @gst_eml = {13}, @gst_cphn1={14} , @gst_cphn2 ={15}, @arrvl_dt ={16}, @arrvl_tm ={17}, @arrvl_arprt ={18}, @arrvl_arln ={19}, @arrvl_flght_nmbr ={20}, @arrvl_nmbr_pssngrs ={21}, @arrvl_pckup_tm ={22},@arrvl_drpoff_loc ={23}, @dep_dt ={24}, @dep_tm ={25}, @dep_arprt ={26}, @dep_arln ={27}, @dep_flght_nmbr ={28}, @dep_nmbr_pssngrs ={29}, @dep_pckup_tm ={30}, @dep_drpoff_loc ={31}, @whlchr ={32}, @whlchr_cnfld ={33}, @addtnl_inf ={34}",
+                // int count = db.Database.ExecuteSqlCommand("exec sp_I_VwRsrvtnFrm @htl_id = {0},@htl_nme = {1} , @htl_clrk = {2}, @htl_rsrvtn_nmbr = {3}, @shp_id = {4}, @shp_nme = {5}, @shp_dt = {6} , @shp_fc = {7}, @shp_pd = {8}, @shp_cst = {9}, @rsrvtn_ctgry = {10}, @rsrvtn_type = {11}, @gst_nme = {12}, @gst_eml = {13}, @gst_cphn1={14} , @gst_cphn2 ={15}, @arrvl_dt ={16}, @arrvl_tm ={17}, @arrvl_arprt ={18}, @arrvl_arln ={19}, @arrvl_flght_nmbr ={20}, @arrvl_nmbr_pssngrs ={21}, @arrvl_pckup_tm ={22},@arrvl_drpoff_loc ={23}, @dep_dt ={24}, @dep_tm ={25}, @dep_arprt ={26}, @dep_arln ={27}, @dep_flght_nmbr ={28}, @dep_nmbr_pssngrs ={29}, @dep_pckup_tm ={30}, @dep_drpoff_loc ={31}, @whlchr ={32}, @whlchr_cnfld ={33}, @addtnl_inf ={34}",
+                //Convert.ToInt32(obj.htl_id), obj.htl_nme, obj.htl_clrk, obj.htl_rsrvtn_nmbr, Convert.ToInt32(obj.shp_id), obj.shp_nme, obj.shp_dt, obj.shp_fc, Convert.ToInt32(obj.shp_pd), Convert.ToDecimal(obj.shp_cst)
+                // , Convert.ToInt32(obj.rsrvtn_ctgry), Convert.ToInt32(obj.rsrvtn_type), obj.gst_nme, obj.gst_eml, obj.gst_cphn1, obj.gst_cphn2, obj.arrvl_dt, obj.arrvl_tm, obj.arrvl_arprt, obj.arrvl_arln
+                // , obj.arrvl_flght_nmbr, Convert.ToInt32(obj.arrvl_nmbr_pssngrs), obj.arrvl_pckup_tm, obj.arrvl_drpoff_loc, obj.dep_dt, obj.dep_tm, obj.dep_arprt, obj.dep_arln
+                // , obj.dep_flght_nmbr, Convert.ToInt32(obj.dep_nmbr_pssngrs), obj.dep_pckup_tm, obj.dep_drpoff_loc, obj.whlchr, obj.whlchr_cnfld, obj.addtnl_inf);
+                string Email = User.Identity.Name;
+                int count = db.Database.ExecuteSqlCommand("exec sp_I_VwRsrvtnFrm @htl_id = {0},@htl_nme = {1} , @htl_clrk = {2}, @htl_rsrvtn_nmbr = {3}, @shp_id = {4}, @shp_nme = {5}, @shp_dt = {6} , @shp_fc = {7}, @shp_pd = {8}, @shp_cst = {9}, @rsrvtn_type = {11},@rsrvtn_nbr={35}, @gst_fnme = {35},@gst_lnme = {36}, @gst_eml = {13}, @gst_cphn1={14} , @gst_cphn2 ={15}, @arrvl_dt ={16}, @arrvl_tm ={17}, @arrvl_arprt ={18}, @arrvl_arln ={19}, @arrvl_flght_nmbr ={20}, @arrvl_nmbr_pssngrs ={21}, @arrvl_pckup_tm ={22},@arrvl_drpoff_loc ={23}, @dep_dt ={24}, @dep_tm ={25}, @dep_arprt ={26}, @dep_arln ={27}, @dep_flght_nmbr ={28}, @dep_nmbr_pssngrs ={29}, @dep_pckup_tm ={30}, @dep_drpoff_loc ={31}, @whlchr ={32}, @whlchr_cnfld ={33}, @addtnl_inf ={34},@CreatedBy = {36}",
                obj.htl_id, obj.htl_nme, obj.htl_clrk, obj.htl_rsrvtn_nmbr,obj.shp_id, obj.shp_nme, obj.shp_dt, obj.shp_fc, obj.shp_pd, obj.shp_cst
                 , obj.rsrvtn_ctgry, obj.rsrvtn_type, obj.gst_nme, obj.gst_eml, obj.gst_cphn1, obj.gst_cphn2, obj.arrvl_dt, obj.arrvl_tm, obj.arrvl_arprt, obj.arrvl_arln
                 , obj.arrvl_flght_nmbr, obj.arrvl_nmbr_pssngrs, obj.arrvl_pckup_tm, obj.arrvl_drpoff_loc, obj.dep_dt, obj.dep_tm, obj.dep_arprt, obj.dep_arln
-                , obj.dep_flght_nmbr, obj.dep_nmbr_pssngrs, obj.dep_pckup_tm, obj.dep_drpoff_loc, obj.whlchr, obj.whlchr_cnfld, obj.addtnl_inf,obj.gst_fnme,obj.gst_lnme);
+                , obj.dep_flght_nmbr, obj.dep_nmbr_pssngrs, obj.dep_pckup_tm, obj.dep_drpoff_loc, obj.whlchr, obj.whlchr_cnfld, obj.addtnl_inf,obj.gst_fnme,obj.gst_lnme,obj.rsrvtn_nbr, Email);
 
             }
             catch (Exception ex)
@@ -1488,7 +1490,7 @@ namespace AuthModule.Controllers
 
             try
             {
-                int count = db.Database.ExecuteSqlCommand("exec sp_I_tblCstmrs @CstmrFN={0},@CstmrLN={1},@CstmrEml={2},@CstmrPhn1={3},@CstmrPhn2={4},@CstmrCrtdBy{5},@CstmrActv{6}", 
+                int count = db.Database.ExecuteSqlCommand("exec sp_I_tblCstmrs @CstmrFN={0},@CstmrLN={1},@CstmrEml={2},@CstmrPhn1={3},@CstmrPhn2={4},@CstmrCrtdBy={5},@CstmrActv={6}", 
                     customer.CstmrFN, customer.CstmrLN, customer.CstmrEml, customer.CstmrPhn1, customer.CstmrPhn2, Email,customer.CstmrActv);
 
 
@@ -1533,7 +1535,7 @@ namespace AuthModule.Controllers
             string Email = User.Identity.Name;
             try
             {
-                int count = db.Database.ExecuteSqlCommand("exec sp_I_tblCstmrs @CstmrFN={0},@CstmrLN={1},@CstmrEml={2},@CstmrPhn1={3},@CstmrPhn2={4},@CstmrCrtdBy{5},@CstmrActv{6},@CstmrID={7}",
+                int count = db.Database.ExecuteSqlCommand("exec sp_I_tblCstmrs @CstmrFN={0},@CstmrLN={1},@CstmrEml={2},@CstmrPhn1={3},@CstmrPhn2={4},@CstmrCrtdBy={5},@CstmrActv={6},@CstmrID={7}",
                     customer.CstmrFN, customer.CstmrLN, customer.CstmrEml, customer.CstmrPhn1, customer.CstmrPhn2, Email, customer.CstmrActv,customer.CstmrID);
 
 
@@ -1562,5 +1564,14 @@ namespace AuthModule.Controllers
 
         }
 
+        public JsonResult GetLocationsByType(string type)
+        {
+            IEnumerable<tblLocations> locationList = db.Database.SqlQuery
+                                                                           <tblLocations>("select * from udfGetLocations() where lctn_tpe = {0}", type).ToList();
+
+
+            return Json(locationList, JsonRequestBehavior.AllowGet);
+
+        }
     }
 }

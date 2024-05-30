@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\CoCoBeachSurf_Dev",
+    "\\CoCoBeachSurf_Dev\\Controllers"
   ],
-  "SelectedNode": "\\C:\\Bluechip Development\\CoCoaBeachSurf",
+  "SelectedNode": "\\CoCoBeachSurf_Dev\\Controllers\\HomeController.cs",
   "PreviewInSolutionExplorer": false
 }

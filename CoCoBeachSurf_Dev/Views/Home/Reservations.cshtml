@@ -9,7 +9,11 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         position: relative;
     }
-
+    .circular-button {
+        border-radius: 50%;
+        background-color: red;
+        /* Other button styles (background color, padding, etc.) */
+    }
     h1 {
         border-radius: 8px;
         background-color: #333;
@@ -197,7 +201,7 @@
         border-radius: 8px;
     }
 
-    #fs-arrive {
+    .fs-arrive {
         border: 1px solid;
         <!-- margin: 50% auto; -->
         Width: 50%;
@@ -255,21 +259,21 @@
         background-color: #f4f4f4;
     }
 
-    #td-nopad {
+    .td-nopad {
         border: 0px solid;
         margin: 0px 0 0px;
         padding: 0px;
         font-size: 12px;
         <!-- float: left; -->
     }
-
+    
     #btn-submit {
         position: center;
     }
 
-    #addtnl-inf {
+   /* #addtnl-inf {
         width: 100%;
-    }
+    }*/
 
     input[class="red-border"]:checked {
         color: darkred;
@@ -300,210 +304,231 @@
     }
 </style>
 <form class="form1">
-    <h1>Cocoa Beach Express Shuttle Reservation <img style=" width: 50px; height: 40px;" src="~/Images/search.png"/></h1>
-    <table id="td-nopad" style="width:100%">
-        <td>
-            <fieldset id="fs-restype">
-                <legend>Reservation Type</legend>
-                <table id="fs-nopadding">
-                    <tr>
-                        <td>
-                            @*<select id="rsrvtn_ctgry" title="Hotel">
-                                    <option value="radisson">ADD-ON</option>
-                                    <option value="PACKAGE">PACKAGE</option>
-                                </select>*@
-                            <label4><input type="checkbox" id="rsrvtn_ctgry" name="rsrvtn_ctgry" value="1"> ADD-ON</label4>
-                            <label4><input type="checkbox" id="rsrvtn_ctgry" name="rsrvtn_ctgry" value="2"> PACKAGE</label4>
-                        </td>
-                    </tr>
-                    <!--<tr>
-                        <td>
-                            <label4><input type="radio" id="rsrvtn_tpe" name="rsrvtn_tpe" value="1"> ONE-WAY</label4>
-                            <label4><input type="radio" id="rsrvtn_tpe" name="rsrvtn_tpe" value="2"> ROUND-TRIP</label4>-->
-                            @*<label4><input type="radio" id="rsrvtn_tpe" name="rsrvtn_tpe" value="3"> PORT 2 PORT</label4>*@
+    <input type="hidden" id="rsrvtn_nbr"value="@ViewBag.ReservationId" />   
+    <h1 style="padding:unset">
+        Cocoa Beach Express Shuttle Reservation
+        <img style=" width: 50px; height: 40px;" src="~/Images/search.png" />
+        <lable style="font-size:20px">@ViewBag.ReservationId</lable>
+    </h1>
+    <table class="td-nopad" style="width:100%">
+        <tr>
+            <td style="display: flex;">
+                <fieldset id="fs-restype" style="border:none">
+                    @*<legend>Reservation Type</legend>*@
+                    @*<table id="fs-nopadding">*@
+                    <table id="fs-nopadding">
+                        <tr>
+                            <td>
+                                @*<select id="rsrvtn_ctgry" title="Hotel">
+                                <option value="radisson">ADD-ON</option>
+                                <option value="PACKAGE">PACKAGE</option>
+                            </select>*@
+                                <label4><input type="checkbox" id="rsrvtn_ctgry" name="rsrvtn_ctgry" value="1"> ADD-ON</label4>
+                                <label4><input type="checkbox" id="rsrvtn_ctgry" name="rsrvtn_ctgry" value="2"> PACKAGE</label4>
+                            </td>
+                        </tr>
+                        <!--<tr>
+                <td>
+                    <label4><input type="radio" id="rsrvtn_tpe" name="rsrvtn_tpe" value="1"> ONE-WAY</label4>
+                    <label4><input type="radio" id="rsrvtn_tpe" name="rsrvtn_tpe" value="2"> ROUND-TRIP</label4>-->
+                        @*<label4><input type="radio" id="rsrvtn_tpe" name="rsrvtn_tpe" value="3"> PORT 2 PORT</label4>*@
                         <!--</td>
-                        <td>
-                        </td>
-                    </tr>-->
-                </table>
-            </fieldset>
-            <Div id="Div-Hotel" style="display:none">
-                <fieldset id="fs-hotel">
-                    <legend>Hotel</legend>
-                    @*<select id="htl_nme" title="Hotel">
-                            <option value="radisson">Radisson</option>
-                            <option value="port_2_port">PORT 2 PORT</option>
-                            <option value="springhill_suites">SpringHill Suites</option>
-                            <option value="4_points">4 Points</option>
-                            <option value="cocoa_beach_suites">Cocoa Beach Suites</option>
-                            <option value="towne_place">Towne Place</option>
-                            <option value="other">Other</option>
-                        </select>*@
-                    <select id="htl_lst" name="htl_nme" title="Hotel">
-                    </select>
-                    <!-- Add other form fields here -->
-                    <label4 id="nopadding">Clerk: <input type="text" id="htl_clrk" name="htl_clrk"></label4>
-                    <label4 id="nopadding">Reservation #: <input type="text" id="htl_rsrvtn_nmbr" name="htl_rsrvtn_nmbr"></label4>
-                </fieldset>
-            </Div>
-        </td>
-
-        <td>
-            <Div id="div-ship" style="display:none">
-                <fieldset id="fs-ship">
-                    <legend>Ship</legend>
-                    <table id="td-nopad">
-                        <tr>
-                            <td id="td-nopad">
-                                @*<label4>Ship:<input type="text" id="shp_id"></label4>*@
-                                <select id="shp_lst" name="shp_id" title="Hotel">
-                                </select>
-                            </td>
-                            <td></td>
-                            <td id="td-nopad">
-                                <label4>FC Added:<input type="text" id="shp_fc"></label4>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td id="td-nopad">
-                                <label4>Time:<input type="time" id="shp_tm"></label4>
-                            </td>
-                            <td></td>
-                            <td id="td-nopad">
-                                <label4>Paid:<input type="text" id="shp_pd"></label4>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td id="td-nopad">
-                                <label4>Dates:<input type="date" id="shp_dt"></label4>
-                            </td>
-                            <td>     </td>
-                            <td id="td-nopad">
-                                <label4>Cost:<span class="currencyinput">$<input type="text" id="shp_cst"></span></label4>
-                            </td>
-                        </tr>
+                    <td>
+                    </td>
+                </tr>-->
                     </table>
                 </fieldset>
-            </Div>
-        </td>
+                <Div id="Div-Hotel" style="display:none">
+                    <fieldset id="fs-hotel">
+                        <legend>Hotel</legend>
+                        @*<select id="htl_nme" title="Hotel">
+                        <option value="radisson">Radisson</option>
+                        <option value="port_2_port">PORT 2 PORT</option>
+                        <option value="springhill_suites">SpringHill Suites</option>
+                        <option value="4_points">4 Points</option>
+                        <option value="cocoa_beach_suites">Cocoa Beach Suites</option>
+                        <option value="towne_place">Towne Place</option>
+                        <option value="other">Other</option>
+                    </select>*@
+                        <select id="htl_lst" name="htl_nme" title="Hotel">
+                        </select>
+                        <!-- Add other form fields here -->
+                        <label4 id="nopadding">Clerk: <input type="text" id="htl_clrk" name="htl_clrk"></label4>
+                        <label4 id="nopadding">Reservation #: <input type="text" id="htl_rsrvtn_nmbr" name="htl_rsrvtn_nmbr"></label4>
+                    </fieldset>
+                </Div>
+            </td>
+            <td style="display: flex; justify-content: flex-end; margin-top: -22px;">
+                <fieldset id="fs-noborder" style="padding:2px">
+                    <label3 id="verified-info">&nbsp;Guest Verified Email Received<input type="checkbox" id="vrfd_eml_rcvd"></label3></br>
+                </fieldset>
+                <fieldset id="fs-noborder" style="padding:2px">
+                    <label3 id="verified-info">&nbsp;Guest Verified Correct Info Entered<input type="checkbox" id="vrfd_Inf"></label3>
+                </fieldset>
 
-        <td>
-            <fieldset id="fs-noborder">
-                <label3 id="verified-info">Guest Verified Email Received<input type="checkbox" id="vrfd_eml_rcvd"></label3></br>
-            </fieldset>
-            <fieldset id="fs-noborder">
-                <label3 id="verified-info">Guest Verified Correct Info Entered<input type="checkbox" id="vrfd_Inf"></label3>
-            </fieldset>
-
-        </td>
-    </table>
+            </td>
+            <td>
+                <Div id="div-ship" style="display:none">
+                    <fieldset id="fs-ship">
+                        <legend>Ship</legend>
+                        <table id="td-nopad">
+                            <tr>
+                                <td id="td-nopad">
+                                    @*<label4>Ship:<input type="text" id="shp_id"></label4>*@
+                                    <select id="shp_lst" name="shp_id" title="Hotel">
+                                    </select>
+                                </td>
+                                <td></td>
+                                <td id="td-nopad">
+                                    <label4>FC Added:<input type="text" id="shp_fc"></label4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="td-nopad">
+                                    <label4>Time:<input type="time" id="shp_tm"></label4>
+                                </td>
+                                <td></td>
+                                <td id="td-nopad">
+                                    <label4>Paid:<input type="text" id="shp_pd"></label4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="td-nopad">
+                                    <label4>Dates:<input type="date" id="shp_dt"></label4>
+                                </td>
+                                <td>     </td>
+                                <td id="td-nopad">
+                                    <label4>Cost:<span class="currencyinput">$<input type="text" id="shp_cst"></span></label4>
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                </Div>
+            </td>
+    </tr>
+</table>
 
    
     <fieldset id="fs-guest">
-        <legend style="border-bottom:unset">
+        <legend style="border-bottom:unset;margin-bottom:0px">
             <h2 style="width: 100%; text-align: center; border-bottom: 1px solid #000; line-height: 0.1em;">
-                <span style="padding: 0 10px; background: white; ">Guest Info</span>
+                <span style="padding: 0 10px; background: white; ">GUEST INFO</span>
             </h2>
         </legend>
         <table id="td-nopad">
             <tr id="td-nopad">
-                <td><label4 id="nopadding">Email: <input type="email" id="gst_eml"></label4></td>
+                <td><label4 id="nopadding">Email: <input type="email" id="gst_eml" style="width:150%"></label4></td>
             </tr>
             <tr id="td-nopad">
                 <td>
                     <label4 id="nopadding">First Name: <input type="text" id="gst_fnme"></label4>
-                    <label4 id="nopadding">Last Name: <input type="text" id="gst_lnme"></label4> 
-                    
-                </td></tr>
+                    <label4 id="nopadding">Last Name: <input type="text" id="gst_lnme"></label4>
+
+                </td>
+            </tr>
             <tr id="td-nopad"><td><label4 id="nopadding">Cell Phone: <input type="tel" id="gst_cphn1"></label4> <label4 id="nopadding">2nd Cell Phone: <input type="tel" id="gst_cphn2"></label4></td></tr>
         </table>
-        <!--	</fieldset>
-        <fieldset id="fs-flightinfo">
-           <legend>Flight Info</legend> -->
+    </fieldset>
 
         <h2 style="width: 100%; text-align: center; border-bottom: 1px solid #000; line-height: 0.1em;">
             <span style="padding: 0 10px; background: white; ">ITINERARY</span>
         </h2>
-
-        <fieldset id="fs-arrive" class="mt" style="width: 100%; border: none">
-
-            <legend style="display:flex;border:none">
-                PickUp
-                <label4 class="ml">
-                    From:
-                    @Html.DropDownList("lctn_tpe", new SelectList(ViewBag.TypeList, "lctn_tpe", "lctn_tpe_dsc"), "Please select", new { selected = "A", @id = "Pickuplctn_tpe", @style = "margin-left:5px;height:30px" })
+        <div id="Trips">
+        <div id="Trip1">
+            <label id="TrpNm1" style="background-color: #F7DC6F;"> <input id="btnRmvTrp1" class="circular-button" type="button" style="font-weight: 900;" value="-" />Trip 1</label>
+            <fieldset id="fs-arrive1" classs="fs-arrive" style="width: 100%; border: none;margin-bottom:35px">
+                <legend style="display:flex;border:none">
+                    PickUp
+                    <label4 class="ml">
+                        From:
+                        @Html.DropDownList("lctn_tpe", new SelectList(ViewBag.TypeList, "lctn_tpe", "lctn_tpe_dsc"), "Please select", new { selected = "A", @id = "Pickuplctn_tpe", @style = "margin-left:5px;height:30px" })
+                    </label4>
+                    <label4 class="ml">Date: <input type="date" id="pck_dt"></label4>
+                    <label4 class="ml">Time: <input type="time" id="pck_tm"></label4>
+                    <label4 style=" margin-left: 10px; width: 100px; "># Passengers: <input type="number" id="pck_pssngrs"></label4>
+                </legend>
+                <label4 id="lblfrm_tm" style=" margin-left: 10px; width: 100px;display:inline-block ">Time: <input type="time" id="frm_tm"></label4>
+                <label4>
+                    <label4 id="lbl_pck"></label4> @*<input type="text" id="arrvl_arprt" value="MCO">*@
+                    <select id="pck_lctn" name="pck_lctn" title="Hotel">
+                    </select>
                 </label4>
-                <label4 class="ml">Date: <input type="date" id="arrvl_dt"></label4>
-                <label4 class="ml">Time: <input type="time" id="arrvl_pckup_tm"></label4>
-            </legend>
-            <label4 style=" margin-left: 10px; width: 100px; ">Time: <input type="time" id="arrvl_tm"></label4>
-            <label4>
-                <label id="lbl1"></label> @*<input type="text" id="arrvl_arprt" value="MCO">*@
-                @Html.DropDownList("lctn_UnqID", new SelectList(ViewBag.locationList, "lctn_UnqID", "lctn_nme"), "Please select", new { @id = "lctn_UnqID", @style = "margin-left:5px" })
-
-            </label4>
-            <label4 style=" margin-left: 10px; width: 100px; ">Airline: <input type="text" id="arrvl_arln"></label4>
-            <label4 style=" margin-left: 10px; width: 100px; ">Flight #: <input type="text" id="arrvl_flght_nmbr"></label4>
-            <label4 style=" margin-left: 10px; width: 100px; "># Pssngrs: <input type="number" id="arrvl_nmbr_pssngrs"></label4>
-            <br />
-            @*<label4 style="display: flow; margin-top: 10px; margin-bottom: 10px; ">
-                    <label>Drop-off</label> To:
-
-                    @Html.DropDownList("lctn_tpe", new SelectList(ViewBag.TypeList, "lctn_tpe", "lctn_tpe_dsc"), "Please select", new { selected = "A", @id = "lctn_tpe", @style = "margin-left:5px;width: 100px;" })
-                    Location:
-                    @Html.DropDownList("lctn_UnqID", new SelectList(ViewBag.locationList, "lctn_UnqID", "lctn_nme"), "Please select", new { @id = "lctn_UnqID", @style = "margin-left:5px;width: 100px;" })
-
-                </label4>*@
-            <legend style="display: flex; margin-top: 10px; margin-bottom: 20px; border-bottom:unset">
-                Drop-off
-                <label4 class="ml">
-                    To:
-                    @Html.DropDownList("lctn_tpe", new SelectList(ViewBag.TypeList, "lctn_tpe", "lctn_tpe_dsc"), "Please select", new { selected = "A", @id = "Pickuplctn_tpe", @style = "margin-left:5px;height:30px" })
+                <label4 id="lblpck_arln" style=" margin-left: 10px; width: 100px; display: inline-block ">
+                    Airline:
+                    <select id="pck_arln"><option value="0">select</option></select>
                 </label4>
-                <label4 class="ml">
-                    Location:
-                    @Html.DropDownList("lctn_UnqID", new SelectList(ViewBag.locationList, "lctn_UnqID", "lctn_nme"), "Please select", new { @id = "lctn_UnqID", @style = "margin-left:5px;height:30px" })
+                <label4 id="lblpck_flght" style=" margin-left: 10px; width: 100px; display: inline-block ">Flight #: <input type="text" id="pck_flght"></label4>
 
+                <br />
+
+                <legend style="display: flex; margin-top: 10px; margin-bottom: 20px; border-bottom: unset; border-top: 1px dotted gray;">
+                    Drop-off
+                    <label4 class="ml">
+                        To:
+                        @Html.DropDownList("lctn_tpe", new SelectList(ViewBag.TypeList, "lctn_tpe", "lctn_tpe_dsc"), "Please select", new { selected = "A", @id = "Droplctn_tpe", @style = "margin-left:5px;height:30px" })
+                    </label4>
+
+
+                </legend>
+                <label4 id="lbldrp_tm" style=" margin-left: 10px; width: 100px;display:none ">Time: <input type="time" id="drp_tm"></label4>
+                <label4>
+                    <label4 id="lbl_drp"></label4>
+                    <select id="drop_lctn_to" name="drop_lctn_to" title="Hotel">
+                    </select>
                 </label4>
-            </legend>
-        </fieldset>
-        <fieldset id="fs-depart" style="display:none">
-            <legend> Departure </legend>
-            <label4>Date: <input type="date" id="dep_dt"></label4>
-            <label4>Time: <input type="time" id="dep_tm"></label4>
-            <label4>Airport: <input type="text" id="dep_arprt" value="MCO"></label4>
-            <label4>Airline: <input type="text" id="dep_arln"></label4>
-            <label4>Flight #: <input type="text" id="dep_flght_nmbr"></label4>
-            <label4># Of Passengers: <input type="number" id="dep_nmbr_pssngrs"></label4>
-            <label4>Pick-Up Time: <input type="time" id="dep_pck_up_tm"></label4>
-            <label4>Drop-off location: <input type="text" id="dep_drp_off_loc"></label4>
-        </fieldset>
+                <label4 id="lbldrp_arln" style=" margin-left: 10px; width: 100px; display:none ">
+                    Airline:
+                    <select id="drp_arln"><option value="0">select</option></select>
+                </label4>
+                <label4 id="lbldrp_flght" style=" margin-left: 10px; width: 100px;display:none ">Flight #: <input type="text" id="drp_flght"></label4>
 
-        <h2 style="width: 100%; text-align: center; border-bottom: 1px solid #000; line-height: 0.1em;">
+                <br />
+
+                <div style="display: flex; justify-content: flex-start; align-items: flex-end;">
+                    <legend style="margin-bottom: 0px; border-bottom: unset; margin-top: 15px;width:220px ">Special Requirements</legend>
+                    <label4 id="nopadding">Wheelchair:</label4><input type="checkbox" id="whlchr" value="1">
+                    <label4>fold up:</label4><input type="checkbox" id="whlchr_cnfld" value="1">
+                    <label4 id="addtnl-inf">Additional Info:</label4> <textarea id="addtnl_inf" style=" height: 40px; width: 300px;"></textarea>
+                </div>
+            </fieldset>
+        </div>
+        </div>
+        <h4 style="width: 100%; text-align: center; border-bottom: 0px solid #000; line-height: 0.1em;">
+            @*<span style="padding: 0 10px; background: white; font-size: 40px; ">+</span>*@
+            <input id="btnAddTrp" class="btn btn-default" type="button" style="font-weight: 900;" value="+"/>
+            @*<button class="btn btn-default fa fa-plus"></button>*@
+        </h4>
+
+        @*<h2 style="width: 100%; text-align: center; border-bottom: 1px solid #000; line-height: 0.1em;">
             <span style="padding: 0 10px; background: white; ">Special Requirements</span>
-        </h2>
-        <fieldset id="fs-special" style="border:none">
-            @*<legend>Special Requirements</legend>*@
+        </h2>*@
+        @*<fieldset id="fs-special" style="border:none">
+            <legend>Special Requirements</legend>
             <fieldset id="fs-wheelchair">
                 Wheelchair:
                 <label4 id="nopadding">Passenger has wheelchair:</label4><input type="checkbox" id="whlchr" value="1">
                 <label4>It can fold up:</label4><input type="checkbox" id="whlchr_cnfld" value="1">
             </fieldset>
             <label4 id="addtnl-inf">Additional Info: <textarea id="addtnl_inf"></textarea></label4>
-        </fieldset>
-        <!-- ... (other fields) ... -->
+        </fieldset>*@
+
         <br />
         <div style="text-align: center;">
-            @*<button type="submit">Submit</button>*@
+
             <a class="btn btn-success" OnClick="SaveCustomer()" href="#" id="MncAgr" style=" font-size: 20px;">
                 Submit
             </a>
+
+            @Html.ActionLink("Cancel", "Reservations", "Home", new { area = "" }, new { @class = "btn btn-danger", @style = "font-size:20px" })
         </div>
 </form>
 
 <script type="text/javascript">
     let htl_id;
     let shp_id;
+
+    let trpcnt = 1;
+
     let Rsvtnfrm = [
         {
             htl_id: "",
@@ -542,7 +567,8 @@
             dep_drp_off_loc: "",
             whlchr: "",
             whlchr_cnfld: "",
-            addtnl_inf: ""
+            addtnl_inf: "",
+            rsrvtn_nbr:""
         }
     ];
 
@@ -550,13 +576,50 @@
         console.log("document.onload", e, Date.now(), window.tdiff,
             (window.tdiff[0] = Date.now()) && window.tdiff.reduce(fred));
     }
+    document.addEventListener('click', function (event) {
+        var clickedElement =
+            event.target;
+        console.log('You clicked on: ', clickedElement.id);
+        if (clickedElement.id == 'btnAddTrp') {
+            console.log('Adding a Trip')
+            const TrpDiv = document.getElementById('Trip1');
+            const TrpClone = TrpDiv.cloneNode(true); // The `true` is for deep cloning
+            //parseInt(TrpClone.id.match(/\d+/g), 10) + 1;
+            const TrpCloneLbl = TrpClone.querySelector("#TrpNm1");
+            const TrpCloneRmvBtn = TrpClone.querySelector("#btnRmvTrp1");
+            const TrpFsArrive = TrpClone.querySelector("#fs-arrive1");
+            //Increment TripCounter
+            trpcnt = trpcnt + 1;
+            //
+            //TrpCloneLbl.textcontent = 'TestTrip'
+            TrpClone.id = "Trip" + trpcnt;
+            TrpCloneLbl.id = "TripLbl" + trpcnt;
+            TrpCloneLbl.textContent = "Trip " + trpcnt;
+            TrpCloneRmvBtn.id = "btnRmvTrp" + trpcnt;
+            TrpFsArrive.id = "fsArrive" + trpcnt;
 
+            // Get the target container by its ID
+            const TripContainer = document.getElementById('Trips');
+
+            // Append the cloned div to the target container
+            TripContainer.appendChild(TrpClone);
+            //TrpClone.style.backgroundColor = '#CCD1D1';
+
+        }
+    }); 
     $(document).ready(function () {
         
-        $('#lbl1').text("Airport");
+        $('#lbl_pck').text("Airport");        
+        $('#lbl_drp').text("Hotel");
+        $("#Pickuplctn_tpe").val("AP");
+        $("#Droplctn_tpe").val("H ");   
+        pckgetLocationsByType("AP")
+        drpgetLocationsByType("H ")
+        getAirLineLocations("AL")
         getHotelList();
         getShipsList();
     })
+   
     function getHotelList() {
 
 
@@ -663,14 +726,216 @@
     });
     
     $(function () {
-        $("#Pickuplctn_tpe").change(function () {
-            //alert($('option:selected', this).text());
+        $("#Droplctn_tpe").change(function () {
+           // alert($('option:selected', this).val());
+            var selectedVal = $('option:selected', this).val()
             var lbl = $('option:selected', this).text();
-            $('#lbl1').text(lbl);
-            
-           // document.getElementById("lbl1").text = lbl;
+            $('#lbl_drp').text(lbl);
+            if (selectedVal === "AP") {
+                document.getElementById("lbldrp_arln").style.display = "inline-block";
+                document.getElementById("lbldrp_flght").style.display = "inline-block";
+                document.getElementById("lbldrp_tm").style.display = "inline-block";
+                
+                getAirLineLocations("AL")
+                //$.get("/Home/GetLocationsByType",
+                //    {
+                //        type: "AL"
+                //    },
+                //    function (data, status) {
+                //        let d = data;
+                //        $.each(data, function () {
+                //            $("#drp_arln").empty();
+                //            $("#drp_arln").append($("<option>", {
+                //                value: "0",
+                //                text: "Select"
+                //            }));
+                //            $.each(data, function (i, item) {
+
+                //                $("#drp_arln").append($("<option>", {
+                //                    value: item.lctn_id,
+                //                    text: item.lctn_nme
+                //                }));
+                //            });
+                //        });
+                //    });
+            }
+            else {
+                document.getElementById("lbldrp_arln").style.display = "none";
+                document.getElementById("lbldrp_flght").style.display = "none";
+                document.getElementById("lbldrp_tm").style.display = "none";
+            }
+            drpgetLocationsByType(selectedVal)
+            //$.get("/Home/GetLocationsByType",
+            //    {
+            //        type: selectedVal
+            //    },
+            //    function (data, status) {
+            //        let d = data;
+            //        $.each(data, function () {
+            //            $("#drop_lctn_to").empty();
+            //            $("#drop_lctn_to").append($("<option>", {
+            //                value: "0",
+            //                text: "Select"
+            //            }));
+            //            $.each(data, function (i, item) {
+
+            //                $("#drop_lctn_to").append($("<option>", {
+            //                    value: item.lctn_id,
+            //                    text: item.lctn_nme
+            //                }));
+            //            });
+            //        });
+            //    });
         });
     });
+    $(function () {
+        $("#Pickuplctn_tpe").change(function () {
+           // alert($('option:selected', this).val());
+            var selectedVal = $('option:selected', this).val()
+            var lbl = $('option:selected', this).text();
+            $('#lbl_pck').text(lbl);            
+           
+            if (selectedVal === "AP") {
+                document.getElementById("lblpck_arln").style.display = "inline-block";
+                document.getElementById("lblpck_flght").style.display = "inline-block";
+                document.getElementById("lblfrm_tm").style.display = "inline-block";
+                getAirLineLocations("AL")
+                //$.get("/Home/GetLocationsByType",
+                //    {
+                //        type: "AL"
+                //    },
+                //    function (data, status) {
+                //        let d = data;
+                //        $.each(data, function () {
+                //            $("#pck_arln").empty();
+                //            $("#pck_arln").append($("<option>", {
+                //                value: "0",
+                //                text: "Select"
+                //            }));
+                //            $.each(data, function (i, item) {
+
+                //                $("#pck_arln").append($("<option>", {
+                //                    value: item.lctn_id,
+                //                    text: item.lctn_nme
+                //                }));
+                //            });
+                //        });
+                //    });
+            }
+            else {
+                document.getElementById("lblpck_arln").style.display = "none";
+                document.getElementById("lblpck_flght").style.display = "none";
+                document.getElementById("lblfrm_tm").style.display = "none";
+            }
+            pckgetLocationsByType(selectedVal)
+            
+            //$.get("/Home/GetLocationsByType",
+            //    {
+            //        type:selectedVal
+            //    },
+            //    function (data, status) {
+            //        let d = data;
+            //        $.each(data, function () {
+            //            $("#pck_lctn").empty();
+            //            $("#pck_lctn").append($("<option>", {
+            //                value: "0",
+            //                text: "Select"
+            //            }));
+            //            $.each(data, function (i, item) {
+
+            //                $("#pck_lctn").append($("<option>", {
+            //                    value: item.lctn_id,
+            //                    text: item.lctn_nme
+            //                }));
+            //            });
+            //        });
+            //    });
+        });
+    });
+    function pckgetLocationsByType(data) {
+
+
+        $.get("/Home/GetLocationsByType",
+            {
+                type:data
+            },
+            function (data, status) {
+                let d = data;
+                let f = '#pck_lctn'; // + trpcnt;
+                $.each(data, function () {
+//                    $("#pck_lctn").empty();
+                    $(f).empty();
+//                    $("#pck_lctn").append($("<option>", {
+                    $(f).append($("<option>", {value: "0",text: "Select"}));
+                    $.each(data, function (i, item) {
+
+//                        $("#pck_lctn").append($("<option>", {
+                    $(f).append($("<option>", {value: item.lctn_id,text: item.lctn_nme}));
+                    });
+                });
+            });
+
+    }
+    function drpgetLocationsByType(data) {
+
+
+        $.get("/Home/GetLocationsByType",
+            {
+                type: data
+            },
+            function (data, status) {
+                let d = data;
+                $.each(data, function () {
+                    $("#drop_lctn_to").empty();
+                    $("#drop_lctn_to").append($("<option>", {
+                        value: "0",
+                        text: "Select"
+                    }));
+                    $.each(data, function (i, item) {
+
+                        $("#drop_lctn_to").append($("<option>", {
+                            value: item.lctn_id,
+                            text: item.lctn_nme
+                        }));
+                    });
+                });
+            });
+
+    }
+    function getAirLineLocations(data) {
+        $.get("/Home/GetLocationsByType",
+            {
+                type: data
+            },
+            function (data, status) {
+                let d = data;
+                $.each(data, function () {
+                    $("#pck_arln").empty();
+                    $("#pck_arln").append($("<option>", {
+                        value: "0",
+                        text: "Select"
+                    }));
+                    $("#drp_arln").empty();
+                    $("#drp_arln").append($("<option>", {
+                        value: "0",
+                        text: "Select"
+                    }));
+                    $.each(data, function (i, item) {
+
+                        $("#pck_arln").append($("<option>", {
+                            value: item.lctn_id,
+                            text: item.lctn_nme
+                        }));
+                        $("#drp_arln").append($("<option>", {
+                            value: item.lctn_id,
+                            text: item.lctn_nme
+                        }));
+                    });
+                });
+               
+            });
+
+    }
 
     function SaveCustomer() {    
       
@@ -712,7 +977,8 @@
             dep_drp_off_loc: $('#dep_drp_off_loc').val(),
             whlchr: $('#whlchr').val(),
             whlchr_cnfld: $('#whlchr_cnfld').val(),
-            addtnl_inf: $('#addtnl_inf').val()
+            addtnl_inf: $('#addtnl_inf').val(),
+            rsrvtn_nbr: $('#rsrvtn_nbr').val()
         }
         console.log(Rsvtnfrm)
         //alert(Rsvtnfrm)
@@ -739,7 +1005,7 @@
     
 
     $("#gst_eml").blur(function () {
-        alert('working');
+        //alert('working');
         var SearchTerm = document.getElementById("gst_eml").value
         if (SearchTerm != "") {
             $.get("/Home/GetCustomerByEmail",
