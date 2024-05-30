@@ -11,7 +11,8 @@
     }
     .circular-button {
         border-radius: 50%;
-        background-color:cornflowerblue;
+        background-color: red;
+        background: url(MinusButton.png);
         /* Other button styles (background color, padding, etc.) */
     }
     h1 {
@@ -201,7 +202,7 @@
         border-radius: 8px;
     }
 
-    #fs-arrive {
+    .fs-arrive {
         border: 1px solid;
         <!-- margin: 50% auto; -->
         Width: 50%;
@@ -434,65 +435,74 @@
             <span style="padding: 0 10px; background: white; ">ITINERARY</span>
         </h2>
         <div id="Trips">
-        <div id="Trip1" style="background-color: white;">
-            <label id="TrpNm1"> <input id="btnRmvTrp1" class="circular-button" type="button" style="font-weight: 900;" value="-" />Trip 1</label>
-            <fieldset id="fs-arrive" style="width: 100%; border: none;margin-bottom:35px">
-
-                <legend style="display:flex;border:none">
-                    PickUp
-                    <label4 class="ml">
-                        From:
-                        @Html.DropDownList("lctn_tpe", new SelectList(ViewBag.TypeList, "lctn_tpe", "lctn_tpe_dsc"), "Please select", new { selected = "A", @id = "Pickuplctn_tpe", @style = "margin-left:5px;height:30px" })
+            <div id="Trip1">
+                <table style=" margin-bottom: 10px;">
+                    <tr><td style="background-color: #F7DC6F; border-radius: 5px;"><input id="btnRmvTrp1" class="circular-button" type="button" style="font-weight: 900;" value="-" /></td>
+                        <td style="background-color: #F7DC6F;width:100%">
+                            <label id="TrpNm1" style="padding-left: 5px; background-color: #F7DC6F; font-size: 15px; font-weight: 900; margin-bottom: 0px;margin:unset">
+                                Trip 1
+                            </label>
+                        </td>
+                    </tr>
+                </table>
+                
+               
+                <fieldset id="fs-arrive1" classs="fs-arrive" style="width: 100%; border: none;margin-bottom:35px">
+                    <legend style="display:flex;border:none">
+                        PickUp
+                        <label4 class="ml">
+                            From:
+                            @Html.DropDownList("lctn_tpe", new SelectList(ViewBag.TypeList, "lctn_tpe", "lctn_tpe_dsc"), "Please select", new { selected = "A", @id = "Pickuplctn_tpe", @style = "margin-left:5px;height:30px" })
+                        </label4>
+                        <label4 class="ml">Date: <input type="date" id="pck_dt"></label4>
+                        <label4 class="ml">Time: <input type="time" id="pck_tm"></label4>
+                        <label4 style=" margin-left: 10px; width: 100px; "># Passengers: <input type="number" id="pck_pssngrs"></label4>
+                    </legend>
+                    <label4 id="lblfrm_tm" style=" margin-left: 10px; width: 100px;display:inline-block ">Time: <input type="time" id="frm_tm"></label4>
+                    <label4>
+                        <label4 id="lbl_pck"></label4> @*<input type="text" id="arrvl_arprt" value="MCO">*@
+                        <select id="pck_lctn" name="pck_lctn" title="Hotel">
+                        </select>
                     </label4>
-                    <label4 class="ml">Date: <input type="date" id="pck_dt"></label4>
-                    <label4 class="ml">Time: <input type="time" id="pck_tm"></label4>
-                    <label4 style=" margin-left: 10px; width: 100px; "># Passengers: <input type="number" id="pck_pssngrs"></label4>
-                </legend>
-                <label4 id="lblfrm_tm" style=" margin-left: 10px; width: 100px;display:inline-block ">Time: <input type="time" id="frm_tm"></label4>
-                <label4>
-                    <label4 id="lbl_pck"></label4> @*<input type="text" id="arrvl_arprt" value="MCO">*@
-                    <select id="pck_lctn" name="pck_lctn" title="Hotel">
-                    </select>
-                </label4>
-                <label4 id="lblpck_arln" style=" margin-left: 10px; width: 100px; display: inline-block ">
-                    Airline:
-                    <select id="pck_arln"><option value="0">select</option></select>
-                </label4>
-                <label4 id="lblpck_flght" style=" margin-left: 10px; width: 100px; display: inline-block ">Flight #: <input type="text" id="pck_flght"></label4>
-
-                <br />
-
-                <legend style="display: flex; margin-top: 10px; margin-bottom: 20px; border-bottom: unset; border-top: 1px dotted gray;">
-                    Drop-off
-                    <label4 class="ml">
-                        To:
-                        @Html.DropDownList("lctn_tpe", new SelectList(ViewBag.TypeList, "lctn_tpe", "lctn_tpe_dsc"), "Please select", new { selected = "A", @id = "Droplctn_tpe", @style = "margin-left:5px;height:30px" })
+                    <label4 id="lblpck_arln" style=" margin-left: 10px; width: 100px; display: inline-block ">
+                        Airline:
+                        <select id="pck_arln"><option value="0">select</option></select>
                     </label4>
+                    <label4 id="lblpck_flght" style=" margin-left: 10px; width: 100px; display: inline-block ">Flight #: <input type="text" id="pck_flght"></label4>
+
+                    <br />
+
+                    <legend style="display: flex; margin-top: 10px; margin-bottom: 20px; border-bottom: unset; border-top: 1px dotted gray;">
+                        Drop-off
+                        <label4 class="ml">
+                            To:
+                            @Html.DropDownList("lctn_tpe", new SelectList(ViewBag.TypeList, "lctn_tpe", "lctn_tpe_dsc"), "Please select", new { selected = "A", @id = "Droplctn_tpe", @style = "margin-left:5px;height:30px" })
+                        </label4>
 
 
-                </legend>
-                <label4 id="lbldrp_tm" style=" margin-left: 10px; width: 100px;display:none ">Time: <input type="time" id="drp_tm"></label4>
-                <label4>
-                    <label4 id="lbl_drp"></label4>
-                    <select id="drop_lctn_to" name="drop_lctn_to" title="Hotel">
-                    </select>
-                </label4>
-                <label4 id="lbldrp_arln" style=" margin-left: 10px; width: 100px; display:none ">
-                    Airline:
-                    <select id="drp_arln"><option value="0">select</option></select>
-                </label4>
-                <label4 id="lbldrp_flght" style=" margin-left: 10px; width: 100px;display:none ">Flight #: <input type="text" id="drp_flght"></label4>
+                    </legend>
+                    <label4 id="lbldrp_tm" style=" margin-left: 10px; width: 100px;display:none ">Time: <input type="time" id="drp_tm"></label4>
+                    <label4>
+                        <label4 id="lbl_drp"></label4>
+                        <select id="drop_lctn_to" name="drop_lctn_to" title="Hotel">
+                        </select>
+                    </label4>
+                    <label4 id="lbldrp_arln" style=" margin-left: 10px; width: 100px; display:none ">
+                        Airline:
+                        <select id="drp_arln"><option value="0">select</option></select>
+                    </label4>
+                    <label4 id="lbldrp_flght" style=" margin-left: 10px; width: 100px;display:none ">Flight #: <input type="text" id="drp_flght"></label4>
 
-                <br />
+                    <br />
 
-                <div style="display: flex; justify-content: flex-start; align-items: flex-end;">
-                    <legend style="margin-bottom: 0px; border-bottom: unset; margin-top: 15px;width:220px ">Special Requirements</legend>
-                    <label4 id="nopadding">Wheelchair:</label4><input type="checkbox" id="whlchr" value="1">
-                    <label4>fold up:</label4><input type="checkbox" id="whlchr_cnfld" value="1">
-                    <label4 id="addtnl-inf">Additional Info:</label4> <textarea id="addtnl_inf" style=" height: 40px; width: 300px;"></textarea>
-                </div>
-            </fieldset>
-        </div>
+                    <div style="display: flex; justify-content: flex-start; align-items: flex-end;">
+                        <legend style="margin-bottom: 0px; border-bottom: unset; margin-top: 15px;width:220px ">Special Requirements</legend>
+                        <label4 id="nopadding">Wheelchair:</label4><input type="checkbox" id="whlchr" value="1">
+                        <label4>fold up:</label4><input type="checkbox" id="whlchr_cnfld" value="1">
+                        <label4 id="addtnl-inf">Additional Info:</label4> <textarea id="addtnl_inf" style=" height: 40px; width: 300px;"></textarea>
+                    </div>
+                </fieldset>
+            </div>
         </div>
         <h4 style="width: 100%; text-align: center; border-bottom: 0px solid #000; line-height: 0.1em;">
             @*<span style="padding: 0 10px; background: white; font-size: 40px; ">+</span>*@
@@ -587,15 +597,17 @@
             const TrpClone = TrpDiv.cloneNode(true); // The `true` is for deep cloning
             //parseInt(TrpClone.id.match(/\d+/g), 10) + 1;
             const TrpCloneLbl = TrpClone.querySelector("#TrpNm1");
-            const TrpCloneRmvBtn = TrpClone.querySelector("#btnRmvTrp1")
+            const TrpCloneRmvBtn = TrpClone.querySelector("#btnRmvTrp1");
+            const TrpFsArrive = TrpClone.querySelector("#fs-arrive1");
             //Increment TripCounter
             trpcnt = trpcnt + 1;
             //
             //TrpCloneLbl.textcontent = 'TestTrip'
             TrpClone.id = "Trip" + trpcnt;
             TrpCloneLbl.id = "TripLbl" + trpcnt;
-            TrpCloneLbl.textContent = "Trip " + trpcnt;
             TrpCloneRmvBtn.id = "btnRmvTrp" + trpcnt;
+            TrpCloneLbl.textContent = "Trip " + trpcnt;           
+            TrpFsArrive.id = "fsArrive" + trpcnt;
 
             // Get the target container by its ID
             const TripContainer = document.getElementById('Trips');
@@ -618,7 +630,7 @@
         getHotelList();
         getShipsList();
     })
-
+   
     function getHotelList() {
 
 
@@ -860,18 +872,16 @@
             },
             function (data, status) {
                 let d = data;
+                let f = '#pck_lctn'; // + trpcnt;
                 $.each(data, function () {
-                    $("#pck_lctn").empty();
-                    $("#pck_lctn").append($("<option>", {
-                        value: "0",
-                        text: "Select"
-                    }));
+//                    $("#pck_lctn").empty();
+                    $(f).empty();
+//                    $("#pck_lctn").append($("<option>", {
+                    $(f).append($("<option>", {value: "0",text: "Select"}));
                     $.each(data, function (i, item) {
 
-                        $("#pck_lctn").append($("<option>", {
-                            value: item.lctn_id,
-                            text: item.lctn_nme
-                        }));
+//                        $("#pck_lctn").append($("<option>", {
+                    $(f).append($("<option>", {value: item.lctn_id,text: item.lctn_nme}));
                     });
                 });
             });

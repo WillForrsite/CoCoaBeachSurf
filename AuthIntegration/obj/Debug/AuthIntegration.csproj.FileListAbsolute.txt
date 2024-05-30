@@ -118,3 +118,16 @@ C:\Bluechip Development\CoCoaBeachSurf\AuthIntegration\obj\Debug\AuthIntegration
 C:\Bluechip Development\CoCoaBeachSurf\AuthIntegration\obj\Debug\AuthIntegration.csproj.CopyComplete
 C:\Bluechip Development\CoCoaBeachSurf\AuthIntegration\obj\Debug\AuthIntegration.dll
 C:\Bluechip Development\CoCoaBeachSurf\AuthIntegration\obj\Debug\AuthIntegration.pdb
+C:\Data1\Source\Repos\CoCoaBeachSurf\AuthIntegration\bin\Debug\AuthIntegration.dll
+C:\Data1\Source\Repos\CoCoaBeachSurf\AuthIntegration\bin\Debug\AuthIntegration.pdb
+C:\Data1\Source\Repos\CoCoaBeachSurf\AuthIntegration\bin\Debug\Newtonsoft.Json.dll
+C:\Data1\Source\Repos\CoCoaBeachSurf\AuthIntegration\bin\Debug\SendGrid.dll
+C:\Data1\Source\Repos\CoCoaBeachSurf\AuthIntegration\bin\Debug\StarkbankEcdsa.dll
+C:\Data1\Source\Repos\CoCoaBeachSurf\AuthIntegration\bin\Debug\Newtonsoft.Json.xml
+C:\Data1\Source\Repos\CoCoaBeachSurf\AuthIntegration\bin\Debug\SendGrid.pdb
+C:\Data1\Source\Repos\CoCoaBeachSurf\AuthIntegration\bin\Debug\SendGrid.xml
+C:\Data1\Source\Repos\CoCoaBeachSurf\AuthIntegration\obj\Debug\AuthIntegration.csproj.AssemblyReference.cache
+C:\Data1\Source\Repos\CoCoaBeachSurf\AuthIntegration\obj\Debug\AuthIntegration.csproj.CoreCompileInputs.cache
+C:\Data1\Source\Repos\CoCoaBeachSurf\AuthIntegration\obj\Debug\AuthIntegration.csproj.CopyComplete
+C:\Data1\Source\Repos\CoCoaBeachSurf\AuthIntegration\obj\Debug\AuthIntegration.dll
+C:\Data1\Source\Repos\CoCoaBeachSurf\AuthIntegration\obj\Debug\AuthIntegration.pdb

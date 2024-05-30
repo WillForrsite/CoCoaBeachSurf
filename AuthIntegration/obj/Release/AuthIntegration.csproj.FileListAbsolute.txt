@@ -47,3 +47,16 @@ D:\Work Area\IHP\AuthIntegration\obj\Release\AuthIntegration.csproj.CoreCompileI
 D:\Work Area\IHP\AuthIntegration\obj\Release\AuthIntegration.csproj.CopyComplete
 D:\Work Area\IHP\AuthIntegration\obj\Release\AuthIntegration.dll
 D:\Work Area\IHP\AuthIntegration\obj\Release\AuthIntegration.pdb
+C:\Data1\Source\Repos\CoCoaBeachSurf\AuthIntegration\bin\Release\AuthIntegration.dll
+C:\Data1\Source\Repos\CoCoaBeachSurf\AuthIntegration\bin\Release\AuthIntegration.pdb
+C:\Data1\Source\Repos\CoCoaBeachSurf\AuthIntegration\bin\Release\Newtonsoft.Json.dll
+C:\Data1\Source\Repos\CoCoaBeachSurf\AuthIntegration\bin\Release\SendGrid.dll
+C:\Data1\Source\Repos\CoCoaBeachSurf\AuthIntegration\bin\Release\StarkbankEcdsa.dll
+C:\Data1\Source\Repos\CoCoaBeachSurf\AuthIntegration\bin\Release\Newtonsoft.Json.xml
+C:\Data1\Source\Repos\CoCoaBeachSurf\AuthIntegration\bin\Release\SendGrid.pdb
+C:\Data1\Source\Repos\CoCoaBeachSurf\AuthIntegration\bin\Release\SendGrid.xml
+C:\Data1\Source\Repos\CoCoaBeachSurf\AuthIntegration\obj\Release\AuthIntegration.csproj.AssemblyReference.cache
+C:\Data1\Source\Repos\CoCoaBeachSurf\AuthIntegration\obj\Release\AuthIntegration.csproj.CoreCompileInputs.cache
+C:\Data1\Source\Repos\CoCoaBeachSurf\AuthIntegration\obj\Release\AuthIntegration.csproj.CopyComplete
+C:\Data1\Source\Repos\CoCoaBeachSurf\AuthIntegration\obj\Release\AuthIntegration.dll
+C:\Data1\Source\Repos\CoCoaBeachSurf\AuthIntegration\obj\Release\AuthIntegration.pdb
