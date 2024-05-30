@@ -427,16 +427,6 @@
     </Content>
     <None Include="Properties\PublishProfiles\cocoabeachsurf - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\cocoabeachsurf - Web Deploy.pubxml" />
-    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
-    <None Include="Properties\PublishProfiles\FS-GLOBAL-AUTH-DEV - Web Deploy.pubxml" />
-    <None Include="Properties\PublishProfiles\FS-GLOBAL-AUTH-PROD - Web Deploy.pubxml" />
-    <None Include="Properties\PublishProfiles\ihp-dev - FTP.pubxml" />
-    <None Include="Properties\PublishProfiles\ihp-dev - FTP1.pubxml" />
-    <None Include="Properties\PublishProfiles\ihp-dev - Web Deploy.pubxml" />
-    <None Include="Properties\PublishProfiles\ihp-dev - Web Deploy1.pubxml" />
-    <None Include="Properties\PublishProfiles\Ollas - FTP.pubxml" />
-    <None Include="Properties\PublishProfiles\Ollas - FTP1.pubxml" />
-    <None Include="Properties\PublishProfiles\Ollas - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

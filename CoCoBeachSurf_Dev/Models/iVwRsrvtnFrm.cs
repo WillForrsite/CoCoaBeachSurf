@@ -20,6 +20,7 @@ namespace AuthModule.Models
         public string shp_cst { get; set; }
         public string rsrvtn_ctgry { get; set; }
         public string rsrvtn_type { get; set; }
+        public string rsrvtn_nbr { get; set; }
         public string gst_nme { get; set; }
         public string gst_fnme { get; set; }
         public string gst_lnme { get; set; }
@@ -45,6 +46,8 @@ namespace AuthModule.Models
         public string whlchr { get; set; }
         public string whlchr_cnfld { get; set; }
         public string addtnl_inf { get; set; }
-       
+        public string CreatedBy { get; set; }
+
+
     }
 }
