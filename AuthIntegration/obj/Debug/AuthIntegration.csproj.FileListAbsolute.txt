@@ -115,6 +115,6 @@ C:\Bluechip Development\CoCoaBeachSurf\AuthIntegration\bin\Debug\SendGrid.pdb
 C:\Bluechip Development\CoCoaBeachSurf\AuthIntegration\bin\Debug\SendGrid.xml
 C:\Bluechip Development\CoCoaBeachSurf\AuthIntegration\obj\Debug\AuthIntegration.csproj.AssemblyReference.cache
 C:\Bluechip Development\CoCoaBeachSurf\AuthIntegration\obj\Debug\AuthIntegration.csproj.CoreCompileInputs.cache
-C:\Bluechip Development\CoCoaBeachSurf\AuthIntegration\obj\Debug\AuthIntegration.csproj.CopyComplete
 C:\Bluechip Development\CoCoaBeachSurf\AuthIntegration\obj\Debug\AuthIntegration.dll
 C:\Bluechip Development\CoCoaBeachSurf\AuthIntegration\obj\Debug\AuthIntegration.pdb
+C:\Bluechip Development\CoCoaBeachSurf\AuthIntegration\obj\Debug\AuthInte.F0CEA189.Up2Date

@@ -610,468 +610,468 @@ namespace AuthModule.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<ActionResult> changePassword(ChangePasswordViewModel model)
-        {
-            //if (!ModelState.IsValid)
-            //{
-            //    return View(model);
-            //}
-            ////var user = await UserManager.FindByNameAsync(model.Email);
-            //if (user == null)
-            //{
-            //    // Don't reveal that the user does not exist
-            //    return RedirectToAction("ResetPasswordConfirmation", "Account");
-            //}
-            //var result = await UserManager.ResetPasswordAsync(user.Id, model.Code, model.Password);
-            //if (result.Succeeded)
-            //{
-            //    return RedirectToAction("ResetPasswordConfirmation", "Account");
-            //}
-            //AddErrors(result);
-            return View();
-        }
+        //public async Task<ActionResult> changePassword(ChangePasswordViewModel model)
+        //{
+        //    //if (!ModelState.IsValid)
+        //    //{
+        //    //    return View(model);
+        //    //}
+        //    ////var user = await UserManager.FindByNameAsync(model.Email);
+        //    //if (user == null)
+        //    //{
+        //    //    // Don't reveal that the user does not exist
+        //    //    return RedirectToAction("ResetPasswordConfirmation", "Account");
+        //    //}
+        //    //var result = await UserManager.ResetPasswordAsync(user.Id, model.Code, model.Password);
+        //    //if (result.Succeeded)
+        //    //{
+        //    //    return RedirectToAction("ResetPasswordConfirmation", "Account");
+        //    //}
+        //    //AddErrors(result);
+        //    return View();
+        //}
 
+        //#endregion
+
+        //#region Helper
+
+        //private void AddErrors(IdentityResult result)
+        //{
+        //    foreach (var error in result.Errors)
+        //    {
+        //        ModelState.AddModelError("", error);
+        //    }
+        //}
+        //#endregion
+
+        //#region Sales Order
+        //public ActionResult SalesOrder()
+        //{
+
+        //    ViewBag.Role = getRole();
+        //    string CurrentUserid = getUserId();
+        //    var AdminUser = db.AppUserValidations.Where(s => s.UserId == CurrentUserid && s.IsGlobalAdmin == 1).FirstOrDefault();
+        //    SalesOrderViewModel salesOrderViewModel = new SalesOrderViewModel();
+        //    if (TempData["OD"] != null)
+        //    {
+        //        string Od = TempData["OD"].ToString();
+        //        ViewBag.Od = Od;
+        //    }
+        //    return View();
+
+        //}
+        //[HttpPost]
+        //public ActionResult SalesOrder(SalesOrderViewModel salesOrderViewModel)
+        //{
+
+        //    ViewBag.Role = getRole();
+        //    string CurrentUserid = getUserId();
+        //    var AdminUser = db.AppUserValidations.Where(s => s.UserId == CurrentUserid && s.IsGlobalAdmin == 1).FirstOrDefault();
+        //    SalesOrderViewModel salesOrderObj = new SalesOrderViewModel();
+        //    salesOrderObj = salesOrderViewModel;
+        //    return View();
+
+        //}
+
+        //#endregion
+        //#region Sales Order Spanish
+        //public ActionResult SalesOrderSpanish()
+        //{
+
+        //    ViewBag.Role = getRole();
+        //    string CurrentUserid = getUserId();
+        //    var AdminUser = db.AppUserValidations.Where(s => s.UserId == CurrentUserid && s.IsGlobalAdmin == 1).FirstOrDefault();
+        //    SalesOrderViewModel salesOrderViewModel = new SalesOrderViewModel();
+        //    if (TempData["OD"] != null)
+        //    {
+        //        string Od = TempData["OD"].ToString();
+        //        ViewBag.Od = Od;
+        //    }
+        //    return View();
+
+        //}
+        //[HttpPost]
+        //public ActionResult SalesOrderSpanish(SalesOrderViewModel salesOrderViewModel)
+        //{
+
+        //    ViewBag.Role = getRole();
+        //    string CurrentUserid = getUserId();
+        //    var AdminUser = db.AppUserValidations.Where(s => s.UserId == CurrentUserid && s.IsGlobalAdmin == 1).FirstOrDefault();
+        //    SalesOrderViewModel salesOrderObj = new SalesOrderViewModel();
+        //    salesOrderObj = salesOrderViewModel;
+        //    return View();
+
+        //}
+
+        //#endregion
+
+        //#region Price Selection
+        //public ActionResult ProductSelection1()
+        //{
+
+        //    ViewBag.Role = getRole();
+        //    string CurrentUserid = getUserId();
+        //    IEnumerable<vw_tblCategory> categoryList = db.Database.SqlQuery
+        //                                                                      <vw_tblCategory>("exec spGetCategoryList ").ToList();
+        //    var list = categoryList.Select(s => new
+        //    {
+        //        Id = s.CatId,
+        //        CategoryName = s.Category
+        //    }).ToList();
+        //    ViewBag.CatList = list;
+        //    return View();
+
+        //}
+        //public ActionResult ProductSelection(string OrderId)
+        //{
+
+        //    ViewBag.Role = getRole();
+        //    string CurrentUserid = getUserId();
+        //    IEnumerable<vw_tblCategory> categoryList = db.Database.SqlQuery
+        //                                                                      <vw_tblCategory>("exec spGetCategoryList ").ToList();
+        //    var list = categoryList.Select(s => new
+        //    {
+        //        Id = s.CatId,
+        //        CategoryName = s.Category
+        //    }).ToList();
+        //    ViewBag.CatList = list;
+        //    if (OrderId != "New" && OrderId != "0")
+        //    {
+        //        IEnumerable<tblOrder> orderlist = db.Database.SqlQuery
+        //                                                                        <tblOrder>("exec spGetOrderDetailsByOrderId @OrderID={0} ", OrderId).ToList();
+        //    }
+        //    return View();
+
+        //}
+        //public ActionResult ProductList()
+        //{
+
+        //    ViewBag.Role = getRole();
+        //    string CurrentUserid = getUserId();
+
+        //    ViewBag.ALL = "0";
+        //    var list = db.tblCategories.Select(s => new
+        //    {
+        //        Id = s.CatId,
+        //        CategoryName = s.Category
+        //    }).ToList();
+        //    ViewBag.CatList = list;
+        //    IEnumerable<vw_tblCategory> categoryList = db.Database.SqlQuery
+        //                                                                      <vw_tblCategory>("exec spGetCategoryList ").Select(s => new vw_tblCategory { CatId = s.CatId, Category = s.Category }).ToList();
+        //    ViewBag.CatList = categoryList;
+        //    List<tblProduct> tp = new List<tblProduct>();
+        //    IEnumerable<vw_tblProducts> productList = db.Database.SqlQuery
+        //                                                                      <vw_tblProducts>("exec spGetProductList ").ToList();
+
+        //    return View(productList);
+
+        //}
+        //public ActionResult CategoryList()
+        //{
+
+        //    ViewBag.Role = getRole();
+        //    string CurrentUserid = getUserId();
+
+        //    ViewBag.ALL = "0";
+        //    List<tblProduct> tp = new List<tblProduct>();
+        //    IEnumerable<vw_tblCategory> categoryList = db.Database.SqlQuery
+        //                                                                      <vw_tblCategory>("exec spGetCategoryList ").ToList();
+
+        //    return View(categoryList);
+
+        //}
+        //public JsonResult Prdlist()
+        //{
+        //    IEnumerable<vw_tblProducts> productList = db.Database.SqlQuery
+        //                                                                     <vw_tblProducts>("exec spGetProductList ").ToList();
+        //    return Json(productList, JsonRequestBehavior.AllowGet);
+        //}
+        //public JsonResult Prdlist123(string OrderId)
+        //{
+        //    if (OrderId != "New" && OrderId != "0")
+        //    {
+        //        IEnumerable<vw_tblProducts> SelectedproductList = db.Database.SqlQuery
+        //                                                                    <vw_tblProducts>("exec spGetOrderDetailsByOrderId @OrderID={0} ", OrderId).ToList();
+        //        return Json(SelectedproductList, JsonRequestBehavior.AllowGet);
+        //    }
+        //    return Json("", JsonRequestBehavior.AllowGet);
+        //}
+        //public JsonResult Catlist()
+        //{
+        //    IEnumerable<vw_tblCategory> categoryList = db.Database.SqlQuery
+        //                                                                      <vw_tblCategory>("exec spGetCategoryList ").ToList();
+        //    var list = categoryList.Select(s => new
+        //    {
+        //        Id = s.CatId,
+        //        CategoryName = s.Category
+        //    }).ToList();
+        //    ViewBag.CatList = list;
+        //    return Json(categoryList, JsonRequestBehavior.AllowGet);
+        //}
+
+        //[HttpPost]
+        //public string SaveProducts(string ProductName, string Code, string Price, string Active, string CatId, string PrdMfCode, string PrdESPDesc, string PrdTaxable)
+        //{
+        //    string CurrentUserid = getUserId();
+        //    if (!string.IsNullOrEmpty(ProductName) && !string.IsNullOrEmpty(Code) && !string.IsNullOrEmpty(Price))
+        //    {
+        //        try
+        //        {
+        //            int count = db.Database.ExecuteSqlCommand("exec sp_I_tblProducts @PrdCode={0},@PrdDesc={1},@PrdPrice={2},@Active={3},@CMBy={4},@CatId={5},@PrdMfCode={6},@PrdESPDesc={7},@PrdTaxable={8}", Code, ProductName, Price, Active, CurrentUserid, CatId, PrdMfCode, PrdESPDesc, PrdTaxable);
+
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            string error = ex.Message.ToString();
+        //            throw;
+        //        }
+        //        return "1";
+        //    }
+        //    else
+        //    {
+        //        ViewBag.ALL = "1";
+        //        return "0";
+        //    }
+        //    // int count = db.Database.ExecuteSqlCommand("exec sp_I_tblProducts @PrdCode = " + Code + ",@PrdDesc = " + ProductName + ",@PrdPrice=" + Convert.ToDecimal(Price) + ",@Active = " + Convert.ToInt32(Active) + ",@CMBy=" + CurrentUserid);
+        //    //string ConnectionString = (db.Connection as EntityConnection).StoreConnection.ConnectionString;
+        //    //SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder(ConnectionString);
+        //    //builder.ConnectTimeout = 2500;
+        //    //SqlConnection con = new SqlConnection(builder.ConnectionString);
+        //    //System.Data.Common.DbDataReader sqlReader;
+        //    //con.Open();
+        //    //using (SqlCommand cmd = con.CreateCommand())
+        //    //{
+        //    //    cmd.CommandText = "sp_I_tblProducts";
+        //    //    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+        //    //    cmd.CommandTimeout = 0;
+        //    //    cmd.Parameters.Add(new SqlParameter("@PrdCode", SqlDbType.VarChar) { Value = Code });
+        //    //    sqlReader = (System.Data.Common.DbDataReader)cmd.ExecuteReader();
+        //    //}
+
+
+        //    //return "0";
+        //}
+
+        ////[HttpPost]
+        ////public string UpdateProducts(string PrdId, string ProductName, string Code, string Price, string Active, string CatId, string PrdMfCode, string PrdESPDesc, string PrdTaxable)
+        ////{
+        ////    string CurrentUserid = getUserId();
+        ////    if (!string.IsNullOrEmpty(ProductName) && !string.IsNullOrEmpty(Code) && !string.IsNullOrEmpty(Price))
+        ////    {
+        ////        try
+        ////        {
+        ////            int count = db.Database.ExecuteSqlCommand("exec sp_I_tblProducts @PrdCode={0},@PrdDesc={1},@PrdPrice={2},@Active={3},@CMBy={4},@PrdId={5},@CatId={6},@PrdMfCode={7},@PrdESPDesc={8},@PrdTaxable={9}", Code, ProductName, Price, Active, CurrentUserid, PrdId, CatId, PrdMfCode, PrdESPDesc, PrdTaxable);
+
+        ////        }
+        ////        catch (Exception ex)
+        ////        {
+        ////            string error = ex.Message.ToString();
+        ////            throw;
+        ////        }
+        ////        return "1";
+        ////    }
+        ////    else
+        ////    {
+        ////        ViewBag.ALL = "1";
+        ////        return "0";
+        ////    }
+
+
+        ////    return "0";
+        ////}
+
+        ////public string DeleteProducts(string PrdId)
+        ////{
+        ////    string CurrentUserid = getUserId();
+        ////    if (!string.IsNullOrEmpty(PrdId))
+        ////    {
+        ////        try
+        ////        {
+        ////            int count = db.Database.ExecuteSqlCommand("exec sp_I_tblProducts @PrdId={0},@Delete={1}", PrdId.Trim(), 1);
+
+        ////        }
+        ////        catch (Exception ex)
+        ////        {
+        ////            string error = ex.Message.ToString();
+        ////            throw;
+        ////        }
+        ////        return "1";
+        ////    }
+        ////    else
+        ////    {
+        ////        ViewBag.ALL = "1";
+        ////        return "0";
+        ////    }
+
+
+        ////    return "0";
+        ////}
+        //[HttpPost]
+        //public string SaveCategory(string Category, string CatDesc)
+        //{
+        //    string CurrentUserid = getUserId();
+        //    if (!string.IsNullOrEmpty(Category))
+        //    {
+        //        try
+        //        {
+        //            int count = db.Database.ExecuteSqlCommand("exec sp_I_tblCategory @Category={0},@CatDesc={1},@CMBy={2}", Category, CatDesc, CurrentUserid);
+
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            string error = ex.Message.ToString();
+        //            return "0";
+        //        }
+        //        return "1";
+        //    }
+        //    else
+        //    {
+        //        ViewBag.ALL = "1";
+        //        return "0";
+        //    }
+
+
+
+        //    //return "0";
+        //}
+        //[HttpPost]
+        ////public string UpdateCategory(string CatId, string Category, string CatDesc)
+        ////{
+        ////    string CurrentUserid = getUserId();
+        ////    if (!string.IsNullOrEmpty(CatId) && !string.IsNullOrEmpty(Category))
+        ////    {
+        ////        try
+        ////        {
+        ////            int count = db.Database.ExecuteSqlCommand("exec sp_I_tblCategory @CatId={0},@Category={1},@CatDesc={2},@CMBy={3}", CatId, Category, CatDesc, CurrentUserid);
+
+        ////        }
+        ////        catch (Exception ex)
+        ////        {
+        ////            string error = ex.Message.ToString();
+        ////            throw;
+        ////        }
+        ////        return "1";
+        ////    }
+        ////    else
+        ////    {
+        ////        ViewBag.ALL = "1";
+        ////        return "0";
+        ////    }
+
+
+        ////    return "0";
+        ////}
+        ////public string DeleteCategory(string CatId)
+        ////{
+        ////    string CurrentUserid = getUserId();
+        ////    if (!string.IsNullOrEmpty(CatId))
+        ////    {
+        ////        try
+        ////        {
+        ////            int count = db.Database.ExecuteSqlCommand("exec sp_I_tblCategory @CatId={0},@Delete={1}", CatId.Trim(), 1);
+
+        ////        }
+        ////        catch (Exception ex)
+        ////        {
+        ////            string error = ex.Message.ToString();
+        ////            throw;
+        ////        }
+        ////        return "1";
+        ////    }
+        ////    else
+        ////    {
+        ////        ViewBag.ALL = "1";
+        ////        return "0";
+        ////    }
+
+
+        ////    return "0";
+        ////}
+        ////[HttpPost]
+        //public string SaveOrder(List<tblProduct> products, string CustId)
+        //{
+        //    string CurrentUserid = getUserId();
+        //    Guid Od = Guid.NewGuid();
+        //    if (products != null && products.Count > 0)
+        //    {
+        //        if (products[0].PrdESPDesc == null || products[0].PrdESPDesc == "New" || products[0].PrdESPDesc == "0")
+        //        {
+
+
+        //            string OrderId = Od.ToString();
+        //            String strConnString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+        //            SqlConnection con = new SqlConnection(strConnString);
+        //            SqlCommand cmd = new SqlCommand();
+        //            cmd.CommandType = CommandType.StoredProcedure;
+        //            cmd.CommandText = "sp_I_tblOrder";
+        //            cmd.Parameters.Add("@OrderId", SqlDbType.VarChar).Value = OrderId;
+        //            cmd.Parameters.Add("@CustId", SqlDbType.Int).Value = Convert.ToInt32(products[0].PrdEngDesc);
+        //            cmd.Parameters.Add("@DeliveryZip", SqlDbType.VarChar).Value = "12345";
+        //            cmd.Parameters.Add("@CMBy", SqlDbType.VarChar).Value = CurrentUserid;
+
+        //            cmd.Connection = con;
+        //            try
+        //            {
+        //                con.Open();
+        //                cmd.ExecuteNonQuery();
+
+
+        //            }
+        //            catch (Exception ex)
+        //            {
+        //                throw ex;
+        //            }
+        //            finally
+        //            {
+        //                con.Close();
+        //                con.Dispose();
+        //            }
+        //        }
+        //        else
+        //        {
+        //            Od = new Guid(products[0].PrdESPDesc);
+        //        }
+        //        if (!string.IsNullOrEmpty(CurrentUserid))
+        //        {
+        //            try
+        //            {
+        //                int count = 0;
+
+        //                List<tblProduct> tp = new List<tblProduct>();
+        //                tp = products;
+
+
+        //                foreach (tblProduct product in tp)
+        //                {
+        //                    count = db.Database.ExecuteSqlCommand("exec sp_I_tblOrderItems @PrdId={0},@Qty={1},@OrderBy={2},@OrderId={3}", product.PrdId, product.quantity, CurrentUserid, Od.ToString());
+
+        //                }
+
+        //            }
+        //            catch (Exception ex)
+        //            {
+        //                string error = ex.Message.ToString();
+        //                return "0";
+        //            }
+        //            TempData["OD"] = Od.ToString();
+        //            return Od.ToString();
+        //        }
+        //        else
+        //        {
+        //            ViewBag.ALL = "1";
+        //            return "0";
+        //        }
+
+        //    }
+        //    else
+        //    {
+        //        return "0";
+        //    }
+
+        //    //return "0";
+        //}
         #endregion
-
-        #region Helper
-
-        private void AddErrors(IdentityResult result)
-        {
-            foreach (var error in result.Errors)
-            {
-                ModelState.AddModelError("", error);
-            }
-        }
-        #endregion
-
-        #region Sales Order
-        public ActionResult SalesOrder()
-        {
-
-            ViewBag.Role = getRole();
-            string CurrentUserid = getUserId();
-            var AdminUser = db.AppUserValidations.Where(s => s.UserId == CurrentUserid && s.IsGlobalAdmin == 1).FirstOrDefault();
-            SalesOrderViewModel salesOrderViewModel = new SalesOrderViewModel();
-            if (TempData["OD"] != null)
-            {
-                string Od = TempData["OD"].ToString();
-                ViewBag.Od = Od;
-            }
-            return View();
-
-        }
-        [HttpPost]
-        public ActionResult SalesOrder(SalesOrderViewModel salesOrderViewModel)
-        {
-
-            ViewBag.Role = getRole();
-            string CurrentUserid = getUserId();
-            var AdminUser = db.AppUserValidations.Where(s => s.UserId == CurrentUserid && s.IsGlobalAdmin == 1).FirstOrDefault();
-            SalesOrderViewModel salesOrderObj = new SalesOrderViewModel();
-            salesOrderObj = salesOrderViewModel;
-            return View();
-
-        }
-
-        #endregion
-        #region Sales Order Spanish
-        public ActionResult SalesOrderSpanish()
-        {
-
-            ViewBag.Role = getRole();
-            string CurrentUserid = getUserId();
-            var AdminUser = db.AppUserValidations.Where(s => s.UserId == CurrentUserid && s.IsGlobalAdmin == 1).FirstOrDefault();
-            SalesOrderViewModel salesOrderViewModel = new SalesOrderViewModel();
-            if (TempData["OD"] != null)
-            {
-                string Od = TempData["OD"].ToString();
-                ViewBag.Od = Od;
-            }
-            return View();
-
-        }
-        [HttpPost]
-        public ActionResult SalesOrderSpanish(SalesOrderViewModel salesOrderViewModel)
-        {
-
-            ViewBag.Role = getRole();
-            string CurrentUserid = getUserId();
-            var AdminUser = db.AppUserValidations.Where(s => s.UserId == CurrentUserid && s.IsGlobalAdmin == 1).FirstOrDefault();
-            SalesOrderViewModel salesOrderObj = new SalesOrderViewModel();
-            salesOrderObj = salesOrderViewModel;
-            return View();
-
-        }
-
-        #endregion
-
-        #region Price Selection
-        public ActionResult ProductSelection1()
-        {
-
-            ViewBag.Role = getRole();
-            string CurrentUserid = getUserId();
-            IEnumerable<vw_tblCategory> categoryList = db.Database.SqlQuery
-                                                                              <vw_tblCategory>("exec spGetCategoryList ").ToList();
-            var list = categoryList.Select(s => new
-            {
-                Id = s.CatId,
-                CategoryName = s.Category
-            }).ToList();
-            ViewBag.CatList = list;
-            return View();
-
-        }
-        public ActionResult ProductSelection(string OrderId)
-        {
-
-            ViewBag.Role = getRole();
-            string CurrentUserid = getUserId();
-            IEnumerable<vw_tblCategory> categoryList = db.Database.SqlQuery
-                                                                              <vw_tblCategory>("exec spGetCategoryList ").ToList();
-            var list = categoryList.Select(s => new
-            {
-                Id = s.CatId,
-                CategoryName = s.Category
-            }).ToList();
-            ViewBag.CatList = list;
-            if (OrderId != "New" && OrderId != "0")
-            {
-                IEnumerable<tblOrder> orderlist = db.Database.SqlQuery
-                                                                                <tblOrder>("exec spGetOrderDetailsByOrderId @OrderID={0} ", OrderId).ToList();
-            }
-            return View();
-
-        }
-        public ActionResult ProductList()
-        {
-
-            ViewBag.Role = getRole();
-            string CurrentUserid = getUserId();
-
-            ViewBag.ALL = "0";
-            var list = db.tblCategories.Select(s => new
-            {
-                Id = s.CatId,
-                CategoryName = s.Category
-            }).ToList();
-            ViewBag.CatList = list;
-            IEnumerable<vw_tblCategory> categoryList = db.Database.SqlQuery
-                                                                              <vw_tblCategory>("exec spGetCategoryList ").Select(s => new vw_tblCategory { CatId = s.CatId, Category = s.Category }).ToList();
-            ViewBag.CatList = categoryList;
-            List<tblProduct> tp = new List<tblProduct>();
-            IEnumerable<vw_tblProducts> productList = db.Database.SqlQuery
-                                                                              <vw_tblProducts>("exec spGetProductList ").ToList();
-
-            return View(productList);
-
-        }
-        public ActionResult CategoryList()
-        {
-
-            ViewBag.Role = getRole();
-            string CurrentUserid = getUserId();
-
-            ViewBag.ALL = "0";
-            List<tblProduct> tp = new List<tblProduct>();
-            IEnumerable<vw_tblCategory> categoryList = db.Database.SqlQuery
-                                                                              <vw_tblCategory>("exec spGetCategoryList ").ToList();
-
-            return View(categoryList);
-
-        }
-        public JsonResult Prdlist()
-        {
-            IEnumerable<vw_tblProducts> productList = db.Database.SqlQuery
-                                                                             <vw_tblProducts>("exec spGetProductList ").ToList();
-            return Json(productList, JsonRequestBehavior.AllowGet);
-        }
-        public JsonResult Prdlist123(string OrderId)
-        {
-            if (OrderId != "New" && OrderId != "0")
-            {
-                IEnumerable<vw_tblProducts> SelectedproductList = db.Database.SqlQuery
-                                                                            <vw_tblProducts>("exec spGetOrderDetailsByOrderId @OrderID={0} ", OrderId).ToList();
-                return Json(SelectedproductList, JsonRequestBehavior.AllowGet);
-            }
-            return Json("", JsonRequestBehavior.AllowGet);
-        }
-        public JsonResult Catlist()
-        {
-            IEnumerable<vw_tblCategory> categoryList = db.Database.SqlQuery
-                                                                              <vw_tblCategory>("exec spGetCategoryList ").ToList();
-            var list = categoryList.Select(s => new
-            {
-                Id = s.CatId,
-                CategoryName = s.Category
-            }).ToList();
-            ViewBag.CatList = list;
-            return Json(categoryList, JsonRequestBehavior.AllowGet);
-        }
-
-        [HttpPost]
-        public string SaveProducts(string ProductName, string Code, string Price, string Active, string CatId, string PrdMfCode, string PrdESPDesc, string PrdTaxable)
-        {
-            string CurrentUserid = getUserId();
-            if (!string.IsNullOrEmpty(ProductName) && !string.IsNullOrEmpty(Code) && !string.IsNullOrEmpty(Price))
-            {
-                try
-                {
-                    int count = db.Database.ExecuteSqlCommand("exec sp_I_tblProducts @PrdCode={0},@PrdDesc={1},@PrdPrice={2},@Active={3},@CMBy={4},@CatId={5},@PrdMfCode={6},@PrdESPDesc={7},@PrdTaxable={8}", Code, ProductName, Price, Active, CurrentUserid, CatId, PrdMfCode, PrdESPDesc, PrdTaxable);
-
-                }
-                catch (Exception ex)
-                {
-                    string error = ex.Message.ToString();
-                    throw;
-                }
-                return "1";
-            }
-            else
-            {
-                ViewBag.ALL = "1";
-                return "0";
-            }
-            // int count = db.Database.ExecuteSqlCommand("exec sp_I_tblProducts @PrdCode = " + Code + ",@PrdDesc = " + ProductName + ",@PrdPrice=" + Convert.ToDecimal(Price) + ",@Active = " + Convert.ToInt32(Active) + ",@CMBy=" + CurrentUserid);
-            //string ConnectionString = (db.Connection as EntityConnection).StoreConnection.ConnectionString;
-            //SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder(ConnectionString);
-            //builder.ConnectTimeout = 2500;
-            //SqlConnection con = new SqlConnection(builder.ConnectionString);
-            //System.Data.Common.DbDataReader sqlReader;
-            //con.Open();
-            //using (SqlCommand cmd = con.CreateCommand())
-            //{
-            //    cmd.CommandText = "sp_I_tblProducts";
-            //    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-            //    cmd.CommandTimeout = 0;
-            //    cmd.Parameters.Add(new SqlParameter("@PrdCode", SqlDbType.VarChar) { Value = Code });
-            //    sqlReader = (System.Data.Common.DbDataReader)cmd.ExecuteReader();
-            //}
-
-
-            return "0";
-        }
-
-        [HttpPost]
-        public string UpdateProducts(string PrdId, string ProductName, string Code, string Price, string Active, string CatId, string PrdMfCode, string PrdESPDesc, string PrdTaxable)
-        {
-            string CurrentUserid = getUserId();
-            if (!string.IsNullOrEmpty(ProductName) && !string.IsNullOrEmpty(Code) && !string.IsNullOrEmpty(Price))
-            {
-                try
-                {
-                    int count = db.Database.ExecuteSqlCommand("exec sp_I_tblProducts @PrdCode={0},@PrdDesc={1},@PrdPrice={2},@Active={3},@CMBy={4},@PrdId={5},@CatId={6},@PrdMfCode={7},@PrdESPDesc={8},@PrdTaxable={9}", Code, ProductName, Price, Active, CurrentUserid, PrdId, CatId, PrdMfCode, PrdESPDesc, PrdTaxable);
-
-                }
-                catch (Exception ex)
-                {
-                    string error = ex.Message.ToString();
-                    throw;
-                }
-                return "1";
-            }
-            else
-            {
-                ViewBag.ALL = "1";
-                return "0";
-            }
-
-
-            return "0";
-        }
-
-        public string DeleteProducts(string PrdId)
-        {
-            string CurrentUserid = getUserId();
-            if (!string.IsNullOrEmpty(PrdId))
-            {
-                try
-                {
-                    int count = db.Database.ExecuteSqlCommand("exec sp_I_tblProducts @PrdId={0},@Delete={1}", PrdId.Trim(), 1);
-
-                }
-                catch (Exception ex)
-                {
-                    string error = ex.Message.ToString();
-                    throw;
-                }
-                return "1";
-            }
-            else
-            {
-                ViewBag.ALL = "1";
-                return "0";
-            }
-
-
-            return "0";
-        }
-        [HttpPost]
-        public string SaveCategory(string Category, string CatDesc)
-        {
-            string CurrentUserid = getUserId();
-            if (!string.IsNullOrEmpty(Category))
-            {
-                try
-                {
-                    int count = db.Database.ExecuteSqlCommand("exec sp_I_tblCategory @Category={0},@CatDesc={1},@CMBy={2}", Category, CatDesc, CurrentUserid);
-
-                }
-                catch (Exception ex)
-                {
-                    string error = ex.Message.ToString();
-                    return "0";
-                }
-                return "1";
-            }
-            else
-            {
-                ViewBag.ALL = "1";
-                return "0";
-            }
-
-
-
-            //return "0";
-        }
-        [HttpPost]
-        public string UpdateCategory(string CatId, string Category, string CatDesc)
-        {
-            string CurrentUserid = getUserId();
-            if (!string.IsNullOrEmpty(CatId) && !string.IsNullOrEmpty(Category))
-            {
-                try
-                {
-                    int count = db.Database.ExecuteSqlCommand("exec sp_I_tblCategory @CatId={0},@Category={1},@CatDesc={2},@CMBy={3}", CatId, Category, CatDesc, CurrentUserid);
-
-                }
-                catch (Exception ex)
-                {
-                    string error = ex.Message.ToString();
-                    throw;
-                }
-                return "1";
-            }
-            else
-            {
-                ViewBag.ALL = "1";
-                return "0";
-            }
-
-
-            return "0";
-        }
-        public string DeleteCategory(string CatId)
-        {
-            string CurrentUserid = getUserId();
-            if (!string.IsNullOrEmpty(CatId))
-            {
-                try
-                {
-                    int count = db.Database.ExecuteSqlCommand("exec sp_I_tblCategory @CatId={0},@Delete={1}", CatId.Trim(), 1);
-
-                }
-                catch (Exception ex)
-                {
-                    string error = ex.Message.ToString();
-                    throw;
-                }
-                return "1";
-            }
-            else
-            {
-                ViewBag.ALL = "1";
-                return "0";
-            }
-
-
-            return "0";
-        }
-        [HttpPost]
-        public string SaveOrder(List<tblProduct> products, string CustId)
-        {
-            string CurrentUserid = getUserId();
-            Guid Od = Guid.NewGuid();
-            if (products != null && products.Count > 0)
-            {
-                if (products[0].PrdESPDesc == null || products[0].PrdESPDesc == "New" || products[0].PrdESPDesc == "0")
-                {
-
-
-                    string OrderId = Od.ToString();
-                    String strConnString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-                    SqlConnection con = new SqlConnection(strConnString);
-                    SqlCommand cmd = new SqlCommand();
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.CommandText = "sp_I_tblOrder";
-                    cmd.Parameters.Add("@OrderId", SqlDbType.VarChar).Value = OrderId;
-                    cmd.Parameters.Add("@CustId", SqlDbType.Int).Value = Convert.ToInt32(products[0].PrdEngDesc);
-                    cmd.Parameters.Add("@DeliveryZip", SqlDbType.VarChar).Value = "12345";
-                    cmd.Parameters.Add("@CMBy", SqlDbType.VarChar).Value = CurrentUserid;
-
-                    cmd.Connection = con;
-                    try
-                    {
-                        con.Open();
-                        cmd.ExecuteNonQuery();
-
-
-                    }
-                    catch (Exception ex)
-                    {
-                        throw ex;
-                    }
-                    finally
-                    {
-                        con.Close();
-                        con.Dispose();
-                    }
-                }
-                else
-                {
-                    Od = new Guid(products[0].PrdESPDesc);
-                }
-                if (!string.IsNullOrEmpty(CurrentUserid))
-                {
-                    try
-                    {
-                        int count = 0;
-
-                        List<tblProduct> tp = new List<tblProduct>();
-                        tp = products;
-
-
-                        foreach (tblProduct product in tp)
-                        {
-                            count = db.Database.ExecuteSqlCommand("exec sp_I_tblOrderItems @PrdId={0},@Qty={1},@OrderBy={2},@OrderId={3}", product.PrdId, product.quantity, CurrentUserid, Od.ToString());
-
-                        }
-
-                    }
-                    catch (Exception ex)
-                    {
-                        string error = ex.Message.ToString();
-                        return "0";
-                    }
-                    TempData["OD"] = Od.ToString();
-                    return Od.ToString();
-                }
-                else
-                {
-                    ViewBag.ALL = "1";
-                    return "0";
-                }
-
-            }
-            else
-            {
-                return "0";
-            }
-
-            //return "0";
-        }
-        #endregion
-        [HttpPost]
+        //[HttpPost]
         public string SaveCustomer(tblCustomer customer)
         {
             string CurrentUserid = getUserId();
@@ -1180,9 +1180,6 @@ namespace AuthModule.Controllers
                 ViewBag.ALL = "1";
                 return "0";
             }
-
-
-
             //return "0";
         }
         [HttpPost]
@@ -1242,26 +1239,26 @@ namespace AuthModule.Controllers
         [HttpPost]
         public string SavePayments(tblPayments payments)
         {
-           
-            if (payments.PmtAmt != null)
-            {
-                try
-                {
-                    int count = db.Database.ExecuteSqlCommand("exec sp_I_tblPayments @OrderId={0},@PmtType={1},@PmtAmt={2},@PmtRef={3},@PmtNote={4},@PmtDate={5}",
-                        payments.OrderId, Convert.ToInt32(payments.PmtType), Convert.ToDecimal(payments.PmtAmt), payments.PmtRef, payments.PmtNote, payments.PmtDate);
 
-                }
-                catch (Exception ex)
-                {
-                    string error = ex.Message.ToString();
-                    return "0";
-                }
-                return "1";
+            //if (payments.PmtAmt != null)
+            //{
+            try
+            {
+                int count = db.Database.ExecuteSqlCommand("exec sp_I_tblPayments @OrderId={0},@PmtType={1},@PmtAmt={2},@PmtRef={3},@PmtNote={4},@PmtDate={5}",
+                    payments.OrderId, Convert.ToInt32(payments.PmtType), Convert.ToDecimal(payments.PmtAmt), payments.PmtRef, payments.PmtNote, payments.PmtDate);
+
             }
-            else
-            {               
+            catch (Exception ex)
+            {
+                string error = ex.Message.ToString();
                 return "0";
             }
+            return "1";
+            //}
+            //else
+            //{               
+            //    return "0";
+            //}
 
 
 
@@ -1284,7 +1281,7 @@ namespace AuthModule.Controllers
             ViewBag.TypeList = locationTypesList;
             IEnumerable<tblLocations> locationList = db.Database.SqlQuery
                                                                            <tblLocations>("select * from udfGetLocations()").ToList();
-            ViewBag.locationList = locationList;            
+            ViewBag.locationList = locationList;
             string rsrvtnId = Guid.NewGuid().ToString();
             ViewBag.ReservationId = rsrvtnId;
             return View();
@@ -1319,7 +1316,6 @@ namespace AuthModule.Controllers
                 , obj.rsrvtn_ctgry, obj.rsrvtn_type, obj.gst_nme, obj.gst_eml, obj.gst_cphn1, obj.gst_cphn2, obj.arrvl_dt, obj.arrvl_tm, obj.arrvl_arprt, obj.arrvl_arln
                 , obj.arrvl_flght_nmbr, obj.arrvl_nmbr_pssngrs, obj.arrvl_pckup_tm, obj.arrvl_drpoff_loc, obj.dep_dt, obj.dep_tm, obj.dep_arprt, obj.dep_arln
                 , obj.dep_flght_nmbr, obj.dep_nmbr_pssngrs, obj.dep_pckup_tm, obj.dep_drpoff_loc, obj.whlchr, obj.whlchr_cnfld, obj.addtnl_inf,obj.gst_fnme,obj.gst_lnme,obj.rsrvtn_nbr, Email);
-
             }
             catch (Exception ex)
             {
@@ -1330,6 +1326,13 @@ namespace AuthModule.Controllers
 
 
 
+        }
+        public JsonResult GetLocationTypes()
+        {
+            IEnumerable<tblLocationType> locationTypesList = db.Database.SqlQuery
+                                                                           <tblLocationType>("select * from udfGetLocationTypes()").ToList();
+
+            return Json(locationTypesList, JsonRequestBehavior.AllowGet);
         }
         public ActionResult LocationTypes()
         {

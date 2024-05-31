@@ -381,9 +381,8 @@
     <Content Include="Images\coco.png" />
     <Content Include="Images\coco_old.png" />
     <Content Include="Images\CreditAppDD.png" />
-    <Content Include="Images\IHPLogo.png" />
     <Content Include="Images\loader.gif" />
-    <Content Include="Images\Logo_WPC_WHT.jpg" />
+    <Content Include="Images\MinusButton.png" />
     <Content Include="Images\Products.png" />
     <Content Include="Images\search.png" />
     <Content Include="Images\Weather.png" />

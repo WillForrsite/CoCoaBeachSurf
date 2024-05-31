@@ -13,6 +13,12 @@
         border-radius: 50%;
         background-color: red;
         /* Other button styles (background color, padding, etc.) */
+        background-image: url('/Images/MinusButton.png');
+        height: 30px;
+        width: 31px;
+        font-weight: 900;
+        border: none;
+        background-color: #F7DC6F;
     }
     h1 {
         border-radius: 8px;
@@ -50,6 +56,15 @@
         font-size: 11px;
         margin: 0px 0 0px;
         display: inline-block
+    }
+    .TrpNm {
+        padding-left: 5px; 
+        background-color: #F7DC6F; 
+        font-size: 15px; 
+        font-weight: 900; 
+        margin-bottom: 0px; 
+        margin: unset; 
+/*        justify-content: flex-end;"*/
     }
 
     input[type='text'],
@@ -172,7 +187,7 @@
         width: 300px;
         margin: 0px 0 0px;
         border-radius: 8px;
-        -- display: inline-block;
+        /*display: inline-block;*/
         left: 314px;
         top: 100px; -->
     }
@@ -288,7 +303,6 @@
         display: flex;
         flex-direction: row;
     }
-
         h4:before,
         h4:after {
             content: "";
@@ -296,7 +310,6 @@
             border-bottom: 2px solid #000;
             margin: auto;
         }
-
     img {
         height: 100px;
         width: 100px;
@@ -365,7 +378,6 @@
                 <fieldset id="fs-noborder" style="padding:2px">
                     <label3 id="verified-info">&nbsp;Guest Verified Correct Info Entered<input type="checkbox" id="vrfd_Inf"></label3>
                 </fieldset>
-
             </td>
             <td>
                 <Div id="div-ship" style="display:none">
@@ -407,8 +419,6 @@
             </td>
     </tr>
 </table>
-
-   
     <fieldset id="fs-guest">
         <legend style="border-bottom:unset;margin-bottom:0px">
             <h2 style="width: 100%; text-align: center; border-bottom: 1px solid #000; line-height: 0.1em;">
@@ -429,38 +439,46 @@
             <tr id="td-nopad"><td><label4 id="nopadding">Cell Phone: <input type="tel" id="gst_cphn1"></label4> <label4 id="nopadding">2nd Cell Phone: <input type="tel" id="gst_cphn2"></label4></td></tr>
         </table>
     </fieldset>
-
         <h2 style="width: 100%; text-align: center; border-bottom: 1px solid #000; line-height: 0.1em;">
             <span style="padding: 0 10px; background: white; ">ITINERARY</span>
         </h2>
         <div id="Trips">
-            <div id="Trip1">
+            <div id="Trip_1">
                 <table style=" margin-bottom: 10px;">
-                    <tr><td style="background-color: #F7DC6F; border-radius: 5px;"><input id="btnRmvTrp1" class="circular-button" type="button" style="font-weight: 900;" value="-" /></td>
-                        <td style="background-color: #F7DC6F;width:100%">
-                            <label id="TrpNm1" style="padding-left: 5px; background-color: #F7DC6F; font-size: 15px; font-weight: 900; margin-bottom: 0px;margin:unset">
-                                Trip 1
-                            </label>
+                    <tr><td style="background-color: #F7DC6F; "><input id="btnRmvTrp_1" class="circular-button" type="button"  /></td>
+                        <td id="TripInfTD_1"style="background-color: #F7DC6F;width:100%">
+                            <label id="TrpNm_1" class ="TrpNm">Trip 1</label>
+                            <fieldset id="fsTripInfo_1" class="fs-arrive" style="width: 100%; border: none; margin-bottom:5px">
+                                <label4 class="ml">Date: <input type="date" id="TrpDt_1"></label4>
+                                <label4 class="ml">Time: <input type="time" id="TrpTm_1"></label4>
+                                <label4 class="ml" style=" /* margin-left: 10px;*/ width: 100px; "># Passengers: <input type="number" id="TrpPssngrs_1"></label4>
+                                <label4 id="TrpCst_1" class="TrpNm" style="width:250px; font-size:25px;text-align: right;">$0.00</label4>
+                            </fieldset>
                         </td>
                     </tr>
                 </table>
-                
-               
-                <fieldset id="fs-arrive1" classs="fs-arrive" style="width: 100%; border: none;margin-bottom:35px">
+                <fieldset id="fs-arrive_1" classs="fs-arrive" style="width: 100%; border: none;margin-bottom:35px">
                     <legend style="display:flex;border:none">
                         PickUp
                         <label4 class="ml">
                             From:
-                            @Html.DropDownList("lctn_tpe", new SelectList(ViewBag.TypeList, "lctn_tpe", "lctn_tpe_dsc"), "Please select", new { selected = "A", @id = "Pickuplctn_tpe", @style = "margin-left:5px;height:30px" })
+                            @*<select id="Pickuplctn_tpe" name="lctn_tpe" title="Hotel">
+        <select id="Pickuplctn_tpe" name="lctn_tpe" selected="A" style="margin-left:5px;height:30px">
+            <option value="">Please select</option>
+            <option value="AP">Airport</option>
+            <option value="CL">Cruise Line</option>
+            <option value="H ">Hotel</option>
+            <option value="P ">Port</option>
+        </select>*@
+                            <select id="Pcklctntpe_1" name="Pcklctntpe_1" title="Hotel">
+                            </select>
+                            @*@Html.DropDownList("lctn_tpe", new SelectList(ViewBag.TypeList, "lctn_tpe", "lctn_tpe_dsc"), "Please select", new { selected = "A", @id = "Pickuplctn_tpe", @style = "margin-left:5px;height:30px" })*@
                         </label4>
-                        <label4 class="ml">Date: <input type="date" id="pck_dt"></label4>
-                        <label4 class="ml">Time: <input type="time" id="pck_tm"></label4>
-                        <label4 style=" margin-left: 10px; width: 100px; "># Passengers: <input type="number" id="pck_pssngrs"></label4>
                     </legend>
                     <label4 id="lblfrm_tm" style=" margin-left: 10px; width: 100px;display:inline-block ">Time: <input type="time" id="frm_tm"></label4>
                     <label4>
-                        <label4 id="lbl_pck"></label4> @*<input type="text" id="arrvl_arprt" value="MCO">*@
-                        <select id="pck_lctn" name="pck_lctn" title="Hotel">
+                        <label4 id="lbl_pck"></label4>@*<input type="text" id="arrvl_arprt" value="MCO">*@
+                        <select id="pcklctn_1" name="pcklctn_1" title="Hotel">
                         </select>
                     </label4>
                     <label4 id="lblpck_arln" style=" margin-left: 10px; width: 100px; display: inline-block ">
@@ -468,17 +486,15 @@
                         <select id="pck_arln"><option value="0">select</option></select>
                     </label4>
                     <label4 id="lblpck_flght" style=" margin-left: 10px; width: 100px; display: inline-block ">Flight #: <input type="text" id="pck_flght"></label4>
-
                     <br />
-
                     <legend style="display: flex; margin-top: 10px; margin-bottom: 20px; border-bottom: unset; border-top: 1px dotted gray;">
                         Drop-off
                         <label4 class="ml">
                             To:
-                            @Html.DropDownList("lctn_tpe", new SelectList(ViewBag.TypeList, "lctn_tpe", "lctn_tpe_dsc"), "Please select", new { selected = "A", @id = "Droplctn_tpe", @style = "margin-left:5px;height:30px" })
+                            <select id="Drplctntpe_1" name="Drplctntpe_1" title="Hotel">
+                            </select>
+                            @*@Html.DropDownList("lctn_tpe", new SelectList(ViewBag.TypeList, "lctn_tpe", "lctn_tpe_dsc"), "Please select", new { selected = "A", @id = "Droplctn_tpe", @style = "margin-left:5px;height:30px" })*@
                         </label4>
-
-
                     </legend>
                     <label4 id="lbldrp_tm" style=" margin-left: 10px; width: 100px;display:none ">Time: <input type="time" id="drp_tm"></label4>
                     <label4>
@@ -491,11 +507,9 @@
                         <select id="drp_arln"><option value="0">select</option></select>
                     </label4>
                     <label4 id="lbldrp_flght" style=" margin-left: 10px; width: 100px;display:none ">Flight #: <input type="text" id="drp_flght"></label4>
-
                     <br />
-
                     <div style="display: flex; justify-content: flex-start; align-items: flex-end;">
-                        <legend style="margin-bottom: 0px; border-bottom: unset; margin-top: 15px;width:220px ">Special Requirements</legend>
+                        <label style="margin-bottom: 0px; border-bottom: unset; margin-top: 15px;width:220px ">Special Requirements</label>
                         <label4 id="nopadding">Wheelchair:</label4><input type="checkbox" id="whlchr" value="1">
                         <label4>fold up:</label4><input type="checkbox" id="whlchr_cnfld" value="1">
                         <label4 id="addtnl-inf">Additional Info:</label4> <textarea id="addtnl_inf" style=" height: 40px; width: 300px;"></textarea>
@@ -508,7 +522,6 @@
             <input id="btnAddTrp" class="btn btn-default" type="button" style="font-weight: 900;" value="+"/>
             @*<button class="btn btn-default fa fa-plus"></button>*@
         </h4>
-
         @*<h2 style="width: 100%; text-align: center; border-bottom: 1px solid #000; line-height: 0.1em;">
             <span style="padding: 0 10px; background: white; ">Special Requirements</span>
         </h2>*@
@@ -524,21 +537,16 @@
 
         <br />
         <div style="text-align: center;">
-
             <a class="btn btn-success" OnClick="SaveCustomer()" href="#" id="MncAgr" style=" font-size: 20px;">
                 Submit
             </a>
-
             @Html.ActionLink("Cancel", "Reservations", "Home", new { area = "" }, new { @class = "btn btn-danger", @style = "font-size:20px" })
         </div>
 </form>
-
 <script type="text/javascript">
     let htl_id;
     let shp_id;
-
     let trpcnt = 1;
-
     let Rsvtnfrm = [
         {
             htl_id: "",
@@ -581,7 +589,6 @@
             rsrvtn_nbr:""
         }
     ];
-
     window.document.onload = function (e) {
         console.log("document.onload", e, Date.now(), window.tdiff,
             (window.tdiff[0] = Date.now()) && window.tdiff.reduce(fred));
@@ -592,44 +599,89 @@
         console.log('You clicked on: ', clickedElement.id);
         if (clickedElement.id == 'btnAddTrp') {
             console.log('Adding a Trip')
-            const TrpDiv = document.getElementById('Trip1');
+            const TrpDiv = document.getElementById('Trip_1');
             const TrpClone = TrpDiv.cloneNode(true); // The `true` is for deep cloning
             //parseInt(TrpClone.id.match(/\d+/g), 10) + 1;
-            const TrpCloneLbl = TrpClone.querySelector("#TrpNm1");
-            const TrpCloneRmvBtn = TrpClone.querySelector("#btnRmvTrp1");
-            const TrpFsArrive = TrpClone.querySelector("#fs-arrive1");
+            const TrpCloneLbl = TrpClone.querySelector("#TrpNm_1");
+            const TrpCloneRmvBtn = TrpClone.querySelector("#btnRmvTrp_1");
+            const TrpFsArrive = TrpClone.querySelector("#fs-arrive_1");
+            const TrpPckLctn = TrpClone.querySelector("#pcklctn_1");
+            const TripInfTD = TrpClone.querySelector("#TripInfTD_1");
+            const TrpInfo = TrpClone.querySelector("#fsTripInfo_1");
+            const Trpdt = TrpClone.querySelector("#TrpDt_1");
+            const Trptm = TrpClone.querySelector("#TrpTm_1");
+            const Trppssngrs = TrpClone.querySelector("#TrpPssngrs_1");
+            const TrpCst = TrpClone.querySelector("#TrpCst_1");
             //Increment TripCounter
             trpcnt = trpcnt + 1;
             //
             //TrpCloneLbl.textcontent = 'TestTrip'
             TrpClone.id = "Trip" + trpcnt;
-            TrpCloneLbl.id = "TripLbl" + trpcnt;
-            TrpCloneRmvBtn.id = "btnRmvTrp" + trpcnt;
+            TrpCloneLbl.id = "TripLbl_" + trpcnt;
+            TrpCloneRmvBtn.id = "btnRmvTrp_" + trpcnt;
             TrpCloneLbl.textContent = "Trip " + trpcnt;           
-            TrpFsArrive.id = "fsArrive" + trpcnt;
-
+            TrpFsArrive.id = "fsArrive_" + trpcnt;
+            TrpPckLctn.id = "pcklctn_" + trpcnt;
+            TrpPckLctn.name = "pcklctn_" + trpcnt;
+            TripInfTD.id = "TripInfTD_" + trpcnt;
+            TrpInfo.id = "fsTripInfo_" + trpcnt;
+            Trpdt.id = "TrpDt_" + trpcnt;
+            Trptm.id = "TrpTm_" + trpcnt;
+            Trppssngrs.id = "TrpPssngrs_" + trpcnt;
+            TrpCst.id = "TrpCst_" + trpcnt;
             // Get the target container by its ID
             const TripContainer = document.getElementById('Trips');
-
             // Append the cloned div to the target container
             TripContainer.appendChild(TrpClone);
             //TrpClone.style.backgroundColor = '#CCD1D1';
-
         }
     }); 
-    $(document).ready(function () {
-        
+    $(document).ready(function () {        
         $('#lbl_pck').text("Airport");        
         $('#lbl_drp').text("Hotel");
-        $("#Pickuplctn_tpe").val("AP");
-        $("#Droplctn_tpe").val("H ");   
+        
+        getLocationTypeList();
+        $("#Pcklctntpe_1").val("AP");
+        $("#Drplctntpe_1").val("H ");
         pckgetLocationsByType("AP")
         drpgetLocationsByType("H ")
         getAirLineLocations("AL")
         getHotelList();
         getShipsList();
-    })
-   
+       
+    })   
+    function getLocationTypeList() {
+        $.get("/Home/GetLocationTypes",
+            {
+
+            },
+            function (data, status) {
+                let d = data;
+                $.each(data, function () {
+                    $("#Pcklctntpe_1").empty(); 
+                    $("#Drplctntpe_1").empty()
+                    $("#Pcklctntpe_1").append($("<option>", {
+                        value: "0",
+                        text: "Select"
+                    }));
+                    $("#Drplctntpe_1").append($("<option>", {
+                        value: "0",
+                        text: "Select"
+                    }));
+                    $.each(data, function (i, item) {
+
+                        $("#Pcklctntpe_1").append($("<option>", {
+                            value: item.lctn_tpe,
+                            text: item.lctn_tpe_dsc
+                        }));
+                        $("#Drplctntpe_1").append($("<option>", {
+                            value: item.lctn_tpe,
+                            text: item.lctn_tpe_dsc
+                        }));
+                    });
+                });
+            });
+    }
     function getHotelList() {
 
 
@@ -656,11 +708,8 @@
             });
     }
     function getShipsList() {
-
-
         $.get("/Home/GetShipsList",
             {
-
             },
             function (data, status) {
                 let d = data;
@@ -694,8 +743,7 @@
     });
     rsrvtn_ctgry
     $(function () {
-        $("#vrfd_eml_rcvd").change(function () {
-           
+        $("#vrfd_eml_rcvd").change(function () {          
             alert(this.checked);
             if (this.checked)
                 $('#vrfd_eml_rcvd').val("1")
@@ -703,40 +751,32 @@
                 $('#vrfd_eml_rcvd').val("0")
 
             alert($('#vrfd_eml_rcvd').val())
-
         })
     });
     $(function () {
             $("#vrfd_Inf").change(function () {
                 //alert($('option:selected', this).text());
-
                 //alert(this.checked);
                 if (this.checked)
                     $('#vrfd_Inf').val("1")
                 else
                     $('#vrfd_Inf').val("0")
-
                 //alert($('#vrfd_Inf/').val())
-
             });
     });
     $(function () {
         $("#rsrvtn_ctgry").change(function () {
             //alert($('option:selected', this).text());
-
             alert(this.checked);
             if (this.checked)
                 $('#rsrvtn_ctgry').val("1")
             else
                 $('#rsrvtn_ctgry').val("0")
-
             alert($('#rsrvtn_ctgry').val())
         })
-       
     });
-    
     $(function () {
-        $("#Droplctn_tpe").change(function () {
+        $("#Drplctntpe_1").change(function () {
            // alert($('option:selected', this).val());
             var selectedVal = $('option:selected', this).val()
             var lbl = $('option:selected', this).text();
@@ -744,8 +784,7 @@
             if (selectedVal === "AP") {
                 document.getElementById("lbldrp_arln").style.display = "inline-block";
                 document.getElementById("lbldrp_flght").style.display = "inline-block";
-                document.getElementById("lbldrp_tm").style.display = "inline-block";
-                
+                document.getElementById("lbldrp_tm").style.display = "inline-block";               
                 getAirLineLocations("AL")
                 //$.get("/Home/GetLocationsByType",
                 //    {
@@ -799,7 +838,7 @@
         });
     });
     $(function () {
-        $("#Pickuplctn_tpe").change(function () {
+        $("#Pcklctntpe_1").change(function () {
            // alert($('option:selected', this).val());
             var selectedVal = $('option:selected', this).val()
             var lbl = $('option:selected', this).text();
@@ -863,15 +902,13 @@
         });
     });
     function pckgetLocationsByType(data) {
-
-
         $.get("/Home/GetLocationsByType",
             {
                 type:data
             },
             function (data, status) {
                 let d = data;
-                let f = '#pck_lctn'; // + trpcnt;
+                let f = '#pcklctn_' + trpcnt;
                 $.each(data, function () {
 //                    $("#pck_lctn").empty();
                     $(f).empty();
@@ -884,11 +921,8 @@
                     });
                 });
             });
-
     }
     function drpgetLocationsByType(data) {
-
-
         $.get("/Home/GetLocationsByType",
             {
                 type: data
@@ -902,7 +936,6 @@
                         text: "Select"
                     }));
                     $.each(data, function (i, item) {
-
                         $("#drop_lctn_to").append($("<option>", {
                             value: item.lctn_id,
                             text: item.lctn_nme
@@ -910,7 +943,6 @@
                     });
                 });
             });
-
     }
     function getAirLineLocations(data) {
         $.get("/Home/GetLocationsByType",
@@ -931,7 +963,6 @@
                         text: "Select"
                     }));
                     $.each(data, function (i, item) {
-
                         $("#pck_arln").append($("<option>", {
                             value: item.lctn_id,
                             text: item.lctn_nme
@@ -942,14 +973,9 @@
                         }));
                     });
                 });
-               
             });
-
     }
-
     function SaveCustomer() {    
-      
-       
         Rsvtnfrm = {             
             htl_id: $('#htl_lst').val(),
             htl_clrk: $('#htl_clrk').val(),          
@@ -992,7 +1018,6 @@
         }
         console.log(Rsvtnfrm)
         //alert(Rsvtnfrm)
-
             $.ajax({
                 type: "POST",
                 url: '@Url.Action("SaveReservationFrm")',
@@ -1001,19 +1026,12 @@
                 contentType: "application/json; charset=utf-8",
                 success: function () {
                     alert("Data has been added successfully.");
-                    
                 },
                 error: function () {
                     alert("Error while inserting data");
                 }
             });
-        
-        
-
     }
-
-    
-
     $("#gst_eml").blur(function () {
         //alert('working');
         var SearchTerm = document.getElementById("gst_eml").value
@@ -1028,20 +1046,14 @@
                         $('#gst_fnme').val(data[0].CstmrFN);
                         $('#gst_lnme').val(data[0].CstmrLN);
                         $('#gst_cphn1').val(data[0].CstmrPhn1);
-                        $('#gst_cphn2').val(data[0].CstmrPhn2);
-                        
+                        $('#gst_cphn2').val(data[0].CstmrPhn2);                   
                     }
                     else {
-                        
-
                     }
-
-
                     //alert("Data: " + data + "\nStatus: " + status);
                     //alert("Changed!");
                 });
         }
         localStorage.setItem("OrderID", "");
     })
-
 </script>
