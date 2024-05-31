@@ -117,4 +117,4 @@ C:\Bluechip Development\CoCoaBeachSurf\AuthIntegration\obj\Debug\AuthIntegration
 C:\Bluechip Development\CoCoaBeachSurf\AuthIntegration\obj\Debug\AuthIntegration.csproj.CoreCompileInputs.cache
 C:\Bluechip Development\CoCoaBeachSurf\AuthIntegration\obj\Debug\AuthIntegration.dll
 C:\Bluechip Development\CoCoaBeachSurf\AuthIntegration\obj\Debug\AuthIntegration.pdb
-C:\Bluechip Development\CoCoaBeachSurf\AuthIntegration\obj\Debug\AuthInte.F0CEA189.Up2Date
+C:\Bluechip Development\CoCoaBeachSurf\AuthIntegration\obj\Debug\AuthIntegration.csproj.CopyComplete

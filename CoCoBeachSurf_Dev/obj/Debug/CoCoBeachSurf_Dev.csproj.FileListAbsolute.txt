@@ -333,4 +333,4 @@ C:\Bluechip Development\CoCoaBeachSurf\CoCoBeachSurf_Dev\obj\Debug\CoCoBeachSurf
 C:\Bluechip Development\CoCoaBeachSurf\CoCoBeachSurf_Dev\obj\Debug\CoCoBeachSurf_Dev.csproj.CoreCompileInputs.cache
 C:\Bluechip Development\CoCoaBeachSurf\CoCoBeachSurf_Dev\obj\Debug\AuthModule.dll
 C:\Bluechip Development\CoCoaBeachSurf\CoCoBeachSurf_Dev\obj\Debug\AuthModule.pdb
-C:\Bluechip Development\CoCoaBeachSurf\CoCoBeachSurf_Dev\obj\Debug\CoCoBeac.ECDBFB73.Up2Date
+C:\Bluechip Development\CoCoaBeachSurf\CoCoBeachSurf_Dev\obj\Debug\CoCoBeachSurf_Dev.csproj.CopyComplete
