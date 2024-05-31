@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
   <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Server=tcp:forrsitesql.database.windows.net;Initial Catalog=cocoasurf24_dev;user id=apps.admin;password=Pr@t3kt3d!2023;MultipleActiveResultSets=true;" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Bluechip\ Development\\CoCoaBeachSurf\\CoCoBeachSurf_Dev\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="C:\\Data1\\Source\\Repos\\CoCoaBeachSurf\\CoCoBeachSurf_Dev\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
   </parameter>
   <parameter name="app_authentication_devEntities-Web.config Connection String" description="app_authentication_devEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/AuthEF.csdl|res://*/AuthEF.ssdl|res://*/AuthEF.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=tcp:forrsitesql.database.windows.net;initial catalog=cocoasurf24_dev;user id=apps.admin;password=Pr@t3kt3d!2023;MultipleActiveResultSets=true;App=EntityFramework&quot;" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Bluechip\ Development\\CoCoaBeachSurf\\CoCoBeachSurf_Dev\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='app_authentication_devEntities']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="C:\\Data1\\Source\\Repos\\CoCoaBeachSurf\\CoCoBeachSurf_Dev\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='app_authentication_devEntities']/@connectionString" />
   </parameter>
 </parameters>
