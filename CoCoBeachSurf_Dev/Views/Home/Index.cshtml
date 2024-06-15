@@ -1,8 +1,185 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<style>
+    .d {
+        height: 100%;
+        background-color: #efeeee;
+        border: 1px solid #b9b5b5;
+        padding-top: 10px;
+        padding-bottom:10px;
 
-<div class="text-center" style=" margin-top: 100px;">
-    <h1 class="display-4">Welcome to <a href="https://www.cocoabeachsurf.com/" title="Cocoa Beach Dashboard">Cocoa Beach Dashboard</a> </h1>
+    }
+    .container {
+        display: inherit;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding-top: 10px;
+        background-color: #efeeee;
+        border: 1px solid #b9b5b5;
+    }
 
+    .image {
+        flex: 1;
+        height: 60px;
+        width:60px;
+        display:inline-block;
+        margin-right: 0px; /* Adjust as needed */
+    }
+
+    .text {
+        border: 0px;
+        display: inline-block;
+        flex: 2;
+        font-size: 2em; /* Larger font size for top row */
+        text-align: center;
+    }
+    .text2 {
+        padding: 0px;
+        border: 0px;
+        display: block;
+        flex: 2;
+        font-size: 1em; /* Larger font size for top row */
+        text-align: center;
+    }
+    .td {
+        padding: 0px;
+        border:0px;
+    }
+</style>
+@*<div class="text-center" style=" margin-top: 100px;">
+        <h1 class="display-4">Welcome to <a href="https://www.cocoabeachsurf.com/" title="Cocoa Beach Dashboard">Cocoa Beach Dashboard</a> </h1>
+
+    </div>*@
+<div style="float: right; margin-bottom: 10px;">
+    <input class="form-control" type="text" id="searchtxt" placeholder="Search ..." name="search2" value="" />
+    <span style=" padding-right: 20px; float: right; margin-top: -27px;">
+        <i class="fa fa-search"></i>
+    </span>
 </div>
+<div>
+    <table class="table table-responsive " style="width:100%;text-align:center">
+        <tr>
+            <td style=" height: 100px;">
+                <div class="container">
+                    <table>
+                        <tr>
+                            <td><img class="image" src="~/Images/PickUpFlag.png" /></td>
+                            <td><p class="text">71</p><p class="text2">Pickups</p></td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+            <td style=" height: 100px;">
+                <div class="container">
+                    <table>
+                        <tr>
+                            <td><img class="image" src="~/Images/Customers.png" /></td>
+                            <td><p class="text">158</p><p class="text2">Customers</p></td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+            <td style=" height: 100px;">
+                <div class="container">
+                    <table>
+                        <tr>
+                            <td><img class="image" src="~/Images/Ships.png" /></td>
+                            <td><p class="text">13</p><p class="text2">Ships</p></td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+            <td style=" height: 100px;">
+                <div class="container">
+                    <table>
+                        <tr>
+                            <td><img class="image" src="~/Images/Vehicles.png" /></td>
+                            <td><p class="text">8</p><p class="text2">Vehicles</p></td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style=" height: 100px;">
+                <div class="container">
+                    <table>
+                        <tr>
+                            <td><img class="image" src="~/Images/DropOffs.png" /></td>
+                            <td><p class="text">41</p><p class="text2">Drops</p></td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+            <td style=" height: 100px;">
+                <div class="container">
+                    <table>
+                        <tr>
+                            <td><img class="image" src="~/Images/PickUpFlag.png" /></td>
+                            <td><p class="text">2514</p><p class="text2">Weekly Pickups</p></td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+            <td colspan="2" style=" height: 100px;">
+                <div class="container">
+                    <table>
+                        <tr>
+                            <td><img class="image" src="~/Images/PickUpFlag.png" /></td>
+                            <td><p class="text">14854</p><p class="text2">Monthly Pickups</p></td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style=" height: 100px;">
+                <div class="d" style=" padding-top: 15px;">
+                    <label>Today 21/1</label>
+                    <hr style="border-top: 1px solid #adacac ">
+                    <p>Wish 8</p>
+                    <p>Allure 1</p>
+                    <p>Libertyc3 </p>
+                </div>
+            </td>
+            <td colspan="3" style="height: 100px;">
+                <div class="d" style=" padding-top: 15px;">
+                    <label>Montly Statistics</label>
+                    <hr style="border-top: 1px solid #adacac "  >
+                    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+                </div>
+            </td>
+
+        </tr>
+    </table>
+</div>
+
+
+<script>
+    const xValues = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000];
+
+    new Chart("myChart", {
+        type: "line",
+        data: {
+            labels: xValues,
+            datasets: [{
+                data: [860, 1140, 1060, 1060, 1070, 1110, 1330, 2210, 7830, 2478],
+                borderColor: "red",
+                fill: false
+            }, {
+                data: [1600, 1700, 1700, 1900, 2000, 2700, 4000, 5000, 6000, 7000],
+                borderColor: "green",
+                fill: false
+            }, {
+                data: [300, 700, 2000, 5000, 6000, 4000, 2000, 1000, 200, 100],
+                borderColor: "blue",
+                fill: false
+            }]
+        },
+        options: {
+            legend: { display: false }
+        }
+    });
+</script>

@@ -99,44 +99,44 @@ namespace AuthModule
             //    appId: ConfigurationManager.AppSettings["FacebookAppId"].ToString(),
             //    appSecret: ConfigurationManager.AppSettings["FacebookAppSecret"].ToString());
 
-            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            {
-                ClientId = ConfigurationManager.AppSettings["GoogleAppId"].ToString(),
-                ClientSecret = ConfigurationManager.AppSettings["GoogleAppSecret"].ToString()
-            });
+            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            //{
+            //    ClientId = ConfigurationManager.AppSettings["GoogleAppId"].ToString(),
+            //    ClientSecret = ConfigurationManager.AppSettings["GoogleAppSecret"].ToString()
+            //});
 
-            app.UseOpenIdConnectAuthentication(
-                new OpenIdConnectAuthenticationOptions
-                {
-                    // Sets the ClientId, authority, RedirectUri as obtained from web.configure
-                    ClientId = ConfigurationManager.AppSettings["WpcClientId"].ToString(),
-                    Authority = ConfigurationManager.AppSettings["WpcAuthority"].ToString(),
-                    //RedirectUri = ConfigurationManager.AppSettings["WpcPostLogoutRedirectUri"].ToString(),
+            //app.UseOpenIdConnectAuthentication(
+            //    new OpenIdConnectAuthenticationOptions
+            //    {
+            //        // Sets the ClientId, authority, RedirectUri as obtained from web.configure
+            //        ClientId = ConfigurationManager.AppSettings["WpcClientId"].ToString(),
+            //        Authority = ConfigurationManager.AppSettings["WpcAuthority"].ToString(),
+            //        //RedirectUri = ConfigurationManager.AppSettings["WpcPostLogoutRedirectUri"].ToString(),
 
-                    // PostLogoutRedirectUri is the page that users will be redirected to after sign-out. In this case, it is using the home page
-                    //PostLogoutRedirectUri = ConfigurationManager.AppSettings["WpcPostLogoutRedirectUri"].ToString(),
+            //        // PostLogoutRedirectUri is the page that users will be redirected to after sign-out. In this case, it is using the home page
+            //        //PostLogoutRedirectUri = ConfigurationManager.AppSettings["WpcPostLogoutRedirectUri"].ToString(),
 
-                    //Scope is the requested scope: OpenIdConnectScopes.OpenIdProfileis equivalent to the string 'openid profile': in the consent screen, this will result in 'Sign you in and read your profile'
-                    Scope = OpenIdConnectScope.OpenIdProfile,
+            //        //Scope is the requested scope: OpenIdConnectScopes.OpenIdProfileis equivalent to the string 'openid profile': in the consent screen, this will result in 'Sign you in and read your profile'
+            //        Scope = OpenIdConnectScope.OpenIdProfile,
 
-                    // ResponseType is set to request the id_token - which contains basic information about the signed-in user
-                    ResponseType = OpenIdConnectResponseType.IdToken,
+            //        // ResponseType is set to request the id_token - which contains basic information about the signed-in user
+            //        ResponseType = OpenIdConnectResponseType.IdToken,
 
-                    // ValidateIssuer set to false to allow work accounts from any organization to sign in to your application
-                    // To only allow users from a single organizations, set ValidateIssuer to true and 'tenant' setting in web.config to the tenant name or Id (example: contoso.onmicrosoft.com)
-                    // To allow users from only a list of specific organizations, set ValidateIssuer to true and use ValidIssuers parameter
-                    TokenValidationParameters = new TokenValidationParameters()
-                    {
-                        ValidateIssuer = true
-                    },
+            //        // ValidateIssuer set to false to allow work accounts from any organization to sign in to your application
+            //        // To only allow users from a single organizations, set ValidateIssuer to true and 'tenant' setting in web.config to the tenant name or Id (example: contoso.onmicrosoft.com)
+            //        // To allow users from only a list of specific organizations, set ValidateIssuer to true and use ValidIssuers parameter
+            //        TokenValidationParameters = new TokenValidationParameters()
+            //        {
+            //            ValidateIssuer = true
+            //        },
 
-                    // OpenIdConnectAuthenticationNotifications configures OWIN to send notification of failed authentications to OnAuthenticationFailed method
-                    Notifications = new OpenIdConnectAuthenticationNotifications
-                    {
-                        AuthenticationFailed = OnAuthenticationFailed
-                    }
-                }
-            );
+            //        // OpenIdConnectAuthenticationNotifications configures OWIN to send notification of failed authentications to OnAuthenticationFailed method
+            //        Notifications = new OpenIdConnectAuthenticationNotifications
+            //        {
+            //            AuthenticationFailed = OnAuthenticationFailed
+            //        }
+            //    }
+            //);
 
             //app.UseOpenIdConnectAuthentication(
             //new OpenIdConnectAuthenticationOptions

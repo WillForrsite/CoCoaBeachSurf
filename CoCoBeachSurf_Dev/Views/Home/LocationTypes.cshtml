@@ -1,8 +1,5 @@
 ﻿@model List<AuthModule.Models.tblLocationType>
-
 <link href="/Content/PagedList.css" rel="stylesheet" type="text/css" />
-
-
 <h1>Location Types</h1>
 <br />
 <table class="table table-bordered" style="text-align:center">
@@ -24,17 +21,11 @@
                 <td>
                     @Html.ActionLink(" ", "EditLocationType", "Home", new { @typeId = @item.lctn_tpe_Id}, new { @class = "btn btn-warning fa fa-pencil" }) 
                     @Html.ActionLink(" ", "DeleteLocationType", "Home", new { @type = @item.lctn_tpe, @desc = item.lctn_tpe_dsc}, new { @class = "btn btn-danger fa fa-trash" })
-
                 </td>
-
-
             </tr>
         }
     }
 </table>
-
-
-
 <script>
     function deletDevice(e) {
         debugger;

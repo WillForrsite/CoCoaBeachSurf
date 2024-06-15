@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.bundle.min.js" integrity="sha512-w3u9q/DeneCSwUDjhiMNibTRh/1i/gScBVp2imNVAMCt6cUHIw6xzhzcPFIaL3Q1EbI2l+nu17q2aLJJLo4ZYg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <style>
         /*.navbar {
             min-height: 60px !important;
@@ -39,8 +39,9 @@
             padding: 14px 16px;
             text-decoration: none;
         }
+
         .navbar-fixed-bottom, .navbar-fixed-top {
-            position: sticky!important
+            position: sticky !important
         }
 
         .subnav {
@@ -62,6 +63,7 @@
             .navbar a:hover, .subnav:hover .subnavAdminbtn {
                 background-color: black;
             }
+
             .subnav .subnavbtn {
                 font-size: 16px;
                 border: none;
@@ -100,6 +102,7 @@
         .subnav:hover .subnav-content {
             display: block;
         }
+
         .subnav-Admincontent {
             display: block;
             position: absolute;
@@ -115,7 +118,7 @@
                 text-decoration: none;
             }
 
-               
+
 
         #registerLink {
             color: #999;
@@ -125,7 +128,7 @@
             color: #999;
         }
 
-       
+
         .navbar-fixed-left {
             width: 221px;
             position: fixed;
@@ -133,20 +136,21 @@
             height: 100%;
         }
 
-        .navbar-fixed-left .navbar-nav > li {
-            float: none; /* Cancel default li float: left */
-            width: 139px;
-        }
+            .navbar-fixed-left .navbar-nav > li {
+                float: none; /* Cancel default li float: left */
+                width: 139px;
+            }
 
-        .navbar-fixed-left + .container {
-            padding-left: 160px;
-        }
+            .navbar-fixed-left + .container {
+                padding-left: 160px;
+            }
 
-        /* On using dropdown menu (To right shift popuped) */
-        .navbar-fixed-left .navbar-nav > li > .dropdown-menu {
-            margin-top: -50px;
-            margin-left: 140px;
-        }
+            /* On using dropdown menu (To right shift popuped) */
+            .navbar-fixed-left .navbar-nav > li > .dropdown-menu {
+                margin-top: -50px;
+                margin-left: 140px;
+            }
+
             .navbar-fixed-left a {
                 float: left;
                 font-size: 25px;
@@ -155,16 +159,16 @@
                 padding: 14px 16px;
                 text-decoration: none;
             }
+
         .list-group-item-light.list-group-item-action:hover, .list-group-item-light.list-group-item-action:focus {
             color: #636464;
             background-color: #edb81c;
         }
+
         .navbar-fixed-left .navbar-nav > a:hover {
             color: #636464;
             background-color: #edb81c;
         }
-        
-        
     </style>
 </head>
 <body id="body" style="padding-top:0px">
@@ -203,10 +207,9 @@
 
                 <li>@Html.ActionLink("Dashboard", "Index", "Home", new { area = "" }, null) </li>
                 <li>@Html.ActionLink("Reservations", "Reservations", "Home", new { area = "" }, null)</li>
-                <li><a href="#">Payments</a></li>               
+                <li style="display:none;"><a href="#">Payments</a></li>               
                 <li>@Html.ActionLink("Customers", "Customers", "Home", new { area = "" }, null)</li>
                 <li><a href="#">Reports</a></li>
-                <li><a href="#">Inventory</a></li>
                 <li>
                     <a href="#" style="display:flex" class="subnavAdminbtn">Administrators  <i class="fa fa-caret-down"></i></a>
 
@@ -216,15 +219,16 @@
             </button>*@
                 </li>
             </ul>
-            <div class="subnav-Admincontent">
+            <div class="subnav-Admincontent" style="display:inline">
 
                 <ul class="nav navbar-nav" style="float:none;font-size:22px;text-align:left">
                     <li>
                     <li style="width:100%;font-size:20px">
                         @Html.ActionLink("Location Types", "LocationTypes", "Home", new { area = "" }, null)
                     </li>
-                    <li style="width:100%;font-size:20px">@Html.ActionLink("Locations", "Locations", "Home", new { area = "" }, null)</li>                   
-                   
+                    <li style="width:100%;font-size:20px">@Html.ActionLink("Locations", "Locations", "Home", new { area = "" }, null)</li>
+                    <li><a href="#">Inventory</a></li>
+                    <li><a href="#">Pricing</a></li>
                 </ul>
 
             </div>

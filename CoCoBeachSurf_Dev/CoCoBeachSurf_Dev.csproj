@@ -381,14 +381,17 @@
     <Content Include="Images\coco.png" />
     <Content Include="Images\coco_old.png" />
     <Content Include="Images\CreditAppDD.png" />
+    <Content Include="Images\Customers.png" />
+    <Content Include="Images\DropOffs.png" />
     <Content Include="Images\loader.gif" />
     <Content Include="Images\MinusButton.png" />
+    <Content Include="Images\PickUpFlag.png" />
     <Content Include="Images\Products.png" />
     <Content Include="Images\search.png" />
+    <Content Include="Images\Ships.png" />
+    <Content Include="Images\TransparentBlock.png" />
+    <Content Include="Images\Vehicles.png" />
     <Content Include="Images\Weather.png" />
-    <Content Include="Image\20190704044515-img.jpg" />
-    <Content Include="Image\20190704050402-img.jpg" />
-    <Content Include="Image\20190704050845-img.jpg" />
     <Content Include="Scripts\app\_run.js" />
     <Content Include="Scripts\app\app.datamodel.js" />
     <Content Include="Scripts\app\app.viewmodel.js" />
@@ -503,7 +506,6 @@
     <Content Include="Views\Home\CategoryList.cshtml" />
     <Content Include="Views\Home\MaintenanceAgreement.cshtml" />
     <Content Include="Views\Home\CreditAppDDList.cshtml" />
-    <Content Include="Views\Home\Reservations_Bkp.cshtml" />
     <Content Include="Views\Home\Reservations.cshtml" />
     <Content Include="Views\Home\LocationTypes.cshtml" />
     <Content Include="Views\Home\Locations.cshtml" />
@@ -514,6 +516,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Image\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

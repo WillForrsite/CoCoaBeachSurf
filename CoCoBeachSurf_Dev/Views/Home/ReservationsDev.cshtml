@@ -1,0 +1,1491 @@
+﻿<style>
+  
+    .form1 {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+    }
+    .circular-button {
+        border-radius: 50%;
+        background-color: red;
+        background: url(MinusButton.png);
+        /* Other button styles (background color, padding, etc.) */
+        background-image: url('/Images/MinusButton.png');
+        height: 30px;
+        width: 31px;
+        font-weight: 900;
+        border: none;
+        background-color: #F7DC6F;
+    }
+    h1 {
+        border-radius: 8px;
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    h2 {
+        color: #333;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        margin: 12px 0 5px;
+    }
+
+    label2 {
+        display: block;
+        margin: 0px 0 0px;
+    }
+
+    label3 {
+        color: red;
+        display: inline-block;
+        margin: 0px 0 0px;
+    }
+
+    label4 {
+        font-size: 11px;
+        margin: 0px 0 0px;
+        display: inline-block
+    }
+    .TrpNm {
+        padding-left: 5px; 
+        background-color: #F7DC6F; 
+        font-size: 15px; 
+        font-weight: 900; 
+        margin-bottom: 0px; 
+        margin: unset; 
+/*        justify-content: flex-end;"*/
+    }
+
+    input[type='text'],
+    input[type='tel'],
+    input[type='email'],
+    input[type='date'],
+    input[type='time'],
+    input[type='number'],
+    select,
+    textarea {
+        width: 100%;
+        padding: 5px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-sizing: border-box;
+    }
+
+    input[type='radio'],
+    input[type='checkbox'] {
+        margin-right: 10px;
+        margin-left:5px;
+    }
+        /* Custom checkbox style */
+        input[type="checkbox"].red-border {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            width: 10px; /* Width and height can be adjusted as needed */
+            height: 10px;
+            border: 1px solid red; /* Red border */
+            cursor: default;
+        }
+
+    textarea {
+        height: 100px;
+        width: 100%;
+    }
+
+    button {
+        background-color: #5cb85c;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+        button:hover {
+            background-color: #4cae4c;
+        }
+
+    #verified-info {
+        color: red;
+        border: 1px solid;
+        border-spacing: 0px;
+        border-color: red;
+        margin: 0px 0 0px;
+        padding: 0px;
+        float: right;
+        top: 0px;
+    }
+
+    #verified-info-block {
+        display: inline-block;
+        color: red;
+        border: 1px solid;
+        border-color: red;
+        margin: 0px 0 0px;
+        top: 0px;
+        padding: 0px;
+        float: right;
+    }
+
+    #fs-noborder {
+        color: red;
+        border: 0px solid;
+        border-color: red;
+        margin: 0px 0 0px;
+        padding: 0px;
+        <!-- float: right; -->
+    }
+
+    #fs-nopadding {
+        border: 0px solid;
+        margin: 0px 0 0px;
+        padding: 0px;
+        width: 100%;
+        <!-- float: left; -->
+    }
+
+    
+
+    #fs-nopadding2 {
+        border: 1px solid;
+        <!-- margin: 50% auto; -->
+        Width: 50%;
+        padding: 0px;
+        display: inline-block;
+    }
+
+    #fs-restype {
+        border: 1px solid;      
+        width: 55% !important;
+        padding: 0px;
+        border-radius: 8px;
+        float: left;
+    }
+
+    #div-ship {
+        <!-- position: absolute; -->
+        left: 175px;
+        top: 155px;
+        padding: 0px;
+        margin: 0px 0 0px;
+    }
+
+    #fs-ship {
+        border: 1px solid;
+        padding: 0px;
+        width: 300px;
+        margin: 0px 0 0px;
+        border-radius: 8px;
+        /*display: inline-block;*/
+        left: 314px;
+        top: 100px; -->
+    }
+
+    #div-Hotel {
+        position: relative;
+        left: 150px;
+        top: 5px;
+        padding: 0px;
+        margin: 0px 0 0px;
+    }
+
+    #fs-hotel {
+        border: 1px solid;
+        padding: 0px;
+        margin: 0px;
+        width: 150px;
+        border-radius: 8px;
+        top: 5px;
+    }
+
+    #fs-guest {
+       /* border: 1px solid;*/
+        padding: 0px;
+        margin: 0px;
+        border-radius: 8px;
+    }
+
+    .fs-arrive {
+        border: 1px solid;
+        <!-- margin: 50% auto; -->
+        Width: 50%;
+        padding: 0px;
+        float: left;
+        margin: 0px;
+        border-radius: 8px;
+    }
+
+    #fs-depart {
+        border: 1px solid;
+        <!-- margin: 50% auto; -->
+        Width: 50%;
+        padding: 0px;
+        float: right;
+        margin: 0px;
+        border-radius: 8px;
+    }
+
+    #fs-special {
+        border: 1px solid;
+        <!-- margin: 50% auto; -->
+        Width: 100%;
+        padding: 0px;
+        <!-- float: right; -->
+        margin: 0px;
+        border-radius: 8px;
+    }
+
+    #fs-wheelchair {
+        border: none;
+        <!-- margin: 50% auto; -->
+        Width: 100%;
+        padding: 0px;
+        <!-- float: right; -->
+        margin: 0px;
+        border-radius: 8px;
+    }
+
+    #fs-nopadding3 {
+        border: 1px solid;
+        <!-- margin: 50% auto; -->
+        width: 50%;
+        padding: 0px;
+        float: right;
+    }
+
+    #fs-flightinfo {
+        border: 1px solid;
+        <!-- margin: 50% auto; -->
+        width: 50%;
+        padding: 0px;
+        border-radius: 8px;
+        float: left;
+        background-color: #f4f4f4;
+    }
+
+    .td-nopad {
+        border: 0px solid;
+        margin: 0px 0 0px;
+        padding: 0px;
+        font-size: 12px;
+        <!-- float: left; -->
+    }
+    
+    #btn-submit {
+        position: center;
+    }
+
+   /* #addtnl-inf {
+        width: 100%;
+    }*/
+
+    input[class="red-border"]:checked {
+        color: darkred;
+    }
+    .ml {
+        margin-left: 30px;
+    }
+    .mt {
+        margin-top: 30px!important;
+    }
+    h4 {
+        display: flex;
+        flex-direction: row;
+    }
+        h4:before,
+        h4:after {
+            content: "";
+            flex: 1 1;
+            border-bottom: 2px solid #000;
+            margin: auto;
+        }
+    img {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+    }
+    .TrpNm {
+        width: 100%;
+    }
+</style>
+<form class="form1">
+    <input type="hidden" id="rsrvtn_nbr"value="@ViewBag.ReservationId" />   
+    <h1 style="padding:unset">
+        Cocoa Beach Express Shuttle Reservation
+        <img style=" width: 50px; height: 40px;" src="~/Images/search.png" />
+        @*<lable id="RsrvtnID" style="font-size:20px">@ViewBag.ReservationId</lable>*@
+        <label id="RsrvtnID" style="font-size:20px"></label>
+    </h1>
+    <table class="td-nopad" style="width:100%">
+        <tr>
+            <td style="display: flex;">
+                <fieldset id="fs-restype" style="border:none">
+                    @*<legend>Reservation Type</legend>*@
+                    @*<table id="fs-nopadding">*@
+                    <table id="fs-nopadding">
+                        <tr>
+                            <td>
+                                @*<select id="rsrvtn_ctgry" title="Hotel">
+                                <option value="radisson">ADD-ON</option>
+                                <option value="PACKAGE">PACKAGE</option>
+                            </select>*@
+                                <label4><input type="checkbox" id="rsrvtn_ctgry" name="rsrvtn_ctgry" value="1"> ADD-ON</label4>
+                                <label4><input type="checkbox" id="rsrvtn_ctgry" name="rsrvtn_ctgry" value="2"> PACKAGE</label4>
+                            </td>
+                        </tr>
+                        <!--<tr>
+                <td>
+                    <label4><input type="radio" id="rsrvtn_tpe" name="rsrvtn_tpe" value="1"> ONE-WAY</label4>
+                    <label4><input type="radio" id="rsrvtn_tpe" name="rsrvtn_tpe" value="2"> ROUND-TRIP</label4>-->
+                        @*<label4><input type="radio" id="rsrvtn_tpe" name="rsrvtn_tpe" value="3"> PORT 2 PORT</label4>*@
+                        <!--</td>
+                    <td>
+                    </td>
+                </tr>-->
+                    </table>
+                </fieldset>
+                <Div id="Div-Hotel" style="display:none">
+                    <fieldset id="fs-hotel">
+                        <legend>Hotel</legend>
+                        @*<select id="htl_nme" title="Hotel">
+                        <option value="radisson">Radisson</option>
+                        <option value="port_2_port">PORT 2 PORT</option>
+                        <option value="springhill_suites">SpringHill Suites</option>
+                        <option value="4_points">4 Points</option>
+                        <option value="cocoa_beach_suites">Cocoa Beach Suites</option>
+                        <option value="towne_place">Towne Place</option>
+                        <option value="other">Other</option>
+                    </select>*@
+                        <select id="htl_lst" name="htl_nme" title="Hotel">
+                        </select>
+                        <!-- Add other form fields here -->
+                        <label4 id="nopadding">Clerk: <input type="text" id="htl_clrk" name="htl_clrk"></label4>
+                        <label4 id="nopadding">Reservation #: <input type="text" id="htl_rsrvtn_nmbr" name="htl_rsrvtn_nmbr"></label4>
+                    </fieldset>
+                </Div>
+            </td>
+            <td style="display: flex; justify-content: flex-end; margin-top: -22px;">
+                <fieldset id="fs-noborder" style="padding:2px">
+                    <label3 id="verified-info">&nbsp;Guest Verified Email Received<input type="checkbox" id="vrfd_eml_rcvd"></label3><br>
+                </fieldset>
+                <fieldset id="fs-noborder" style="padding:2px">
+                    <label3 id="verified-info">&nbsp;Guest Verified Correct Info Entered<input type="checkbox" id="vrfd_Inf"></label3>
+                </fieldset>
+            </td>
+            <td>
+                <Div id="div-ship" style="display:none">
+                    <fieldset id="fs-ship">
+                        <legend>Ship</legend>
+                        <table class="td-nopad">
+                            <tr>
+                                <td class="td-nopad">
+                                    @*<label4>Ship:<input type="text" id="shp_id"></label4>*@
+                                    <select id="shp_lst" name="shp_id" title="Hotel">
+                                    </select>
+                                </td>
+                                <td></td>
+                                <td class="td-nopad">
+                                    <label4>FC Added:<input type="text" id="shp_fc"></label4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td-nopad">
+                                    <label4>Time:<input type="time" id="shp_tm"></label4>
+                                </td>
+                                <td></td>
+                                <td class="td-nopad">
+                                    <label4>Paid:<input type="text" id="shp_pd"></label4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td-nopad">
+                                    <label4>Dates:<input type="date" id="shp_dt"></label4>
+                                </td>
+                                <td>     </td>
+                                <td class="td-nopad">
+                                    <label4>Cost:<span class="currencyinput">$<input type="text" id="shp_cst"></span></label4>
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                </Div>
+            </td>
+    </tr>
+</table>
+    <fieldset id="fs-guest">
+        <legend style="border-bottom:unset;margin-bottom:0px">
+            <h2 style="width: 100%; text-align: center; border-bottom: 1px solid #000; line-height: 0.1em;">
+                <span style="padding: 0 10px; background: white; ">GUEST INFO</span>
+            </h2>
+        </legend>
+        <table class="td-nopad">
+            <tr class="td-nopad">
+                <td><label4 id="nopadding">Email: <input type="email" id="gst_eml" style="width:150%"></label4></td>
+            </tr>
+            <tr class="td-nopad">
+                <td>
+                    <label4 id="nopadding">First Name: <input type="text" id="gst_fnme"></label4>
+                    <label4 id="nopadding">Last Name: <input type="text" id="gst_lnme"></label4>
+
+                </td>
+            </tr>
+            <tr class="td-nopad"><td><label4 id="nopadding">Cell Phone: <input type="tel" id="gst_cphn1"></label4> <label4 id="nopadding">2nd Cell Phone: <input type="tel" id="gst_cphn2"></label4></td></tr>
+        </table>
+    </fieldset>
+        <h2 style="width: 100%; text-align: center; border-bottom: 1px solid #000; line-height: 0.1em;">
+            <span style="padding: 0 10px; background: white; ">ITINERARY</span>
+        </h2>
+        <div id="Trips">
+            <div id="Trip_tmplt" style="width: 100%; display:none">
+                <table style=" margin-bottom: 10px; width:100%;">
+                    <tr><td style="background-color: #F7DC6F; display:none "><input id="btnRmvTrp_tmplt" class="circular-button" type="button"/></td>
+                        <td id="TripHDR_tmplt"style="background-color: #F7DC6F;">
+                            <label id="TrpNm_tmplt" class ="TrpNm">Trip Template</label>
+                            <fieldset id="fsTrpHDR_tmplt" class="fs-arrive" style="width: 100%; border: none; margin-bottom:5px">
+                                <label4 class="ml">Date: <input type="date" id="TrpDt_tmplt"></label4>
+                                <label4 class="ml">Time: <input type="time" id="TrpTm_tmplt"></label4>
+                                <label4 class="ml" style=" /* margin-left: 10px;*/ width: 100px; "># Passengers: <input type="number" id="TrpPssngrs_tmplt"></label4>
+                                <label4 id="TrpCst_tmplt" class="TrpNm" style="width:250px; font-size:25px;text-align: right;">$0.00</label4>
+                            </fieldset>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <fieldset id="fs-TrpDET_tmplt" classs="fs-arrive" style="width: 100%; border: none;margin-bottom:35px">
+                                <div style="display:flex;border:none; margin-bottom:10px;">
+                                    Pick
+                                    <label4 style=" margin-left: 30px; width: 100px;display:inline-block ">
+                                        From:
+                                        <select id="Pcklctntpe_tmplt" name="Pcklctntpe_tmplt" title="Hotel" style=" margin-left: 0px; width: 100px; display: inline-block "></select>
+                                    </label4>
+                                    <label4 id="lblfrmtm_tmplt" style=" margin-left: 10px; width: 100px;display:inline-block ">Time: <input type="time" id="frmtm_tmplt"></label4>
+                                    <label4>
+                                        <label4 id="lblpck_tmplt" style=" margin-left: 10px; width: 100px;display:inline-block "></label4>
+                                        <select id="pcklctn_tmplt" name="pcklctn_tmplt" title="Hotel" style="margin-left: 10px;"></select>
+                                    </label4>
+                                    <label4>
+                                        <label4 id="lblpckarln_tmplt" style=" margin-left: 20px; width: 100px; display: inline-block ">
+                                            Airline:
+                                        </label4>
+                                        <select id="pckarln_tmplt" title:"test" name="pckarln_tmplt" style=" margin-left: 20px; width: 100px; display: inline-block "><option value="0">select</option></select>
+                                    </label4>
+                                    <label4>
+                                        <label4 id="lblpckflght_tmplt" style=" margin-left: 10px; width: 100px; display: inline-block ">Flight #: </label4><input type="text" id="pckflght_tmplt" style=" margin-left: 10px; width: 100px; display: inline-block ">
+                                    </label4>
+                                </div>
+                                <div style="display: flex; margin-top: 0px; margin-bottom: 20px; border-bottom: unset; border-top: 1px dotted gray;">
+                                    Drop
+                                    <label4 style=" margin-left: 30px; width: 100px;display:inline-block ">
+                                        To:
+                                        <select id="Drplctntpe_tmplt" name="Drplctntpe_tmplt" title="Hotel" style=" margin-left: 0px; width: 100px;display:inline-block "></select>
+                                    </label4>
+                                    <label4 id="lbldrptm_tmplt" style=" margin-left: 10px; width: 100px;display:inline-block ">Time: <input type="time" id="drptm_tmplt"></label4>
+                                    <label4>
+                                        <label4 id="lbldrp_tmplt" style=" margin-left: 10px; width: 100px;display:inline-block;"></label4>
+                                        <select id="drplctnto_tmplt" name="drop_lctn_to" title="Hotel" style="margin-left: 10px;"></select>
+                                    </label4>
+                                    <label4>
+                                        <label4 id="lbldrparln_tmplt" style=" margin-left: 20px; width: 100px; display: inline-block ">
+                                            Airline:
+                                        </label4>
+                                        <select id="drparln_tmplt" style=" margin-left: 20px; width: 100px; display: inline-block "><option value="0">select</option></select>
+                                    </label4>
+                                    <label4>
+                                        <label4 id="lbldrpflght_tmplt" style=" margin-left: 10px; width: 100px; display: inline-block ">Flight #: </label4><input type="text" id="drpflght_tmplt" style=" margin-left: 10px; width: 100px; display: inline-block ">
+                                    </label4>
+
+                                </div>                   <br />
+                                <div style="display: flex; justify-content: flex-start; align-items: flex-end;">
+                                    <label style="margin-bottom: 0px; border-bottom: unset; margin-top: 15px;width:220px ">Special Requirements</label>
+                                    <label4 id="lblwhlchr_tmplt">Wheelchair:</label4><input type="checkbox" id="whlchr_tmplt" value="1">
+                                    <label4 id="lblwhlchrcnfld_tmplt">fold up:</label4><input type="checkbox" id="whlchrcnfld_tmplt" value="1">
+                                    <label4 id="lbladdtnlinf_tmplt">Additional Info:</label4> <textarea id="addtnlinf_tmplt" style=" height: 40px; width: 300px;"></textarea>
+                                </div>
+                            </fieldset>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <h4 style="width: 100%; text-align: center; border-bottom: 0px solid #000; line-height: 0.1em;">
+            @*<span style="padding: 0 10px; background: white; font-size: 40px; ">+</span>*@
+            <input id="btnAddTrp" class="btn btn-default" type="button" style="font-weight: 900;" value="+"/>
+            @*<button class="btn btn-default fa fa-plus"></button>*@
+        </h4>
+        <br />
+        <div style="text-align: center;">
+            <a class="btn btn-success" OnClick="SaveCustomer()" href="#" id="MncAgr" style=" font-size: 20px;">
+                Submit
+            </a>
+            @Html.ActionLink("Cancel", "Reservations", "Home", new { area = "" }, new { @class = "btn btn-danger", @style = "font-size:20px" })
+        </div>
+</form>
+<script type="text/javascript">
+    let htl_id;
+    let shp_id;
+    let trpcnt = 1;
+    let TripNumber = 1;
+    let RsrvtnID = "xxxxxx"
+    let Rsvtnfrm = [
+        {
+            htl_id: "",
+            htl_clrk: "",
+            htl_rsrvtn_nmbr: "",
+            shp_id: "",
+            shp_fc: "",
+            shp_tm: "",
+            shp_pd: "",
+            shp_dt: "",
+            shp_cst: "",
+            vrfd_eml_rcvd: "",
+            vrfd_Inf: "",
+            rsrvtn_ctgry: "",
+            rsrvtn_tpe: "",            
+            gst_fnme: "",
+            gst_lnme: "",
+            gst_cphn1: "",
+            gst_eml: "",
+            gst_cphn2: "",
+            arrvl_dt: "",
+            arrvl_tm: "",
+            arrvl_arprt: "",
+            arrvl_arln: "",
+            arrvl_flght_nmbr: "",
+            arrvl_nmbr_pssngrs: "",
+            arrvl_pckup_tm: "",
+            arrvl_drpoff_loc: "",
+            dep_dt: "",
+            dep_tm: "",
+            dep_arprt: "",
+            dep_arln: "",
+            dep_flght_nmbr: "",
+            dep_nmbr_pssngrs: "",
+            dep_pck_up_tm: "",
+            dep_drp_off_loc: "",
+            whlchr: "",
+            whlchr_cnfld: "",
+            addtnl_inf: "",
+            rsrvtn_nbr:""
+        }
+    ];
+    window.document.onload = function (e) {
+        console.log("document.onload", e, Date.now(), window.tdiff,
+            (window.tdiff[0] = Date.now()) && window.tdiff.reduce(fred));
+    }
+    function generateUniqueID() {
+        return Math.random().toString(36).substr(2, 6);
+    }
+
+        RsrvtnID = generateUniqueID();
+    // Document Click Event Handler
+    document.addEventListener('click', function (event) {
+        clickedElement = event.target;
+        console.log('You clicked on: ', clickedElement.id);
+        var EName = clickedElement.id;
+        console.log('EName: ', EName);
+        console.log('TripNumber', EName.substring(position + 1));
+        console.log('TripNumber', EName.substring(EName.length - 1));
+
+        // Find the position of searchString in mainStringvar
+        var position = EName.indexOf('_');
+        if (position !== -1) {
+            // If the searchString is found, take the remaining datavar 
+            TripNumber = EName.substring(EName.length - 1)      //position + 1);
+
+            // Now remainingData contains the string starting from the end of searchStringconsole.log("Remaining data: " + remainingData);
+        } else {
+            console.log('_' + " not found in " + clickedElement.id);
+        }
+        console.log('_posx: ', position);
+        console.log('TripNumberx: ', TripNumber);
+
+
+        if (clickedElement.id == 'btnAddTrp') {
+            console.log('Adding a Trip');
+            const TrpDiv = document.getElementById('Trip_tmplt');
+            const TrpClone = TrpDiv.cloneNode(true); // The `true` is for deep cloning
+            //parseInt(TrpClone.id.match(/\d+/g), 10) + 1;
+            const TrpCloneLbl = TrpClone.querySelector("#TrpNm_tmplt");
+            const TrpCloneRmvBtn = TrpClone.querySelector("#btnRmvTrp_tmplt");
+            const TrpFsArrive = TrpClone.querySelector("#fs-arrive_tmplt");
+            const TrpPckLctn = TrpClone.querySelector("#pcklctn_tmplt");
+            const TrpPckLctntpe = TrpClone.querySelector("#Pcklctntpe_tmplt");
+            const TripInfTD = TrpClone.querySelector("#TripInfTD_tmplt");
+            const TrpInfo = TrpClone.querySelector("#fsTripInfo_tmplt");
+            const Trpdt = TrpClone.querySelector("#TrpDt_tmplt");
+            const Trptm = TrpClone.querySelector("#TrpTm_tmplt");
+            const Trppssngrs = TrpClone.querySelector("#TrpPssngrs_tmplt");
+            const TrpCst = TrpClone.querySelector("#TrpCst_tmplt");
+            const lblfrmtm = TrpClone.querySelector("#lblfrmtm_tmplt");
+            const frmtm = TrpClone.querySelector("#frmtm_tmplt");
+            const lblpck = TrpClone.querySelector("#lblpck_tmplt");
+            const lblpckarln = TrpClone.querySelector("#lblpckarln_tmplt");
+            const pckarln = TrpClone.querySelector("#pckarln_tmplt");
+            const lblpckflght = TrpClone.querySelector("#lblpckflght_tmplt");
+            const pckflght = TrpClone.querySelector("#pckflght_tmplt");
+            const Drplctntpe = TrpClone.querySelector("#Drplctntpe_tmplt");
+            const lbldrptm = TrpClone.querySelector("#lbldrptm_tmplt");
+            const drptm = TrpClone.querySelector("#drptm_tmplt");
+            const lbldrp = TrpClone.querySelector("#lbldrp_tmplt");
+            const drplctnto = TrpClone.querySelector("#drplctnto_tmplt");
+            const lbldrparln = TrpClone.querySelector("#lbldrparln_tmplt");
+            const drparln = TrpClone.querySelector("#drparln_tmplt");
+            const lbldrpflght = TrpClone.querySelector("#lbldrpflght_tmplt");
+            const drpflght = TrpClone.querySelector("#drpflght_tmplt");
+            const lblwhlchr = TrpClone.querySelector("#lblwhlchr_tmplt");
+            const whlchr = TrpClone.querySelector("#whlchr_tmplt");
+            const lblwhlchrcnfld = TrpClone.querySelector("#lblwhlchrcnfld_tmplt");
+            const whlchrcnfld = TrpClone.querySelector("#whlchrcnfld_tmplt");
+            const lbladdtnlinf = TrpClone.querySelector("#lbladdtnlinf_tmplt");
+            const addtnlinf = TrpClone.querySelector("#addtnlinf_tmplt");
+            //Increment TripCounter
+            trpcnt = trpcnt + 1;
+            //
+            //TrpCloneLbl.textcontent = 'TestTrip'
+            lblfrmtm.id = "lblfrmtm_" + trpcnt;
+            frmtm.id = "frmtm_" + trpcnt;
+            lblpck.id = "lblpck_" + trpcnt;
+            lblpckarln.id = "lblpckarln_" + trpcnt;
+            pckarln.id = "pckarln_" + trpcnt;
+            lblpckflght.id = "lblpckflght_" + trpcnt;
+            pckflght.id = "pckflght_" + trpcnt;
+            Drplctntpe.id = "Drplctntpe_" + trpcnt;
+            lbldrptm.id = "lbldrptm_" + trpcnt;
+            drptm.id = "drptm_" + trpcnt;
+            lbldrp.id = "lbldrp_" + trpcnt;
+            drplctnto.id = "#drplctnto_" + trpcnt;
+            lbldrparln.id = "#lbldrparln_" + trpcnt;
+            drparln.id = "drparln_" + trpcnt;
+            lbldrpflght.id = "lbldrpflght_" + trpcnt;
+            drpflght.id = "drpflght_" + trpcnt;
+            lblwhlchr.id = "lblwhlchr_" + trpcnt;
+            whlchr.id = "whlchr_" + trpcnt;
+            lblwhlchrcnfld.id = "lblwhlchrcnfld_" + trpcnt;
+            whlchrcnfld.id = "whlchrcnfld_" + trpcnt;
+            lbladdtnlinf.id = "lbladdtnlinf_" + trpcnt;
+            addtnlinf.id = "addtnlinf_" + trpcnt;
+            TrpClone.id = "Trip" + trpcnt;
+            TrpCloneLbl.id = "TrpNm_" + trpcnt;
+            TrpCloneRmvBtn.id = "btnRmvTrp_" + trpcnt;
+            TrpCloneRmvBtn.style.display = "";
+            TrpCloneLbl.textContent = "Trip " + trpcnt;           
+            TrpFsArrive.id = "fsArrive_" + trpcnt;
+            TrpPckLctntpe.id = "Pcklctntpe_" + trpcnt; 
+            TrpPckLctn.id = "pcklctn_" + trpcnt; 
+            TrpPckLctn.name = "pcklctn_" + trpcnt;
+            TripInfTD.id = "TripInfTD_" + trpcnt;
+            TrpInfo.id = "fsTripInfo_" + trpcnt;
+            Trpdt.id = "TrpDt_" + trpcnt;
+            Trptm.id = "TrpTm_" + trpcnt;
+            Trppssngrs.id = "TrpPssngrs_" + trpcnt;
+            TrpCst.id = "TrpCst_" + trpcnt;
+            // Get the target container by its ID
+            const TripContainer = document.getElementById('Trips');
+            // Append the cloned div to the target container
+            TripContainer.appendChild(TrpClone);
+            //TrpClone.style.backgroundColor = '#CCD1D1';
+            IntializeNewTrip();
+            //getLocationTypeList();
+        }
+    }); 
+
+    //Trip Channge event handler
+    document.addEventListener('change', function (event) {
+        var changedElement = event.target;
+        //var selectedVal = changedElement.value;
+        console.log('You changed: ', changedElement.id);
+        var EName = document.getElementById(changedElement.id).id;
+        var selectedVal = changedElement.value;
+        console.log('Selected value:', selectedVal);
+
+        console.log('EName: ', EName);
+        console.log('TripNumber', EName.substring(position + 1));
+        console.log('TripNumber', EName.substring(EName.length - 1));
+
+        // Find the position of searchString in mainStringvar
+        var position = EName.indexOf('_');
+        if (position !== -1) {
+            // If the searchString is found, take the remaining datavar 
+            TripNumber = EName.substring(EName.length - 1)      //position + 1);
+
+            // Now remainingData contains the string starting from the end of searchStringconsole.log("Remaining data: " + remainingData);
+        } else {
+            console.log('_' + " not found in " + clickedElement.id);
+        }
+        console.log('_posx: ', position);
+        console.log('TripNumberx: ', TripNumber);
+
+        if (changedElement.id == 'vrfd_eml_rcvd') {
+            console.log('Emlrcvd');
+                alert(this.checked);
+                if (this.checked)
+                    $('#vrfd_eml_rcvd').val("1")
+                else
+                    $('#vrfd_eml_rcvd').val("0")
+
+                alert($('#vrfd_eml_rcvd').val())
+        }
+
+        // Verified Information Change Handler
+        if (changedElement.id == 'vrfd_Inf') {
+            //alert($('option:selected', this).text());
+            //alert(this.checked);
+            if (this.checked)
+                $('#vrfd_Inf').val("1")
+            else
+                $('#vrfd_Inf').val("0")
+            //alert($('#vrfd_Inf/').val())
+        };
+
+        // Reservation Category change Handler
+        if (changedElement.id == 'rsrvtn_ctgry') {
+                //alert($('option:selected', this).text());
+                alert(this.checked);
+                if (this.checked)
+                    $('#rsrvtn_ctgry').val("1")
+                else
+                    $('#rsrvtn_ctgry').val("0")
+                alert($('#rsrvtn_ctgry').val())
+        };
+
+
+
+
+//        if (EName.substring(10) == 'Drplctntpe' ){ //_' + TripNumber) {
+if (changedElement.id == 'Drplctntpe_' + TripNumber) {
+            //alert(changedElement.options[changedElement.selectedIndex].text);
+            //alert(changedElement.value);
+            //alert('next variable:');
+            //alert(changedElement.options[changedElement.selectedIndex].value);
+            selectedVal = changedElement.options[changedElement.selectedIndex].value;
+            var lbl = changedElement.options[changedElement.selectedIndex].text;
+            //$("#lbldrp_" + TripNumber).text(lbl);
+            document.getElementById("lbldrp_" + TripNumber).textContent = lbl + ":";
+            switch (selectedVal) {
+                case "AP":
+                    document.getElementById("#lbldrparln_" + TripNumber).textContent = "Airline:";
+                    document.getElementById("#lbldrparln_" + TripNumber).style.display = "inline-block";
+                    document.getElementById("lbldrpflght_" + TripNumber).textContent = "Flight #";
+                    document.getElementById("lbldrpflght_" + TripNumber).style.display = "inline-block";
+                    document.getElementById("lbldrptm_" + TripNumber).style.display = "inline-block";
+                    document.getElementById("lbldrp_" + TripNumber).style.display = "inline-block";
+                    document.getElementById("drpflght_" + TripNumber).style.display = "inline-block";
+                    document.getElementById("drparln_" + TripNumber).style.display = "inline-block";
+                    getAirLineLocations("AL");
+                    drpgetLocationsByType("AP");
+                    break;
+                case "CL":
+                    document.getElementById("#lbldrparln_" + TripNumber).textContent = "Ship:";
+                    document.getElementById("#lbldrparln_" + TripNumber).style.display = "inline-block";
+                    document.getElementById("lbldrpflght_" + TripNumber).textContent = "Conf:";
+                    document.getElementById("lbldrpflght_" + TripNumber).style.display = "inline-block";
+                    document.getElementById("lbldrptm_" + TripNumber).style.display = "inline-block";
+                    document.getElementById("lbldrp_" + TripNumber).style.display = "inline-block";
+                    document.getElementById("drpflght_" + TripNumber).style.display = "inline-block";
+                    document.getElementById("drparln_" + TripNumber).style.display = "inline-block";
+                    //getAirLineLocations("AL");
+                    drpgetLocationsByType("CL");
+
+                    break;
+                case "H ":
+                    document.getElementById("#lbldrparln_" + TripNumber).style.display = "none";
+                    document.getElementById("lbldrpflght_" + TripNumber).style.display = "none";
+                    document.getElementById("lbldrptm_" + TripNumber).style.display = "none";
+                    document.getElementById("lbldrp_" + TripNumber).style.display = "block";
+                    document.getElementById("drpflght_" + TripNumber).style.display = "none";
+                    document.getElementById("drparln_" + TripNumber).style.display = "none";
+                    drpgetLocationsByType("H ");
+                    break;
+               default:
+                    document.getElementById("#lbldrparln_" + TripNumber).style.display = "none";
+                    document.getElementById("lbldrpflght_" + TripNumber).style.display = "none";
+                    document.getElementById("lbldrptm_" + TripNumber).style.display = "none";
+                    document.getElementById("lbldrp_" + TripNumber).style.display = "block";
+                    document.getElementById("drpflght_" + TripNumber).style.display = "none";
+                    document.getElementById("drparln_" + TripNumber).style.display = "none";
+                   break;
+            }
+            //if (selectedVal === "AP") {
+            //    document.getElementById("lbldrparln_" + TripNumber).style.display = "inline-block";
+            //    document.getElementById("lbldrpflght_" + TripNumber).style.display = "inline-block";
+            //    document.getElementById("lbldrptm_" + TripNumber).style.display = "inline-block";
+            //    document.getElementById("lbldrp_" + TripNumber).style.display = "inline-block";
+            //    getAirLineLocations("AL");
+            //}
+            //else {
+            //    document.getElementById("lbldrparln_" + TripNumber).style.display = "none";
+            //    document.getElementById("lbldrpflght_" + TripNumber).style.display = "none";
+            //    document.getElementById("lbldrptm_" + TripNumber).style.display = "none";
+            //    document.getElementById("lbldrp_" + TripNumber).style.display = "block";
+            //}
+            drpgetLocationsByType(selectedVal);
+        };
+        if (changedElement.id == 'Pcklctntpe_' + TripNumber) {
+            //alert(changedElement.options[changedElement.selectedIndex].text);
+            //alert(changedElement.value);
+            var lbl = changedElement.options[changedElement.selectedIndex].text;
+            //$("#lblpck_" + TripNumber).text(lbl);
+            document.getElementById("lblpck_" + TripNumber).textContent = lbl + ':';
+            switch (selectedVal) {
+                case "AP":
+                    document.getElementById("lblpckarln_" + TripNumber).textContent = "Airline:";
+                    document.getElementById("lblpckarln_" + TripNumber).style.display = "inline-block";
+                    document.getElementById("lblpckflght_" + TripNumber).textContent = "Flight #";
+                    document.getElementById("lblpckflght_" + TripNumber).style.display = "inline-block";
+                    document.getElementById("lblfrmtm_" + TripNumber).style.display = "inline-block";
+                    document.getElementById("lblpck_" + TripNumber).style.display = "inline-block";
+                    document.getElementById("pckflght_" + TripNumber).style.display = "inline-block";
+                    document.getElementById("pckarln_" + TripNumber).style.display = "inline-block";
+                    getAirLineLocations("AL");
+                    pckgetLocationsByType("AP");
+                    break;
+                case "CL":
+                    document.getElementById("lblpckarln_" + TripNumber).textContent = "Ship:";
+                    document.getElementById("lblpckarln_" + TripNumber).style.display = "inline-block";
+                    document.getElementById("lblpckflght_" + TripNumber).textContent = "Ship #";
+                    document.getElementById("lblpckflght_" + TripNumber).style.display = "inline-block";
+                    document.getElementById("lblfrmtm_" + TripNumber).style.display = "inline-block";
+                    document.getElementById("lblpck_" + TripNumber).style.display = "inline-block";
+                    document.getElementById("pckflght_" + TripNumber).style.display = "inline-block";
+                    document.getElementById("pckarln_" + TripNumber).style.display = "inline-block";
+                    //getAirLineLocations("AL");
+                    pckgetLocationsByType("CL")
+                    break;
+                case "H ":
+                    document.getElementById("lblpckarln_" + TripNumber).style.display = "none";
+                    document.getElementById("lblpckflght_" + TripNumber).style.display = "none";
+                    document.getElementById("lblfrmtm_" + TripNumber).style.display = "none";
+                    document.getElementById("lblpck_" + TripNumber).style.display = "block";
+                    document.getElementById("pckflght_" + TripNumber).style.display = "none";
+                    document.getElementById("pckarln_" + TripNumber).style.display = "none";
+                    pckgetLocationsByType("H ");
+                    break;
+                default:
+                    document.getElementById("lblpckarln_" + TripNumber).textcontent = "Airline:";
+                    document.getElementById("lblpckarln_" + TripNumber).style.display = "inline-block";
+                    document.getElementById("lblpckflght_" + TripNumber).textContent = "Flight #";
+                    document.getElementById("lblpckflght_" + TripNumber).style.display = "inline-block";
+                    document.getElementById("lblfrmtm_" + TripNumber).style.display = "inline-block";
+                    document.getElementById("lblpck_" + TripNumber).style.display = "inline-block";
+                    document.getElementById("pckflght_" + TripNumber).style.display = "inline-block";
+                    document.getElementById("pckarln_" + TripNumber).style.display = "inline-block";
+                    document.getElementById("pckfrmtm_" + TripNumber).style.display = "inline-block";
+
+                    getAirLineLocations("AL");
+                    break;
+            }
+            //if (selectedVal === "AP") {
+            //    document.getElementById("lblpckarln_" + TripNumber).style.display = "inline-block";
+            //    document.getElementById("lblpckflght_" + TripNumber).style.display = "inline-block";
+            //    document.getElementById("lblfrmtm_" + TripNumber).style.display = "inline-block";
+            //    document.getElementById("lblpck_" + TripNumber).style.display = "inline-block";
+            //    getAirLineLocations("AL");
+            //}
+            //else {
+            //    document.getElementById("lblpckarln_" + TripNumber).style.display = "none";
+            //    document.getElementById("lblpckflght_" + TripNumber).style.display = "none";
+            //    document.getElementById("lblfrmtm_" + TripNumber).style.display = "none";
+            //    document.getElementById("lblpck_" + TripNumber).style.display = "block";
+            //}
+            //alert('Selected Value:', selectedVal);
+            pckgetLocationsByType(selectedVal);
+        };
+    });
+
+
+    function IntializeNewTrip() {
+        TripNumber = trpcnt;
+        let lr = document.getElementById('RsrvtnID');
+        let pt = document.getElementById('Pcklctntpe_' + TripNumber);
+        let dt = document.getElementById('Drplctntpe_' + TripNumber);
+        let lp = document.getElementById('lblpck_' + TripNumber);
+        let ld = document.getElementById('lbldrp_' + TripNumber);
+        let lda = document.getElementById("#lbldrparln_" + TripNumber);
+        lr.textContent = "Reservation: " + RsrvtnID;
+        lp.textContent = "Airport:";
+        ld.textContent = "Hotel:";
+
+        //$('#lblpck_' + TripNumber).text("Airport:");        
+        //$('#lbldrp_' + TripNumber).text("Hotel:");
+        document.getElementById("lblpckarln_" + TripNumber).style.display = "inline-block";
+        document.getElementById("lblpckflght_" + TripNumber).style.display = "inline-block";
+        document.getElementById("lblfrmtm_" + TripNumber).style.display = "inline-block";
+        lp.style.display = "inline-block";
+
+        lda.style.display = "none";
+        document.getElementById("lbldrpflght_" + TripNumber).style.display = "none";
+        document.getElementById("lbldrptm_" + TripNumber).style.display = "none";
+        document.getElementById("drpflght_" + TripNumber).style.display = "none";
+        document.getElementById("drparln_" + TripNumber).style.display = "none";
+        ld.style.display = "block";
+
+
+        getLocationTypeList();
+        //$("#Pcklctntpe_" + TripNumber).val("AP");
+        //$("#Drplctntpe_" + TripNumber).val("H ");
+        pckgetLocationsByType("AP");
+        drpgetLocationsByType("H ");
+        getAirLineLocations("AL");
+        pt.value = "AP";
+        dt.value = "H ";
+        //getHotelList();
+        //getShipsList();
+    }
+
+
+
+    $(document).ready(function () { 
+        //TripNumber = 1
+
+        let lr = document.getElementById('RsrvtnID');
+        let pt = document.getElementById('Pcklctntpe_' + TripNumber);
+        let dt = document.getElementById('Drplctntpe_' + TripNumber);
+        let lp = document.getElementById('lblpck_' + TripNumber);
+        let ld = document.getElementById('lbldrp_' + TripNumber);
+        lr.textContent = "Reservation: " + RsrvtnID;
+        lp.textContent = "Airport:";
+        ld.textContent = "Hotel:";
+        
+        //$('#lblpck_' + TripNumber).text("Airport:");        
+        //$('#lbldrp_' + TripNumber).text("Hotel:");
+        document.getElementById('lblpckarln_' + TripNumber).style.display = "inline-block";
+        document.getElementById('lblpckflght_' + TripNumber).style.display = "inline-block";
+        document.getElementById('lblfrmtm_' + TripNumber).style.display = "inline-block";
+        lp.style.display = "inline-block";
+
+        document.getElementById('lbldrparln_' + TripNumber).style.display = "none";
+        document.getElementById('lbldrpflght_' + TripNumber).style.display = "none";
+        document.getElementById('lbldrptm_' + TripNumber).style.display = "none";
+        document.getElementById('drpflght_' + TripNumber).style.display = "none";
+        document.getElementById('drparln_' + TripNumber).style.display = "none";
+        ld.style.display = "block";
+
+                
+        getLocationTypeList();
+        //$("#Pcklctntpe_" + TripNumber).val("AP");
+        //$("#Drplctntpe_" + TripNumber).val("H ");
+        pckgetLocationsByType("AP");
+        drpgetLocationsByType("H ");
+        getAirLineLocations("AL");
+        pt.value = "AP";
+        dt.value = "H ";
+        pt.selectedVal = "AP";
+        dt.selectedVal = "H ";
+        //getHotelList();
+        //getShipsList();
+       
+    })   
+    function getLocationTypeList() {
+        $.get("/Home/GetLocationTypes",
+            {
+
+            },
+            function (data, status) {
+                let d = data;
+                $.each(data, function () {
+                    $("#Pcklctntpe_" + TripNumber).empty(); 
+                    $("#Drplctntpe_" + TripNumber).empty()
+                    $("#Pcklctntpe_" + TripNumber).append($("<option>", {
+                        value: "0",
+                        text: "Select"
+                    }));
+                    $("Drplctntpe_" + TripNumber).append($("<option>", {
+                        value: "0",
+                        text: "Select"
+                    }));
+                    $.each(data, function (i, item) {
+
+                        $("#Pcklctntpe_" + TripNumber).append($("<option>", {
+                            value: item.lctn_tpe,
+                            text: item.lctn_tpe_dsc
+                        }));
+                        $("#Drplctntpe_" + TripNumber).append($("<option>", {
+                            value: item.lctn_tpe,
+                            text: item.lctn_tpe_dsc
+                        }));
+                    });
+                });
+            });
+    }
+    function getHotelList() {
+
+
+        $.get("/Home/GetHotelsList",
+            {
+
+            },
+            function (data, status) {
+                let d = data;
+                $.each(data, function () {
+                    $("#htl_lst").empty();
+                    $("#htl_lst").append($("<option>", {
+                        value: "0",
+                        text: "Select"
+                    }));
+                    $.each(data, function (i, item) {
+
+                        $("#htl_lst").append($("<option>", {
+                            value: item.htl_id,
+                            text: item.htl_nme
+                        }));
+                    });
+                });
+            });
+    }
+    function getShipsList() {
+        $.get("/Home/GetShipsList",
+            {
+            },
+            function (data, status) {
+                let d = data;
+                $.each(data, function () {
+                    $("#shp_lst").empty();
+                    $("#shp_lst").append($("<option>", {
+                        value: "0",
+                        text: "Select"
+                    }));
+                    $.each(data, function (i, item) {
+
+                        $("#shp_lst").append($("<option>", {
+                            value: item.ShipName,
+                            text: item.ShipName
+                        }));
+                    });
+                });
+            });
+    }
+    $(function () {
+        $("#htl_lst").change(function () {
+            //alert($('option:selected', this).text());
+            htl_id = $("#htl_lst").val()
+        });
+    });
+    $(function () {
+        $("#shp_lst").change(function () {
+            //alert($('option:selected', this).text());
+            shp_id = $("#shp_lst").val()
+        });
+    });
+    rsrvtn_ctgry
+    //$(function () {
+    //    $("#vrfd_eml_rcvd").change(function () {          
+    //        alert(this.checked);
+    //        if (this.checked)
+    //            $('#vrfd_eml_rcvd').val("1")
+    //        else
+    //            $('#vrfd_eml_rcvd').val("0")
+
+    //        alert($('#vrfd_eml_rcvd').val())
+    //    })
+    //});
+    //$(function () {
+    //        $("#vrfd_Inf").change(function () {
+    //            //alert($('option:selected', this).text());
+    //            //alert(this.checked);
+    //            if (this.checked)
+    //                $('#vrfd_Inf').val("1")
+    //            else
+    //                $('#vrfd_Inf').val("0")
+    //            //alert($('#vrfd_Inf/').val())
+    //        });
+    //});
+    //$(function () {
+    //    $("#rsrvtn_ctgry").change(function () {
+    //        //alert($('option:selected', this).text());
+    //        alert(this.checked);
+    //        if (this.checked)
+    //            $('#rsrvtn_ctgry').val("1")
+    //        else
+    //            $('#rsrvtn_ctgry').val("0")
+    //        alert($('#rsrvtn_ctgry').val())
+    //    })
+    //});
+    //$(function () {
+    //    $("#Drplctntpe_tmplt").change(function () {
+    //       // alert($('option:selected', this).val());
+    //        var selectedVal = $('option:selected', this).val()
+    //        var lbl = $('option:selected', this).text();
+    //        $("#lbldrp_" + TripNumber).text(lbl);
+    //        if (selectedVal === "AP") {
+    //            document.getElementById("lbldrparln_" + TripNumber).style.display = "inline-block";
+    //            document.getElementById("lbldrpflght_" + TripNumber).style.display = "inline-block";
+    //            document.getElementById("lbldrptm_" + TripNumber).style.display = "inline-block";               
+    //            getAirLineLocations("AL")
+    //            //$.get("/Home/GetLocationsByType",
+    //            //    {
+    //            //        type: "AL"
+    //            //    },
+    //            //    function (data, status) {
+    //            //        let d = data;
+    //            //        $.each(data, function () {
+    //            //            $("#drp_arln").empty();
+    //            //            $("#drp_arln").append($("<option>", {
+    //            //                value: "0",
+    //            //                text: "Select"
+    //            //            }));
+    //            //            $.each(data, function (i, item) {
+
+    //            //                $("#drp_arln").append($("<option>", {
+    //            //                    value: item.lctn_id,
+    //            //                    text: item.lctn_nme
+    //            //                }));
+    //            //            });
+    //            //        });
+    //            //    });
+    //        }
+    //        else {
+    //            document.getElementById("#lbldrparln_" + TripNumber).style.display = "none";
+    //            document.getElementById("#lbldrpflght_" + TripNumber).style.display = "none";
+    //            document.getElementById("#lbldrptm_" + TripNumber).style.display = "none";
+    //        }
+    //        drpgetLocationsByType(selectedVal)
+    //        //$.get("/Home/GetLocationsByType",
+    //        //    {
+    //        //        type: selectedVal
+    //        //    },
+    //        //    function (data, status) {
+    //        //        let d = data;
+    //        //        $.each(data, function () {
+    //        //            $("#drop_lctn_to").empty();
+    //        //            $("#drop_lctn_to").append($("<option>", {
+    //        //                value: "0",
+    //        //                text: "Select"
+    //        //            }));
+    //        //            $.each(data, function (i, item) {
+
+    //        //                $("#drop_lctn_to").append($("<option>", {
+    //        //                    value: item.lctn_id,
+    //        //                    text: item.lctn_nme
+    //        //                }));
+    //        //            });
+    //        //        });
+    //        //    });
+    //    });
+    //});
+    //$(function () {
+    //    $("#Pcklctntpe_" + TripNumber).change(function () {
+    //        // alert($('option:selected', this).val());
+    //        var selectedVal = $('option:selected', this).val()
+    //        var lbl = $('option:selected', this).text();
+    //        $('#lblpck_' + TripNumber).text(lbl);
+
+    //        if (selectedVal === "AP") {
+    //            document.getElementById("#lblpckarln_" + TripNumber).style.display = "inline-block";
+    //            document.getElementById("lblpckflght_" + TripNumber).style.display = "inline-block";
+    //            document.getElementById("lblfrmtm_" + TripNumber).style.display = "inline-block";
+    //            getAirLineLocations("AL")
+    //            //$.get("/Home/GetLocationsByType",
+    //            //    {
+    //            //        type: "AL"
+    //            //    },
+    //            //    function (data, status) {
+    //            //        let d = data;
+    //            //        $.each(data, function () {
+    //            //            $("#pck_arln").empty();
+    //            //            $("#pck_arln").append($("<option>", {
+    //            //                value: "0",
+    //            //                text: "Select"
+    //            //            }));
+    //            //            $.each(data, function (i, item) {
+
+    //            //                $("#pck_arln").append($("<option>", {
+    //            //                    value: item.lctn_id,
+    //            //                    text: item.lctn_nme
+    //            //                }));
+    //            //            });
+    //            //        });
+    //            //    });
+    //        }
+    //        else {
+    //            document.getElementById("lblpckarln_" + TripNumber).style.display = "none";
+    //            document.getElementById("lblpckflght_" + TripNumber).style.display = "none";
+    //            document.getElementById("lblfrmtm_" + TripNumber).style.display = "none";
+    //        }
+    //        pckgetLocationsByType(selectedVal)
+
+    //        //$.get("/Home/GetLocationsByType",
+    //        //    {
+    //        //        type:selectedVal
+    //        //    },
+    //        //    function (data, status) {
+    //        //        let d = data;
+    //        //        $.each(data, function () {
+    //        //            $("#pck_lctn").empty();
+    //        //            $("#pck_lctn").append($("<option>", {
+    //        //                value: "0",
+    //        //                text: "Select"
+    //        //            }));
+    //        //            $.each(data, function (i, item) {
+
+    //        //                $("#pck_lctn").append($("<option>", {
+    //        //                    value: item.lctn_id,
+    //        //                    text: item.lctn_nme
+    //        //                }));
+    //        //            });
+    //        //        });
+    //        //    });
+    //    });
+    //});
+
+
+
+
+
+    //$(function () {
+    //    $("#Pcklctntpe_" + TripNumber).change(function () {
+    //       // alert($('option:selected', this).val());
+    //        var selectedVal = $('option:selected', this).val()
+    //        var lbl = $('option:selected', this).text();
+    //        $('#lblpck_' + TripNumber).text(lbl);            
+           
+    //        if (selectedVal === "AP") {
+    //            document.getElementById("lblpckarln_" + TripNumber).style.display = "inline-block";
+    //            document.getElementById("lblpckflght_" + TripNumber).style.display = "inline-block";
+    //            document.getElementById("lblfrmtm_" + TripNumber).style.display = "inline-block";
+    //            getAirLineLocations("AL")
+    //            //$.get("/Home/GetLocationsByType",
+    //            //    {
+    //            //        type: "AL"
+    //            //    },
+    //            //    function (data, status) {
+    //            //        let d = data;
+    //            //        $.each(data, function () {
+    //            //            $("#pck_arln").empty();
+    //            //            $("#pck_arln").append($("<option>", {
+    //            //                value: "0",
+    //            //                text: "Select"
+    //            //            }));
+    //            //            $.each(data, function (i, item) {
+
+    //            //                $("#pck_arln").append($("<option>", {
+    //            //                    value: item.lctn_id,
+    //            //                    text: item.lctn_nme
+    //            //                }));
+    //            //            });
+    //            //        });
+    //            //    });
+    //        }
+    //        else {
+    //            document.getElementById("lblpckarln_" + TripNumber).style.display = "none";
+    //            document.getElementById("lblpckflght_" + TripNumber).style.display = "none";
+    //            document.getElementById("lblfrmtm_" + TripNumber).style.display = "none";
+    //        }
+    //        pckgetLocationsByType(selectedVal)
+            
+    //        //$.get("/Home/GetLocationsByType",
+    //        //    {
+    //        //        type:selectedVal
+    //        //    },
+    //        //    function (data, status) {
+    //        //        let d = data;
+    //        //        $.each(data, function () {
+    //        //            $("#pck_lctn").empty();
+    //        //            $("#pck_lctn").append($("<option>", {
+    //        //                value: "0",
+    //        //                text: "Select"
+    //        //            }));
+    //        //            $.each(data, function (i, item) {
+
+    //        //                $("#pck_lctn").append($("<option>", {
+    //        //                    value: item.lctn_id,
+    //        //                    text: item.lctn_nme
+    //        //                }));
+    //        //            });
+    //        //        });
+    //        //    });
+    //    });
+    //});
+//    function pckgetLocationsByType(data) {
+//        $.get("/Home/GetLocationsByType",
+//            {
+//                type:data
+//            },
+//            function (data, status) {
+//                let d = data;
+//                var f = '#pcklctn_' + TripNumber; // '#pcklctn_' + trpcnt;
+//                $.each(data, function () {
+////                    $("#pck_lctn").empty();
+//                    $(f).empty();
+////                    $("#pck_lctn").append($("<option>", {
+//                    $(f).append($("<option>", {value: "0",text: "Select"}));
+//                    $.each(data, function (i, item) {
+
+////                        $("#pck_lctn").append($("<option>", {
+//                    $(f).append($("<option>", {value: item.lctn_id,text: item.lctn_nme}));
+//                    });
+//                });
+//            });
+//    }
+
+    function pckgetLocationsByType(data) {
+        $.get("/Home/GetLocationsByType",
+            {
+                type: data
+            },
+            function (data, status) {
+                let d = data;
+                $.each(data, function () {
+                    $("#pcklctn_" + TripNumber).empty();
+                    $("#pcklctn_" + TripNumber).append($("<option>", {
+                        value: "0",
+                        text: "Select"
+                    }));
+                    $.each(data, function (i, item) {
+                        $("#pcklctn_" + TripNumber).append($("<option>", {
+                            value: item.lctn_id,
+                            text: item.lctn_nme
+                        }));
+                    });
+                });
+            });
+    }
+
+    function drpgetLocationsByType(data) {
+        $.get("/Home/GetLocationsByType",
+            {
+                type: data
+            },
+            function (data, status) {
+                let d = data;
+                $.each(data, function () {
+                    $("#drplctnto_" + TripNumber).empty();
+                    $("#drplctnto_" + TripNumber).append($("<option>", {
+                        value: "0",
+                        text: "Select"
+                    }));
+                    $.each(data, function (i, item) {
+                        $("#drplctnto_" + TripNumber).append($("<option>", {
+                            value: item.lctn_id,
+                            text: item.lctn_nme
+                        }));
+                    });
+                });
+            });
+    }
+    function getAirLineLocations(data) {
+        $.get("/Home/GetLocationsByType",
+            {
+                type: data
+            },
+            function (data, status) {
+                let d = data;
+                let e = document.getElementById("pckarln_" + TripNumber);
+                //e.empty();
+                $.each(data, function () {
+                    $("#pckarln_" + TripNumber).empty();
+                    $("#pckarln_" + TripNumber).append($("<option>", {
+                        value: "0",
+                        text: "Select"
+                    }));
+                    $("#drparln_" + TripNumber).empty();
+                    $("#drparln_" + TripNumber).append($("<option>", {
+                        value: "0",
+                        text: "Select"
+                    }));
+                    $.each(data, function (i, item) {
+                        $("#pckarln_" + TripNumber).append($("<option>", {
+                            value: item.lctn_id,
+                            text: item.lctn_nme
+                        }));
+                        $("#drparln_").append($("<option>", {
+                            value: item.lctn_id,
+                            text: item.lctn_nme
+                        }));
+                    });
+                });
+            });
+    }
+    function SaveCustomer() {    
+        Rsvtnfrm = {             
+            htl_id: $('#htl_lst').val(),
+            htl_clrk: $('#htl_clrk').val(),          
+            htl_rsrvtn_nmbr: $('#htl_rsrvtn_nmbr').val(),
+            shp_id: $('#shp_lst').val(),
+            shp_fc: $('#shp_fc').val(),
+            shp_tm: $('#shp_tm').val(),
+            shp_pd: $('#shp_pd').val(),
+            shp_dt: $('#shp_dt').val(),
+            shp_cst: $('#shp_cst').val(),
+            vrfd_eml_rcvd: $('#vrfd_eml_rcvd').val(), 
+            vrfd_Inf: $('#vrfd_Inf').val(), 
+            rsrvtn_ctgry: $('#rsrvtn_ctgry').val(),
+            rsrvtn_tpe: $('#rsrvtn_tpe').val(),         
+            gst_fnme: $('#gst_fnme').val(),
+            gst_lnme: $('#gst_lnme').val(),
+            gst_cphn1: $('#gst_cphn1').val(),
+            gst_eml: $('#gst_eml').val(),
+            gst_cphn2: $('#gst_cphn2').val(),
+            arrvl_dt: $('#arrvl_dt').val(),
+            arrvl_tm: $('#arrvl_tm').val(),
+            arrvl_arprt: $('#arrvl_arprt').val(),
+            arrvl_arln: $('#arrvl_arln').val(),
+            arrvl_flght_nmbr: $('#arrvl_flght_nmbr').val(),
+            arrvl_nmbr_pssngrs: $('#arrvl_nmbr_pssngrs').val(),
+            arrvl_pckup_tm: $('#arrvl_pckup_tm').val(),
+            arrvl_drpoff_loc: $('#arrvl_drpoff_loc').val(),
+            dep_dt: $('#dep_dt').val(),
+            dep_tm: $('#dep_tm').val(),
+            dep_arprt: $('#dep_arprt').val(),
+            dep_arln: $('#dep_arln').val(),
+            dep_flght_nmbr: $('#dep_flght_nmbr').val(),
+            dep_nmbr_pssngrs: $('#dep_nmbr_pssngrs').val(),
+            dep_pck_up_tm: $('#dep_pck_up_tm').val(),
+            dep_drp_off_loc: $('#dep_drp_off_loc').val(),
+            whlchr: $('#whlchr').val(),
+            whlchr_cnfld: $('#whlchr_cnfld').val(),
+            addtnl_inf: $('#addtnl_inf').val(),
+            rsrvtn_nbr: $('#rsrvtn_nbr').val()
+        }
+        console.log(Rsvtnfrm)
+        //alert(Rsvtnfrm)
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("SaveReservationFrm")',
+                data: JSON.stringify(Rsvtnfrm),
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function () {
+                    alert("Data has been added successfully.");
+                },
+                error: function () {
+                    alert("Error while inserting data");
+                }
+            });
+    }
+    $("#gst_eml").blur(function () {
+        //alert('working');
+        var SearchTerm = document.getElementById("gst_eml").value
+        if (SearchTerm != "") {
+            $.get("/Home/GetCustomerByEmail",
+                {
+                    Email: SearchTerm
+                },
+                function (data, status) {
+                    if (data != null && data != "") {
+                        console.log(data);
+                        $('#gst_fnme').val(data[0].CstmrFN);
+                        $('#gst_lnme').val(data[0].CstmrLN);
+                        $('#gst_cphn1').val(data[0].CstmrPhn1);
+                        $('#gst_cphn2').val(data[0].CstmrPhn2);                   
+                    }
+                    else {
+                    }
+                    //alert("Data: " + data + "\nStatus: " + status);
+                    //alert("Changed!");
+                });
+        }
+        localStorage.setItem("OrderID", "");
+    })
+</script>

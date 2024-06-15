@@ -1205,9 +1205,6 @@ namespace AuthModule.Controllers
                 ViewBag.ALL = "1";
                 return "0";
             }
-
-
-            return "0";
         }
         public string DeleteCreditAppDD(string Id)
         {
@@ -1231,9 +1228,6 @@ namespace AuthModule.Controllers
                 ViewBag.ALL = "1";
                 return "0";
             }
-
-
-            return "0";
         }
 
         [HttpPost]
@@ -1280,7 +1274,7 @@ namespace AuthModule.Controllers
 
             ViewBag.TypeList = locationTypesList;
             IEnumerable<tblLocations> locationList = db.Database.SqlQuery
-                                                                           <tblLocations>("select * from udfGetLocations()").ToList();
+                                                                           <tblLocations>("select * from udfGetLocations(Default)").ToList();
             ViewBag.locationList = locationList;
             string rsrvtnId = Guid.NewGuid().ToString();
             ViewBag.ReservationId = rsrvtnId;
@@ -1330,7 +1324,7 @@ namespace AuthModule.Controllers
         public JsonResult GetLocationTypes()
         {
             IEnumerable<tblLocationType> locationTypesList = db.Database.SqlQuery
-                                                                           <tblLocationType>("select * from udfGetLocationTypes()").ToList();
+                                                                           <tblLocationType>("select * from udfGetRsvtnlctntyp()").ToList();
 
             return Json(locationTypesList, JsonRequestBehavior.AllowGet);
         }
@@ -1398,11 +1392,19 @@ namespace AuthModule.Controllers
         public ActionResult Locations()
         {
             IEnumerable<tblLocations> locationList = db.Database.SqlQuery
-                                                                           <tblLocations>("select * from udfGetLocations()").ToList();
+                                                                           <tblLocations>("select * from udfGetLocations(DEFAULT)").ToList();
 
             return View(locationList);
             
         }
+        //public ActionResult Locations(string option,string serach)
+        //{
+        //    IEnumerable<tblLocations> locationList = db.Database.SqlQuery
+        //                                                                   <tblLocations>("select * from udfGetLocations()").ToList();
+
+        //    return View(locationList);
+
+        //}
         [HttpGet]
         public ActionResult EditLocation(int LocationId)
         {
@@ -1569,12 +1571,10 @@ namespace AuthModule.Controllers
 
         public JsonResult GetLocationsByType(string type)
         {
+            type = type ?? "default";
             IEnumerable<tblLocations> locationList = db.Database.SqlQuery
-                                                                           <tblLocations>("select * from udfGetLocations() where lctn_tpe = {0}", type).ToList();
-
-
+                                                                           <tblLocations>("select * from udfGetLocations({0})", type).ToList();
             return Json(locationList, JsonRequestBehavior.AllowGet);
-
         }
     }
 }

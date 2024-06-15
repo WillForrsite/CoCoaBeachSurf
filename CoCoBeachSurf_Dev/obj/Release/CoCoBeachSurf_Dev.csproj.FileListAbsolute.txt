@@ -331,7 +331,6 @@ C:\Bluechip Development\CoCoaBeachSurf\CoCoBeachSurf_Dev\bin\Microsoft.AI.Window
 C:\Bluechip Development\CoCoaBeachSurf\CoCoBeachSurf_Dev\bin\Microsoft.AI.Web.xml
 C:\Bluechip Development\CoCoaBeachSurf\CoCoBeachSurf_Dev\obj\Release\CoCoBeachSurf_Dev.csproj.AssemblyReference.cache
 C:\Bluechip Development\CoCoaBeachSurf\CoCoBeachSurf_Dev\obj\Release\CoCoBeachSurf_Dev.csproj.CoreCompileInputs.cache
-C:\Bluechip Development\CoCoaBeachSurf\CoCoBeachSurf_Dev\obj\Release\CoCoBeachSurf_Dev.csproj.CopyComplete
 C:\Bluechip Development\CoCoaBeachSurf\CoCoBeachSurf_Dev\obj\Release\AuthModule.dll
 C:\Bluechip Development\CoCoaBeachSurf\CoCoBeachSurf_Dev\obj\Release\AuthModule.pdb
 C:\Data1\Source\Repos\CoCoaBeachSurf\CoCoBeachSurf_Dev\bin\ApplicationInsights.config
@@ -446,3 +445,4 @@ C:\Data1\Source\Repos\CoCoaBeachSurf\CoCoBeachSurf_Dev\obj\Release\CoCoBeachSurf
 C:\Data1\Source\Repos\CoCoaBeachSurf\CoCoBeachSurf_Dev\obj\Release\CoCoBeachSurf_Dev.csproj.CopyComplete
 C:\Data1\Source\Repos\CoCoaBeachSurf\CoCoBeachSurf_Dev\obj\Release\AuthModule.dll
 C:\Data1\Source\Repos\CoCoaBeachSurf\CoCoBeachSurf_Dev\obj\Release\AuthModule.pdb
+C:\Bluechip Development\CoCoaBeachSurf\CoCoBeachSurf_Dev\obj\Release\CoCoBeac.ECDBFB73.Up2Date
