@@ -447,16 +447,6 @@
             <p id="RsrvtnTot" style="border: 0px; padding: 0px; font-size: 25px; line-height: 30px;">Total: $0.00</p>
         </div>
     </div>
-    @*<div>
-            <h4 style="width: 100%; text-align: center; border-bottom: 0px solid #000; line-height: 0.1em;">
-                <input id="btnAddTrp" class="btn btn-default" type="button" style="font-weight: 900;" value="+" />
-            </h4>
-            <div class="flex-pick-item">
-                <p id="TrpCst_Tmplt" style=" border: 0px; padding: 0px; font-size: 25px; position: absolute; right: 30px; display:inline-flex;">Discounts: $0.00</p><br />
-                <p id="TrpCst_Tmplt" style=" border: 0px; padding: 0px; font-size: 25px; position: absolute; right: 30px; display:inline-flex;">Fees: $0.00</p><br />
-                <p id="TrpCst_Tmplt" style=" border: 0px; padding: 0px; font-size: 25px; position: absolute; right: 30px; display:inline-flex;">Total: $0.00</p>
-            </div>
-        </div>*@
     <div class="flex-pick" style="text-align: center; display:block;">
         <a class="btn btn-success" OnClick="SaveCustomer()" href="#" id="MncAgr" style=" font-size: 20px;">
             Submit
@@ -704,7 +694,7 @@
                     document.getElementById("Drparln_" + TripNumber.toString()).style.display = "none";
                    break;
             }
-            drpgetLocationsByType(selectedVal);
+           // drpgetLocationsByType(selectedVal);
         };
         //if (changedElement.id == 'frmtm_' + TripNumber.toString()) {
         //    alert(ChangedElement.value);

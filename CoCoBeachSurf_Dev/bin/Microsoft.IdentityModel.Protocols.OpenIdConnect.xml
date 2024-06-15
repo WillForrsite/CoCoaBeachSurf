@@ -361,6 +361,13 @@
             </summary>
             <return>true if 'response_types_supported' (ResponseTypesSupported) is not empty; otherwise, false.</return>
         </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeSigningKeys">
+            <summary>
+            Gets a bool that determines if the 'SigningKeys' property should be serialized.
+            This is used by Json.NET in order to conditionally serialize properties.
+            </summary>
+            <return>true if 'SigningKeys' is not empty; otherwise, false.</return>
+        </member>
         <member name="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeScopesSupported">
             <summary>
             Gets a bool that determines if the 'scopes_supported' (ScopesSupported) property should be serialized.
@@ -628,7 +635,7 @@
         </member>
         <member name="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectMessage.CreateLogoutRequestUrl">
             <summary>
-            Creates a query string using the using the current contents of this <see cref="T:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectMessage"/>.
+            Creates a query string using the current contents of this <see cref="T:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectMessage"/>.
             </summary>
             <returns>The uri to use for a redirect.</returns>
         </member>

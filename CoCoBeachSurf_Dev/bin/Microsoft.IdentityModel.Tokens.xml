@@ -19,6 +19,11 @@
             Base class for a Security Key that contains Asymmetric key material.
             </summary>
         </member>
+        <member name="M:Microsoft.IdentityModel.Tokens.AsymmetricSecurityKey.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
         <member name="P:Microsoft.IdentityModel.Tokens.AsymmetricSecurityKey.HasPrivateKey">
             <summary>
             This must be overridden to get a bool indicating if a private key exists.
@@ -588,6 +593,65 @@
             </summary>
             <param name="algorithm">the name of the compression algorithm.</param>
             <returns>true if the compression algorithm is supported, false otherwise.</returns>
+        </member>
+        <member name="T:Microsoft.IdentityModel.Tokens.ECDsaAdapter">
+            <summary>
+            This adapter abstracts the <see cref="T:System.Security.Cryptography.ECDsa"/> differences between versions of .Net targets.
+            </summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Tokens.ECDsaAdapter.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.Tokens.ECDsaAdapter"/> class.
+            </summary>
+            <exception cref="T:System.PlatformNotSupportedException">
+            <see cref="T:System.Security.Cryptography.ECDsa"/> creation is not supported by NETSTANDARD1.4, when running on platforms other than Windows.
+            For more details, see https://aka.ms/IdentityModel/create-ecdsa.
+            </exception>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Tokens.ECDsaAdapter.CreateECDsa(Microsoft.IdentityModel.Tokens.JsonWebKey,System.Boolean)">
+            <summary>
+            Creates an ECDsa object using the <paramref name="jsonWebKey"/> and <paramref name="usePrivateKey"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Tokens.ECDsaAdapter.CreateECDsaUsingCNGKey(Microsoft.IdentityModel.Tokens.JsonWebKey,System.Boolean)">
+            <summary>
+            Creates an ECDsa object using the <paramref name="jsonWebKey"/> and <paramref name="usePrivateKey"/>.
+            'ECParameters' structure is available in .NET Framework 4.7+, .NET Standard 1.6+, and .NET Core 1.0+.
+            This method is supported only on Windows as other platforms don't support operations with <see cref="T:System.Security.Cryptography.CngKey"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Tokens.ECDsaAdapter.GetKeyByteCount(System.String)">
+            <summary>
+            Returns the size of key in bytes
+            </summary>
+            <param name="curveId">Represents ecdsa curve -P256, P384, P521</param>
+            <returns>Size of the key in bytes</returns>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Tokens.ECDsaAdapter.GetKeySize(System.String)">
+            <summary>
+            Returns the size of key in bits.
+            </summary>
+            <param name="curveId">Represents ecdsa curve -P256, P384, P512</param>
+            <returns>Size of the key in bits.</returns>
+        </member>
+        <member name="T:Microsoft.IdentityModel.Tokens.ECDsaAdapter.KeyBlobMagicNumber">
+            <summary>
+            Magic numbers identifying ECDSA blob types
+            </summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Tokens.ECDsaAdapter.GetMagicValue(System.String,System.Boolean)">
+            <summary>
+            Returns the magic value representing the curve corresponding to the curve id.
+            </summary>
+            <param name="curveId">Represents ecdsa curve -P256, P384, P512</param>
+            <param name="willCreateSignatures">Whether the provider will create signatures or not</param>
+            <returns>Uint representing the magic number</returns>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Tokens.ECDsaAdapter.SupportsCNGKey">
+            <summary>
+            Tests if user's runtime platform supports operations using <see cref="T:System.Security.Cryptography.CngKey"/>.
+            </summary>
+            <returns>True if operations using <see cref="T:System.Security.Cryptography.CngKey"/> are supported on user's runtime platform, false otherwise.</returns>
         </member>
         <member name="T:Microsoft.IdentityModel.Tokens.ECDsaSecurityKey">
             <summary>
@@ -1682,11 +1746,6 @@
             Represents a JSON Web Key as defined in http://tools.ietf.org/html/rfc7517.
             </summary>
         </member>
-        <member name="T:Microsoft.IdentityModel.Tokens.JsonWebKey.KeyBlobMagicNumber">
-            <summary>
-            Magic numbers identifying ECDSA blob types
-            </summary>
-        </member>
         <member name="M:Microsoft.IdentityModel.Tokens.JsonWebKey.Create(System.String)">
             <summary>
             Returns a new instance of <see cref="T:Microsoft.IdentityModel.Tokens.JsonWebKey"/>.
@@ -1708,6 +1767,11 @@
             <param name="json">A string that contains JSON Web Key parameters in JSON format.</param>
             <exception cref="T:System.ArgumentNullException">If 'json' is null or empty.</exception>
             <exception cref="T:System.ArgumentException">If 'json' fails to deserialize.</exception>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Tokens.JsonWebKey.ConvertedSecurityKey">
+            <summary>
+            If this was converted to or from a SecurityKey, this field will be set.
+            </summary>
         </member>
         <member name="P:Microsoft.IdentityModel.Tokens.JsonWebKey.AdditionalData">
             <summary>
@@ -1864,32 +1928,16 @@
             </summary>
              <return>true if 'x5c' collection (X.509 Certificate Chain) is not empty; otherwise, false.</return>
         </member>
-        <member name="M:Microsoft.IdentityModel.Tokens.JsonWebKey.GetKeyByteCount(System.String)">
+        <member name="M:Microsoft.IdentityModel.Tokens.JsonWebKey.ToString">
             <summary>
-            Returns the size of key in bytes
+            Returns the formatted string: GetType(), Use: 'value', Kid: 'value', Kty: 'value', InternalId: 'value'.
             </summary>
-            <param name="curveId">Represents ecdsa curve -P256, P384, P521</param>
-            <returns>Size of the key in bytes</returns>
-        </member>
-        <member name="M:Microsoft.IdentityModel.Tokens.JsonWebKey.GetKeySize(System.String)">
-            <summary>
-            Returns the size of key in bits.
-            </summary>
-            <param name="curveId">Represents ecdsa curve -P256, P384, P512</param>
-            <returns>Size of the key in bits.</returns>
-        </member>
-        <member name="M:Microsoft.IdentityModel.Tokens.JsonWebKey.GetMagicValue(System.String,System.Boolean)">
-            <summary>
-            Returns the magic value representing the curve corresponding to the curve id.
-            </summary>
-            <param name="curveId">Represents ecdsa curve -P256, P384, P512</param>
-            <param name="willCreateSignatures">Whether the provider will create signatures or not</param>
-            <returns>Uint representing the magic number</returns>
+            <returns>string</returns>
         </member>
         <member name="T:Microsoft.IdentityModel.Tokens.JsonWebKeyConverter">
             <summary>
             Converts a <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey"/> into a <see cref="T:Microsoft.IdentityModel.Tokens.JsonWebKey"/>
-            Supports: <see cref="T:Microsoft.IdentityModel.Tokens.RsaSecurityKey"/>, <see cref="T:Microsoft.IdentityModel.Tokens.X509SecurityKey"/> and <see cref="T:Microsoft.IdentityModel.Tokens.SymmetricSecurityKey"/>.
+            Supports: converting to a <see cref="T:Microsoft.IdentityModel.Tokens.JsonWebKey"/> from one of: <see cref="T:Microsoft.IdentityModel.Tokens.RsaSecurityKey"/>, <see cref="T:Microsoft.IdentityModel.Tokens.X509SecurityKey"/>, and <see cref="T:Microsoft.IdentityModel.Tokens.SymmetricSecurityKey"/>.
             </summary>
         </member>
         <member name="M:Microsoft.IdentityModel.Tokens.JsonWebKeyConverter.ConvertFromSecurityKey(Microsoft.IdentityModel.Tokens.SecurityKey)">
@@ -1984,10 +2032,23 @@
             Gets the <see cref="T:System.Collections.Generic.IList`1"/>.
             </summary>       
         </member>
+        <member name="F:Microsoft.IdentityModel.Tokens.JsonWebKeySet.DefaultSkipUnresolvedJsonWebKeys">
+            <summary>
+            Default value for the flag that controls whether unresolved JsonWebKeys will be included in the resulting collection of <see cref="M:Microsoft.IdentityModel.Tokens.JsonWebKeySet.GetSigningKeys"/> method.
+            </summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Tokens.JsonWebKeySet.SkipUnresolvedJsonWebKeys">
+            <summary>
+            Flag that controls whether unresolved JsonWebKeys will be included in the resulting collection of <see cref="M:Microsoft.IdentityModel.Tokens.JsonWebKeySet.GetSigningKeys"/> method.
+            </summary>
+        </member>
         <member name="M:Microsoft.IdentityModel.Tokens.JsonWebKeySet.GetSigningKeys">
             <summary>
             Returns the JsonWebKeys as a <see cref="T:System.Collections.Generic.IList`1"/>.
             </summary>
+            <remarks>
+            To include unresolved JsonWebKeys in the resulting <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey"/> collection, set <see cref="P:Microsoft.IdentityModel.Tokens.JsonWebKeySet.SkipUnresolvedJsonWebKeys"/> to <c>false</c>.
+            </remarks>
         </member>
         <member name="T:Microsoft.IdentityModel.Tokens.JsonWebKeySetParameterNames">
             <summary>
@@ -2010,6 +2071,9 @@
             The purpose of this class is to ensure that we obtain an RsaCryptoServiceProvider that supports SHA-256 signatures.
             If the original RsaCryptoServiceProvider doesn't support SHA-256, we create a new one using the same KeyContainer.
             </summary>
+            <remarks>
+            There is no support for <see cref="T:System.Security.Cryptography.CspParameters"/> and <see cref="T:System.Security.Cryptography.CspKeyContainerInfo"/> on non-Windows platforms which makes <see cref="T:Microsoft.IdentityModel.Tokens.RSACryptoServiceProviderProxy"/> a Windows-specific class.
+            </remarks>
         </member>
         <member name="P:Microsoft.IdentityModel.Tokens.RSACryptoServiceProviderProxy.SignatureAlgorithm">
             <summary>
@@ -2159,6 +2223,11 @@
             Base class for Security Key.
             </summary>
         </member>
+        <member name="M:Microsoft.IdentityModel.Tokens.SecurityKey.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
         <member name="P:Microsoft.IdentityModel.Tokens.SecurityKey.KeySize">
             <summary>
             This must be overridden to get the size of this <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey"/>.
@@ -2173,6 +2242,12 @@
             <summary>
             Gets or sets <see cref="T:Microsoft.IdentityModel.Tokens.CryptoProviderFactory"/>.
             </summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Tokens.SecurityKey.ToString">
+            <summary>
+            Returns the formatted string: GetType(), KeyId: 'value', InternalId: 'value'.
+            </summary>
+            <returns>string</returns>
         </member>
         <member name="T:Microsoft.IdentityModel.Tokens.SecurityKeyIdentifierClause">
             <summary>
@@ -2225,6 +2300,11 @@
             Gets or sets the value of the 'audience' claim.
             </summary>
         </member>
+        <member name="P:Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor.CompressionAlgorithm">
+            <summary>
+            Defines the compression algorithm that will be used to compress the JWT token payload.
+            </summary>
+        </member>
         <member name="P:Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor.EncryptingCredentials">
             <summary>
             Gets or sets the <see cref="P:Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor.EncryptingCredentials"/> used to create a encrypted security token.
@@ -2248,6 +2328,11 @@
         <member name="P:Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor.NotBefore">
             <summary>
             Gets or sets the notbefore time for the security token.
+            </summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor.Claims">
+            <summary>
+            Gets or sets the <see cref="T:System.Collections.Generic.Dictionary`2"/> which represents the claims that will be used when creating a security token.
             </summary>
         </member>
         <member name="P:Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor.SigningCredentials">
@@ -2303,6 +2388,13 @@
             This must be overridden to get the System.Type of the SecurityToken this instance handles.
             </summary>
         </member>
+        <member name="M:Microsoft.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken(System.Xml.XmlReader)">
+            <summary>
+            Indicates whether the <see cref="T:System.Xml.XmlReader"/> is positioned at an element that can be read.
+            </summary>
+            <param name="reader">An <see cref="T:System.Xml.XmlReader"/> reader positioned at a start element. The reader should not be advanced.</param>
+            <returns>'true' if the token can be read.</returns>
+        </member>
         <member name="M:Microsoft.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken(System.String)">
             <summary>
             Indicates whether the current token string can be read as a token 
@@ -2354,6 +2446,14 @@
             <param name="securityToken">A token of type <see cref="P:Microsoft.IdentityModel.Tokens.SecurityTokenHandler.TokenType"/>.</param>
             <param name="validationParameters">the current <see cref="T:Microsoft.IdentityModel.Tokens.TokenValidationParameters"/>.</param>
             <param name="validatedToken">The token of type <see cref="P:Microsoft.IdentityModel.Tokens.SecurityTokenHandler.TokenType"/> that was validated.</param>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken(System.Xml.XmlReader,Microsoft.IdentityModel.Tokens.TokenValidationParameters,Microsoft.IdentityModel.Tokens.SecurityToken@)">
+            <summary>
+            Reads and validates a token using a xmlReader and <see cref="T:Microsoft.IdentityModel.Tokens.TokenValidationParameters"/>
+            </summary>
+            <param name="reader">A <see cref="T:System.Xml.XmlReader"/> pointing at the start element of the token.</param>
+            <param name="validationParameters">Contains data and information needed for validation.</param>
+            <param name="validatedToken">The <see cref="T:Microsoft.IdentityModel.Tokens.SecurityToken"/> that was validated.</param>
         </member>
         <member name="T:Microsoft.IdentityModel.Tokens.SignatureProvider">
             <summary>
@@ -2642,6 +2742,37 @@
             </summary>
             <param name="disposing">true, if called from Dispose(), false, if invoked inside a finalizer.</param>
         </member>
+        <member name="T:Microsoft.IdentityModel.Tokens.TokenContext">
+            <summary>
+            An opaque context used to store work when working with authentication artifacts.
+            </summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Tokens.TokenContext.#ctor">
+            <summary>
+            Instantiates a new <see cref="T:Microsoft.IdentityModel.Tokens.TokenContext"/> with a default activityId.
+            </summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Tokens.TokenContext.#ctor(System.Guid)">
+            <summary>
+            Instantiates a new <see cref="T:Microsoft.IdentityModel.Tokens.TokenContext"/> with an activityId.
+            </summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Tokens.TokenContext.ActivityId">
+            <summary>
+            Gets or set a <see cref="T:System.Guid"/> that will be used in the call to EventSource.SetCurrentThreadActivityId before logging.
+            </summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Tokens.TokenContext.CaptureLogs">
+            <summary>
+            Gets or sets a boolean controlling if logs are written into the context.
+            Useful when debugging.
+            </summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Tokens.TokenContext.Logs">
+            <summary>
+            The collection of logs associated with a request. Use <see cref="P:Microsoft.IdentityModel.Tokens.TokenContext.CaptureLogs"/> to control capture.
+            </summary>
+        </member>
         <member name="T:Microsoft.IdentityModel.Tokens.TokenHandler">
             <summary>
             Defines properties shared across all security token handlers.
@@ -2771,7 +2902,7 @@
             <summary>
             Default for the maximm token size.
             </summary>
-            <remarks>2 MB (mega bytes).</remarks>
+            <remarks>250 KB (kilobytes).</remarks>
         </member>
         <member name="M:Microsoft.IdentityModel.Tokens.TokenValidationParameters.#ctor(Microsoft.IdentityModel.Tokens.TokenValidationParameters)">
             <summary>
@@ -2930,6 +3061,11 @@
         <member name="P:Microsoft.IdentityModel.Tokens.TokenValidationParameters.PropertyBag">
             <summary>
             Gets or sets the <see cref="T:System.Collections.Generic.IDictionary`2"/> that contains a collection of custom key/value pairs. This allows addition of parameters that could be used in custom token validation scenarios.
+            </summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Tokens.TokenValidationParameters.RequireAudience">
+            <summary>
+            Gets or sets a value indicating whether SAML tokens must have at least one AudienceRestriction.
             </summary>
         </member>
         <member name="P:Microsoft.IdentityModel.Tokens.TokenValidationParameters.RequireExpirationTime">
@@ -3273,14 +3409,24 @@
         </member>
         <member name="T:Microsoft.IdentityModel.Tokens.X509SecurityKey">
             <summary>
-            Security key that allows access to cert
+            An <see cref="T:Microsoft.IdentityModel.Tokens.AsymmetricSecurityKey"/> that is backed by a <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2"/>
             </summary>
         </member>
         <member name="M:Microsoft.IdentityModel.Tokens.X509SecurityKey.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2)">
             <summary>
-            Instantiates a <see cref="T:Microsoft.IdentityModel.Tokens.SecurityKey"/> using a <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2"/>
+            Instantiates a <see cref="T:Microsoft.IdentityModel.Tokens.X509SecurityKey"/> using a <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2"/>
             </summary>
-            <param name="certificate">The cert to use.</param>
+            <param name="certificate">The <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2"/> to use.</param>
+            <exception cref="T:System.ArgumentNullException">if <paramref name="certificate"/> is null.</exception>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Tokens.X509SecurityKey.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2,System.String)">
+            <summary>
+            Instantiates a <see cref="T:Microsoft.IdentityModel.Tokens.X509SecurityKey"/> using a <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2"/>.
+            </summary>
+            <param name="certificate">The <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2"/> to use.</param>
+            <param name="keyId">The value to set for the KeyId</param>
+            <exception cref="T:System.ArgumentNullException">if <paramref name="certificate"/> is null.</exception>
+            <exception cref="T:System.ArgumentNullException">if <paramref name="keyId"/> is null or empty.</exception>
         </member>
         <member name="P:Microsoft.IdentityModel.Tokens.X509SecurityKey.KeySize">
             <summary>

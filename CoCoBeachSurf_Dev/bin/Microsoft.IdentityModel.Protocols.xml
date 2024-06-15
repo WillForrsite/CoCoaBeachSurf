@@ -74,6 +74,11 @@
             </summary>
             <param name="nameValueCollection"></param>
         </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.AuthenticationProtocolMessage.Script">
+            <summary>
+            Gets the script used when constructing the post string.
+            </summary>
+        </member>
         <member name="P:Microsoft.IdentityModel.Protocols.AuthenticationProtocolMessage.ScriptButtonText">
             <summary>
             Gets or sets the script button text used when constructing the post string.

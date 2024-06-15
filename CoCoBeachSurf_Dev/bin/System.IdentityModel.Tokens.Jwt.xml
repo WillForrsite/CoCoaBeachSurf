@@ -262,6 +262,12 @@
             Gets the thumbprint of the certificate used to sign the token
             </summary>
         </member>
+        <member name="P:System.IdentityModel.Tokens.Jwt.JwtHeader.Zip">
+            <summary>
+            Gets the 'value' of the 'zip' claim { zip, 'value' }.
+            </summary>
+            <remarks>If the 'zip' claim is not found, null is returned.</remarks>   
+        </member>
         <member name="M:System.IdentityModel.Tokens.Jwt.JwtHeader.Base64UrlDeserialize(System.String)">
             <summary>
             Deserializes Base64UrlEncoded JSON into a <see cref="T:System.IdentityModel.Tokens.Jwt.JwtHeader"/> instance.
@@ -1204,7 +1210,7 @@
             <param name="token">A 'JSON Web Token' (JWT) in JWS or JWE Compact Serialization Format.</param>
             <returns>A <see cref="T:System.IdentityModel.Tokens.Jwt.JwtSecurityToken"/></returns>
             <exception cref="T:System.ArgumentNullException">'token' is null or empty.</exception>
-            <exception cref="T:System.ArgumentException">'token.Length' $gt; <see cref="P:Microsoft.IdentityModel.Tokens.TokenHandler.MaximumTokenSizeInBytes"/>.</exception>
+            <exception cref="T:System.ArgumentException">'token.Length' is greater than <see cref="P:Microsoft.IdentityModel.Tokens.TokenHandler.MaximumTokenSizeInBytes"/>.</exception>
             <exception cref="T:System.ArgumentException"><see cref="M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CanReadToken(System.String)"/></exception>
             <remarks><para>If the 'token' is in JWE Compact Serialization format, only the protected header will be deserialized.</para>
             This method is unable to decrypt the payload. Use <see cref="M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(System.String,Microsoft.IdentityModel.Tokens.TokenValidationParameters,Microsoft.IdentityModel.Tokens.SecurityToken@)"/>to obtain the payload.</remarks>
@@ -1239,7 +1245,7 @@
             <param name="validatedToken">The <see cref="T:System.IdentityModel.Tokens.Jwt.JwtSecurityToken"/> that was validated.</param>
             <exception cref="T:System.ArgumentNullException"><paramref name="token"/> is null or whitespace.</exception>
             <exception cref="T:System.ArgumentNullException"><paramref name="validationParameters"/> is null.</exception>
-            <exception cref="T:System.ArgumentException"><paramref name="token"/>.Length $gt; MamimumTokenSizeInBytes.</exception>
+            <exception cref="T:System.ArgumentException"><paramref name="token"/>.Length is greater than <see cref="P:Microsoft.IdentityModel.Tokens.TokenHandler.MaximumTokenSizeInBytes"/>.</exception>
             <exception cref="T:System.ArgumentException"><paramref name="token"/> does not have 3 or 5 parts.</exception>
             <exception cref="T:System.ArgumentException"><see cref="M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CanReadToken(System.String)"/> returns false.</exception>
             <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenDecryptionFailedException"><paramref name="token"/> was a JWE was not able to be decrypted.</exception>

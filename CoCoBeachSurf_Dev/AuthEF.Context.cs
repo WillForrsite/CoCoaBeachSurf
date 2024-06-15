@@ -83,21 +83,13 @@ namespace AuthModule
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_I_tblProducts", prdIdParameter, prdCodeParameter, prdDescParameter, prdPriceParameter, activeParameter, cMByParameter, cMDateParameter, deleteParameter, catIdParameter);
         }
     
-        public virtual ObjectResult<vw_tblProducts> spGetProductList(Nullable<int> prdId)
+        public virtual ObjectResult<spGetProductList_Result> spGetProductList(Nullable<int> prdId)
         {
             var prdIdParameter = prdId.HasValue ?
                 new ObjectParameter("PrdId", prdId) :
                 new ObjectParameter("PrdId", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<vw_tblProducts>("spGetProductList", prdIdParameter);
-        }
-        public virtual ObjectResult<vw_tblCategory> spGetCategoryList(Nullable<int> catId)
-        {
-            var catIdParameter = catId.HasValue ?
-                new ObjectParameter("CatId", catId) :
-                new ObjectParameter("CatId", typeof(int));
-
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<vw_tblCategory>("spGetCategoryList", catIdParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spGetProductList_Result>("spGetProductList", prdIdParameter);
         }
     }
 }
