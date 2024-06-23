@@ -1,0 +1,2 @@
+﻿CREATE USER [jenifer.sql] WITHOUT LOGIN;
+

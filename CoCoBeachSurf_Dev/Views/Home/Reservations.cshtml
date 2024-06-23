@@ -290,7 +290,7 @@
     img {
         height: 100px;
         width: 100px;
-        border-radius: 50%;
+        border-radius: 0%;
     }
     .TrpNm {
         width: 100%;
@@ -343,18 +343,22 @@
     </h2>
     <div id="Trips">
         <div id="Trip_Tmplt" style="width: 100%; display: none;">
-            <table style=" margin-bottom: 10px; width:100%;">
+            <table style="margin-bottom: 10px; width:100%;">
                 <tr>
-                    <td style="background-color: #F7DC6F; "><input id="btnRmvTrp_Tmplt" class="circular-button-clear" style="display:inline-block;" type="button" /></td>
+                    <td style="background-color: #F7DC6F;"><input id="btnRmvTrp_Tmplt" class="circular-button-clear" style="display:inline-block;" type="button" /></td>
                     <td id="TripInfTD_Tmplt" style="background-color: #F7DC6F;">
                         <label id="TrpNm_Tmplt" class="TrpNm">Trip #</label>
-                    <td />
-                    <td style="background-color: #F7DC6F; ">
+                    </td>
+                    <td style="background-color: #F7DC6F;">
                         <fieldset id="fsTripInfo_Tmplt" class="fs-arrive" style="width: 100%; border: none; margin-bottom:5px">
                             <label4 class="ml">Date: <input type="date" id="TrpDt_Tmplt"></label4>
-                            <label4 class="ml" style=" /* margin-left: 10px;*/ width: 100px; "># Passengers: <input type="number" id="TrpPssngrs_Tmplt"></label4>
-                            <label id="TrpCst_Tmplt" class="ml" style="display:inline-block; font-size: 25px; position: absolute; right: 30px; padding: 0 ">$0.00</label>
+                            <label4 class="ml" style="width: 100px;"># Passengers: <input type="number" id="TrpPssngrs_Tmplt"></label4>
                         </fieldset>
+                    </td>
+                    <td style="background-color: #F7DC6F; text-align: right;padding-right:5px;">
+                        <label id="lblTripCst_Tmplt" class="ml" style="font-size: 25px; padding: 0;">
+                            <input type="number" id="TrpCst_Tmplt" style="width:100px; min-height:25px; padding-left: 15px; text-align: right; padding:0; margin-top:0; margin-bottom:10px;" class="TrpNm" min="0" pattern="^\d*(\.\d{0,2})?$" placeholder="$0.00" title="Please enter a number with up to 2 decimal places.">
+                        </label>
                     </td>
                 </tr>
             </table>
@@ -442,8 +446,11 @@
             <input id="btnAddTrp" class="btn btn-default" type="button" style="font-weight: 900;" value="+">
         </h4>
         <div id="Totals" style="height:150px; display: flex; flex-direction: column; align-items: flex-end;">
-            <p id="TrpCsts" style="border: 0px; padding: 0px; font-size: 25px; line-height: 30px;">Discounts: $0.00</p>
-            <p id="TrpFees" style="border: 0px; padding: 0px; font-size: 25px; line-height: 30px;">Fees: $0.00</p>
+            <p id="lblTrpDscnt" style="border: 0px; padding: 0px; font-size: 25px; line-height: 30px;">Discounts: $            <input type="number" id="TrpDscnt" style="width:100px; min-height:25px; padding-left: 15px; text-align: right; padding:0; margin-top:0; margin-bottom:10px;" min="0" pattern="^\d*(\.\d{0,2})?$" placeholder="0.00" title="Please enter a number with up to 2 decimal places.">
+            </p>
+            <p id="lblTrpFees" style="border: 0px; padding: 0px; font-size: 25px; line-height: 30px;">
+                Fees: $ <input type="number" id="TrpFees" style="width:100px; min-height:25px; padding-left: 15px; text-align: right; padding:0; margin-top:0; margin-bottom:10px;" min="0" pattern="^\d*(\.\d{0,2})?$" placeholder="0.00" title="Please enter a number with up to 2 decimal places.">
+            </p>
             <p id="RsrvtnTot" style="border: 0px; padding: 0px; font-size: 25px; line-height: 30px;">Total: $0.00</p>
         </div>
     </div>
@@ -459,10 +466,10 @@
     let shp_id;
     let trpcnt = +1;
     let TripNumber = +1;
+    let TotalRsrvtnCost = 0;
     let Trips;
     let TripTmplt;
     let TripCrrnt;
-    let CrrntElement;
     let RsrvtnID = 'xxxxxx';
     let Rsvtnfrm = [
         {
@@ -506,6 +513,7 @@
             rsrvtn_nbr:""
         }
     ];
+    const regex = /^[0-9]+$/;
     window.document.onload = function (e) {
         console.log("document.onload", e, Date.now(), window.tdiff,
             (window.tdiff[0] = Date.now()) && window.tdiff.reduce(fred));
@@ -525,7 +533,7 @@
     // Document Click Event Handler
     document.addEventListener('click', function (event) {
         clickedElement = event.target;
-        console.log('You clicked on: ', clickedElement.id);
+        console.log('You clicked on: ${clickedElement.id}');
         var EName = clickedElement.id;
         // Find the position of searchString in mainStringvar
         var position = EName.indexOf('_');
@@ -549,39 +557,40 @@
                 break;
             case ("btnRmvTrp_" + TripNumber.toString()):
                 console.log(TripNumber);
-                        if (TripNumber > 1) {
-                            document.getElementById('Trip_' + TripNumber.toString()).remove()
-                            //j = (+trpcnt - 1);
-                            if (TripNumber < trpcnt) {
-                                //Renumber Trips
-                                for (i = (+TripNumber + 1); i <= trpcnt; i++) {
-                                    let element = document.getElementById('Trip_' + i); // The `true` is for deep cloning Trip_Tmplt
-                                    element.id = element.id.substring(0, TripCrrnt.id.indexOf('_') + 1) + (i - 1);
-                                    let filteredElements = element.querySelectorAll('[id*="_' + i + '"]');
-                                    // Iterate over the NodeList and perform actions on each element
-                                    filteredElements.length
-                                    filteredElements.forEach(element => {
-                                    // For demonstration, let's log the ID of each element
-                                        element.setAttribute('id', element.id.substring(0, element.id.indexOf('_') + 1) + (i - 1));
-                                        switch (element.id.substring(0, element.id.indexOf('_') + 1)) {
-                                            case "TrpNm_":
-                                                element.textContent = "Trip " + (i-1).toString();
-                                                break;
-                                            default:
-                                                break;
-                                        }
-                                    //    console.log('Old:' + i + '  New:' + (i - 1));
-                                })
-                            }
+                if (TripNumber > 1) {
+                    document.getElementById('Trip_' + TripNumber.toString()).remove();
+                    //j = (+trpcnt - 1);
+                    if (TripNumber < trpcnt) {
+                        //Renumber Trips
+                        for (i = (+TripNumber + 1); i <= trpcnt; i++) {
+                            let element = document.getElementById('Trip_' + i); // The `true` is for deep cloning Trip_Tmplt
+                            element.id = element.id.substring(0, TripCrrnt.id.indexOf('_') + 1) + (i - 1);
+                            let filteredElements = element.querySelectorAll('[id*="_' + i + '"]');
+                            // Iterate over the NodeList and perform actions on each element
+                            filteredElements.length
+                            filteredElements.forEach(element => {
+                                // For demonstration, let's log the ID of each element
+                                element.setAttribute('id', element.id.substring(0, element.id.indexOf('_') + 1) + (i - 1));
+                                switch (element.id.substring(0, element.id.indexOf('_') + 1)) {
+                                    case "TrpNm_":
+                                        element.textContent = "Trip " + (i-1).toString();
+                                        break;
+                                    default:
+                                        break;
+                                }
+                                 //    console.log('Old:' + i + '  New:' + (i - 1));
+                            })
                         }
+                    }
                 };
                 trpcnt = (document.querySelectorAll('[id*="Trip_"]').length) - 1;
+                CalcTripTotal();
                 TripNumber = trpcnt;
-               break;
+                break;
             case "RsrvtnSearch":
                 var userInput = prompt("Enter Reservation Code:");
                 if (userInput != null) {
-                    console.log("User input: " + userInput);
+                    console.log("User input: ${userinput}.");
                     // You can also perform other actions with the input here
                 }
             default:
@@ -776,6 +785,55 @@
             getSelLocations(selectedVal, document.getElementById("pcklctn_" + TripNumber.toString()));// pckgetLocationsByType(selectedVal);
         };
     });
+    document.addEventListener('focusout', function (event) {
+        var changedElement = event.target;
+        var EName = document.getElementById(changedElement.id).id;
+        console.log('Focus blur from elment:' + changedElement.id)
+        // Find the position of searchString in mainStringvar
+        var position = EName.indexOf('_');
+        if (position !== -1) {
+            // If the searchString is found, take the remaining datavar
+            TripNumber = EName.substring(EName.indexOf('_') + 1); //, EName.length);      //position + 1);
+            // Now remainingData contains the string starting from the end of searchString
+        }
+        else {
+            console.log('_' + " not found in " + clickedElement.id);
+        }
+        switch (changedElement.id) {
+            case ('TrpCst_' + TripNumber.toString()):
+                CalcTripTotal();
+                document.getElementById('TrpCst_' + TripNumber.toString()).value = document.getElementById('TrpCst_' + TripNumber.toString()).value.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
+                break;
+            case "TrpDscnt":
+                CalcTripTotal();
+                document.getElementById('TrpDscnt' + TripNumber.toString()).value = document.getElementById('TrpDscnt' + TripNumber.toString()).value.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
+                break;
+            case "TrpFees":
+                CalcTripTotal();
+                document.getElementById('TrpFees' + TripNumber.toString()).value = document.getElementById('TrpFees' + TripNumber.toString()).value.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
+                break;
+            default:
+                break;
+        }
+    });
+    function CalcTripTotal() {
+        let t = 0;
+        filteredElements = document.querySelectorAll('[id*="TrpCst_"]');
+        // Iterate over the NodeList and perform actions on each element
+        //alert("Number of costs:" + filteredElements.length);
+            filteredElements.forEach(element => {
+                switch (element.id) {
+                    case "TrpCst_Tmplt":
+                        break;
+                    default:
+                        t += +document.getElementById(element.id).value;
+                };
+            //    alert(+document.getElementById(element.id).value);
+            });
+        t = t - +document.getElementById("TrpDscnt").value + +document.getElementById("TrpFees").value;
+        TotalRsrvtnCost = t;
+        document.getElementById("RsrvtnTot").innerHTML = "Total: " + TotalRsrvtnCost.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+    }
     function AddNewTrip() {
             //console.log('Adding a Trip NewMethod');
             TripNumber = +trpcnt;
@@ -904,7 +962,11 @@
             })
             .catch(error => console.error('Error:', error));
     }
+    vldtRsrvtn() {
+        break;
+    }
     function SaveCustomer() {
+        vldtRsrvtn();
         Rsvtnfrm = {
             htl_id: $('#htl_lst').val(),
             htl_clrk: $('#htl_clrk').val(),

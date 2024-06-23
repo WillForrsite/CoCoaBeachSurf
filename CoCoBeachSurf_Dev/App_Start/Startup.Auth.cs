@@ -5,8 +5,8 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.DataProtection;
-using Microsoft.Owin.Security.OpenIdConnect;
-using Microsoft.Owin.Security.Google;
+//using Microsoft.Owin.Security.OpenIdConnect;
+//using Microsoft.Owin.Security.Google;
 using Microsoft.Owin.Security.OAuth;
 using Owin;
 using AuthModule.Models;
@@ -17,6 +17,7 @@ using System.Threading.Tasks;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.Owin.Security;
+using Microsoft.Owin.Host.SystemWeb;
 
 namespace AuthModule
 {
@@ -53,7 +54,12 @@ namespace AuthModule
             
 
             // Enable the application to use a cookie to store information for the signed in user
-            app.UseKentorOwinCookieSaver();
+            //app.UseKentorOwinCookieSaver();
+            app.UseCookieAuthentication(new CookieAuthenticationOptions
+            {
+                // ... Your existing options here ...
+                CookieManager = new SystemWebCookieManager()
+            });
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
                 // AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
@@ -87,9 +93,9 @@ namespace AuthModule
 
 
             // Uncomment the following lines to enable logging in with third party login providers
-            app.UseMicrosoftAccountAuthentication(
-                clientId: ConfigurationManager.AppSettings["MicrosoftAppId"].ToString(),
-                clientSecret: ConfigurationManager.AppSettings["MicrosoftAppSecret"].ToString());
+            //app.UseMicrosoftAccountAuthentication(
+            //    clientId: ConfigurationManager.AppSettings["MicrosoftAppId"].ToString(),
+            //    clientSecret: ConfigurationManager.AppSettings["MicrosoftAppSecret"].ToString());
 
             //app.UseTwitterAuthentication(
             //    consumerKey: "",
@@ -181,12 +187,12 @@ namespace AuthModule
             //});
         }
 
-        private Task OnAuthenticationFailed(AuthenticationFailedNotification<OpenIdConnectMessage, OpenIdConnectAuthenticationOptions> context)
-        {
-            //throw new NotImplementedException();
-            context.HandleResponse();
-            context.Response.Redirect("/?errormessage=" + context.Exception.Message);
-            return Task.FromResult(0);
-        }
+        //private Task OnAuthenticationFailed(AuthenticationFailedNotification<OpenIdConnectMessage, OpenIdConnectAuthenticationOptions> context)
+        //{
+        //    //throw new NotImplementedException();
+        //    context.HandleResponse();
+        //    context.Response.Redirect("/?errormessage=" + context.Exception.Message);
+        //    return Task.FromResult(0);
+        //}
     }
 }

@@ -30,7 +30,11 @@
                   @(Compile);
                   @(_CoreCompileResourceInputs);
                   $(ApplicationIcon);
+<<<<<<< HEAD:packages/Microsoft.Net.Compilers.4.2.0/tools/Microsoft.CSharp.Core.targets
                   $(KeyOriginatorFile);
+=======
+                  $(AssemblyOriginatorKeyFile);
+>>>>>>> Changes before validation scripts created:CoCoBeachSurf_Dev/obj/Release/Package/PackageTmp/bin/roslyn/Microsoft.CSharp.Core.targets
                   @(ReferencePathWithRefAssemblies);
                   @(CompiledLicenseFile);
                   @(LinkResource);

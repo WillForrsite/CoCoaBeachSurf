@@ -8,7 +8,11 @@
                   @(Compile);
                   @(_CoreCompileResourceInputs);
                   $(ApplicationIcon);
+<<<<<<< HEAD:packages/Microsoft.Net.Compilers.4.2.0/tools/Microsoft.VisualBasic.Core.targets
                   $(KeyOriginatorFile);
+=======
+                  $(AssemblyOriginatorKeyFile);
+>>>>>>> Changes before validation scripts created:CoCoBeachSurf_Dev/obj/Release/Package/PackageTmp/bin/roslyn/Microsoft.VisualBasic.Core.targets
                   @(ReferencePathWithRefAssemblies);
                   @(CompiledLicenseFile);
                   @(LinkResource);

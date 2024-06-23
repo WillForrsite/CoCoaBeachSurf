@@ -1,0 +1,2 @@
+﻿CREATE USER [apps.admin] WITHOUT LOGIN;
+

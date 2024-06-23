@@ -10,7 +10,7 @@ namespace AuthIntegration
 {
     public class IntegrationFunctionality
     {
-        static readonly string connStr = "Server=tcp:forrsitesql.database.windows.net,1433;Initial Catalog=IHP_authenticaton_prod;Persist Security Info=False;User ID=apps.admin;Password=Pr@t3kt3d!2023;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+        static readonly string connStr = "Server=tcp:forrsitesql.database.windows.net,1433;Initial Catalog=cocoasurf24_dev;Persist Security Info=False;User ID=apps.admin;Password=Pr@t3kt3d!2023;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 
         //static readonly string connStr = "Server=tcp:wpcsqldev001.database.windows.net,1433;Initial Catalog=app_authentication_dev;Persist Security Info=False;User ID=Ravi.ks;Password=R@v1789ijn;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
         //static readonly string connStr1 = "Data Source=wpcvmdb002;Initial Catalog=WPC_Acctng_ref;Persist Security Info=True;User ID=app_AP;Password=wpcAP001#";
