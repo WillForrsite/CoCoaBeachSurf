@@ -78,10 +78,7 @@
             <summary>
             Gets the script used when constructing the post string.
             </summary>
-<<<<<<< HEAD
-=======
             <exception cref="T:System.ArgumentNullException">If the 'value' is null.</exception>
->>>>>>> Changes before validation scripts created
         </member>
         <member name="P:Microsoft.IdentityModel.Protocols.AuthenticationProtocolMessage.ScriptButtonText">
             <summary>

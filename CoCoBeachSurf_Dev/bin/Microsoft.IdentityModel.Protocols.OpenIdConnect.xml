@@ -408,11 +408,7 @@
             Gets a bool that determines if the 'SigningKeys' property should be serialized.
             This is used by Json.NET in order to conditionally serialize properties.
             </summary>
-<<<<<<< HEAD
-            <return>true if 'SigningKeys' is not empty; otherwise, false.</return>
-=======
             <return>This method always returns false.</return>
->>>>>>> Changes before validation scripts created
         </member>
         <member name="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeScopesSupported">
             <summary>

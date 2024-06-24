@@ -20,8 +20,6 @@
             </summary>
             <param name="compilerSettings"></param>
         </member>
-<<<<<<< HEAD
-=======
         <member name="M:Microsoft.CodeDom.Providers.DotNetCompilerPlatform.CSharpCodeProvider.#ctor(Microsoft.CodeDom.Providers.DotNetCompilerPlatform.IProviderOptions)">
             <summary>
             Creates an instance using the given IProviderOptions
@@ -34,15 +32,12 @@
             </summary>
             <param name="providerOptions"></param>
         </member>
->>>>>>> Changes before validation scripts created
         <member name="M:Microsoft.CodeDom.Providers.DotNetCompilerPlatform.CSharpCodeProvider.CreateCompiler">
             <summary>
             Gets an instance of the .NET Compiler Platform C# code compiler.
             </summary>
             <returns>An instance of the .NET Compiler Platform C# code compiler</returns>
         </member>
-<<<<<<< HEAD
-=======
         <member name="T:Microsoft.CodeDom.Providers.DotNetCompilerPlatform.IProviderOptions">
             <summary>
             Provides settings for the C# and VB CodeProviders
@@ -122,7 +117,6 @@
             A collection of all &lt;providerOptions&gt; specified in config for the given CodeDomProvider.
             </summary>
         </member>
->>>>>>> Changes before validation scripts created
         <member name="T:Microsoft.CodeDom.Providers.DotNetCompilerPlatform.ICompilerSettings">
             <summary>
             Provides settings for the C# and VB CodeProviders
@@ -154,8 +148,6 @@
             </summary>
             <param name="compilerSettings"></param>
         </member>
-<<<<<<< HEAD
-=======
         <member name="M:Microsoft.CodeDom.Providers.DotNetCompilerPlatform.VBCodeProvider.#ctor(Microsoft.CodeDom.Providers.DotNetCompilerPlatform.IProviderOptions)">
             <summary>
             Creates an instance using the given ICompilerSettings
@@ -168,7 +160,6 @@
             </summary>
             <param name="providerOptions"></param>
         </member>
->>>>>>> Changes before validation scripts created
         <member name="M:Microsoft.CodeDom.Providers.DotNetCompilerPlatform.VBCodeProvider.CreateCompiler">
             <summary>
             Gets an instance of the .NET Compiler Platform VB code compiler.

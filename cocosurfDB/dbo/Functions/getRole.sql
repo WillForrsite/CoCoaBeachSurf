@@ -9,7 +9,7 @@ BEGIN
 	-- Declare the return variable here
 	DECLARE @Userid nvarchar(128),@AppId int
 	SELECT @Userid=userid,@AppId=AppId FROM [dbo].[Authentication] where Token=@Token
-	C:\Bluechip Development\CoCoaBeachSurf\cocosurfDB\dbo\Functions\udfGetCstmrByEml.sql
+	--C:\Bluechip Development\CoCoaBeachSurf\cocosurfDB\dbo\Functions\udfGetCstmrByEml.sql
 	IF EXISTS(select id from [dbo].[AppUserValidation] where [UserId]=@Userid and [IsGlobalAdmin]=1)
 	BEGIN
 	    RETURN 0;

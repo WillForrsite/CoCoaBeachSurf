@@ -94,10 +94,7 @@
          PreferredUILang="$(PreferredUILang)"
          ProvideCommandLineArgs="$(ProvideCommandLineArgs)"
          References="@(ReferencePathWithRefAssemblies)"
-<<<<<<< HEAD
-=======
          RefOnly="$(ProduceOnlyReferenceAssembly)"
->>>>>>> Changes before validation scripts created
          RemoveIntegerChecks="$(RemoveIntegerChecks)"
          ReportAnalyzer="$(ReportAnalyzer)"
          Resources="@(_CoreCompileResourceInputs);@(CompiledLicenseFile)"
@@ -106,10 +103,7 @@
          RuntimeMetadataVersion="$(RuntimeMetadataVersion)"
          SdkPath="$(FrameworkPathOverride)"
          SharedCompilationId="$(SharedCompilationId)"
-<<<<<<< HEAD
-=======
          SkipAnalyzers="$(_SkipAnalyzers)"
->>>>>>> Changes before validation scripts created
          SkipCompilerExecution="$(SkipCompilerExecution)"
          Sources="@(Compile)"
          SubsystemVersion="$(SubsystemVersion)"

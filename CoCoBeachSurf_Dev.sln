@@ -1,13 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.10.34928.147
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoCoBeachSurf_Dev", "CoCoBeachSurf_Dev\CoCoBeachSurf_Dev.csproj", "{028AF480-F011-404E-8B6D-CC1F12657F8A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthIntegration", "AuthIntegration\AuthIntegration.csproj", "{FC448ABA-EE04-4527-88B0-A39EB93C60F9}"
-EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "cocosurfDB", "cocosurfDB\cocosurfDB.sqlproj", "{5865539F-78BC-4963-AC69-032C9F134642}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,12 +21,6 @@ Global
 		{FC448ABA-EE04-4527-88B0-A39EB93C60F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC448ABA-EE04-4527-88B0-A39EB93C60F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC448ABA-EE04-4527-88B0-A39EB93C60F9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5865539F-78BC-4963-AC69-032C9F134642}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5865539F-78BC-4963-AC69-032C9F134642}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5865539F-78BC-4963-AC69-032C9F134642}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{5865539F-78BC-4963-AC69-032C9F134642}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5865539F-78BC-4963-AC69-032C9F134642}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5865539F-78BC-4963-AC69-032C9F134642}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
