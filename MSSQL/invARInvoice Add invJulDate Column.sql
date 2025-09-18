@@ -1,0 +1,13 @@
+ALTER TABLE tblARInvoice
+DROP COLUMN InvJulDate;
+ALTER TABLE tblARInvoice
+ADD InvJulDate AS
+ CASE 
+ WHEN TRY_CAST(LEFT(invNbr, 5) AS INT) IS NOT NULL THEN
+      DATEADD(DAY, TRY_CAST(SUBSTRING(invNbr, 3, 3) AS INT) - 1,
+      DATEFROMPARTS(2000 + TRY_CAST(SUBSTRING(invNbr, 1, 2) AS INT), 1, 1))
+ ELSE NULL
+ END
+ PERSISTED -- Uncomment if SQL Server allows it
+;
+

@@ -1,0 +1,10 @@
+CREATE TABLE PaymentRequestLog (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    PmtRsrvtnID NVARCHAR(100),
+    RequestUri NVARCHAR(500),
+    Payload NVARCHAR(MAX),
+    LoggedAt DATETIME DEFAULT GETDATE()
+);
+
+ALTER TABLE PaymentRequestLog
+ADD Referrer NVARCHAR(500) NULL;

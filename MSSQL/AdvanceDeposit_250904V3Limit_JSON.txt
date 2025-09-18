@@ -1,0 +1,343 @@
+DECLARE @ReportDate date      = '2025-09-05';
+DECLARE @ReportJson nvarchar(max);
+
+WITH
+AllDates AS (
+    SELECT DISTINCT CAST(trpPckDate AS date) AS ReportDate
+    FROM vw_FPTripInvoiceSummary
+    WHERE trpPckDate IS NOT NULL
+    UNION
+    SELECT DISTINCT CAST(pmtCrtdDtTm AT TIME ZONE 'UTC' AT TIME ZONE 'Eastern Standard Time' AS date)
+    FROM tblARpayments
+    WHERE pmtCrtdDtTm IS NOT NULL
+    UNION
+    SELECT @ReportDate
+),
+TripRevenue AS (
+    SELECT 
+        ad.ReportDate,
+        SUM(ISNULL(vts.price, 0)) AS TripRev
+    FROM AllDates ad
+    LEFT JOIN vw_FPTripInvoiceSummary vts
+        ON vts.trpPckDate = ad.ReportDate
+       --AND vts.trpStatus IN ('c','e','p')
+    GROUP BY ad.ReportDate
+),
+TripADRevenue AS (
+    SELECT 
+        ad.ReportDate, --*
+        SUM(ISNULL(vts.price, 0)) AS TripADRev
+    FROM AllDates ad
+    LEFT JOIN vw_FPTripInvoiceSummary vts
+        ON vts.RsrvtnDt = ad.ReportDate
+       --AND vts.trpStatus IN ('c','e','p')
+       AND vts.RsrvtnSrcClean NOT IN ('Hotel')  -- AD rule
+    GROUP BY ad.ReportDate
+),
+TripADConsumption AS (
+    SELECT 
+        ad.ReportDate, 
+        SUM(ISNULL(vts.price, 0)) AS TripADConsumedRev
+    FROM AllDates ad
+    LEFT JOIN vw_FPTripInvoiceSummary vts
+        ON CAST(vts.trpPckDate AS DATE) = ad.ReportDate
+       --AND vts.trpStatus IN ('c','e','p')
+       AND vts.RsrvtnSrcClean NOT IN ('Hotel')  -- AD rule
+--    WHERE ad.ReportDate = @ReportDate
+    GROUP BY ad.ReportDate
+),
+DailyDeposits AS (
+    SELECT 
+        --CAST(pmtCrtdDtTm AS date),*
+        RsrvtnDt AS ReportDate, --*
+        SUM(price) AS DepositAmt
+    FROM vw_FPTripInvoiceSummary
+    WHERE RsrvtnSrcClean NOT IN ('Hotel')  -- AD rule
+--      AND RsrvtnDt = @ReportDate
+    GROUP BY RsrvtnDt
+),
+Combined AS (
+    SELECT 
+        ad.ReportDate,
+        ISNULL(tr.TripRev, 0)     AS TripRev,
+        ISNULL(trad.TripADRev, 0) AS TripADRev,
+        ISNULL(trac.TripADConsumedRev, 0) as TripADRevConsumed,
+        ISNULL(dd.DepositAmt, 0)  AS DailyDepositAmt
+    FROM AllDates ad
+    LEFT JOIN TripRevenue    tr   ON tr.ReportDate   = ad.ReportDate
+    LEFT JOIN TripADRevenue  trad ON trad.ReportDate = ad.ReportDate
+    LEFT JOIN TripADConsumption trac ON trac.ReportDate = ad.ReportDate
+    LEFT JOIN DailyDeposits  dd   ON dd.ReportDate   = ad.ReportDate
+),
+RunningBalance AS (
+    SELECT 
+        ReportDate,
+        DailyDepositAmt,
+        TripRev,
+        TripADRev,
+        TripADRevConsumed,
+        SUM(DailyDepositAmt - TripRev)
+            OVER (ORDER BY ReportDate ROWS UNBOUNDED PRECEDING) AS EndingBalance,
+        SUM(DailyDepositAmt - TripADRevConsumed)
+            OVER (ORDER BY ReportDate ROWS UNBOUNDED PRECEDING) AS ADEndingBalance
+    FROM Combined
+),
+DetailTransactions AS (
+    SELECT  
+        CAST(vts.RsrvtnDt AS date) AS RsrvtnDate,
+        CAST(vts.trpPckDate AS date) AS TripPckDate,
+        vts.RsrvtnSrcClean,
+        vts.price,
+        vts.trpPssngrs,
+        CASE 
+            WHEN vts.RsrvtnSrcClean NOT IN ('Hotel') 
+             AND CAST(vts.trpPckDate AS date) = CAST(vts.RsrvtnDt AS date)
+            THEN 'AD_Consumed'
+            ELSE NULL
+        END AS ADEndingComponent,
+        CASE 
+            WHEN vts.RsrvtnSrcClean NOT IN ('Hotel') 
+             AND vts.RsrvtnDt IS NOT NULL
+            THEN 'Deposit'
+            ELSE NULL
+        END AS DepositComponent
+    FROM vw_FPTripInvoiceSummary vts
+),
+AdvancedDepositTable AS (
+    SELECT
+        ReportDate,
+        LAG(EndingBalance,     1, 0) OVER (ORDER BY ReportDate) AS BeginningBalance,
+        LAG(ADEndingBalance,   1, 0) OVER (ORDER BY ReportDate) AS ADBeginningBalance,
+        DailyDepositAmt,
+        TripRev,
+        TripADRev,
+        EndingBalance,
+        ADEndingBalance
+    FROM RunningBalance
+),
+BeginningBalance AS (
+    SELECT amount = COALESCE(
+        (SELECT TOP (1) ADBeginningBalance AS BeginningBalance FROM AdvancedDepositTable WHERE ReportDate = @ReportDate),
+        0.0
+    ),
+    EndingAmt = COALESCE(
+        (SELECT TOP (1) ADEndingBalance AS EndingBalance FROM AdvancedDepositTable WHERE ReportDate = @ReportDate),
+        0.0
+    ),
+    ADAmt = COALESCE(
+        (SELECT TOP (1) DailyDepositAmt FROM AdvancedDepositTable WHERE ReportDate = @ReportDate),
+        0.0
+    )
+),
+AdvanceDeposits AS (
+    SELECT amount = COALESCE(
+        (SELECT TOP (1) DailyDepositAmt FROM AdvancedDepositTable WHERE ReportDate = @ReportDate),
+        0.0
+    )
+),
+SameDayService AS (
+    SELECT amount = ISNULL(SUM(price), 0.0)
+    FROM vw_FPTripInvoiceSummary
+    WHERE REVGRP LIKE '%Same Day%'
+      AND trpPckDate = @ReportDate
+),
+ADEndingBalanceDetail AS (
+    SELECT
+        vts.RsrvtnID,
+        vts.REVGRP,
+        vts.trpStatus,
+        --pmt.pmtAmt,
+        vts.price,
+        vts.trpPssngrs,
+        vts.trpPckDate,
+        CAST(RsrvtnDt AS date) AS pmtDate
+    FROM vw_FPTripInvoiceSummary vts
+    WHERE vts.RsrvtnSrcClean NOT IN ('Hotel')  -- AD rule
+--      AND vts.trpStatus IN ('c','p','e')
+      AND REVGRP NOT LIKE '%Same Day%'
+      AND CAST(RsrvtnDt AS date) <= @ReportDate
+--      AND CAST(vts.trpPckDate as date) > @ReportDate
+),
+ADEndingBalanceSummary AS (
+select
+        REVGRP,
+        transactions = COUNT_BIG(*),
+        pax          = SUM(ISNULL(trpPssngrs,0)),
+        totalPrice   = SUM(ISNULL(price,0))
+from
+    ADEndingBalanceDetail
+group by REVGRP
+),
+CurrentDayCancel AS (
+    SELECT
+        vts.RsrvtnID,
+        vts.REVGRP,
+        vts.trpStatus,
+        --pmt.pmtAmt,
+        vts.price,
+        vts.trpPssngrs,
+        vts.trpPckDate,
+        ad.ReportDate
+    FROM AllDates ad
+    left join vw_FPTripInvoiceSummary vts on vts.trpPckDate = ad.ReportDate    
+    WHERE vts.RsrvtnSrcClean NOT IN ('Hotel')  -- AD rule
+--      AND vts.trpStatus IN ('c','p','e')
+      AND trpStatus = 'x'
+      AND CAST(trpPckDate AS date) = @ReportDate
+),
+CurrentDayRevenueFinal AS (
+    SELECT
+        REVGRP = CASE 
+                    WHEN price / NULLIF(trpPssngrs,0) = 25 THEN 'RoundTrip '
+                    WHEN price / NULLIF(trpPssngrs,0) = 28 THEN 'OneWay '
+                    ELSE 'OneWay ' 
+                 END + REVGRP,
+        transactions = COUNT_BIG(*),
+        pax          = SUM(ISNULL(trpPssngrs,0)),
+        totalPrice   = SUM(ISNULL(price,0))
+    FROM vw_FPTripInvoiceSummary
+    WHERE RsrvtnSrcClean NOT IN ('Hotel')
+      AND RsrvtnDt = @ReportDate
+      --AND trpPckDate = @ReportDate
+    GROUP BY CASE 
+                WHEN price / NULLIF(trpPssngrs,0) = 25 THEN 'RoundTrip '
+                WHEN price / NULLIF(trpPssngrs,0) = 28 THEN 'OneWay '
+                ELSE 'OneWay ' 
+             END + REVGRP
+),
+CurrentDayCancelFinal AS (
+    SELECT
+        REVGRP = CASE 
+                    WHEN price / NULLIF(trpPssngrs,0) = 25 THEN 'RoundTrip '
+                    WHEN price / NULLIF(trpPssngrs,0) = 28 THEN 'OneWay '
+                    ELSE 'OneWay ' 
+                 END + REVGRP,
+        transactions = COUNT_BIG(*),
+        pax          = SUM(ISNULL(trpPssngrs,0)),
+        totalPrice   = SUM(ISNULL(price,0))
+--    SELECT *
+    FROM vw_FPTripInvoiceSummary
+    WHERE RsrvtnSrcClean NOT IN ('Hotel')
+      AND trpStatus = 'x'
+--      AND trpPckDate = '2025-09-05' --@ReportDate
+      AND trpPckDate = @ReportDate
+    GROUP BY CASE 
+                WHEN price / NULLIF(trpPssngrs,0) = 25 THEN 'RoundTrip '
+                WHEN price / NULLIF(trpPssngrs,0) = 28 THEN 'OneWay '
+                ELSE 'OneWay ' 
+             END + REVGRP
+    UNION ALL
+    SELECT 'No Cancellations or Refunds', 0, 0, 0 -- @ReportDate
+    WHERE NOT EXISTS (SELECT 1 FROM CurrentDayCancel)
+),
+TransactionLedger AS (
+    SELECT  
+        vts.REVGRP,
+        CAST(vts.RsrvtnDt AS date)   AS RsrvtnDate,
+        CAST(vts.trpPckDate AS date) AS TripPckDate,
+        vts.RsrvtnSrcClean,
+        vts.price,
+        vts.trpPssngrs,
+        CASE 
+            WHEN vts.RsrvtnSrcClean NOT IN ('Hotel') 
+                 AND vts.RsrvtnDt IS NOT NULL
+            THEN ISNULL(vts.price,0)
+            ELSE 0
+        END AS DepositAmt,
+        CASE 
+            WHEN vts.RsrvtnSrcClean NOT IN ('Hotel') 
+                 AND vts.trpPckDate <= @ReportDate
+            THEN ISNULL(vts.price,0)
+            ELSE 0
+        END AS ADConsumedAmt
+    FROM vw_FPTripInvoiceSummary vts
+),
+TransactionRunning AS (
+    SELECT  
+        t.REVGRP,
+        t.RsrvtnDate,
+        t.TripPckDate,
+        t.RsrvtnSrcClean,
+        t.price,
+        t.trpPssngrs,
+        t.DepositAmt,
+        t.ADConsumedAmt,
+        SUM(t.DepositAmt - t.ADConsumedAmt) 
+            OVER (
+                PARTITION BY t.REVGRP
+                ORDER BY t.RsrvtnDate, t.TripPckDate, t.RsrvtnSrcClean
+                ROWS UNBOUNDED PRECEDING
+            ) AS ADEndingBalance
+    FROM TransactionLedger t
+    WHERE t.RsrvtnDate <= @ReportDate
+),
+BalanceDetailFinal AS (
+SELECT  
+    REVGRP,
+    sum(DepositAmt - ADConsumedAmt) as totalprice,
+    sum(case
+        when ADConsumedAmt > 0 then 0 
+        else trpPssngrs
+         end) as pax,
+    count(case 
+          when AdconsumedAmt > 0 then 0
+          else 1
+           end) as transactions
+FROM TransactionRunning
+group by REVGRP having sum(DepositAmt - ADConsumedAmt) > 0
+--ORDER BY RsrvtnDate, REVGRP, TripPckDate, RsrvtnSrcClean;
+),
+DailyTransferFinal AS (
+    SELECT
+        REVGRP = CASE 
+                    WHEN price / NULLIF(trpPssngrs,0) = 25 THEN 'RoundTrip '
+                    WHEN price / NULLIF(trpPssngrs,0) = 28 THEN 'OneWay '
+                    ELSE 'OneWay ' 
+                 END + REVGRP,
+        transactions = COUNT_BIG(*),
+        pax          = SUM(ISNULL(trpPssngrs,0)),
+        totalPrice   = SUM(ISNULL(price,0))
+    FROM vw_FPTripInvoiceSummary
+    WHERE RsrvtnSrcClean NOT IN ('Hotel')
+--      AND trpStatus = 'x'
+      --AND trpPckDate = '2025-09-05' --@ReportDate
+      AND trpPckDate = @ReportDate
+    GROUP BY CASE 
+                WHEN price / NULLIF(trpPssngrs,0) = 25 THEN 'RoundTrip '
+                WHEN price / NULLIF(trpPssngrs,0) = 28 THEN 'OneWay '
+                ELSE 'OneWay ' 
+             END + REVGRP
+
+    UNION ALL
+
+    SELECT 'No Transfers', 0, 0, 0
+    WHERE NOT EXISTS (
+        SELECT 1
+        FROM vw_FPTripInvoiceSummary
+        WHERE RsrvtnSrcClean NOT IN ('Hotel')
+          AND trpPckDate = @ReportDate
+    )
+)
+-- Final JSON Output
+SELECT @ReportJson = (
+  SELECT
+    @ReportDate              AS reportDate,
+    bb.amount                AS beginningBalance,
+    bb.EndingAmt             AS endingBalance,
+    bb.ADAmt                 AS advancedDeposit,
+    sds.amount               AS sameDayService,
+    ad.amount                AS advanceDeposits,
+
+    -- Arrays
+    (SELECT * FROM CurrentDayRevenueFinal FOR JSON PATH, INCLUDE_NULL_VALUES) AS currentDayRevenue,
+    (SELECT * FROM CurrentDayCancelFinal  FOR JSON PATH, INCLUDE_NULL_VALUES) AS currentDayCancel,
+    (SELECT * FROM BalanceDetailFinal     FOR JSON PATH, INCLUDE_NULL_VALUES) AS balanceDetail,
+    (SELECT * FROM DailyTransferFinal     FOR JSON PATH, INCLUDE_NULL_VALUES) AS dailyTransfer
+
+  FROM BeginningBalance bb
+  CROSS JOIN SameDayService sds
+  CROSS JOIN AdvanceDeposits ad
+  FOR JSON PATH, WITHOUT_ARRAY_WRAPPER, INCLUDE_NULL_VALUES
+);
+-- Return the JSON
+SELECT @ReportJson AS reportData;
